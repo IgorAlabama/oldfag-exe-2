@@ -1,0 +1,115 @@
+/* OLDfag.exe 2.0 — responsive point-and-click club + three independent quizzes */
+.club-screen,.club-quiz-screen,.club-result-screen{padding:0 0 24px;}
+.club-screen[hidden],.club-quiz-screen[hidden],.club-result-screen[hidden]{display:none!important;}
+.club-intro{padding:12px 4px 16px}
+.club-intro h2{margin:5px 0 10px;font:clamp(17px,2.2vw,28px)/1.5 'Press Start 2P',Consolas,monospace;color:#f5e6ff;text-shadow:3px 3px #6b2180}
+.club-intro h2 span{color:#ff6cc8}
+.club-intro p{max-width:920px;color:#c8d3ed;font:clamp(19px,2vw,26px)/1.12 'VT323',Consolas,monospace;margin:0}
+.club-picture{position:relative;border:4px solid #bd50de;box-shadow:0 0 0 3px #2b1436,0 14px 32px #05030acc;background:#0b0827;line-height:0;isolation:isolate;overflow:hidden}
+.club-picture picture,.club-picture img{width:100%;height:auto;display:block}
+.club-picture::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0px,rgba(16,0,30,.06) 2px,transparent 4px);pointer-events:none;z-index:2}
+.hotspot{position:absolute;z-index:3;appearance:none;border:2px solid transparent;background:transparent;cursor:pointer;display:flex;align-items:flex-end;justify-content:center;padding:5px;transition:background .12s,border-color .12s;min-width:44px;min-height:44px}
+.hotspot span{display:inline-block;white-space:nowrap;padding:8px 10px;border:2px solid #aeeaff;background:#101126ea;box-shadow:3px 3px #050614;color:#fcf0ff;font:clamp(10px,1.2vw,15px)/1.2 'VT323',Consolas,monospace;line-height:1.1;text-shadow:1px 1px #000}
+.hotspot:hover,.hotspot:focus-visible{background:transparent;border-color:transparent;outline:none}
+.hotspot:hover span,.hotspot:focus-visible span{border-color:#ffe56f;color:#ffe56f;text-shadow:0 0 8px #ffe56f}
+.spot-gamer{left:9%;top:35%;width:27%;height:51%}
+.spot-arcade{left:36%;top:25%;width:26%;height:69%}
+.spot-singer{left:64%;top:14%;width:13%;height:46%}
+.spot-tv{left:76%;top:36%;width:23%;height:57%}
+.club-footer{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;color:#aaaecd;background:#131b37;padding:10px 12px;font:16px 'VT323',Consolas,monospace;line-height:1.2}
+.club-accessible-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px;justify-content:center}
+.club-accessible-links button{background:#14213c;color:#e7dafa;border:2px solid #535785;padding:8px 11px;font:17px 'VT323',Consolas,monospace;cursor:pointer}
+.club-accessible-links button:focus-visible,.club-accessible-links button:hover{border-color:#f5d46b}
+.club-shortcut{background:#38204d;color:#ffe48e;border:2px dashed #e1b967;margin-top:13px;width:100%;padding:12px;font:20px 'VT323',Consolas,monospace;cursor:pointer}
+.club-shortcut:hover{background:#49285d}
+.npc-stage{position:relative;display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,#181331,#281340 60%,#16122f);padding:16px;border:4px solid #936ad2;box-shadow:inset 0 0 0 2px #322148;margin:14px 0;min-height:185px}
+.npc-stage::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(to bottom,transparent 0,rgba(255,255,255,.025) 2px,transparent 4px);pointer-events:none}
+.npc-stage[data-state='good']{border-color:#88efba}
+.npc-stage[data-state='bad']{border-color:#ff7f99}
+.npc-stage img{flex:0 0 auto;display:block;width:140px;height:160px;object-fit:cover;image-rendering:pixelated;border:3px solid #5456a2;box-shadow:4px 4px 0 #090916}
+.npc-dialog{position:relative;align-self:center;flex:1;min-width:0;border:3px solid #d5c0ff;background:#0a132e;box-shadow:5px 5px 0 #090917;padding:13px 17px 15px}
+.npc-dialog::before{content:'';position:absolute;left:-12px;top:50%;width:14px;height:14px;background:#0a132e;border-bottom:3px solid #d5c0ff;border-left:3px solid #d5c0ff;transform:rotate(45deg)}
+.npc-name{font:clamp(8px,1.1vw,10px)/1.5 'Press Start 2P',Consolas,monospace;color:#f5c6ff;overflow-wrap:anywhere}
+.npc-dialog p{margin:12px 0 0;color:#fff7f1;font:clamp(22px,2.5vw,31px)/1.05 'VT323',Consolas,monospace;max-width:640px}
+.npc-stage[data-state='good'] .npc-dialog{border-color:#88efba}
+.npc-stage[data-state='bad'] .npc-dialog{border-color:#ff7f99}
+.club-result-card{display:flex;gap:24px;background:#13162b;border:3px solid #bf7fe7;padding:22px;margin:24px 0 20px;align-items:center}
+.club-result-card img{width:132px;height:150px;object-fit:cover;image-rendering:pixelated;border:3px solid #9670d4}
+.club-result-card>div{flex:1;min-width:0}
+.club-result-card h2{font:clamp(13px,2vw,23px)/1.5 'Press Start 2P',Consolas,monospace;color:#e8d2fa;margin:9px 0}
+.club-result-score{font:54px/.9 'VT323',Consolas,monospace;margin:8px 0;color:#92ffaa}
+.club-modal{background:#0d1731;border:3px solid #b78de8;color:#f5efff;box-shadow:8px 8px #050512;width:min(550px,calc(100vw - 24px));padding:19px;max-height:90dvh;overflow:auto}
+.club-modal::backdrop{background:#030411df}
+.club-modal-body{display:flex;gap:18px;margin:18px 0;align-items:center;font:24px/1.1 'VT323',Consolas,monospace}
+.club-modal-body img{width:120px;height:142px;object-fit:cover;image-rendering:pixelated;flex-shrink:0;border:3px solid #b878e9}
+.club-modal-body p{margin:7px 0}
+.club-modal-body .modal-info{font-size:17px;color:#c39eec}
+.club-modal h2{font:15px/1.5 'Press Start 2P',monospace;color:#fad580}
+@media(max-width:680px){
+ .club-intro{padding:7px 0 12px}
+ .club-intro h2{font-size:14px;line-height:1.65}
+ .club-intro p{font-size:21px}
+ .club-picture{border-width:3px}
+ .hotspot{padding:2px;align-items:center}
+ .hotspot span{font-size:clamp(10px,3.3vw,14px);white-space:normal;text-align:center;padding:5px 6px;background:#0d1025da}
+ .spot-singer{left:46%;top:17%;width:23%;height:24%}
+ .spot-tv{left:63%;top:34%;width:34%;height:20%}
+ .spot-gamer{left:11%;top:48%;width:46%;height:34%}
+ .spot-arcade{left:70%;top:56%;width:29%;height:29%}
+ .club-accessible-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+ .club-accessible-links button{min-height:44px}
+ .club-footer{font-size:13px}
+ .npc-stage{padding:9px;gap:12px;min-height:130px;margin:12px 0}
+ .npc-stage img{width:96px;height:110px;border-width:2px}
+ .npc-dialog{padding:9px 10px;box-shadow:3px 3px 0 #090917;border-width:2px}
+ .npc-dialog::before{left:-9px;width:10px;height:10px;border-width:2px}
+ .npc-name{font-size:8px;line-height:1.45}
+ .npc-dialog p{font-size:22px;line-height:1.09;margin-top:6px}
+ #clubFeedback:not([hidden]){padding-bottom:64px}
+ #clubNext{position:fixed;bottom:12px;right:12px;z-index:20;border:3px solid #c7ffa5;box-shadow:4px 4px #000;font-size:11px}
+ .club-result-card{gap:12px;padding:12px}
+ .club-result-card img{width:86px;height:100px}
+ .club-result-card h2{font-size:12px}
+ .club-modal-body{gap:10px}
+ .club-modal-body img{width:85px;height:106px}
+ .club-modal-body p{font-size:21px}
+ .club-modal .action-row{flex-direction:column}
+ .club-modal .btn{width:100%}
+}
+@media(max-width:360px){.npc-stage img{width:80px;height:97px}.npc-dialog p{font-size:19px}.npc-name{font-size:7px}.hotspot span{font-size:11px}}
+
+/* Production arcade selector and game embed */
+.arcade-selector{width:min(900px,calc(100vw - 22px));max-height:min(90dvh,930px);overflow:auto;padding:16px}
+.arcade-selector-lead{font:clamp(18px,2.1vw,25px)/1.1 'VT323',Consolas,monospace;color:#f6d98a;margin:12px 0 18px}
+.arcade-picker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
+.arcade-game-card{min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:15px 12px;background:#181a33;border:3px solid #394466;box-shadow:4px 4px #070611;color:#e7dbfa}
+.arcade-game-ready{border-color:#f9ce67;background:linear-gradient(155deg,#482249,#211637 52%,#112b46);cursor:pointer}
+.arcade-game-ready:hover,.arcade-game-ready:focus-visible{outline:3px solid #a9fcfe;outline-offset:2px;background:linear-gradient(155deg,#62305f,#281a4a 50%,#16405f)}
+.arcade-game-card strong{font:clamp(11px,1.55vw,18px)/1.65 'Press Start 2P',Consolas,monospace;overflow-wrap:anywhere}
+.arcade-game-card strong em{color:#ff79be;font-style:normal}
+.arcade-game-card small{font:clamp(14px,1.6vw,19px)/1.1 'VT323',Consolas,monospace;color:#b1ddeb}
+.arcade-card-num{font:clamp(10px,1.4vw,15px)/1.15 'VT323',Consolas,monospace;color:#a3cafa;align-self:flex-start}
+.arcade-game-glyph{font-size:32px;line-height:1.2}
+.arcade-cta{color:#0a1826;background:#9cf9c5;border:2px solid #e8ffec;padding:8px 20px;font:clamp(11px,1.5vw,15px)/1.5 'Press Start 2P',Consolas,monospace}
+.arcade-coming-soon{filter:saturate(.5);color:#7782a1}
+.arcade-coming-soon .arcade-game-glyph{opacity:.5}
+.arcade-coming-soon>span:last-child{letter-spacing:2px;font:clamp(13px,2.0vw,19px) 'VT323',Consolas,monospace;color:#ffbb6b}
+.arcade-selector-back{margin-top:18px;width:100%}
+.arcade-screen[hidden]{display:none!important}
+.arcade-screen{padding:8px 0 24px}
+.arcade-screen-heading h2{font:clamp(13px,2.5vw,23px)/1.6 'Press Start 2P',monospace;color:#f8d9ff;margin:12px 0 8px}
+.arcade-screen-heading h2 span{color:#ff75bf}
+.arcade-screen-heading p{font:clamp(14px,1.4vw,17px)/1.2 'VT323',Consolas,monospace;color:#a6d8eb;margin:0 0 14px}
+.arcade-frame{border:4px solid #9e70e2;box-shadow:0 0 0 2px #331a59,0 12px 30px #02020aaa;background:#030914}
+.arcade-frame iframe{border:0;display:block;width:100%;height:min(82dvh,825px);min-height:600px;background:#050b13}
+@media(max-width:680px){
+.arcade-selector{padding:11px 8px}
+.arcade-picker-grid{gap:8px}
+.arcade-game-card{padding:9px 5px;min-height:177px;gap:8px;border-width:2px}
+.arcade-game-card strong{font-size:9px;line-height:1.6}
+.arcade-game-card small{font-size:12px}
+.arcade-card-num{font-size:10px}
+.arcade-cta{font-size:10px;padding:7px 8px}
+.arcade-frame{border-width:2px}
+.arcade-frame iframe{height:72dvh;min-height:530px}
+}

@@ -1,0 +1,12603 @@
+/* OLDfag.exe 2.0 — curated 900 questions without release-year prompts, 300 per theme. */
+window.OLDFAG_CLUB_QUESTIONS = [
+{
+"id": "club_games_001",
+"theme": "games",
+"group": "game-000",
+"question": "Какую фракцию Heroes III узнают по архангелам и мечникам?",
+"answers": [
+"Замок",
+"Инферно",
+"Оплот",
+"Башня"
+],
+"correct": 0,
+"explanation": "Архангелы — высший уровень существ Замка."
+},
+{
+"id": "club_games_002",
+"theme": "games",
+"group": "game-000",
+"question": "Какой монстр в Doom атакует большим зелёным шаром энергии?",
+"answers": [
+"Потерянная душа",
+"Барон ада",
+"Пинки",
+"Зомби-солдат"
+],
+"correct": 1,
+"explanation": "Барон ада стреляет зелёными плазменными сгустками."
+},
+{
+"id": "club_games_003",
+"theme": "games",
+"group": "game-000",
+"question": "Как зовут главного героя оригинальной Far Cry?",
+"answers": [
+"Ваас",
+"Джек Карвер",
+"Аджай Гейл",
+"Джейсон Броди"
+],
+"correct": 1,
+"explanation": "Верно: Джек Карвер. Вопрос относится к игре «Far Cry»."
+},
+{
+"id": "club_games_004",
+"theme": "games",
+"group": "game-001",
+"question": "В каком городе Heroes III обитают чёрные драконы?",
+"answers": [
+"Подземелье",
+"Башня",
+"Замок",
+"Крепость"
+],
+"correct": 0,
+"explanation": "Чёрные драконы — элитные войска Подземелья."
+},
+{
+"id": "club_games_005",
+"theme": "games",
+"group": "game-001",
+"question": "Кого в Quake называют огромным волосатым монстром с когтями?",
+"answers": [
+"Шамблер",
+"Хедкраб",
+"Зерглинг",
+"Какодемон"
+],
+"correct": 0,
+"explanation": "Шамблер — один из самых грозных врагов Quake."
+},
+{
+"id": "club_games_006",
+"theme": "games",
+"group": "game-001",
+"question": "Как зовут главную героиню Portal?",
+"answers": [
+"Челл",
+"Лара",
+"Аликс",
+"Джилл"
+],
+"correct": 0,
+"explanation": "Верно: Челл. Вопрос относится к игре «Portal»."
+},
+{
+"id": "club_games_007",
+"theme": "games",
+"group": "game-002",
+"question": "Какая фракция Heroes III нанимает личей и костяных драконов?",
+"answers": [
+"Цитадель",
+"Башня",
+"Оплот",
+"Некрополис"
+],
+"correct": 3,
+"explanation": "Некрополис специализируется на нежити."
+},
+{
+"id": "club_games_008",
+"theme": "games",
+"group": "game-002",
+"question": "В какой серии главным героем был пёс-детектив Сэм и кролик Макс?",
+"answers": [
+"Day of the Tentacle",
+"Sam & Max",
+"Full Throttle",
+"Space Quest"
+],
+"correct": 1,
+"explanation": "Сэм и Макс — детективы комедийного приключения."
+},
+{
+"id": "club_games_009",
+"theme": "games",
+"group": "game-002",
+"question": "Кем работает Гордон Фримен?",
+"answers": [
+"Полицейским",
+"Пилотом",
+"Врачом",
+"Физиком-теоретиком"
+],
+"correct": 3,
+"explanation": "Верно: Физиком-теоретиком. Вопрос относится к игре «Half-Life»."
+},
+{
+"id": "club_games_010",
+"theme": "games",
+"group": "game-003",
+"question": "Какой ресурс в StarCraft нужен почти всем юнитам помимо минералов?",
+"answers": [
+"Нефть",
+"Тиберий",
+"Веспеновый газ",
+"Мана"
+],
+"correct": 2,
+"explanation": "Веспен собирают газовыми постройками на гейзерах."
+},
+{
+"id": "club_games_011",
+"theme": "games",
+"group": "game-003",
+"question": "Каким словом герой Duke Nukem 3D обычно комментирует происходящее?",
+"answers": [
+"Finish him!",
+"Would you kindly?",
+"Hail to the King, baby!",
+"War never changes"
+],
+"correct": 2,
+"explanation": "Дюк Нюкем славится дерзкими цитатами из боевиков."
+},
+{
+"id": "club_games_012",
+"theme": "games",
+"group": "game-003",
+"question": "Как зовут паладина — ключевого спутника в Neverwinter Nights?",
+"answers": [
+"Бастила",
+"Йеннифэр",
+"Арибет",
+"Лара"
+],
+"correct": 2,
+"explanation": "Верно: Арибет. Вопрос относится к игре «Neverwinter Nights»."
+},
+{
+"id": "club_games_013",
+"theme": "games",
+"group": "game-004",
+"question": "Как зовут бывшего маршала Мар-Сары, сражавшегося против зергов?",
+"answers": [
+"Джим Рейнор",
+"Макс Пейн",
+"Кайл Катарн",
+"Дюк Нюкем"
+],
+"correct": 0,
+"explanation": "Рейнор — один из ключевых героев терранской истории."
+},
+{
+"id": "club_games_014",
+"theme": "games",
+"group": "game-004",
+"question": "Что выдаёт Рикардо Диаса в сюжете GTA: Vice City?",
+"answers": [
+"Стража замка",
+"Космический корабль",
+"Дракон",
+"Особняк и криминальная империя"
+],
+"correct": 3,
+"explanation": "Диас — криминальный босс Вайс-Сити."
+},
+{
+"id": "club_games_015",
+"theme": "games",
+"group": "game-004",
+"question": "Какое прозвище носит главный герой «Тени Чернобыля»?",
+"answers": [
+"Шрам",
+"Меченый",
+"Борода",
+"Дегтярёв"
+],
+"correct": 1,
+"explanation": "Верно: Меченый. Вопрос относится к игре «S.T.A.L.K.E.R.: Тень Чернобыля»."
+},
+{
+"id": "club_games_016",
+"theme": "games",
+"group": "game-005",
+"question": "Как называется базовый рабочий юнит зергов?",
+"answers": [
+"Зонд",
+"Зилот",
+"SCV",
+"Дрон"
+],
+"correct": 3,
+"explanation": "Дроны добывают ресурсы и превращаются в строения."
+},
+{
+"id": "club_games_017",
+"theme": "games",
+"group": "game-005",
+"question": "Как называется красная полоса тревоги над головой врага в Metal Gear Solid?",
+"answers": [
+"Режим Alert",
+"Режим Rage",
+"Режим Chaos",
+"Режим VATS"
+],
+"correct": 0,
+"explanation": "При обнаружении Снейка включается режим тревоги Alert."
+},
+{
+"id": "club_games_018",
+"theme": "games",
+"group": "game-005",
+"question": "Как называется город в первой Diablo?",
+"answers": [
+"Кураст",
+"Хэррогат",
+"Тристрам",
+"Лут-Голейн"
+],
+"correct": 2,
+"explanation": "Верно: Тристрам. Вопрос относится к игре «Diablo»."
+},
+{
+"id": "club_games_019",
+"theme": "games",
+"group": "game-006",
+"question": "Какие ворота первым делом ставят протоссы для производства боевых юнитов?",
+"answers": [
+"Инкубатор",
+"Врата",
+"Военный завод",
+"Казарма"
+],
+"correct": 1,
+"explanation": "Во Вратах обучаются зилоты и другие наземные бойцы."
+},
+{
+"id": "club_games_020",
+"theme": "games",
+"group": "game-006",
+"question": "Какой цвет обычно имеют тёмные порталы в Portal?",
+"answers": [
+"Чёрный и белый",
+"Жёлтый и фиолетовый",
+"Синий и оранжевый",
+"Красный и зелёный"
+],
+"correct": 2,
+"explanation": "Портальная пушка создаёт синий и оранжевый порталы."
+},
+{
+"id": "club_games_021",
+"theme": "games",
+"group": "game-006",
+"question": "Как зовут главного героя San Andreas?",
+"answers": [
+"Карл Джонсон",
+"Нико Беллик",
+"Клод",
+"Томми Версетти"
+],
+"correct": 0,
+"explanation": "Верно: Карл Джонсон. Вопрос относится к игре «Grand Theft Auto: San Andreas»."
+},
+{
+"id": "club_games_022",
+"theme": "games",
+"group": "game-007",
+"question": "Чем в Diablo II персонаж восстанавливает запас здоровья быстрее всего?",
+"answers": [
+"Зельями здоровья",
+"Рунами",
+"Свитками портала",
+"Осколками души"
+],
+"correct": 0,
+"explanation": "Красные зелья лечат героя прямо во время боя."
+},
+{
+"id": "club_games_023",
+"theme": "games",
+"group": "game-007",
+"question": "Каким животным можно управлять в Black & White как гигантским помощником?",
+"answers": [
+"Пчелой",
+"Муравьём",
+"Дельфином",
+"Коровой"
+],
+"correct": 3,
+"explanation": "Одно из доступных существ — огромная корова."
+},
+{
+"id": "club_games_024",
+"theme": "games",
+"group": "game-007",
+"question": "Какой герой на обложке кампаний Heroes II воюет с братом Роландом?",
+"answers": [
+"Сандро",
+"Джереми",
+"Арчибальд",
+"Крэг Хэк"
+],
+"correct": 2,
+"explanation": "Верно: Арчибальд. Вопрос относится к игре «Heroes of Might and Magic II»."
+},
+{
+"id": "club_games_025",
+"theme": "games",
+"group": "game-008",
+"question": "Кто произносит предупреждение «Stay awhile and listen» в Diablo?",
+"answers": [
+"Тираэль",
+"Леорик",
+"Баал",
+"Декард Каин"
+],
+"correct": 3,
+"explanation": "Фирменная фраза мудреца Декарда Каина."
+},
+{
+"id": "club_games_026",
+"theme": "games",
+"group": "game-008",
+"question": "Что является валютою жителей в первой Fallout?",
+"answers": [
+"Крышечки",
+"Рубли",
+"Гилы",
+"Золотые драконы"
+],
+"correct": 0,
+"explanation": "Крышки от бутылок — распространённая валюта мира Fallout."
+},
+{
+"id": "club_games_027",
+"theme": "games",
+"group": "game-008",
+"question": "Что позволяет перематывать время в Sands of Time?",
+"answers": [
+"Песочные часы в меню",
+"Магическая книга",
+"Плазменная пушка",
+"Кинжал времени"
+],
+"correct": 3,
+"explanation": "Верно: Кинжал времени. Вопрос относится к игре «Prince of Persia: The Sands of Time»."
+},
+{
+"id": "club_games_028",
+"theme": "games",
+"group": "game-009",
+"question": "Какое оружие в DOOM известно по аббревиатуре BFG?",
+"answers": [
+"Гаусс-пушка",
+"Гравипушка",
+"Рейлган",
+"BFG 9000"
+],
+"correct": 3,
+"explanation": "BFG 9000 — одно из самых разрушительных орудий серии."
+},
+{
+"id": "club_games_029",
+"theme": "games",
+"group": "game-009",
+"question": "Кого в Fallout называют Deathclaw?",
+"answers": [
+"Орка",
+"Когтя смерти",
+"Импа",
+"Шамблера"
+],
+"correct": 1,
+"explanation": "Deathclaw — опасный мутант с огромными когтями."
+},
+{
+"id": "club_games_030",
+"theme": "games",
+"group": "game-009",
+"question": "Какой противник дебютировал в DOOM II?",
+"answers": [
+"Какодемон",
+"Имп",
+"Ревенант",
+"Барон ада"
+],
+"correct": 2,
+"explanation": "Верно: Ревенант. Вопрос относится к игре «DOOM II»."
+},
+{
+"id": "club_games_031",
+"theme": "games",
+"group": "game-010",
+"question": "Как называется зелёный летающий шар с одним глазом в DOOM?",
+"answers": [
+"Какодемон",
+"Имп",
+"Ревенант",
+"Пинки"
+],
+"correct": 0,
+"explanation": "Какодемон парит и атакует огненными шарами."
+},
+{
+"id": "club_games_032",
+"theme": "games",
+"group": "game-010",
+"question": "Какой зверь встречается герою в стартовом городе Gothic?",
+"answers": [
+"Гидралиск",
+"Крысокрот",
+"Мясной жук",
+"Зерглинг"
+],
+"correct": 2,
+"explanation": "Мясные жуки — характерные существа колонии Gothic."
+},
+{
+"id": "club_games_033",
+"theme": "games",
+"group": "game-010",
+"question": "За что в Burnout 3 начисляются очки в режиме Road Rage?",
+"answers": [
+"За сбор монет",
+"За парковку",
+"За экономию топлива",
+"За столкновения с соперниками"
+],
+"correct": 3,
+"explanation": "Верно: За столкновения с соперниками. Вопрос относится к игре «Burnout 3: Takedown»."
+},
+{
+"id": "club_games_034",
+"theme": "games",
+"group": "game-011",
+"question": "Как называется фирменное оружие Гордона Фримена?",
+"answers": [
+"Монтировка",
+"Катана",
+"Лазерный меч",
+"Бензопила"
+],
+"correct": 0,
+"explanation": "Оранжевая HEV и монтировка — визитные карточки Фримена."
+},
+{
+"id": "club_games_035",
+"theme": "games",
+"group": "game-011",
+"question": "Какой навык открывает запертые сундуки в ролевых играх вроде Baldur's Gate?",
+"answers": [
+"Оружейное дело",
+"Пилотирование",
+"Некромантия",
+"Взлом замков"
+],
+"correct": 3,
+"explanation": "Вор может открывать замки с помощью навыка."
+},
+{
+"id": "club_games_036",
+"theme": "games",
+"group": "game-011",
+"question": "Какая из рас StarCraft использует пилоны?",
+"answers": [
+"Зерги",
+"Протоссы",
+"Орки",
+"Терраны"
+],
+"correct": 1,
+"explanation": "Верно: Протоссы. Вопрос относится к игре «StarCraft»."
+},
+{
+"id": "club_games_037",
+"theme": "games",
+"group": "game-012",
+"question": "Какой искусственный интеллект испытывает Челл в Portal?",
+"answers": [
+"EDI",
+"SHODAN",
+"GLaDOS",
+"Cortana"
+],
+"correct": 2,
+"explanation": "GLaDOS управляет испытательными камерами Aperture."
+},
+{
+"id": "club_games_038",
+"theme": "games",
+"group": "game-012",
+"question": "Какая игра отправляет протагониста в подводный город «Восторг»?",
+"answers": [
+"Half-Life",
+"BioShock",
+"Deus Ex",
+"Silent Hill"
+],
+"correct": 1,
+"explanation": "Rapture — подводный мегаполис BioShock."
+},
+{
+"id": "club_games_039",
+"theme": "games",
+"group": "game-012",
+"question": "Как зовут возлюбленную Макса Пейна?",
+"answers": [
+"Лара Крофт",
+"Аликс Вэнс",
+"Джилл Валентайн",
+"Мона Сакс"
+],
+"correct": 3,
+"explanation": "Верно: Мона Сакс. Вопрос относится к игре «Max Payne 2»."
+},
+{
+"id": "club_games_040",
+"theme": "games",
+"group": "game-013",
+"question": "Какой предмет в Counter-Strike нужно обезвредить на карте de_dust2?",
+"answers": [
+"Турель",
+"Бомбу",
+"Ядерный реактор",
+"Ракету"
+],
+"correct": 1,
+"explanation": "de_dust2 — карта режима установки бомбы."
+},
+{
+"id": "club_games_041",
+"theme": "games",
+"group": "game-013",
+"question": "Какой мутант в Half-Life присасывается к голове и превращает людей в зомби?",
+"answers": [
+"Хедкраб",
+"Какодемон",
+"Зерглинг",
+"Шамблер"
+],
+"correct": 0,
+"explanation": "Хедкраб управляет телом заражённого."
+},
+{
+"id": "club_games_042",
+"theme": "games",
+"group": "game-013",
+"question": "Как называется враждебная раса в Quake II?",
+"answers": [
+"Протоссы",
+"Зерги",
+"Тираниды",
+"Строгги"
+],
+"correct": 3,
+"explanation": "Верно: Строгги. Вопрос относится к игре «Quake II»."
+},
+{
+"id": "club_games_043",
+"theme": "games",
+"group": "game-014",
+"question": "Как называется оружие с двумя связанными порталами в Portal?",
+"answers": [
+"Портальная пушка",
+"Гравипушка",
+"Рейлган",
+"Шокер"
+],
+"correct": 0,
+"explanation": "Портальная пушка создаёт проходы между поверхностями."
+},
+{
+"id": "club_games_044",
+"theme": "games",
+"group": "game-014",
+"question": "Какой предмет обычно показывает местонахождение врагов в Deus Ex?",
+"answers": [
+"Волчок",
+"Радар и датчики",
+"Сфера маны",
+"Волшебная карта"
+],
+"correct": 1,
+"explanation": "Импланты и интерфейс помогают обнаруживать угрозы."
+},
+{
+"id": "club_games_045",
+"theme": "games",
+"group": "game-014",
+"question": "Кого нужно спасать, прокладывая им путь, в Lemmings?",
+"answers": [
+"Чокобо",
+"Леммингов",
+"Покемонов",
+"Пикминов"
+],
+"correct": 1,
+"explanation": "Верно: Леммингов. Вопрос относится к игре «Lemmings»."
+},
+{
+"id": "club_games_046",
+"theme": "games",
+"group": "game-015",
+"question": "Какая игра прославилась фразой «You have died of dysentery»?",
+"answers": [
+"Myst",
+"The Sims",
+"Civilization",
+"The Oregon Trail"
+],
+"correct": 3,
+"explanation": "В The Oregon Trail поездка могла закончиться болезнью."
+},
+{
+"id": "club_games_047",
+"theme": "games",
+"group": "game-015",
+"question": "Как называется меню выбора действий в классических квестах LucasArts?",
+"answers": [
+"Пип-Бой",
+"V.A.T.S.",
+"Глагольный интерфейс",
+"Панель приборов"
+],
+"correct": 2,
+"explanation": "SCUMM использует список действий типа «Взять» и «Использовать»."
+},
+{
+"id": "club_games_048",
+"theme": "games",
+"group": "game-015",
+"question": "Как зовут главного героя серии Thief?",
+"answers": [
+"Корво",
+"Агент 47",
+"Гаррет",
+"Кейн"
+],
+"correct": 2,
+"explanation": "Верно: Гаррет. Вопрос относится к игре «Thief: The Dark Project»."
+},
+{
+"id": "club_games_049",
+"theme": "games",
+"group": "game-016",
+"question": "Какой ресурс в Warcraft III нужен для заклинаний героев?",
+"answers": [
+"Спайс",
+"Радиация",
+"Мана",
+"Тиберий"
+],
+"correct": 2,
+"explanation": "Заклинания используют запас маны."
+},
+{
+"id": "club_games_050",
+"theme": "games",
+"group": "game-016",
+"question": "Как зовут друга Мэнни Калаверы из Grim Fandango — демона-водителя?",
+"answers": [
+"Роджер Уилко",
+"Гаррет",
+"Глоттис",
+"Лечак"
+],
+"correct": 2,
+"explanation": "Глоттис — огромный добродушный демон-механик."
+},
+{
+"id": "club_games_051",
+"theme": "games",
+"group": "game-016",
+"question": "Как зовут главного злодея Day of the Tentacle?",
+"answers": [
+"Зелёное щупальце",
+"Гайбраш",
+"Док Браун",
+"Пурпурное щупальце"
+],
+"correct": 3,
+"explanation": "Верно: Пурпурное щупальце. Вопрос относится к игре «Day of the Tentacle»."
+},
+{
+"id": "club_games_052",
+"theme": "games",
+"group": "game-017",
+"question": "Какую расу НЕ встретить среди играбельных в оригинальном Warcraft III?",
+"answers": [
+"Нежить",
+"Протоссов",
+"Ночных эльфов",
+"Орков"
+],
+"correct": 1,
+"explanation": "Протоссы — из StarCraft, а не Warcraft III."
+},
+{
+"id": "club_games_053",
+"theme": "games",
+"group": "game-017",
+"question": "Что означает зелёный кристалл над симом?",
+"answers": [
+"Чекпоинт",
+"Пилон",
+"Пламбоб",
+"Гексагон"
+],
+"correct": 2,
+"explanation": "Ромбик Plumbob показывает выбранного сима."
+},
+{
+"id": "club_games_054",
+"theme": "games",
+"group": "game-017",
+"question": "Как называется минерал, вокруг которого строится конфликт Tiberian Sun?",
+"answers": [
+"Тиберий",
+"Эридиум",
+"Митрил",
+"Элерий"
+],
+"correct": 0,
+"explanation": "Верно: Тиберий. Вопрос относится к игре «Tiberian Sun»."
+},
+{
+"id": "club_games_055",
+"theme": "games",
+"group": "game-018",
+"question": "Кто носит проклятый меч Фростморн в истории Warcraft III?",
+"answers": [
+"Малфурион",
+"Тралл",
+"Иллидан",
+"Артас"
+],
+"correct": 3,
+"explanation": "Принц Артас берёт Фростморн ради победы над нежитью."
+},
+{
+"id": "club_games_056",
+"theme": "games",
+"group": "game-018",
+"question": "Какой босс Diablo II обитает в логове ненависти?",
+"answers": [
+"Мефисто",
+"Баал",
+"Андариэль",
+"Дуриэль"
+],
+"correct": 0,
+"explanation": "Мефисто — повелитель ненависти в третьем акте."
+},
+{
+"id": "club_games_057",
+"theme": "games",
+"group": "game-018",
+"question": "Какая игровая механика впервые появилась в SimCity 2000?",
+"answers": [
+"Вид из глаз",
+"Изометрический вид",
+"Кооперативный шутер",
+"Боевой режим"
+],
+"correct": 1,
+"explanation": "Верно: Изометрический вид. Вопрос относится к игре «SimCity 2000»."
+},
+{
+"id": "club_games_058",
+"theme": "games",
+"group": "game-019",
+"question": "Кто из героев KOTOR на самом деле скрывается под личностью игрока?",
+"answers": [
+"Дарт Нихилус",
+"Дарт Реван",
+"Дарт Бейн",
+"Дарт Малак"
+],
+"correct": 1,
+"explanation": "Главный сюжетный поворот первого KOTOR раскрывает личность Ревана."
+},
+{
+"id": "club_games_059",
+"theme": "games",
+"group": "game-019",
+"question": "Как называется король-скелет из первой Diablo?",
+"answers": [
+"Сандро",
+"Лич Кинг",
+"Леорик",
+"Рагнарос"
+],
+"correct": 2,
+"explanation": "Безумный король Леорик — знаменитый противник Diablo."
+},
+{
+"id": "club_games_060",
+"theme": "games",
+"group": "game-019",
+"question": "В каком сеттинге Dungeons & Dragons происходит Icewind Dale?",
+"answers": [
+"Забытые Королевства",
+"Эберрон",
+"Драгонланс",
+"Равенлофт"
+],
+"correct": 0,
+"explanation": "Верно: Забытые Королевства. Вопрос относится к игре «Icewind Dale»."
+},
+{
+"id": "club_games_061",
+"theme": "games",
+"group": "game-020",
+"question": "Какую реплику обычно начинает дроид HK-47 в KOTOR?",
+"answers": [
+"«Утверждение:»",
+"«Экспекто патронум!»",
+"«Живи долго и процветай»",
+"«War never changes»"
+],
+"correct": 0,
+"explanation": "HK-47 озвучивает тип сообщения до самой фразы."
+},
+{
+"id": "club_games_062",
+"theme": "games",
+"group": "game-020",
+"question": "Какая вторая сторона конфликта противостоит GDI в Command & Conquer?",
+"answers": [
+"Имперцы",
+"Братство Нод",
+"Протоссы",
+"Атрейдесы"
+],
+"correct": 1,
+"explanation": "Кейн возглавляет Братство Нод."
+},
+{
+"id": "club_games_063",
+"theme": "games",
+"group": "game-020",
+"question": "Как называется подводный город BioShock?",
+"answers": [
+"Сити 17",
+"Колумбия",
+"Раккун-Сити",
+"Восторг"
+],
+"correct": 3,
+"explanation": "Верно: Восторг. Вопрос относится к игре «BioShock»."
+},
+{
+"id": "club_games_064",
+"theme": "games",
+"group": "game-021",
+"question": "Какой спутник KOTOR II носит имя Аттон?",
+"answers": [
+"Аттон Рэнд",
+"Кэл Кестис",
+"Джухани",
+"Кандерус Ордо"
+],
+"correct": 0,
+"explanation": "Аттон Рэнд — один из первых спутников Изгнанницы."
+},
+{
+"id": "club_games_065",
+"theme": "games",
+"group": "game-021",
+"question": "Кто построил в StarCraft пси-излучатель, привлекавший зергов?",
+"answers": [
+"Протоссы",
+"Демоны",
+"Орки",
+"Терраны"
+],
+"correct": 3,
+"explanation": "Терраны применяли пси-излучатели для управления угрозой зергов."
+},
+{
+"id": "club_games_066",
+"theme": "games",
+"group": "game-021",
+"question": "Как зовут героиню Tomb Raider?",
+"answers": [
+"Аликс Вэнс",
+"Самус Аран",
+"Лара Крофт",
+"Джилл Валентайн"
+],
+"correct": 2,
+"explanation": "Верно: Лара Крофт. Вопрос относится к игре «Tomb Raider»."
+},
+{
+"id": "club_games_067",
+"theme": "games",
+"group": "game-022",
+"question": "Какой город в Fallout 2 ассоциируется с казино и мафиозными семьями?",
+"answers": [
+"Нью-Рино",
+"Вайтран",
+"Сити 17",
+"Мегатонна"
+],
+"correct": 0,
+"explanation": "Нью-Рино известен казино и криминальными семьями."
+},
+{
+"id": "club_games_068",
+"theme": "games",
+"group": "game-022",
+"question": "Какого героя из Warcraft III называют Предателем?",
+"answers": [
+"Утер",
+"Тралл",
+"Артас",
+"Иллидан"
+],
+"correct": 3,
+"explanation": "Иллидан Ярость Бури известен как Предатель."
+},
+{
+"id": "club_games_069",
+"theme": "games",
+"group": "game-022",
+"question": "Как называется система культурного влияния в Civilization III?",
+"answers": [
+"Тиберий",
+"Культура",
+"Боевой дух",
+"Псионика"
+],
+"correct": 1,
+"explanation": "Верно: Культура. Вопрос относится к игре «Civilization III»."
+},
+{
+"id": "club_games_070",
+"theme": "games",
+"group": "game-023",
+"question": "Что означает надпись SPECIAL в Fallout?",
+"answers": [
+"Модель силовой брони",
+"Название валюты",
+"Набор характеристик героя",
+"Марка автомобиля"
+],
+"correct": 2,
+"explanation": "SPECIAL — семь основных характеристик персонажа."
+},
+{
+"id": "club_games_071",
+"theme": "games",
+"group": "game-023",
+"question": "Какой вражеский отряд в Age of Empires II эффективнее всего бьёт кавалерию?",
+"answers": [
+"Крестьяне",
+"Лучники",
+"Копейщики",
+"Монахи"
+],
+"correct": 2,
+"explanation": "Копейщики имеют бонус против кавалерии."
+},
+{
+"id": "club_games_072",
+"theme": "games",
+"group": "game-023",
+"question": "Как зовут бессмертного главного героя Planescape: Torment?",
+"answers": [
+"Нереварин",
+"Реван",
+"Безымянный",
+"Довакин"
+],
+"correct": 2,
+"explanation": "Верно: Безымянный. Вопрос относится к игре «Planescape: Torment»."
+},
+{
+"id": "club_games_073",
+"theme": "games",
+"group": "game-024",
+"question": "Кто ведёт героя через сюжет первой Baldur's Gate из Кэндлкипа?",
+"answers": [
+"Саревок",
+"Эльминстер",
+"Горайон",
+"Иреникус"
+],
+"correct": 2,
+"explanation": "Горайон — приёмный отец и наставник протагониста."
+},
+{
+"id": "club_games_074",
+"theme": "games",
+"group": "game-024",
+"question": "Какую победу в Civilization обычно дают запуском корабля к Альфе Центавра?",
+"answers": [
+"Культурную",
+"Религиозную",
+"Космическую",
+"Дипломатическую"
+],
+"correct": 2,
+"explanation": "Строительство космического корабля — классический путь к победе."
+},
+{
+"id": "club_games_075",
+"theme": "games",
+"group": "game-024",
+"question": "В каком городе разворачивается большая часть Half-Life 2?",
+"answers": [
+"Раккун-Сити",
+"Нью-Рино",
+"Сити 17",
+"Либерти-Сити"
+],
+"correct": 2,
+"explanation": "Верно: Сити 17. Вопрос относится к игре «Half-Life 2»."
+},
+{
+"id": "club_games_076",
+"theme": "games",
+"group": "game-025",
+"question": "Как зовут говорящий летающий череп из Planescape: Torment?",
+"answers": [
+"Фрай",
+"Пип-Бой",
+"Скелетор",
+"Морт"
+],
+"correct": 3,
+"explanation": "Морт сопровождает Безымянного и язвит без остановки."
+},
+{
+"id": "club_games_077",
+"theme": "games",
+"group": "game-025",
+"question": "Какой волшебный предмет помогает найти дорогу в Myst?",
+"answers": [
+"Книги-порталы",
+"Портальная пушка",
+"Кольцо Саурона",
+"Пип-Бой"
+],
+"correct": 0,
+"explanation": "В Myst книги позволяют перемещаться между мирами-эпохами."
+},
+{
+"id": "club_games_078",
+"theme": "games",
+"group": "game-025",
+"question": "Как зовут враждебный искусственный интеллект System Shock?",
+"answers": [
+"SHODAN",
+"GLaDOS",
+"AM",
+"Cortana"
+],
+"correct": 0,
+"explanation": "Верно: SHODAN. Вопрос относится к игре «System Shock»."
+},
+{
+"id": "club_games_079",
+"theme": "games",
+"group": "game-026",
+"question": "Что игрок чаще всего строит вдоль дороги в Stronghold ради еды?",
+"answers": [
+"Гейзеры",
+"Пилоны",
+"Яблоневые сады",
+"Порталы"
+],
+"correct": 2,
+"explanation": "Сады — один из способов снабжать замок едой."
+},
+{
+"id": "club_games_080",
+"theme": "games",
+"group": "game-026",
+"question": "В каком игровом мире герои строят железную дорогу ради сырья и товаров?",
+"answers": [
+"Thief",
+"Quake",
+"Transport Tycoon",
+"Tomb Raider"
+],
+"correct": 2,
+"explanation": "Transport Tycoon посвящена транспортной логистике."
+},
+{
+"id": "club_games_081",
+"theme": "games",
+"group": "game-026",
+"question": "Продолжением какой игры является Riven?",
+"answers": [
+"Doom",
+"Quake",
+"Myst",
+"The Sims"
+],
+"correct": 2,
+"explanation": "Верно: Myst. Вопрос относится к игре «Riven»."
+},
+{
+"id": "club_games_082",
+"theme": "games",
+"group": "game-027",
+"question": "Какой город в GTA: Vice City вдохновлён Майами?",
+"answers": [
+"Вайс-Сити",
+"Лос-Сантос",
+"Сан-Фиерро",
+"Либерти-Сити"
+],
+"correct": 0,
+"explanation": "Вайс-Сити — неоновая версия Майами восьмидесятых."
+},
+{
+"id": "club_games_083",
+"theme": "games",
+"group": "game-027",
+"question": "Какое устройство улавливает псионический сигнал в StarCraft?",
+"answers": [
+"Радио Пулемёт",
+"Хроносфера",
+"Пип-Бой",
+"Пси-излучатель"
+],
+"correct": 3,
+"explanation": "Пси-излучатель притягивает зергов."
+},
+{
+"id": "club_games_084",
+"theme": "games",
+"group": "game-027",
+"question": "Какую героиню возглавляет одна из кампаний Age of Empires II?",
+"answers": [
+"Елизавета I",
+"Жанна д'Арк",
+"Клеопатра",
+"Екатерина II"
+],
+"correct": 1,
+"explanation": "Верно: Жанна д'Арк. Вопрос относится к игре «Age of Empires II»."
+},
+{
+"id": "club_games_085",
+"theme": "games",
+"group": "game-028",
+"question": "Как зовут напарника Си-Джея, постоянно предлагающего «следовать за поездом»?",
+"answers": [
+"Биг Смоук",
+"Райдер",
+"Каталина",
+"Тенпенни"
+],
+"correct": 0,
+"explanation": "Миссия Wrong Side of the Tracks связана с Биг Смоуком."
+},
+{
+"id": "club_games_086",
+"theme": "games",
+"group": "game-028",
+"question": "Какой игровой персонаж носит на голове красную повязку в Metal Gear?",
+"answers": [
+"Гаррет",
+"Агент 47",
+"Солид Снейк",
+"Кайл Катарн"
+],
+"correct": 2,
+"explanation": "Снейк часто появляется с повязкой на лбу."
+},
+{
+"id": "club_games_087",
+"theme": "games",
+"group": "game-028",
+"question": "Как называется остров из Gothic II?",
+"answers": [
+"Манаан",
+"Тарис",
+"Вварденфелл",
+"Хоринис"
+],
+"correct": 3,
+"explanation": "Верно: Хоринис. Вопрос относится к игре «Gothic II»."
+},
+{
+"id": "club_games_088",
+"theme": "games",
+"group": "game-029",
+"question": "Какая знаменитая фраза ассоциируется с GTA: San Andreas?",
+"answers": [
+"«Stay awhile and listen»",
+"«Ah shit, here we go again»",
+"«War never changes»",
+"«Finish him!»"
+],
+"correct": 1,
+"explanation": "Си-Джей говорит её в начале игры."
+},
+{
+"id": "club_games_089",
+"theme": "games",
+"group": "game-029",
+"question": "Чей боевой крик «За Орду!» ассоциируют с Warcraft?",
+"answers": [
+"Орков",
+"Терранов",
+"Строггов",
+"Протоссов"
+],
+"correct": 0,
+"explanation": "Орки входят в Орду."
+},
+{
+"id": "club_games_090",
+"theme": "games",
+"group": "game-029",
+"question": "Сколько основных классов персонажей в Team Fortress Classic?",
+"answers": [
+"Девять",
+"Шесть",
+"Двенадцать",
+"Четыре"
+],
+"correct": 0,
+"explanation": "Верно: Девять. Вопрос относится к игре «Team Fortress Classic»."
+},
+{
+"id": "club_games_091",
+"theme": "games",
+"group": "game-030",
+"question": "Кто бежит по крышам Персии и перематывает время песком?",
+"answers": [
+"Райден",
+"Принц",
+"Эцио",
+"Альтаир"
+],
+"correct": 1,
+"explanation": "Речь о герое The Sands of Time."
+},
+{
+"id": "club_games_092",
+"theme": "games",
+"group": "game-030",
+"question": "Кто такие Big Daddy в мире BioShock?",
+"answers": [
+"Обычные туристы",
+"Мэры города",
+"Пилоты дирижаблей",
+"Бронированные защитники Маленьких Сестричек"
+],
+"correct": 3,
+"explanation": "Big Daddy охраняют Little Sisters."
+},
+{
+"id": "club_games_093",
+"theme": "games",
+"group": "game-030",
+"question": "Какая организация противостоит GDI?",
+"answers": [
+"Сыны Корхала",
+"Скраббы",
+"Братство Нод",
+"Юрий"
+],
+"correct": 2,
+"explanation": "Верно: Братство Нод. Вопрос относится к игре «Command & Conquer»."
+},
+{
+"id": "club_games_094",
+"theme": "games",
+"group": "game-031",
+"question": "Что пополняет шкалу времени в Prince of Persia: The Sands of Time?",
+"answers": [
+"Бензин",
+"Мана",
+"Песок",
+"Золото"
+],
+"correct": 2,
+"explanation": "Песок позволяет использовать особые способности Кинжала."
+},
+{
+"id": "club_games_095",
+"theme": "games",
+"group": "game-031",
+"question": "На каком транспортном средстве герой Full Throttle путешествует по дорогам?",
+"answers": [
+"Снегоходе",
+"Метро",
+"Мотоцикле",
+"Лошади"
+],
+"correct": 2,
+"explanation": "Бен — байкер, а его транспорт — мотоцикл."
+},
+{
+"id": "club_games_096",
+"theme": "games",
+"group": "game-031",
+"question": "В каком городе Heroes III нанимают титанов?",
+"answers": [
+"Башня",
+"Некрополис",
+"Замок",
+"Оплот"
+],
+"correct": 0,
+"explanation": "Верно: Башня. Вопрос относится к игре «Heroes of Might and Magic III»."
+},
+{
+"id": "club_games_097",
+"theme": "games",
+"group": "game-032",
+"question": "Какая игра Need for Speed сделала ночной стритрейсинг главной темой?",
+"answers": [
+"FlatOut 2",
+"Need for Speed: Underground",
+"Burnout Paradise",
+"Forza Horizon"
+],
+"correct": 1,
+"explanation": "Underground сделала ночной стритрейсинг центральной темой."
+},
+{
+"id": "club_games_098",
+"theme": "games",
+"group": "game-032",
+"question": "В какой игре персонажи разговаривают через «симлиш»?",
+"answers": [
+"The Sims",
+"Diablo",
+"Fable",
+"Fallout"
+],
+"correct": 0,
+"explanation": "Симлиш — вымышленный язык симов."
+},
+{
+"id": "club_games_099",
+"theme": "games",
+"group": "game-032",
+"question": "Как называется высокотехнологичная броня Crysis?",
+"answers": [
+"Экзоскелет С.Т.А.Л.К.Е.Р.",
+"Силовая броня T-51",
+"Костюм HEV",
+"Нанокостюм"
+],
+"correct": 3,
+"explanation": "Верно: Нанокостюм. Вопрос относится к игре «Crysis»."
+},
+{
+"id": "club_games_100",
+"theme": "games",
+"group": "game-033",
+"question": "Какую машину разыскивает герой Most Wanted 2005?",
+"answers": [
+"Lada 2107",
+"Ferrari F40",
+"BMW M3 GTR",
+"DeLorean DMC-12"
+],
+"correct": 2,
+"explanation": "BMW M3 GTR — главный автомобиль сюжетной линии."
+},
+{
+"id": "club_games_101",
+"theme": "games",
+"group": "game-033",
+"question": "С каким персонажем Дарт Малак сражается за власть в KOTOR?",
+"answers": [
+"Оби-Ваном",
+"Кайло Реном",
+"Реваном",
+"Дартом Молом"
+],
+"correct": 2,
+"explanation": "Реван — центральная фигура конфликта KOTOR."
+},
+{
+"id": "club_games_102",
+"theme": "games",
+"group": "game-033",
+"question": "Как зовут главного героя Metal Gear Solid?",
+"answers": [
+"Биг Босс",
+"Солид Снейк",
+"Райден",
+"Револьвер Оцелот"
+],
+"correct": 1,
+"explanation": "Верно: Солид Снейк. Вопрос относится к игре «Metal Gear Solid»."
+},
+{
+"id": "club_games_103",
+"theme": "games",
+"group": "game-034",
+"question": "Что замедляет время в Max Payne?",
+"answers": [
+"Хроносфера",
+"Bullet time",
+"V.A.T.S.",
+"Сфера маны"
+],
+"correct": 1,
+"explanation": "Bullet time — центральный приём боёв Max Payne."
+},
+{
+"id": "club_games_104",
+"theme": "games",
+"group": "game-034",
+"question": "Как называются знаменитые хищные растения в Plants vs. Zombies?",
+"answers": [
+"Гидралиски",
+"Шамблеры",
+"Строгги",
+"Чомперы"
+],
+"correct": 3,
+"explanation": "Чомпер поедает зомби целиком."
+},
+{
+"id": "club_games_105",
+"theme": "games",
+"group": "game-034",
+"question": "Как зовут главного антагониста Baldur's Gate II?",
+"answers": [
+"Саревок",
+"Гортах",
+"Джон Иреникус",
+"Малик"
+],
+"correct": 2,
+"explanation": "Верно: Джон Иреникус. Вопрос относится к игре «Baldur's Gate II»."
+},
+{
+"id": "club_games_106",
+"theme": "games",
+"group": "game-035",
+"question": "Какого цвета костюм использует Агент 47 на заданиях чаще всего?",
+"answers": [
+"Чёрный с красным галстуком",
+"Оранжевый",
+"Зелёный",
+"Жёлтый"
+],
+"correct": 0,
+"explanation": "Классический образ 47-го — строгий костюм и красный галстук."
+},
+{
+"id": "club_games_107",
+"theme": "games",
+"group": "game-035",
+"question": "Какой звук слышен при появлении скорпиона в Mortal Kombat?",
+"answers": [
+"«All your base»",
+"«D'oh!»",
+"«War never changes»",
+"«Get over here!»"
+],
+"correct": 3,
+"explanation": "Скорпион кричит «Get over here!» бросая гарпун."
+},
+{
+"id": "club_games_108",
+"theme": "games",
+"group": "game-035",
+"question": "Как называется центральная провинция в Oblivion?",
+"answers": [
+"Морровинд",
+"Скайрим",
+"Сиродил",
+"Хаммерфелл"
+],
+"correct": 2,
+"explanation": "Верно: Сиродил. Вопрос относится к игре «The Elder Scrolls IV: Oblivion»."
+},
+{
+"id": "club_games_109",
+"theme": "games",
+"group": "game-036",
+"question": "Кто охотится за Ларой Крофт в основном как за расхитительницей?",
+"answers": [
+"Геральт",
+"Доктор Роботник",
+"Супер Марио",
+"Конкуренты и древние ловушки"
+],
+"correct": 3,
+"explanation": "В Tomb Raider главная опасность — враги и древние гробницы."
+},
+{
+"id": "club_games_110",
+"theme": "games",
+"group": "game-036",
+"question": "Каким оружием в Half-Life 2 удобно поднимать и бросать предметы?",
+"answers": [
+"AWP",
+"BFG",
+"Гравипушкой",
+"Рейлганом"
+],
+"correct": 2,
+"explanation": "Гравитационная пушка манипулирует объектами."
+},
+{
+"id": "club_games_111",
+"theme": "games",
+"group": "game-036",
+"question": "Как зовут ведьмака — главного героя игры?",
+"answers": [
+"Ламберт",
+"Эскель",
+"Геральт",
+"Весемир"
+],
+"correct": 2,
+"explanation": "Верно: Геральт. Вопрос относится к игре «The Witcher»."
+},
+{
+"id": "club_games_112",
+"theme": "games",
+"group": "game-037",
+"question": "Как зовут губернатора, в которую влюблён Гайбраш Трипвуд?",
+"answers": [
+"Лара Крофт",
+"Мона Сакс",
+"Кейт Уокер",
+"Элейн Марли"
+],
+"correct": 3,
+"explanation": "Элейн Марли — губернатор острова Мели и возлюбленная Гайбраша."
+},
+{
+"id": "club_games_113",
+"theme": "games",
+"group": "game-037",
+"question": "Какую игру напоминает олдфагу слово или имя «Артас»?",
+"answers": [
+"Lemmings",
+"Hitman: Codename 47",
+"Warcraft III",
+"SimCity"
+],
+"correct": 2,
+"explanation": "«Warcraft III»: Как зовут принца Лордерона, ставшего Королём-личом — Артас."
+},
+{
+"id": "club_games_114",
+"theme": "games",
+"group": "game-037",
+"question": "Как зовут принца Лордерона, ставшего Королём-личом?",
+"answers": [
+"Тралл",
+"Иллидан",
+"Артас",
+"Утер"
+],
+"correct": 2,
+"explanation": "Верно: Артас. Вопрос относится к игре «Warcraft III»."
+},
+{
+"id": "club_games_115",
+"theme": "games",
+"group": "game-038",
+"question": "Как зовут демоническую обезьяну-пирата из Monkey Island?",
+"answers": [
+"Морган",
+"Дэйви Джонс",
+"Лечак",
+"Барбосса"
+],
+"correct": 2,
+"explanation": "Лечак — заклятый враг Гайбраша Трипвуда."
+},
+{
+"id": "club_games_116",
+"theme": "games",
+"group": "game-038",
+"question": "Какую игру напоминает олдфагу слово или имя «Кролик Макс»?",
+"answers": [
+"DOOM II",
+"Sam & Max Hit the Road",
+"Warcraft III",
+"BioShock"
+],
+"correct": 1,
+"explanation": "«Sam & Max Hit the Road»: Кто является напарником пса Сэма — Кролик Макс."
+},
+{
+"id": "club_games_117",
+"theme": "games",
+"group": "game-038",
+"question": "Кто является напарником пса Сэма?",
+"answers": [
+"Кролик Макс",
+"Мышь Джерри",
+"Кот Гарфилд",
+"Хомяк Бу"
+],
+"correct": 0,
+"explanation": "Верно: Кролик Макс. Вопрос относится к игре «Sam & Max Hit the Road»."
+},
+{
+"id": "club_games_118",
+"theme": "games",
+"group": "game-039",
+"question": "В какой игре герой постоянно повторяет про необходимость найти три предмета для комбинации?",
+"answers": [
+"Doom",
+"Grim Fandango",
+"StarCraft",
+"Counter-Strike"
+],
+"correct": 1,
+"explanation": "В Grim Fandango важно разгадывать загадки с предметами."
+},
+{
+"id": "club_games_119",
+"theme": "games",
+"group": "game-039",
+"question": "Какую игру напоминает олдфагу слово или имя «Романов»?",
+"answers": [
+"Dune 2000",
+"Diablo",
+"Crysis",
+"Red Alert 2"
+],
+"correct": 3,
+"explanation": "«Red Alert 2»: Кто возглавляет советскую сторону в Red Alert 2 — Романов."
+},
+{
+"id": "club_games_120",
+"theme": "games",
+"group": "game-039",
+"question": "Кто возглавляет советскую сторону в Red Alert 2?",
+"answers": [
+"Сталин",
+"Романов",
+"Кейн",
+"Артас"
+],
+"correct": 1,
+"explanation": "Верно: Романов. Вопрос относится к игре «Red Alert 2»."
+},
+{
+"id": "club_games_121",
+"theme": "games",
+"group": "game-040",
+"question": "Куда ведут даэдрические врата в Oblivion?",
+"answers": [
+"Азерот",
+"Арракис",
+"Обливион",
+"Шэдоулендс"
+],
+"correct": 2,
+"explanation": "Ворота Обливиона ведут в даэдрические владения."
+},
+{
+"id": "club_games_122",
+"theme": "games",
+"group": "game-040",
+"question": "Какая студия разработала оригинальную «Space Quest»?",
+"answers": [
+"Sierra On-Line",
+"Lucasfilm Games",
+"Bullfrog Productions",
+"DMA Design"
+],
+"correct": 0,
+"explanation": "Оригинальную «Space Quest» разработала Sierra On-Line."
+},
+{
+"id": "club_games_123",
+"theme": "games",
+"group": "game-040",
+"question": "Как зовут незадачливого уборщика из Space Quest?",
+"answers": [
+"Роджер Уилко",
+"Ларри Лаффер",
+"Кайл Катарн",
+"Грэм"
+],
+"correct": 0,
+"explanation": "Верно: Роджер Уилко. Вопрос относится к игре «Space Quest»."
+},
+{
+"id": "club_games_124",
+"theme": "games",
+"group": "game-041",
+"question": "В честь какого бога-трибуна назван огромный город на юге Вварденфелла?",
+"answers": [
+"Тираэля",
+"Довакина",
+"Вивека",
+"Сталкера"
+],
+"correct": 2,
+"explanation": "Вивек — один из богов-трибуналов Морровинда."
+},
+{
+"id": "club_games_125",
+"theme": "games",
+"group": "game-041",
+"question": "Какая студия разработала оригинальную «Need for Speed: Underground»?",
+"answers": [
+"Crytek",
+"Valve",
+"EA Black Box",
+"BioWare"
+],
+"correct": 2,
+"explanation": "Оригинальную «Need for Speed: Underground» разработала EA Black Box."
+},
+{
+"id": "club_games_126",
+"theme": "games",
+"group": "game-041",
+"question": "Какой тип гонок стал отличительной чертой Underground?",
+"answers": [
+"Гонки на лошадях",
+"Ралли по пустыне",
+"Формула-1",
+"Уличные ночные гонки"
+],
+"correct": 3,
+"explanation": "Верно: Уличные ночные гонки. Вопрос относится к игре «Need for Speed: Underground»."
+},
+{
+"id": "club_games_127",
+"theme": "games",
+"group": "game-042",
+"question": "Как называется знаменитая железнодорожная система в Half-Life?",
+"answers": [
+"Монорельс Black Mesa",
+"Поезд Хогвартса",
+"Экспресс Найт-Сити",
+"Метро Сити 17"
+],
+"correct": 0,
+"explanation": "Вступление Half-Life — поездка по исследовательскому комплексу."
+},
+{
+"id": "club_games_128",
+"theme": "games",
+"group": "game-042",
+"question": "Какая студия разработала оригинальную «Hitman: Codename 47»?",
+"answers": [
+"BioWare",
+"IO Interactive",
+"Crytek",
+"Valve"
+],
+"correct": 1,
+"explanation": "Оригинальную «Hitman: Codename 47» разработала IO Interactive."
+},
+{
+"id": "club_games_129",
+"theme": "games",
+"group": "game-042",
+"question": "Какой номер носит главный герой серии Hitman?",
+"answers": [
+"007",
+"47",
+"101",
+"13"
+],
+"correct": 1,
+"explanation": "Верно: 47. Вопрос относится к игре «Hitman: Codename 47»."
+},
+{
+"id": "club_games_130",
+"theme": "games",
+"group": "game-043",
+"question": "Кто говорит «Would you kindly» в BioShock?",
+"answers": [
+"Эндрю Райан",
+"Биг Дэдди",
+"Атлас",
+"Сандер Коэн"
+],
+"correct": 2,
+"explanation": "Фраза Атласа — ключ к сюжетному твисту BioShock."
+},
+{
+"id": "club_games_131",
+"theme": "games",
+"group": "game-043",
+"question": "Какая студия разработала оригинальную «Silent Hill»?",
+"answers": [
+"Crytek",
+"Valve",
+"Team Silent",
+"BioWare"
+],
+"correct": 2,
+"explanation": "Оригинальную «Silent Hill» разработала Team Silent."
+},
+{
+"id": "club_games_132",
+"theme": "games",
+"group": "game-043",
+"question": "Как зовут главного героя первой Silent Hill?",
+"answers": [
+"Гарри Мейсон",
+"Хизер Мейсон",
+"Джеймс Сандерленд",
+"Алекс Шепард"
+],
+"correct": 0,
+"explanation": "Верно: Гарри Мейсон. Вопрос относится к игре «Silent Hill»."
+},
+{
+"id": "club_games_133",
+"theme": "games",
+"group": "game-044",
+"question": "Кого в BioShock защищают Большие Папочки?",
+"answers": [
+"Маленьких Сестричек",
+"Туристов",
+"Солдаты",
+"Учёных"
+],
+"correct": 0,
+"explanation": "Big Daddy сопровождает Little Sister."
+},
+{
+"id": "club_games_134",
+"theme": "games",
+"group": "game-044",
+"question": "Какая студия разработала оригинальную «Age of Empires»?",
+"answers": [
+"Blizzard North",
+"BioWare",
+"Ensemble Studios",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Age of Empires» разработала Ensemble Studios."
+},
+{
+"id": "club_games_135",
+"theme": "games",
+"group": "game-044",
+"question": "С какой исторической эпохи начинается Age of Empires?",
+"answers": [
+"Средневековье",
+"Новое время",
+"Железный век",
+"Каменный век"
+],
+"correct": 3,
+"explanation": "Верно: Каменный век. Вопрос относится к игре «Age of Empires»."
+},
+{
+"id": "club_games_136",
+"theme": "games",
+"group": "game-045",
+"question": "Кто выступает врагом суперкомпьютера SHODAN в System Shock?",
+"answers": [
+"Пират",
+"Штурмовик",
+"Хакер",
+"Космонавт"
+],
+"correct": 2,
+"explanation": "Игрок управляет неназванным хакером."
+},
+{
+"id": "club_games_137",
+"theme": "games",
+"group": "game-045",
+"question": "Какая студия разработала оригинальную «Red Alert»?",
+"answers": [
+"Westwood Studios",
+"Blizzard North",
+"New World Computing",
+"Valve"
+],
+"correct": 0,
+"explanation": "Оригинальную «Red Alert» разработала Westwood Studios."
+},
+{
+"id": "club_games_138",
+"theme": "games",
+"group": "game-045",
+"question": "Что такое Хроносфера в Red Alert?",
+"answers": [
+"Нефтяная вышка",
+"Устройство телепортации",
+"Защитная стена",
+"Космический корабль"
+],
+"correct": 1,
+"explanation": "Верно: Устройство телепортации. Вопрос относится к игре «Red Alert»."
+},
+{
+"id": "club_games_139",
+"theme": "games",
+"group": "game-046",
+"question": "Кого изображает знаменитая настольная игра в The Sims?",
+"answers": [
+"Зергов",
+"Симов",
+"Бобров",
+"Покемонов"
+],
+"correct": 1,
+"explanation": "Персонажи The Sims называются симами."
+},
+{
+"id": "club_games_140",
+"theme": "games",
+"group": "game-046",
+"question": "Какая студия разработала оригинальную «Assassin's Creed»?",
+"answers": [
+"Valve",
+"BioWare",
+"Ubisoft Montreal",
+"Crytek"
+],
+"correct": 2,
+"explanation": "Оригинальную «Assassin's Creed» разработала Ubisoft Montreal."
+},
+{
+"id": "club_games_141",
+"theme": "games",
+"group": "game-046",
+"question": "Как зовут ассасина из первой Assassin's Creed?",
+"answers": [
+"Арно",
+"Альтаир",
+"Эцио",
+"Коннор"
+],
+"correct": 1,
+"explanation": "Верно: Альтаир. Вопрос относится к игре «Assassin's Creed»."
+},
+{
+"id": "club_games_142",
+"theme": "games",
+"group": "game-047",
+"question": "Как называется желание, которое персонажи The Sims выражают над головой?",
+"answers": [
+"Пузырь мыслей",
+"Чек-поинт",
+"Чатбот",
+"Квест-маркер"
+],
+"correct": 0,
+"explanation": "Игра показывает действия и мысли симов пиктограммами."
+},
+{
+"id": "club_games_143",
+"theme": "games",
+"group": "game-047",
+"question": "Какая студия разработала оригинальную «Stronghold»?",
+"answers": [
+"Firefly Studios",
+"Valve",
+"Crytek",
+"BioWare"
+],
+"correct": 0,
+"explanation": "Оригинальную «Stronghold» разработала Firefly Studios."
+},
+{
+"id": "club_games_144",
+"theme": "games",
+"group": "game-047",
+"question": "Какой ресурс нужен для производства хлеба в Stronghold?",
+"answers": [
+"Уголь",
+"Мана",
+"Мука",
+"Веспен"
+],
+"correct": 2,
+"explanation": "Верно: Мука. Вопрос относится к игре «Stronghold»."
+},
+{
+"id": "club_games_145",
+"theme": "games",
+"group": "game-048",
+"question": "Какой ландшафт делает SimCity не просто набором кварталов?",
+"answers": [
+"Арена",
+"Космический сектор",
+"Подземелье",
+"Городская карта"
+],
+"correct": 3,
+"explanation": "В SimCity игрок развивает инфраструктуру города."
+},
+{
+"id": "club_games_146",
+"theme": "games",
+"group": "game-048",
+"question": "Какая студия разработала оригинальную «Max Payne»?",
+"answers": [
+"BioWare",
+"Remedy Entertainment",
+"Valve",
+"Crytek"
+],
+"correct": 1,
+"explanation": "Оригинальную «Max Payne» разработала Remedy Entertainment."
+},
+{
+"id": "club_games_147",
+"theme": "games",
+"group": "game-048",
+"question": "Какую особенность стрельбы прославил Max Payne?",
+"answers": [
+"Bullet time",
+"Chronosphere",
+"Overwatch",
+"V.A.T.S."
+],
+"correct": 0,
+"explanation": "Верно: Bullet time. Вопрос относится к игре «Max Payne»."
+},
+{
+"id": "club_games_148",
+"theme": "games",
+"group": "game-049",
+"question": "Чем прославилась Theme Hospital помимо строительства клиники?",
+"answers": [
+"Пиратскими боями",
+"Захватом планет",
+"Уличными гонками",
+"Абсурдными болезнями"
+],
+"correct": 3,
+"explanation": "В игре лечат выдуманные и комичные заболевания."
+},
+{
+"id": "club_games_149",
+"theme": "games",
+"group": "game-049",
+"question": "Какая студия разработала оригинальную «Resident Evil 2»?",
+"answers": [
+"Valve",
+"BioWare",
+"Capcom",
+"Blizzard North"
+],
+"correct": 2,
+"explanation": "Оригинальную «Resident Evil 2» разработала Capcom."
+},
+{
+"id": "club_games_150",
+"theme": "games",
+"group": "game-049",
+"question": "Как зовут молодого полицейского Resident Evil 2?",
+"answers": [
+"Крис Редфилд",
+"Барри Бёртон",
+"Итан Уинтерс",
+"Леон Кеннеди"
+],
+"correct": 3,
+"explanation": "Верно: Леон Кеннеди. Вопрос относится к игре «Resident Evil 2»."
+},
+{
+"id": "club_games_151",
+"theme": "games",
+"group": "game-050",
+"question": "Какой предмет герой Thief чаще использует для бесшумного устранения света?",
+"answers": [
+"Водяные стрелы",
+"Лазер",
+"Свитки огня",
+"Плазменные гранаты"
+],
+"correct": 0,
+"explanation": "Водяные стрелы гасят факелы."
+},
+{
+"id": "club_games_152",
+"theme": "games",
+"group": "game-050",
+"question": "Какая студия разработала оригинальную «Diablo II»?",
+"answers": [
+"BioWare",
+"Crytek",
+"Blizzard North",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Diablo II» разработала Blizzard North."
+},
+{
+"id": "club_games_153",
+"theme": "games",
+"group": "game-050",
+"question": "Кто является главным боссом второго акта Diablo II?",
+"answers": [
+"Андариэль",
+"Баал",
+"Дуриэль",
+"Мефисто"
+],
+"correct": 2,
+"explanation": "Верно: Дуриэль. Вопрос относится к игре «Diablo II»."
+},
+{
+"id": "club_games_154",
+"theme": "games",
+"group": "game-051",
+"question": "Чего боятся герои Silent Hill сильнее всего в тумане?",
+"answers": [
+"Монстров",
+"Бандитов на машинах",
+"Метеоритов",
+"Зергов"
+],
+"correct": 0,
+"explanation": "Серия сочетает психологический хоррор с монстрами."
+},
+{
+"id": "club_games_155",
+"theme": "games",
+"group": "game-051",
+"question": "Какая студия разработала оригинальную «Fable»?",
+"answers": [
+"BioWare",
+"Crytek",
+"Valve",
+"Big Blue Box"
+],
+"correct": 3,
+"explanation": "Оригинальную «Fable» разработала Big Blue Box."
+},
+{
+"id": "club_games_156",
+"theme": "games",
+"group": "game-051",
+"question": "Как называется страна, в которой происходит действие Fable?",
+"answers": [
+"Азерот",
+"Аркхэм",
+"Нирн",
+"Альбион"
+],
+"correct": 3,
+"explanation": "Верно: Альбион. Вопрос относится к игре «Fable»."
+},
+{
+"id": "club_games_157",
+"theme": "games",
+"group": "game-052",
+"question": "Как называется фирменный сигнал тревоги в Metal Gear Solid?",
+"answers": [
+"Красная звезда",
+"Карта сокровищ",
+"Золотой кубок",
+"Восклицательный знак «!»"
+],
+"correct": 3,
+"explanation": "Над головой обнаружившего героя врага появляется «!»."
+},
+{
+"id": "club_games_158",
+"theme": "games",
+"group": "game-052",
+"question": "Какая студия разработала оригинальную «Need for Speed: Most Wanted»?",
+"answers": [
+"Crytek",
+"EA Black Box",
+"Valve",
+"BioWare"
+],
+"correct": 1,
+"explanation": "Оригинальную «Need for Speed: Most Wanted» разработала EA Black Box."
+},
+{
+"id": "club_games_159",
+"theme": "games",
+"group": "game-052",
+"question": "Как зовут главного соперника в Most Wanted 2005?",
+"answers": [
+"Эдди",
+"Дариус",
+"Рэйзор",
+"Кросс"
+],
+"correct": 2,
+"explanation": "Верно: Рэйзор. Вопрос относится к игре «Need for Speed: Most Wanted»."
+},
+{
+"id": "club_games_160",
+"theme": "games",
+"group": "game-053",
+"question": "Какой картонный предмет помогает Снейку прятаться?",
+"answers": [
+"Чемодан",
+"Бочка с мёдом",
+"Коробка",
+"Книга"
+],
+"correct": 2,
+"explanation": "Снейк знаменит маскировкой под картонную коробку."
+},
+{
+"id": "club_games_161",
+"theme": "games",
+"group": "game-053",
+"question": "Какая студия разработала оригинальную «Star Wars Jedi Knight II: Jedi Outcast»?",
+"answers": [
+"Raven Software",
+"Valve",
+"Crytek",
+"BioWare"
+],
+"correct": 0,
+"explanation": "Оригинальную «Star Wars Jedi Knight II: Jedi Outcast» разработала Raven Software."
+},
+{
+"id": "club_games_162",
+"theme": "games",
+"group": "game-053",
+"question": "Как зовут главного героя Jedi Outcast?",
+"answers": [
+"Дарт Реван",
+"Кайл Катарн",
+"Кэл Кестис",
+"Дарт Малак"
+],
+"correct": 1,
+"explanation": "Верно: Кайл Катарн. Вопрос относится к игре «Star Wars Jedi Knight II: Jedi Outcast»."
+},
+{
+"id": "club_games_163",
+"theme": "games",
+"group": "game-054",
+"question": "Какая тактика основная для игры Lemmings?",
+"answers": [
+"Вести танковые бои",
+"Устроить гонку",
+"Разрушить базу врага",
+"Спасти толпу, раздавая умения"
+],
+"correct": 3,
+"explanation": "Леммингам назначают роли, чтобы провести их до выхода."
+},
+{
+"id": "club_games_164",
+"theme": "games",
+"group": "game-054",
+"question": "Какая студия разработала оригинальную «Metal Gear Solid 2»?",
+"answers": [
+"BioWare",
+"Konami Computer Entertainment Japan",
+"Valve",
+"Crytek"
+],
+"correct": 1,
+"explanation": "Оригинальную «Metal Gear Solid 2» разработала Konami Computer Entertainment Japan."
+},
+{
+"id": "club_games_165",
+"theme": "games",
+"group": "game-054",
+"question": "Как зовут персонажа, за которого играют большую часть MGS2?",
+"answers": [
+"Сокол",
+"Райден",
+"Солид Снейк",
+"Отакон"
+],
+"correct": 1,
+"explanation": "Верно: Райден. Вопрос относится к игре «Metal Gear Solid 2»."
+},
+{
+"id": "club_games_166",
+"theme": "games",
+"group": "game-055",
+"question": "Какой из вариантов является классическим строением русских в Red Alert?",
+"answers": [
+"Тесла-катушка",
+"Инкубатор",
+"Зиккурат",
+"Пилон"
+],
+"correct": 0,
+"explanation": "Тесла-катушки обороняют советские базы."
+},
+{
+"id": "club_games_167",
+"theme": "games",
+"group": "game-055",
+"question": "Какая студия разработала оригинальную «Star Wars Jedi Knight: Jedi Academy»?",
+"answers": [
+"BioWare",
+"Raven Software",
+"Crytek",
+"Valve"
+],
+"correct": 1,
+"explanation": "Оригинальную «Star Wars Jedi Knight: Jedi Academy» разработала Raven Software."
+},
+{
+"id": "club_games_168",
+"theme": "games",
+"group": "game-055",
+"question": "Как зовут ученика-джедая, за которого играет пользователь?",
+"answers": [
+"Люк Скайуокер",
+"Кайл Катарн",
+"Джейден Корр",
+"Реван"
+],
+"correct": 2,
+"explanation": "Верно: Джейден Корр. Вопрос относится к игре «Star Wars Jedi Knight: Jedi Academy»."
+},
+{
+"id": "club_games_169",
+"theme": "games",
+"group": "game-056",
+"question": "В Dune II кто сражается за добычу меланжа?",
+"answers": [
+"Фракции Fallout",
+"Протоссы и зерги",
+"Великие дома",
+"Альянс и Орда"
+],
+"correct": 2,
+"explanation": "Атрейдесы, Харконнены и Ордосы борются за спайс."
+},
+{
+"id": "club_games_170",
+"theme": "games",
+"group": "game-056",
+"question": "Какая студия разработала оригинальную «Dungeon Keeper»?",
+"answers": [
+"Bullfrog Productions",
+"Blizzard North",
+"BioWare",
+"Valve"
+],
+"correct": 0,
+"explanation": "Оригинальную «Dungeon Keeper» разработала Bullfrog Productions."
+},
+{
+"id": "club_games_171",
+"theme": "games",
+"group": "game-056",
+"question": "Кого игрок защищает в Dungeon Keeper?",
+"answers": [
+"Космическую станцию",
+"Своё подземелье",
+"Замок короля",
+"Подводный город"
+],
+"correct": 1,
+"explanation": "Верно: Своё подземелье. Вопрос относится к игре «Dungeon Keeper»."
+},
+{
+"id": "club_games_172",
+"theme": "games",
+"group": "game-057",
+"question": "Какого вида необычное оружие есть в Worms?",
+"answers": [
+"BFG 9000",
+"Снайперка AWP",
+"Световой меч",
+"Овца со взрывчаткой"
+],
+"correct": 3,
+"explanation": "Взрывающаяся овца — фирменная шутка Worms."
+},
+{
+"id": "club_games_173",
+"theme": "games",
+"group": "game-057",
+"question": "Какая студия разработала оригинальную «Mafia»?",
+"answers": [
+"BioWare",
+"Illusion Softworks",
+"Crytek",
+"Valve"
+],
+"correct": 1,
+"explanation": "Оригинальную «Mafia» разработала Illusion Softworks."
+},
+{
+"id": "club_games_174",
+"theme": "games",
+"group": "game-057",
+"question": "Как зовут главного героя Mafia: The City of Lost Heaven?",
+"answers": [
+"Томми Анджело",
+"Вито Скалетта",
+"Джо Барбаро",
+"Линкольн Клей"
+],
+"correct": 0,
+"explanation": "Верно: Томми Анджело. Вопрос относится к игре «Mafia»."
+},
+{
+"id": "club_games_175",
+"theme": "games",
+"group": "game-058",
+"question": "Какая игра стала символом строительства парка с американскими горками?",
+"answers": [
+"Doom II",
+"Deus Ex",
+"SimCity",
+"RollerCoaster Tycoon"
+],
+"correct": 3,
+"explanation": "RollerCoaster Tycoon посвящена паркам аттракционов."
+},
+{
+"id": "club_games_176",
+"theme": "games",
+"group": "game-058",
+"question": "Какая студия разработала оригинальную «Dune 2000»?",
+"answers": [
+"Blizzard North",
+"Valve",
+"Intelligent Games",
+"BioWare"
+],
+"correct": 2,
+"explanation": "Оригинальную «Dune 2000» разработала Intelligent Games."
+},
+{
+"id": "club_games_177",
+"theme": "games",
+"group": "game-058",
+"question": "Какой ресурс добывают дома на Арракисе?",
+"answers": [
+"Веспен",
+"Мана",
+"Пряность",
+"Тиберий"
+],
+"correct": 2,
+"explanation": "Верно: Пряность. Вопрос относится к игре «Dune 2000»."
+},
+{
+"id": "club_games_178",
+"theme": "games",
+"group": "game-059",
+"question": "Какой враг в Resident Evil преследует героиню, крича «STARS!»?",
+"answers": [
+"Немезис",
+"Биркин",
+"Тиран Т-103",
+"Ликер"
+],
+"correct": 0,
+"explanation": "Немезис преследует Джилл в Resident Evil 3."
+},
+{
+"id": "club_games_179",
+"theme": "games",
+"group": "game-059",
+"question": "Какая студия разработала оригинальную «StarCraft: Brood War»?",
+"answers": [
+"Blizzard Entertainment",
+"Blizzard North",
+"Valve",
+"BioWare"
+],
+"correct": 0,
+"explanation": "Оригинальную «StarCraft: Brood War» разработала Blizzard Entertainment."
+},
+{
+"id": "club_games_180",
+"theme": "games",
+"group": "game-059",
+"question": "Как зовут Королеву Клинков?",
+"answers": [
+"Зератул",
+"Мира Хан",
+"Нова",
+"Сара Керриган"
+],
+"correct": 3,
+"explanation": "Верно: Сара Керриган. Вопрос относится к игре «StarCraft: Brood War»."
+},
+{
+"id": "club_games_181",
+"theme": "games",
+"group": "game-060",
+"question": "Почему у Геральта прозвище Белый Волк?",
+"answers": [
+"Из-за белых доспехов",
+"Из-за заклинания",
+"Из-за фамилии",
+"Из-за седых волос и школы Волка"
+],
+"correct": 3,
+"explanation": "Белые волосы — характерная черта ведьмака Геральта."
+},
+{
+"id": "club_games_182",
+"theme": "games",
+"group": "game-060",
+"question": "Какая студия разработала оригинальную «Thief II: The Metal Age»?",
+"answers": [
+"Looking Glass Studios",
+"Crytek",
+"Valve",
+"BioWare"
+],
+"correct": 0,
+"explanation": "Оригинальную «Thief II: The Metal Age» разработала Looking Glass Studios."
+},
+{
+"id": "club_games_183",
+"theme": "games",
+"group": "game-060",
+"question": "Какая группировка — главный противник Гаррета во второй Thief?",
+"answers": [
+"Механисты",
+"Паладины",
+"Хранители",
+"Братство Стали"
+],
+"correct": 0,
+"explanation": "Верно: Механисты. Вопрос относится к игре «Thief II: The Metal Age»."
+},
+{
+"id": "club_games_184",
+"theme": "games",
+"group": "game-061",
+"question": "В какой игре встречается или упоминается «Божеством»?",
+"answers": [
+"Thief II: The Metal Age",
+"Assassin's Creed",
+"Monkey Island 2",
+"Populous"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Populous»: Кем выступает игрок в Populous — Божеством."
+},
+{
+"id": "club_games_185",
+"theme": "games",
+"group": "game-061",
+"question": "Какая студия разработала оригинальную «Populous»?",
+"answers": [
+"id Software",
+"Bullfrog Productions",
+"DMA Design",
+"LucasArts"
+],
+"correct": 1,
+"explanation": "Оригинальную «Populous» разработала Bullfrog Productions."
+},
+{
+"id": "club_games_186",
+"theme": "games",
+"group": "game-061",
+"question": "Кем выступает игрок в Populous?",
+"answers": [
+"Врачом",
+"Пиратом",
+"Пожарным",
+"Божеством"
+],
+"correct": 3,
+"explanation": "Верно: Божеством. Вопрос относится к игре «Populous»."
+},
+{
+"id": "club_games_187",
+"theme": "games",
+"group": "game-062",
+"question": "В какой игре встречается или упоминается «HK-47»?",
+"answers": [
+"Emperor: Battle for Dune",
+"Space Quest",
+"Planescape: Torment",
+"Star Wars: Knights of the Old Republic"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Star Wars: Knights of the Old Republic»: Как зовут саркастичного дроида-убийцу в KOTOR — HK-47."
+},
+{
+"id": "club_games_188",
+"theme": "games",
+"group": "game-062",
+"question": "Какая студия разработала оригинальную «Star Wars: Knights of the Old Republic»?",
+"answers": [
+"Valve",
+"BioWare",
+"Crytek",
+"GSC Game World"
+],
+"correct": 1,
+"explanation": "Оригинальную «Star Wars: Knights of the Old Republic» разработала BioWare."
+},
+{
+"id": "club_games_189",
+"theme": "games",
+"group": "game-062",
+"question": "Как зовут саркастичного дроида-убийцу в KOTOR?",
+"answers": [
+"R2-D2",
+"C-3PO",
+"HK-47",
+"BB-8"
+],
+"correct": 2,
+"explanation": "Верно: HK-47. Вопрос относится к игре «Star Wars: Knights of the Old Republic»."
+},
+{
+"id": "club_games_190",
+"theme": "games",
+"group": "game-063",
+"question": "В какой игре встречается или упоминается «Симлиш»?",
+"answers": [
+"DOOM",
+"Assassin's Creed",
+"Grand Theft Auto: San Andreas",
+"The Sims"
+],
+"correct": 3,
+"explanation": "Это подсказка к «The Sims»: Как называется язык персонажей серии The Sims — Симлиш."
+},
+{
+"id": "club_games_191",
+"theme": "games",
+"group": "game-063",
+"question": "Какая студия разработала оригинальную «The Sims»?",
+"answers": [
+"Valve",
+"Crytek",
+"BioWare",
+"Maxis"
+],
+"correct": 3,
+"explanation": "Оригинальную «The Sims» разработала Maxis."
+},
+{
+"id": "club_games_192",
+"theme": "games",
+"group": "game-063",
+"question": "Как называется язык персонажей серии The Sims?",
+"answers": [
+"Хаттский",
+"Симлиш",
+"Клингонский",
+"На'ви"
+],
+"correct": 1,
+"explanation": "Верно: Симлиш. Вопрос относится к игре «The Sims»."
+},
+{
+"id": "club_games_193",
+"theme": "games",
+"group": "game-064",
+"question": "К какой игре относится подсказка «Шепард»?",
+"answers": [
+"Mass Effect",
+"Myst",
+"Assassin's Creed",
+"Far Cry"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Mass Effect»: Как зовут капитана корабля «Нормандия» — Шепард."
+},
+{
+"id": "club_games_194",
+"theme": "games",
+"group": "game-064",
+"question": "Какая студия разработала оригинальную «Mass Effect»?",
+"answers": [
+"Valve",
+"Crytek",
+"GSC Game World",
+"BioWare"
+],
+"correct": 3,
+"explanation": "Оригинальную «Mass Effect» разработала BioWare."
+},
+{
+"id": "club_games_195",
+"theme": "games",
+"group": "game-064",
+"question": "Как зовут командора, которым управляет игрок в Mass Effect?",
+"answers": [
+"Шепард",
+"Андерсон",
+"Гаррус",
+"Рекс"
+],
+"correct": 0,
+"explanation": "Игрок создаёт командора Шепарда, лидера команды «Нормандии»."
+},
+{
+"id": "club_games_196",
+"theme": "games",
+"group": "game-065",
+"question": "К какой игре относится подсказка «Крея»?",
+"answers": [
+"Star Wars: Knights of the Old Republic II",
+"Team Fortress Classic",
+"StarCraft",
+"Tomb Raider"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Star Wars: Knights of the Old Republic II»: Как зовут наставницу Изгнанницы в KOTOR II — Крея."
+},
+{
+"id": "club_games_197",
+"theme": "games",
+"group": "game-065",
+"question": "Какая студия разработала оригинальную «Star Wars: Knights of the Old Republic II»?",
+"answers": [
+"Obsidian Entertainment",
+"Crytek",
+"Valve",
+"BioWare"
+],
+"correct": 0,
+"explanation": "Оригинальную «Star Wars: Knights of the Old Republic II» разработала Obsidian Entertainment."
+},
+{
+"id": "club_games_198",
+"theme": "games",
+"group": "game-065",
+"question": "Как зовут наставницу Изгнанницы в KOTOR II?",
+"answers": [
+"Миссия",
+"Крея",
+"Бастила",
+"Морриган"
+],
+"correct": 1,
+"explanation": "Верно: Крея. Вопрос относится к игре «Star Wars: Knights of the Old Republic II»."
+},
+{
+"id": "club_games_199",
+"theme": "games",
+"group": "game-066",
+"question": "В какой игре встречается или упоминается «Мэнни Калавера»?",
+"answers": [
+"Star Wars: Knights of the Old Republic",
+"Thief II: The Metal Age",
+"Red Alert",
+"Grim Fandango"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Grim Fandango»: Как зовут главного героя Grim Fandango — Мэнни Калавера."
+},
+{
+"id": "club_games_200",
+"theme": "games",
+"group": "game-066",
+"question": "Какая студия разработала оригинальную «Grim Fandango»?",
+"answers": [
+"Blizzard North",
+"Valve",
+"LucasArts",
+"BioWare"
+],
+"correct": 2,
+"explanation": "Оригинальную «Grim Fandango» разработала LucasArts."
+},
+{
+"id": "club_games_201",
+"theme": "games",
+"group": "game-066",
+"question": "Как зовут главного героя Grim Fandango?",
+"answers": [
+"Мэнни Калавера",
+"Бернард",
+"Макс",
+"Гайбраш"
+],
+"correct": 0,
+"explanation": "Верно: Мэнни Калавера. Вопрос относится к игре «Grim Fandango»."
+},
+{
+"id": "club_games_202",
+"theme": "games",
+"group": "game-067",
+"question": "Узнай игру по детали: «Ларри Лаффер». Какая это игра?",
+"answers": [
+"Leisure Suit Larry in the Land of the Lounge Lizards",
+"StarCraft",
+"Lemmings",
+"Half-Life 2"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Leisure Suit Larry in the Land of the Lounge Lizards»: Как зовут главного героя Leisure Suit Larry — Ларри Лаффер."
+},
+{
+"id": "club_games_203",
+"theme": "games",
+"group": "game-067",
+"question": "Какая студия разработала оригинальную «Leisure Suit Larry in the Land of the Lounge Lizards»?",
+"answers": [
+"Bullfrog Productions",
+"Sierra On-Line",
+"DMA Design",
+"Delphine Software"
+],
+"correct": 1,
+"explanation": "Оригинальную «Leisure Suit Larry in the Land of the Lounge Lizards» разработала Sierra On-Line."
+},
+{
+"id": "club_games_204",
+"theme": "games",
+"group": "game-067",
+"question": "Как зовут главного героя Leisure Suit Larry?",
+"answers": [
+"Кинг Грэм",
+"Роджер Уилко",
+"Гайбраш Трипвуд",
+"Ларри Лаффер"
+],
+"correct": 3,
+"explanation": "Верно: Ларри Лаффер. Вопрос относится к игре «Leisure Suit Larry in the Land of the Lounge Lizards»."
+},
+{
+"id": "club_games_205",
+"theme": "games",
+"group": "game-068",
+"question": "К какой игре относится подсказка «Джеймс Сандерленд»?",
+"answers": [
+"Populous",
+"Star Wars: Knights of the Old Republic",
+"Silent Hill 2",
+"The Witcher"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Silent Hill 2»: Как зовут главного героя Silent Hill 2 — Джеймс Сандерленд."
+},
+{
+"id": "club_games_206",
+"theme": "games",
+"group": "game-068",
+"question": "Какая студия разработала оригинальную «Silent Hill 2»?",
+"answers": [
+"Team Silent",
+"Valve",
+"BioWare",
+"Crytek"
+],
+"correct": 0,
+"explanation": "Оригинальную «Silent Hill 2» разработала Team Silent."
+},
+{
+"id": "club_games_207",
+"theme": "games",
+"group": "game-068",
+"question": "Как зовут главного героя Silent Hill 2?",
+"answers": [
+"Трэвис Грейди",
+"Генри Таунсенд",
+"Гарри Мейсон",
+"Джеймс Сандерленд"
+],
+"correct": 3,
+"explanation": "Верно: Джеймс Сандерленд. Вопрос относится к игре «Silent Hill 2»."
+},
+{
+"id": "club_games_208",
+"theme": "games",
+"group": "game-069",
+"question": "В какой игре встречается или упоминается «Грэм»?",
+"answers": [
+"Neverwinter Nights",
+"Fallout",
+"King's Quest",
+"Heroes of Might and Magic III"
+],
+"correct": 2,
+"explanation": "Это подсказка к «King's Quest»: Как зовут главного героя первого King's Quest — Грэм."
+},
+{
+"id": "club_games_209",
+"theme": "games",
+"group": "game-069",
+"question": "Какая студия разработала оригинальную «King's Quest»?",
+"answers": [
+"Sierra On-Line",
+"Maxis",
+"Bullfrog Productions",
+"Namco"
+],
+"correct": 0,
+"explanation": "Оригинальную «King's Quest» разработала Sierra On-Line."
+},
+{
+"id": "club_games_210",
+"theme": "games",
+"group": "game-069",
+"question": "Как зовут главного героя первого King's Quest?",
+"answers": [
+"Ларри Лаффер",
+"Роджер Уилко",
+"Грэм",
+"Мэнни Калавера"
+],
+"correct": 2,
+"explanation": "Верно: Грэм. Вопрос относится к игре «King's Quest»."
+},
+{
+"id": "club_games_211",
+"theme": "games",
+"group": "game-070",
+"question": "К какой игре относится подсказка «Парк аттракционов»?",
+"answers": [
+"Half-Life 2",
+"Star Wars: Knights of the Old Republic",
+"RollerCoaster Tycoon",
+"Leisure Suit Larry in the Land of the Lounge Lizards"
+],
+"correct": 2,
+"explanation": "Это подсказка к «RollerCoaster Tycoon»: Что строит игрок в RollerCoaster Tycoon — Парк аттракционов."
+},
+{
+"id": "club_games_212",
+"theme": "games",
+"group": "game-070",
+"question": "Какая студия разработала оригинальную «RollerCoaster Tycoon»?",
+"answers": [
+"Chris Sawyer Productions",
+"Crytek",
+"BioWare",
+"Valve"
+],
+"correct": 0,
+"explanation": "Оригинальную «RollerCoaster Tycoon» разработала Chris Sawyer Productions."
+},
+{
+"id": "club_games_213",
+"theme": "games",
+"group": "game-070",
+"question": "Что строит игрок в RollerCoaster Tycoon?",
+"answers": [
+"Парк аттракционов",
+"Метро",
+"Город на Марсе",
+"Военную базу"
+],
+"correct": 0,
+"explanation": "Верно: Парк аттракционов. Вопрос относится к игре «RollerCoaster Tycoon»."
+},
+{
+"id": "club_games_214",
+"theme": "games",
+"group": "game-071",
+"question": "В какой игре встречается или упоминается «Конрад»?",
+"answers": [
+"System Shock 2",
+"Red Alert",
+"Flashback",
+"Crysis"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Flashback»: Как зовут главного героя Flashback — Конрад."
+},
+{
+"id": "club_games_215",
+"theme": "games",
+"group": "game-071",
+"question": "Какая студия разработала оригинальную «Flashback»?",
+"answers": [
+"id Software",
+"New World Computing",
+"Blizzard North",
+"Delphine Software"
+],
+"correct": 3,
+"explanation": "Оригинальную «Flashback» разработала Delphine Software."
+},
+{
+"id": "club_games_216",
+"theme": "games",
+"group": "game-071",
+"question": "Как зовут главного героя Flashback?",
+"answers": [
+"Реван",
+"Конрад",
+"Лестер",
+"Артём"
+],
+"correct": 1,
+"explanation": "Верно: Конрад. Вопрос относится к игре «Flashback»."
+},
+{
+"id": "club_games_217",
+"theme": "games",
+"group": "game-072",
+"question": "Узнай игру по детали: «Убежище 13». Какая это игра?",
+"answers": [
+"Fallout",
+"Dungeon Keeper",
+"Tomb Raider",
+"Star Wars: Knights of the Old Republic II"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Fallout»: Как называется убежище героя первой Fallout — Убежище 13."
+},
+{
+"id": "club_games_218",
+"theme": "games",
+"group": "game-072",
+"question": "Какая студия разработала оригинальную «Fallout»?",
+"answers": [
+"BioWare",
+"Blizzard North",
+"Interplay Productions",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Fallout» разработала Interplay Productions."
+},
+{
+"id": "club_games_219",
+"theme": "games",
+"group": "game-072",
+"question": "Как называется убежище героя первой Fallout?",
+"answers": [
+"Убежище 111",
+"Убежище 101",
+"Убежище 13",
+"Убежище 76"
+],
+"correct": 2,
+"explanation": "Верно: Убежище 13. Вопрос относится к игре «Fallout»."
+},
+{
+"id": "club_games_220",
+"theme": "games",
+"group": "game-073",
+"question": "Узнай игру по детали: «Атрейдесы». Какая это игра?",
+"answers": [
+"Emperor: Battle for Dune",
+"System Shock 2",
+"Deus Ex",
+"Red Alert"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Emperor: Battle for Dune»: Какой из домов можно выбрать в Emperor: Battle for Dune — Атрейдесы."
+},
+{
+"id": "club_games_221",
+"theme": "games",
+"group": "game-073",
+"question": "Какая студия разработала оригинальную «Emperor: Battle for Dune»?",
+"answers": [
+"BioWare",
+"Westwood Studios",
+"Crytek",
+"Valve"
+],
+"correct": 1,
+"explanation": "Оригинальную «Emperor: Battle for Dune» разработала Westwood Studios."
+},
+{
+"id": "club_games_222",
+"theme": "games",
+"group": "game-073",
+"question": "Какой из домов можно выбрать в Emperor: Battle for Dune?",
+"answers": [
+"Баратеоны",
+"Атрейдесы",
+"Ланнистеры",
+"Старки"
+],
+"correct": 1,
+"explanation": "Верно: Атрейдесы. Вопрос относится к игре «Emperor: Battle for Dune»."
+},
+{
+"id": "club_games_223",
+"theme": "games",
+"group": "game-074",
+"question": "Узнай игру по детали: «Либерти-Сити». Какая это игра?",
+"answers": [
+"Baldur's Gate II",
+"Star Wars: Knights of the Old Republic",
+"Deus Ex",
+"Grand Theft Auto III"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Grand Theft Auto III»: Как называется город GTA III — Либерти-Сити."
+},
+{
+"id": "club_games_224",
+"theme": "games",
+"group": "game-074",
+"question": "Какая студия разработала оригинальную «Grand Theft Auto III»?",
+"answers": [
+"DMA Design",
+"Crytek",
+"BioWare",
+"Valve"
+],
+"correct": 0,
+"explanation": "Оригинальную «Grand Theft Auto III» разработала DMA Design."
+},
+{
+"id": "club_games_225",
+"theme": "games",
+"group": "game-074",
+"question": "Как называется город GTA III?",
+"answers": [
+"Сан-Фиерро",
+"Лос-Сантос",
+"Вайс-Сити",
+"Либерти-Сити"
+],
+"correct": 3,
+"explanation": "Верно: Либерти-Сити. Вопрос относится к игре «Grand Theft Auto III»."
+},
+{
+"id": "club_games_226",
+"theme": "games",
+"group": "game-075",
+"question": "В какой игре встречается или упоминается «Лечак»?",
+"answers": [
+"Resident Evil",
+"The Secret of Monkey Island",
+"Sam & Max Hit the Road",
+"Stronghold Crusader"
+],
+"correct": 1,
+"explanation": "Это подсказка к «The Secret of Monkey Island»: Кто главный противник Гайбраша — Лечак."
+},
+{
+"id": "club_games_227",
+"theme": "games",
+"group": "game-075",
+"question": "Какая студия разработала оригинальную «The Secret of Monkey Island»?",
+"answers": [
+"LucasArts",
+"id Software",
+"Lucasfilm Games",
+"DMA Design"
+],
+"correct": 2,
+"explanation": "Оригинальную «The Secret of Monkey Island» разработала Lucasfilm Games."
+},
+{
+"id": "club_games_228",
+"theme": "games",
+"group": "game-075",
+"question": "Кто главный противник Гайбраша?",
+"answers": [
+"Лечак",
+"Барбосса",
+"Дэйви Джонс",
+"Чёрная Борода"
+],
+"correct": 0,
+"explanation": "Верно: Лечак. Вопрос относится к игре «The Secret of Monkey Island»."
+},
+{
+"id": "club_games_229",
+"theme": "games",
+"group": "game-076",
+"question": "Узнай игру по детали: «Томми Версетти». Какая это игра?",
+"answers": [
+"Tomb Raider II",
+"Day of the Tentacle",
+"Grand Theft Auto: Vice City",
+"System Shock"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Grand Theft Auto: Vice City»: Как зовут главного героя Vice City — Томми Версетти."
+},
+{
+"id": "club_games_230",
+"theme": "games",
+"group": "game-076",
+"question": "Какая студия разработала оригинальную «Grand Theft Auto: Vice City»?",
+"answers": [
+"Rockstar North",
+"BioWare",
+"Valve",
+"Crytek"
+],
+"correct": 0,
+"explanation": "Оригинальную «Grand Theft Auto: Vice City» разработала Rockstar North."
+},
+{
+"id": "club_games_231",
+"theme": "games",
+"group": "game-076",
+"question": "Как зовут главного героя Vice City?",
+"answers": [
+"Томми Версетти",
+"Карл Джонсон",
+"Клод",
+"Нико Беллик"
+],
+"correct": 0,
+"explanation": "Верно: Томми Версетти. Вопрос относится к игре «Grand Theft Auto: Vice City»."
+},
+{
+"id": "club_games_232",
+"theme": "games",
+"group": "game-077",
+"question": "К какой игре относится подсказка «Джей-Си Дентон»?",
+"answers": [
+"Warcraft III",
+"Deus Ex",
+"SimCity 2000",
+"Need for Speed: Underground"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Deus Ex»: Как зовут агента — главного героя Deus Ex — Джей-Си Дентон."
+},
+{
+"id": "club_games_233",
+"theme": "games",
+"group": "game-077",
+"question": "Какая студия разработала оригинальную «Deus Ex»?",
+"answers": [
+"BioWare",
+"Crytek",
+"Ion Storm",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Deus Ex» разработала Ion Storm."
+},
+{
+"id": "club_games_234",
+"theme": "games",
+"group": "game-077",
+"question": "Как зовут агента — главного героя Deus Ex?",
+"answers": [
+"Алекс Мерсер",
+"Джей-Си Дентон",
+"Пол Атрейдес",
+"Адам Дженсен"
+],
+"correct": 1,
+"explanation": "Верно: Джей-Си Дентон. Вопрос относится к игре «Deus Ex»."
+},
+{
+"id": "club_games_235",
+"theme": "games",
+"group": "game-078",
+"question": "Узнай игру по детали: «На Ближнем Востоке». Какая это игра?",
+"answers": [
+"Command & Conquer",
+"Gothic",
+"Stronghold Crusader",
+"Team Fortress Classic"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Stronghold Crusader»: Где разворачиваются битвы Stronghold Crusader — На Ближнем Востоке."
+},
+{
+"id": "club_games_236",
+"theme": "games",
+"group": "game-078",
+"question": "Какая студия разработала оригинальную «Stronghold Crusader»?",
+"answers": [
+"Valve",
+"BioWare",
+"Crytek",
+"Firefly Studios"
+],
+"correct": 3,
+"explanation": "Оригинальную «Stronghold Crusader» разработала Firefly Studios."
+},
+{
+"id": "club_games_237",
+"theme": "games",
+"group": "game-078",
+"question": "Где разворачиваются битвы Stronghold Crusader?",
+"answers": [
+"В Японии",
+"На Татуине",
+"На Ближнем Востоке",
+"На Марсе"
+],
+"correct": 2,
+"explanation": "Верно: На Ближнем Востоке. Вопрос относится к игре «Stronghold Crusader»."
+},
+{
+"id": "club_games_238",
+"theme": "games",
+"group": "game-079",
+"question": "К какой игре относится подсказка «Городом»?",
+"answers": [
+"Mass Effect",
+"Resident Evil 3: Nemesis",
+"Command & Conquer",
+"SimCity"
+],
+"correct": 3,
+"explanation": "Это подсказка к «SimCity»: Чем игрок управляет в SimCity — Городом."
+},
+{
+"id": "club_games_239",
+"theme": "games",
+"group": "game-079",
+"question": "Какая студия разработала оригинальную «SimCity»?",
+"answers": [
+"LucasArts",
+"DMA Design",
+"Maxis",
+"id Software"
+],
+"correct": 2,
+"explanation": "Оригинальную «SimCity» разработала Maxis."
+},
+{
+"id": "club_games_240",
+"theme": "games",
+"group": "game-079",
+"question": "Чем игрок управляет в SimCity?",
+"answers": [
+"Городом",
+"Космическим кораблём",
+"Подводной лодкой",
+"Спортивной командой"
+],
+"correct": 0,
+"explanation": "Верно: Городом. Вопрос относится к игре «SimCity»."
+},
+{
+"id": "club_games_241",
+"theme": "games",
+"group": "game-080",
+"question": "В какой игре встречается или упоминается «Шамблер»?",
+"answers": [
+"Age of Empires",
+"Command & Conquer",
+"Quake",
+"Mass Effect"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Quake»: Какой монстр относится к серии Quake — Шамблер."
+},
+{
+"id": "club_games_242",
+"theme": "games",
+"group": "game-080",
+"question": "Какая студия разработала оригинальную «Quake»?",
+"answers": [
+"id Software",
+"Blizzard North",
+"New World Computing",
+"Valve"
+],
+"correct": 0,
+"explanation": "Оригинальную «Quake» разработала id Software."
+},
+{
+"id": "club_games_243",
+"theme": "games",
+"group": "game-080",
+"question": "Какой монстр относится к серии Quake?",
+"answers": [
+"Манкубус",
+"Зерглинг",
+"Шамблер",
+"Хедкраб"
+],
+"correct": 2,
+"explanation": "Верно: Шамблер. Вопрос относится к игре «Quake»."
+},
+{
+"id": "club_games_244",
+"theme": "games",
+"group": "game-081",
+"question": "Узнай игру по детали: «Раккун-Сити». Какая это игра?",
+"answers": [
+"Far Cry",
+"Fallout",
+"Resident Evil",
+"Half-Life 2"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Resident Evil»: Как называется город из вселенной Resident Evil — Раккун-Сити."
+},
+{
+"id": "club_games_245",
+"theme": "games",
+"group": "game-081",
+"question": "Какая студия разработала оригинальную «Resident Evil»?",
+"answers": [
+"Blizzard North",
+"Valve",
+"Capcom",
+"New World Computing"
+],
+"correct": 2,
+"explanation": "Оригинальную «Resident Evil» разработала Capcom."
+},
+{
+"id": "club_games_246",
+"theme": "games",
+"group": "game-081",
+"question": "Как называется город из вселенной Resident Evil?",
+"answers": [
+"Раккун-Сити",
+"Сайлент-Хилл",
+"Сити 17",
+"Вайс-Сити"
+],
+"correct": 0,
+"explanation": "Верно: Раккун-Сити. Вопрос относится к игре «Resident Evil»."
+},
+{
+"id": "club_games_247",
+"theme": "games",
+"group": "game-082",
+"question": "Узнай игру по детали: «Имоэн». Какая это игра?",
+"answers": [
+"Hitman: Codename 47",
+"SimCity 2000",
+"Gothic",
+"Baldur's Gate"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Baldur's Gate»: Как зовут спутницу героя из Кэндлкипа — Имоэн."
+},
+{
+"id": "club_games_248",
+"theme": "games",
+"group": "game-082",
+"question": "Какая студия разработала оригинальную «Baldur's Gate»?",
+"answers": [
+"Valve",
+"BioWare",
+"Blizzard North",
+"New World Computing"
+],
+"correct": 1,
+"explanation": "Оригинальную «Baldur's Gate» разработала BioWare."
+},
+{
+"id": "club_games_249",
+"theme": "games",
+"group": "game-082",
+"question": "Как зовут спутницу героя из Кэндлкипа?",
+"answers": [
+"Морриган",
+"Йеннифэр",
+"Имоэн",
+"Бастила"
+],
+"correct": 2,
+"explanation": "Верно: Имоэн. Вопрос относится к игре «Baldur's Gate»."
+},
+{
+"id": "club_games_250",
+"theme": "games",
+"group": "game-083",
+"question": "В какой игре встречается или упоминается «Люди и орки»?",
+"answers": [
+"Fable",
+"Resident Evil 3: Nemesis",
+"Portal",
+"Warcraft: Orcs & Humans"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Warcraft: Orcs & Humans»: Какие две стороны сражаются в первом Warcraft — Люди и орки."
+},
+{
+"id": "club_games_251",
+"theme": "games",
+"group": "game-083",
+"question": "Какая студия разработала оригинальную «Warcraft: Orcs & Humans»?",
+"answers": [
+"New World Computing",
+"Valve",
+"Blizzard Entertainment",
+"Blizzard North"
+],
+"correct": 2,
+"explanation": "Оригинальную «Warcraft: Orcs & Humans» разработала Blizzard Entertainment."
+},
+{
+"id": "club_games_252",
+"theme": "games",
+"group": "game-083",
+"question": "Какие две стороны сражаются в первом Warcraft?",
+"answers": [
+"Люди и орки",
+"Зерги и терраны",
+"Нежить и эльфы",
+"Протоссы и терраны"
+],
+"correct": 0,
+"explanation": "Верно: Люди и орки. Вопрос относится к игре «Warcraft: Orcs & Humans»."
+},
+{
+"id": "club_games_253",
+"theme": "games",
+"group": "game-084",
+"question": "К какой игре относится подсказка «Нереварин»?",
+"answers": [
+"The Elder Scrolls III: Morrowind",
+"Stronghold",
+"Diablo II",
+"Neverwinter Nights"
+],
+"correct": 0,
+"explanation": "Это подсказка к «The Elder Scrolls III: Morrowind»: Как именуют главного героя Morrowind в пророчествах — Нереварин."
+},
+{
+"id": "club_games_254",
+"theme": "games",
+"group": "game-084",
+"question": "Какая студия разработала оригинальную «The Elder Scrolls III: Morrowind»?",
+"answers": [
+"Valve",
+"Crytek",
+"BioWare",
+"Bethesda Game Studios"
+],
+"correct": 3,
+"explanation": "Оригинальную «The Elder Scrolls III: Morrowind» разработала Bethesda Game Studios."
+},
+{
+"id": "club_games_255",
+"theme": "games",
+"group": "game-084",
+"question": "Как именуют главного героя Morrowind в пророчествах?",
+"answers": [
+"Драконорождённый",
+"Нереварин",
+"Избранный",
+"Безымянный"
+],
+"correct": 1,
+"explanation": "Верно: Нереварин. Вопрос относится к игре «The Elder Scrolls III: Morrowind»."
+},
+{
+"id": "club_games_256",
+"theme": "games",
+"group": "game-085",
+"question": "Узнай игру по детали: «Гайбраш Трипвуд». Какая это игра?",
+"answers": [
+"Icewind Dale",
+"DOOM",
+"King's Quest",
+"Monkey Island 2"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Monkey Island 2»: Как зовут пирата — героя Monkey Island — Гайбраш Трипвуд."
+},
+{
+"id": "club_games_257",
+"theme": "games",
+"group": "game-085",
+"question": "Какая студия разработала оригинальную «Monkey Island 2»?",
+"answers": [
+"id Software",
+"New World Computing",
+"Blizzard North",
+"LucasArts"
+],
+"correct": 3,
+"explanation": "Оригинальную «Monkey Island 2» разработала LucasArts."
+},
+{
+"id": "club_games_258",
+"theme": "games",
+"group": "game-085",
+"question": "Как зовут пирата — героя Monkey Island?",
+"answers": [
+"Элейн Марли",
+"Херман Туфрот",
+"Лечак",
+"Гайбраш Трипвуд"
+],
+"correct": 3,
+"explanation": "Верно: Гайбраш Трипвуд. Вопрос относится к игре «Monkey Island 2»."
+},
+{
+"id": "club_games_259",
+"theme": "games",
+"group": "game-086",
+"question": "В какой игре встречается или упоминается «Герои участвуют в бою»?",
+"answers": [
+"Star Wars Jedi Knight II: Jedi Outcast",
+"Heroes of Might and Magic IV",
+"Grand Theft Auto III",
+"SimCity 2000"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Heroes of Might and Magic IV»: Какая крупная особенность отличает Heroes IV от Heroes III — Герои участвуют в бою."
+},
+{
+"id": "club_games_260",
+"theme": "games",
+"group": "game-086",
+"question": "Какая студия разработала оригинальную «Heroes of Might and Magic IV»?",
+"answers": [
+"BioWare",
+"Crytek",
+"New World Computing",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Heroes of Might and Magic IV» разработала New World Computing."
+},
+{
+"id": "club_games_261",
+"theme": "games",
+"group": "game-086",
+"question": "Какая крупная особенность отличает Heroes IV от Heroes III?",
+"answers": [
+"Герои участвуют в бою",
+"Нет магии",
+"Нет героев",
+"Только две фракции"
+],
+"correct": 0,
+"explanation": "Верно: Герои участвуют в бою. Вопрос относится к игре «Heroes of Might and Magic IV»."
+},
+{
+"id": "club_games_262",
+"theme": "games",
+"group": "game-087",
+"question": "Узнай игру по детали: «Арракис». Какая это игра?",
+"answers": [
+"Dune II",
+"Baldur's Gate II",
+"Phantasmagoria",
+"Assassin's Creed"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Dune II»: Какая планета служит местом борьбы за пряность в Dune II — Арракис."
+},
+{
+"id": "club_games_263",
+"theme": "games",
+"group": "game-087",
+"question": "Какая студия разработала оригинальную «Dune II»?",
+"answers": [
+"id Software",
+"New World Computing",
+"Blizzard North",
+"Westwood Studios"
+],
+"correct": 3,
+"explanation": "Оригинальную «Dune II» разработала Westwood Studios."
+},
+{
+"id": "club_games_264",
+"theme": "games",
+"group": "game-087",
+"question": "Какая планета служит местом борьбы за пряность в Dune II?",
+"answers": [
+"Тарис",
+"Татуин",
+"Арракис",
+"Каладан"
+],
+"correct": 2,
+"explanation": "Верно: Арракис. Вопрос относится к игре «Dune II»."
+},
+{
+"id": "club_games_265",
+"theme": "games",
+"group": "game-088",
+"question": "В какой игре встречается или упоминается «Джилл Валентайн»?",
+"answers": [
+"Resident Evil 3: Nemesis",
+"StarCraft",
+"Half-Life 2",
+"StarCraft: Brood War"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Resident Evil 3: Nemesis»: Как зовут главную героиню Resident Evil 3 — Джилл Валентайн."
+},
+{
+"id": "club_games_266",
+"theme": "games",
+"group": "game-088",
+"question": "Какая студия разработала оригинальную «Resident Evil 3: Nemesis»?",
+"answers": [
+"Valve",
+"BioWare",
+"Capcom",
+"Crytek"
+],
+"correct": 2,
+"explanation": "Оригинальную «Resident Evil 3: Nemesis» разработала Capcom."
+},
+{
+"id": "club_games_267",
+"theme": "games",
+"group": "game-088",
+"question": "Как зовут главную героиню Resident Evil 3?",
+"answers": [
+"Ребекка Чемберс",
+"Клэр Редфилд",
+"Ада Вонг",
+"Джилл Валентайн"
+],
+"correct": 3,
+"explanation": "Верно: Джилл Валентайн. Вопрос относится к игре «Resident Evil 3: Nemesis»."
+},
+{
+"id": "club_games_268",
+"theme": "games",
+"group": "game-089",
+"question": "В какой игре встречается или упоминается «Нефть»?",
+"answers": [
+"Warcraft: Orcs & Humans",
+"Tiberian Sun",
+"Hitman: Codename 47",
+"Warcraft II"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Warcraft II»: Какой ресурс появляется в Warcraft II наряду с золотом и древесиной — Нефть."
+},
+{
+"id": "club_games_269",
+"theme": "games",
+"group": "game-089",
+"question": "Какая студия разработала оригинальную «Warcraft II»?",
+"answers": [
+"New World Computing",
+"Valve",
+"Blizzard North",
+"Blizzard Entertainment"
+],
+"correct": 3,
+"explanation": "Оригинальную «Warcraft II» разработала Blizzard Entertainment."
+},
+{
+"id": "club_games_270",
+"theme": "games",
+"group": "game-089",
+"question": "Какой ресурс появляется в Warcraft II наряду с золотом и древесиной?",
+"answers": [
+"Нефть",
+"Мана",
+"Кристаллы",
+"Железо"
+],
+"correct": 0,
+"explanation": "Верно: Нефть. Вопрос относится к игре «Warcraft II»."
+},
+{
+"id": "club_games_271",
+"theme": "games",
+"group": "game-090",
+"question": "К какой игре относится подсказка «Кинжал Сианя»?",
+"answers": [
+"Stronghold Crusader",
+"Sam & Max Hit the Road",
+"Heroes of Might and Magic II",
+"Tomb Raider II"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Tomb Raider II»: Как называется кинжал, за которым охотится Лара во второй Tomb Raider — Кинжал Сианя."
+},
+{
+"id": "club_games_272",
+"theme": "games",
+"group": "game-090",
+"question": "Какая студия разработала оригинальную «Tomb Raider II»?",
+"answers": [
+"BioWare",
+"Valve",
+"Blizzard North",
+"Core Design"
+],
+"correct": 3,
+"explanation": "Оригинальную «Tomb Raider II» разработала Core Design."
+},
+{
+"id": "club_games_273",
+"theme": "games",
+"group": "game-090",
+"question": "Как называется кинжал, за которым охотится Лара во второй Tomb Raider?",
+"answers": [
+"Кинжал времени",
+"Кинжал Сианя",
+"Проклятый клинок",
+"Клинок Хаоса"
+],
+"correct": 1,
+"explanation": "Верно: Кинжал Сианя. Вопрос относится к игре «Tomb Raider II»."
+},
+{
+"id": "club_games_274",
+"theme": "games",
+"group": "game-091",
+"question": "Узнай игру по детали: «Точки». Какая это игра?",
+"answers": [
+"Myst",
+"Half-Life 2",
+"Pac-Man",
+"Thief: The Dark Project"
+],
+"correct": 2,
+"explanation": "Это подсказка к «Pac-Man»: Что обычно собирает Пакман в лабиринте — Точки."
+},
+{
+"id": "club_games_275",
+"theme": "games",
+"group": "game-091",
+"question": "Какая студия разработала оригинальную «Pac-Man»?",
+"answers": [
+"Sierra On-Line",
+"Valve",
+"Namco",
+"Crytek"
+],
+"correct": 2,
+"explanation": "Оригинальную «Pac-Man» разработала Namco."
+},
+{
+"id": "club_games_276",
+"theme": "games",
+"group": "game-091",
+"question": "Что обычно собирает Пакман в лабиринте?",
+"answers": [
+"Точки",
+"Звёзды",
+"Яблоки",
+"Монеты"
+],
+"correct": 0,
+"explanation": "Верно: Точки. Вопрос относится к игре «Pac-Man»."
+},
+{
+"id": "club_games_277",
+"theme": "games",
+"group": "game-092",
+"question": "В какой игре встречается или упоминается «Байкером»?",
+"answers": [
+"Prince of Persia: The Sands of Time",
+"Full Throttle",
+"SimCity",
+"Thief II: The Metal Age"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Full Throttle»: Кем является Бен в Full Throttle — Байкером."
+},
+{
+"id": "club_games_278",
+"theme": "games",
+"group": "game-092",
+"question": "Какая студия разработала оригинальную «Full Throttle»?",
+"answers": [
+"Valve",
+"LucasArts",
+"Blizzard North",
+"New World Computing"
+],
+"correct": 1,
+"explanation": "Оригинальную «Full Throttle» разработала LucasArts."
+},
+{
+"id": "club_games_279",
+"theme": "games",
+"group": "game-092",
+"question": "Кем является Бен в Full Throttle?",
+"answers": [
+"Врачом",
+"Поваром",
+"Байкером",
+"Магом"
+],
+"correct": 2,
+"explanation": "Верно: Байкером. Вопрос относится к игре «Full Throttle»."
+},
+{
+"id": "club_games_280",
+"theme": "games",
+"group": "game-093",
+"question": "Узнай игру по детали: «Мист». Какая это игра?",
+"answers": [
+"Age of Empires II",
+"Myst",
+"Hitman: Codename 47",
+"Quake II"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Myst»: Как называется остров в игре Myst — Мист."
+},
+{
+"id": "club_games_281",
+"theme": "games",
+"group": "game-093",
+"question": "Какая студия разработала оригинальную «Myst»?",
+"answers": [
+"Blizzard North",
+"Cyan",
+"New World Computing",
+"Valve"
+],
+"correct": 1,
+"explanation": "Оригинальную «Myst» разработала Cyan."
+},
+{
+"id": "club_games_282",
+"theme": "games",
+"group": "game-093",
+"question": "Как называется остров в игре Myst?",
+"answers": [
+"Остров обезьян",
+"Мист",
+"Кохолинт",
+"Вварденфелл"
+],
+"correct": 1,
+"explanation": "Верно: Мист. Вопрос относится к игре «Myst»."
+},
+{
+"id": "club_games_283",
+"theme": "games",
+"group": "game-094",
+"question": "Узнай игру по детали: «В рудниковой колонии». Какая это игра?",
+"answers": [
+"Need for Speed: Underground",
+"Gothic",
+"Leisure Suit Larry in the Land of the Lounge Lizards",
+"Grand Theft Auto: Vice City"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Gothic»: Где начинается Gothic — В рудниковой колонии."
+},
+{
+"id": "club_games_284",
+"theme": "games",
+"group": "game-094",
+"question": "Какая студия разработала оригинальную «Gothic»?",
+"answers": [
+"Valve",
+"Piranha Bytes",
+"BioWare",
+"Crytek"
+],
+"correct": 1,
+"explanation": "Оригинальную «Gothic» разработала Piranha Bytes."
+},
+{
+"id": "club_games_285",
+"theme": "games",
+"group": "game-094",
+"question": "Где начинается Gothic?",
+"answers": [
+"В космосе",
+"В Тристраме",
+"В рудниковой колонии",
+"В Бикини-Боттом"
+],
+"correct": 2,
+"explanation": "Верно: В рудниковой колонии. Вопрос относится к игре «Gothic»."
+},
+{
+"id": "club_games_286",
+"theme": "games",
+"group": "game-095",
+"question": "К какой игре относится подсказка «Космическая гонка»?",
+"answers": [
+"Civilization",
+"Lemmings",
+"Gothic II",
+"Thief II: The Metal Age"
+],
+"correct": 0,
+"explanation": "Это подсказка к «Civilization»: Какая условная победа характерна для серии Civilization — Космическая гонка."
+},
+{
+"id": "club_games_287",
+"theme": "games",
+"group": "game-095",
+"question": "Какая студия разработала оригинальную «Civilization»?",
+"answers": [
+"MicroProse",
+"id Software",
+"New World Computing",
+"Blizzard North"
+],
+"correct": 0,
+"explanation": "Оригинальную «Civilization» разработала MicroProse."
+},
+{
+"id": "club_games_288",
+"theme": "games",
+"group": "game-095",
+"question": "Какая условная победа характерна для серии Civilization?",
+"answers": [
+"Коллекция монет",
+"Танковый бой",
+"Победа в футболе",
+"Космическая гонка"
+],
+"correct": 3,
+"explanation": "Верно: Космическая гонка. Вопрос относится к игре «Civilization»."
+},
+{
+"id": "club_games_289",
+"theme": "games",
+"group": "game-096",
+"question": "В какой игре встречается или упоминается «Египетская»?",
+"answers": [
+"Warcraft: Orcs & Humans",
+"Grand Theft Auto III",
+"Lemmings",
+"Age of Mythology"
+],
+"correct": 3,
+"explanation": "Это подсказка к «Age of Mythology»: Какая мифология представлена в Age of Mythology — Египетская."
+},
+{
+"id": "club_games_290",
+"theme": "games",
+"group": "game-096",
+"question": "Какая студия разработала оригинальную «Age of Mythology»?",
+"answers": [
+"Crytek",
+"BioWare",
+"Ensemble Studios",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Age of Mythology» разработала Ensemble Studios."
+},
+{
+"id": "club_games_291",
+"theme": "games",
+"group": "game-096",
+"question": "Какая мифология представлена в Age of Mythology?",
+"answers": [
+"Славянская",
+"Египетская",
+"Ацтекская",
+"Японская"
+],
+"correct": 1,
+"explanation": "Верно: Египетская. Вопрос относится к игре «Age of Mythology»."
+},
+{
+"id": "club_games_292",
+"theme": "games",
+"group": "game-097",
+"question": "В какой игре встречается или упоминается «Адриенна»?",
+"answers": [
+"Dune 2000",
+"Phantasmagoria",
+"Silent Hill 2",
+"The Sims"
+],
+"correct": 1,
+"explanation": "Это подсказка к «Phantasmagoria»: Как зовут писательницу — героиню Phantasmagoria — Адриенна."
+},
+{
+"id": "club_games_293",
+"theme": "games",
+"group": "game-097",
+"question": "Какая студия разработала оригинальную «Phantasmagoria»?",
+"answers": [
+"Blizzard North",
+"New World Computing",
+"Sierra On-Line",
+"Valve"
+],
+"correct": 2,
+"explanation": "Оригинальную «Phantasmagoria» разработала Sierra On-Line."
+},
+{
+"id": "club_games_294",
+"theme": "games",
+"group": "game-097",
+"question": "Как зовут писательницу — героиню Phantasmagoria?",
+"answers": [
+"Адриенна",
+"Аликс",
+"Лара",
+"Джилл"
+],
+"correct": 0,
+"explanation": "Верно: Адриенна. Вопрос относится к игре «Phantasmagoria»."
+},
+{
+"id": "club_games_295",
+"theme": "games",
+"group": "game-098",
+"question": "Узнай игру по детали: «Фон Браун». Какая это игра?",
+"answers": [
+"Metal Gear Solid 2",
+"Heroes of Might and Magic II",
+"System Shock 2",
+"StarCraft: Brood War"
+],
+"correct": 2,
+"explanation": "Это подсказка к «System Shock 2»: Как называется космический корабль System Shock 2 — Фон Браун."
+},
+{
+"id": "club_games_296",
+"theme": "games",
+"group": "game-098",
+"question": "Какая студия разработала оригинальную «System Shock 2»?",
+"answers": [
+"Irrational Games и Looking Glass Studios",
+"Valve",
+"BioWare",
+"Crytek"
+],
+"correct": 0,
+"explanation": "Оригинальную «System Shock 2» разработала Irrational Games и Looking Glass Studios."
+},
+{
+"id": "club_games_297",
+"theme": "games",
+"group": "game-098",
+"question": "Как называется космический корабль System Shock 2?",
+"answers": [
+"Нормандия",
+"Ностромо",
+"Ишимура",
+"Фон Браун"
+],
+"correct": 3,
+"explanation": "Верно: Фон Браун. Вопрос относится к игре «System Shock 2»."
+},
+{
+"id": "club_games_298",
+"theme": "games",
+"group": "game-099",
+"question": "Узнай игру по детали: «UAC». Какая это игра?",
+"answers": [
+"DOOM",
+"Assassin's Creed",
+"Myst",
+"Sam & Max Hit the Road"
+],
+"correct": 0,
+"explanation": "Это подсказка к «DOOM»: Как называется база людей в оригинальной DOOM — UAC."
+},
+{
+"id": "club_games_299",
+"theme": "games",
+"group": "game-099",
+"question": "Какая студия разработала оригинальную «DOOM»?",
+"answers": [
+"id Software",
+"Blizzard North",
+"Valve",
+"New World Computing"
+],
+"correct": 0,
+"explanation": "Оригинальную «DOOM» разработала id Software."
+},
+{
+"id": "club_games_300",
+"theme": "games",
+"group": "game-099",
+"question": "Как называется база людей в оригинальной DOOM?",
+"answers": [
+"GDI",
+"UNSC",
+"UAC",
+"Umbrella"
+],
+"correct": 2,
+"explanation": "Верно: UAC. Вопрос относится к игре «DOOM»."
+},
+{
+"id": "club_music_001",
+"theme": "music",
+"group": "song-000",
+"question": "Какая пара хитов принадлежит Дима Билан?",
+"answers": [
+"Невозможное возможно + Believe",
+"Такие девчонки + Владивосток 2000",
+"Варвара + Полковнику никто не пишет",
+"Нас не догонят + Я сошла с ума"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Дима Билан."
+},
+{
+"id": "club_music_002",
+"theme": "music",
+"group": "song-000",
+"question": "В какой группе Фред Дёрст был фронтменом?",
+"answers": [
+"Korn",
+"Linkin Park",
+"Limp Bizkit",
+"Deftones"
+],
+"correct": 2,
+"explanation": "Фред Дёрст — вокалист Limp Bizkit."
+},
+{
+"id": "club_music_003",
+"theme": "music",
+"group": "song-001",
+"question": "Какая пара хитов принадлежит Radiohead?",
+"answers": [
+"Как на войне + Сказочная тайга",
+"Creep + Karma Police",
+"Without Me + Lose Yourself",
+"Иногда + Зимний сон"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Radiohead."
+},
+{
+"id": "club_music_004",
+"theme": "music",
+"group": "song-001",
+"question": "Какая песня Linkin Park звучит на финальных титрах первых «Трансформеров»?",
+"answers": [
+"Numb",
+"In the End",
+"Faint",
+"What I've Done"
+],
+"correct": 3,
+"explanation": "На титрах фильма 2007 года звучит What I've Done."
+},
+{
+"id": "club_music_005",
+"theme": "music",
+"group": "song-002",
+"question": "Какая пара хитов принадлежит Ace of Base?",
+"answers": [
+"Как на войне + Сказочная тайга",
+"Самолёт + Часики",
+"The Sign + It's a Beautiful Life",
+"Yellow + Viva la Vida"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Ace of Base."
+},
+{
+"id": "club_music_006",
+"theme": "music",
+"group": "song-002",
+"question": "Кто вместе с Майком Шинодой пел в Linkin Park?",
+"answers": [
+"Энтони Кидис",
+"Честер Беннингтон",
+"Фред Дёрст",
+"Билли Джо Армстронг"
+],
+"correct": 1,
+"explanation": "Честер — основной вокалист классического состава Linkin Park."
+},
+{
+"id": "club_music_007",
+"theme": "music",
+"group": "song-003",
+"question": "Какая пара хитов принадлежит Мумий Тролль?",
+"answers": [
+"Хали-гали паратрупер + Пятница",
+"Losing My Religion + Everybody Hurts",
+"Такие девчонки + Владивосток 2000",
+"Алёшка + 18 мне уже"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Мумий Тролль."
+},
+{
+"id": "club_music_008",
+"theme": "music",
+"group": "song-003",
+"question": "Кто пел в группе Nirvana?",
+"answers": [
+"Эдди Веддер",
+"Дэйв Грол",
+"Крис Корнелл",
+"Курт Кобейн"
+],
+"correct": 3,
+"explanation": "Курт Кобейн был фронтменом Nirvana."
+},
+{
+"id": "club_music_009",
+"theme": "music",
+"group": "song-004",
+"question": "Какая пара хитов принадлежит Наталья Ветлицкая?",
+"answers": [
+"Посмотри в глаза + Плейбой",
+"Ручки + Ты меня не ищи",
+"Бухгалтер + American Boy",
+"Всё что касается + Районы-кварталы"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Наталья Ветлицкая."
+},
+{
+"id": "club_music_010",
+"theme": "music",
+"group": "song-004",
+"question": "Кто был фронтменом The Prodigy в клипе Firestarter?",
+"answers": [
+"Фэтбой Слим",
+"Кит Флинт",
+"Моби",
+"Лиам Галлахер"
+],
+"correct": 1,
+"explanation": "Кит Флинт — лицо видеоклипа Firestarter."
+},
+{
+"id": "club_music_011",
+"theme": "music",
+"group": "song-005",
+"question": "Какая пара хитов принадлежит Комбинация?",
+"answers": [
+"Нас не догонят + Я сошла с ума",
+"Мой рай + Нежность",
+"Бухгалтер + American Boy",
+"Creep + Karma Police"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Комбинация."
+},
+{
+"id": "club_music_012",
+"theme": "music",
+"group": "song-005",
+"question": "Кто исполняет хит «Freestyler»?",
+"answers": [
+"Scooter",
+"The Prodigy",
+"Fatboy Slim",
+"Bomfunk MC's"
+],
+"correct": 3,
+"explanation": "Freestyler — трек финской группы Bomfunk MC's."
+},
+{
+"id": "club_music_013",
+"theme": "music",
+"group": "song-006",
+"question": "Какая пара хитов принадлежит R.E.M.?",
+"answers": [
+"Around the World + One More Time",
+"Швайне + Юра",
+"Losing My Religion + Everybody Hurts",
+"Варвара + Полковнику никто не пишет"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара R.E.M.."
+},
+{
+"id": "club_music_014",
+"theme": "music",
+"group": "song-006",
+"question": "Какая группа выступала в шлемах роботов?",
+"answers": [
+"R.E.M.",
+"Daft Punk",
+"Aqua",
+"Oasis"
+],
+"correct": 1,
+"explanation": "Французский дуэт Daft Punk выступал в роботизированных шлемах."
+},
+{
+"id": "club_music_015",
+"theme": "music",
+"group": "song-007",
+"question": "Какая пара хитов принадлежит Coldplay?",
+"answers": [
+"Yellow + Viva la Vida",
+"Around the World + One More Time",
+"Иногда + Зимний сон",
+"Without Me + Lose Yourself"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Coldplay."
+},
+{
+"id": "club_music_016",
+"theme": "music",
+"group": "song-007",
+"question": "Как называется знаменитый интернет-розыгрыш с клипом Рика Эстли?",
+"answers": [
+"Харлем-шейк",
+"Рикролл",
+"Гангнамстайл",
+"Дабстеп"
+],
+"correct": 1,
+"explanation": "Rickroll приводит зрителя на Never Gonna Give You Up."
+},
+{
+"id": "club_music_017",
+"theme": "music",
+"group": "song-008",
+"question": "Какая пара хитов принадлежит Backstreet Boys?",
+"answers": [
+"MMMBop + Where's the Love?",
+"Everybody (Backstreet's Back) + I Want It That Way",
+"Как на войне + Сказочная тайга",
+"Boom, Boom, Boom, Boom!! + We Like to Party!"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Backstreet Boys."
+},
+{
+"id": "club_music_018",
+"theme": "music",
+"group": "song-008",
+"question": "Какой коллектив исполнил «Dragostea Din Tei»?",
+"answers": [
+"Vengaboys",
+"Eiffel 65",
+"Aqua",
+"O-Zone"
+],
+"correct": 3,
+"explanation": "Молдавская группа O-Zone прославилась этим хитом."
+},
+{
+"id": "club_music_019",
+"theme": "music",
+"group": "song-009",
+"question": "Какая пара хитов принадлежит Mika?",
+"answers": [
+"Otherside + Californication",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"Grace Kelly + Relax Take It Easy",
+"Ручки + Ты меня не ищи"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Mika."
+},
+{
+"id": "club_music_020",
+"theme": "music",
+"group": "song-009",
+"question": "Какой хит звучал под мем с человечком, указывающим пальцем в небо?",
+"answers": [
+"Dragostea Din Tei",
+"Toxic",
+"Umbrella",
+"Sandstorm"
+],
+"correct": 0,
+"explanation": "Мем Numa Numa связан с Dragostea Din Tei."
+},
+{
+"id": "club_music_021",
+"theme": "music",
+"group": "song-010",
+"question": "Какая пара хитов принадлежит Hanson?",
+"answers": [
+"Маленькая страна + Жёлтые тюльпаны",
+"Creep + Karma Police",
+"Pump It + I Gotta Feeling",
+"MMMBop + Where's the Love?"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара Hanson."
+},
+{
+"id": "club_music_022",
+"theme": "music",
+"group": "song-010",
+"question": "Кто исполнил «Blue (Da Ba Dee)»?",
+"answers": [
+"Daft Punk",
+"Aqua",
+"Eiffel 65",
+"Las Ketchup"
+],
+"correct": 2,
+"explanation": "Хит Eiffel 65 известен словами da ba dee."
+},
+{
+"id": "club_music_023",
+"theme": "music",
+"group": "song-011",
+"question": "Какая пара хитов принадлежит Britney Spears?",
+"answers": [
+"...Baby One More Time + Toxic",
+"Хали-гали паратрупер + Пятница",
+"Losing My Religion + Everybody Hurts",
+"Мой рай + Нежность"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Britney Spears."
+},
+{
+"id": "club_music_024",
+"theme": "music",
+"group": "song-011",
+"question": "Какая песня стала основой флешмоба с фирменными движениями рук «асере-хе»?",
+"answers": [
+"Barbie Girl",
+"The Ketchup Song",
+"Freestyler",
+"Macarena"
+],
+"correct": 1,
+"explanation": "Танец Aserejé исполняли под Las Ketchup."
+},
+{
+"id": "club_music_025",
+"theme": "music",
+"group": "song-012",
+"question": "Какая пара хитов принадлежит t.A.T.u.?",
+"answers": [
+"Всё что касается + Районы-кварталы",
+"Крылья + Дыхание",
+"Осколок льда + Беспечный ангел",
+"Нас не догонят + Я сошла с ума"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара t.A.T.u.."
+},
+{
+"id": "club_music_026",
+"theme": "music",
+"group": "song-012",
+"question": "Какая песня прославилась строкой «I'm a Barbie girl»?",
+"answers": [
+"Doctor Jones",
+"Wannabe",
+"Barbie Girl",
+"Blue"
+],
+"correct": 2,
+"explanation": "Barbie Girl — хит Aqua."
+},
+{
+"id": "club_music_027",
+"theme": "music",
+"group": "song-013",
+"question": "Какая пара хитов принадлежит Lady Gaga?",
+"answers": [
+"Швайне + Юра",
+"Варвара + Полковнику никто не пишет",
+"Pump It + I Gotta Feeling",
+"Just Dance + Poker Face"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара Lady Gaga."
+},
+{
+"id": "club_music_028",
+"theme": "music",
+"group": "song-013",
+"question": "Какую музыку чаще всего узнают по интернет-шутке «Darude — ...»?",
+"answers": [
+"Sandstorm",
+"Children",
+"Freestyler",
+"Insomnia"
+],
+"correct": 0,
+"explanation": "Sandstorm — визитная карточка Darude."
+},
+{
+"id": "club_music_029",
+"theme": "music",
+"group": "song-014",
+"question": "Какая пара хитов принадлежит The Black Eyed Peas?",
+"answers": [
+"Как на войне + Сказочная тайга",
+"Pump It + I Gotta Feeling",
+"Вечно молодой + Зачем топтать мою любовь",
+"Around the World + One More Time"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара The Black Eyed Peas."
+},
+{
+"id": "club_music_030",
+"theme": "music",
+"group": "song-014",
+"question": "Какой из артистов исполнял «Gangsta's Paradise»?",
+"answers": [
+"2Pac",
+"Coolio",
+"50 Cent",
+"Dr. Dre"
+],
+"correct": 1,
+"explanation": "Gangsta's Paradise записал Coolio."
+},
+{
+"id": "club_music_031",
+"theme": "music",
+"group": "song-015",
+"question": "Какая пара хитов принадлежит ДДТ?",
+"answers": [
+"Just Dance + Poker Face",
+"Крылья + Дыхание",
+"Что такое осень + Родина",
+"Маленькая страна + Жёлтые тюльпаны"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара ДДТ."
+},
+{
+"id": "club_music_032",
+"theme": "music",
+"group": "song-015",
+"question": "Какой рэпер прославился треком «Lose Yourself» для фильма «8 миля»?",
+"answers": [
+"Snoop Dogg",
+"Xzibit",
+"Eminem",
+"Coolio"
+],
+"correct": 2,
+"explanation": "Lose Yourself — песня Eminem из фильма «8 миля»."
+},
+{
+"id": "club_music_033",
+"theme": "music",
+"group": "song-016",
+"question": "Какая пара хитов принадлежит Смысловые галлюцинации?",
+"answers": [
+"Нас не догонят + Я сошла с ума",
+"Вечно молодой + Зачем топтать мою любовь",
+"Creep + Karma Police",
+"Losing My Religion + Everybody Hurts"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Смысловые галлюцинации."
+},
+{
+"id": "club_music_034",
+"theme": "music",
+"group": "song-016",
+"question": "Какая певица снялась школьницей в клипе «...Baby One More Time»?",
+"answers": [
+"Кристина Агилера",
+"Мадонна",
+"Шакира",
+"Бритни Спирс"
+],
+"correct": 3,
+"explanation": "Школьный образ Бритни прославил её дебютный клип."
+},
+{
+"id": "club_music_035",
+"theme": "music",
+"group": "song-017",
+"question": "Какая пара хитов принадлежит Глюкоза?",
+"answers": [
+"Швайне + Юра",
+"Ручки + Ты меня не ищи",
+"Что такое осень + Родина",
+"Around the World + One More Time"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Глюкоза."
+},
+{
+"id": "club_music_036",
+"theme": "music",
+"group": "song-017",
+"question": "Кто появился в клипе Toxic в образе стюардессы?",
+"answers": [
+"Бритни Спирс",
+"Рианна",
+"Леди Гага",
+"Бейонсе"
+],
+"correct": 0,
+"explanation": "В Toxic Бритни играет стюардессу и другие образы."
+},
+{
+"id": "club_music_037",
+"theme": "music",
+"group": "song-018",
+"question": "Какая пара хитов принадлежит Limp Bizkit?",
+"answers": [
+"Возле дома твоего + Небо",
+"Осколок льда + Беспечный ангел",
+"Take a Look Around + Rollin'",
+"Алёшка + 18 мне уже"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Limp Bizkit."
+},
+{
+"id": "club_music_038",
+"theme": "music",
+"group": "song-018",
+"question": "Чьим главным хитом был «Believe» с эффектом коррекции высоты голоса?",
+"answers": [
+"Cher",
+"Madonna",
+"Céline Dion",
+"Whitney Houston"
+],
+"correct": 0,
+"explanation": "Эффект в Believe часто называют Cher effect."
+},
+{
+"id": "club_music_039",
+"theme": "music",
+"group": "song-019",
+"question": "Какая пара хитов принадлежит Ария?",
+"answers": [
+"Creep + Karma Police",
+"Осколок льда + Беспечный ангел",
+"Everybody (Backstreet's Back) + I Want It That Way",
+"Just Dance + Poker Face"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Ария."
+},
+{
+"id": "club_music_040",
+"theme": "music",
+"group": "song-019",
+"question": "Какая певица спела главный хит фильма «Титаник»?",
+"answers": [
+"Мадонна",
+"Уитни Хьюстон",
+"Шер",
+"Селин Дион"
+],
+"correct": 3,
+"explanation": "My Heart Will Go On — песня Селин Дион."
+},
+{
+"id": "club_music_041",
+"theme": "music",
+"group": "song-020",
+"question": "Какая пара хитов принадлежит Звери?",
+"answers": [
+"Нас не догонят + Я сошла с ума",
+"Всё что касается + Районы-кварталы",
+"The Sign + It's a Beautiful Life",
+"Otherside + Californication"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Звери."
+},
+{
+"id": "club_music_042",
+"theme": "music",
+"group": "song-020",
+"question": "Какую песню Уитни Хьюстон связывают с фильмом «Телохранитель»?",
+"answers": [
+"I Will Always Love You",
+"Frozen",
+"Believe",
+"Umbrella"
+],
+"correct": 0,
+"explanation": "Песня звучит в фильме The Bodyguard."
+},
+{
+"id": "club_music_043",
+"theme": "music",
+"group": "song-021",
+"question": "Какая пара хитов принадлежит Наутилус Помпилиус?",
+"answers": [
+"Что такое осень + Родина",
+"Крылья + Дыхание",
+"Самолёт + Часики",
+"Если хочешь остаться + Мало-помалу"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Наутилус Помпилиус."
+},
+{
+"id": "club_music_044",
+"theme": "music",
+"group": "song-021",
+"question": "Кто пел о «зонтике» в мегахите Umbrella?",
+"answers": [
+"Леди Гага",
+"Бритни Спирс",
+"Рианна",
+"Бейонсе"
+],
+"correct": 2,
+"explanation": "Umbrella — один из самых известных хитов Рианны."
+},
+{
+"id": "club_music_045",
+"theme": "music",
+"group": "song-022",
+"question": "Какая пара хитов принадлежит Vengaboys?",
+"answers": [
+"Creep + Karma Police",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"Орбит без сахара + Выхода нет",
+"Yellow + Viva la Vida"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Vengaboys."
+},
+{
+"id": "club_music_046",
+"theme": "music",
+"group": "song-022",
+"question": "Какого исполнителя называют Slim Shady?",
+"answers": [
+"50 Cent",
+"Coolio",
+"Usher",
+"Eminem"
+],
+"correct": 3,
+"explanation": "Slim Shady — альтер эго Eminem."
+},
+{
+"id": "club_music_047",
+"theme": "music",
+"group": "song-023",
+"question": "Какая пара хитов принадлежит Daft Punk?",
+"answers": [
+"Бухгалтер + American Boy",
+"Around the World + One More Time",
+"Орбит без сахара + Выхода нет",
+"Losing My Religion + Everybody Hurts"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Daft Punk."
+},
+{
+"id": "club_music_048",
+"theme": "music",
+"group": "song-023",
+"question": "Какая группа записала «Chop Suey!»?",
+"answers": [
+"Slipknot",
+"System of a Down",
+"Korn",
+"Limp Bizkit"
+],
+"correct": 1,
+"explanation": "Chop Suey! — сингл System of a Down."
+},
+{
+"id": "club_music_049",
+"theme": "music",
+"group": "song-024",
+"question": "Какая пара хитов принадлежит Леприконсы?",
+"answers": [
+"Losing My Religion + Everybody Hurts",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"Smells Like Teen Spirit + Come as You Are",
+"Хали-гали паратрупер + Пятница"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара Леприконсы."
+},
+{
+"id": "club_music_050",
+"theme": "music",
+"group": "song-024",
+"question": "В какой группе пел Джонатан Дэвис?",
+"answers": [
+"Korn",
+"Green Day",
+"Blur",
+"Limp Bizkit"
+],
+"correct": 0,
+"explanation": "Джонатан Дэвис — вокалист Korn."
+},
+{
+"id": "club_music_051",
+"theme": "music",
+"group": "song-025",
+"question": "Какая пара хитов принадлежит Сплин?",
+"answers": [
+"Орбит без сахара + Выхода нет",
+"Невозможное возможно + Believe",
+"Хали-гали паратрупер + Пятница",
+"Как на войне + Сказочная тайга"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Сплин."
+},
+{
+"id": "club_music_052",
+"theme": "music",
+"group": "song-025",
+"question": "В какой группе играл Билли Джо Армстронг?",
+"answers": [
+"Red Hot Chili Peppers",
+"Green Day",
+"The Verve",
+"The Killers"
+],
+"correct": 1,
+"explanation": "Билли Джо Армстронг — фронтмен Green Day."
+},
+{
+"id": "club_music_053",
+"theme": "music",
+"group": "song-026",
+"question": "Какая пара хитов принадлежит Nirvana?",
+"answers": [
+"Smells Like Teen Spirit + Come as You Are",
+"Creep + Karma Police",
+"Ручки + Ты меня не ищи",
+"Otherside + Californication"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Nirvana."
+},
+{
+"id": "club_music_054",
+"theme": "music",
+"group": "song-026",
+"question": "Кто исполнил «Zombie»?",
+"answers": [
+"The Cranberries",
+"Evanescence",
+"The Cardigans",
+"No Doubt"
+],
+"correct": 0,
+"explanation": "Zombie — хит ирландской группы The Cranberries."
+},
+{
+"id": "club_music_055",
+"theme": "music",
+"group": "song-027",
+"question": "Какая пара хитов принадлежит Би-2?",
+"answers": [
+"Иногда + Зимний сон",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"Creep + Karma Police",
+"Варвара + Полковнику никто не пишет"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара Би-2."
+},
+{
+"id": "club_music_056",
+"theme": "music",
+"group": "song-027",
+"question": "Какая певица была голосом Evanescence в «Bring Me to Life»?",
+"answers": [
+"Шэрон ден Адель",
+"Эми Уайнхаус",
+"Эми Ли",
+"Долорес О'Риордан"
+],
+"correct": 2,
+"explanation": "Эми Ли — вокалистка Evanescence."
+},
+{
+"id": "club_music_057",
+"theme": "music",
+"group": "song-028",
+"question": "Какая пара хитов принадлежит Linkin Park?",
+"answers": [
+"Бухгалтер + American Boy",
+"Numb + Crawling",
+"Around the World + One More Time",
+"MMMBop + Where's the Love?"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Linkin Park."
+},
+{
+"id": "club_music_058",
+"theme": "music",
+"group": "song-028",
+"question": "Чья композиция «Seven Nation Army» стала стадионной кричалкой?",
+"answers": [
+"Oasis",
+"The Killers",
+"The White Stripes",
+"Coldplay"
+],
+"correct": 2,
+"explanation": "Рифф Seven Nation Army часто скандируют футбольные фанаты."
+},
+{
+"id": "club_music_059",
+"theme": "music",
+"group": "song-029",
+"question": "Какая пара хитов принадлежит Дискотека Авария?",
+"answers": [
+"Если хочешь остаться + Мало-помалу",
+"Возле дома твоего + Небо",
+"Как на войне + Сказочная тайга",
+"Осколок льда + Беспечный ангел"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Дискотека Авария."
+},
+{
+"id": "club_music_060",
+"theme": "music",
+"group": "song-029",
+"question": "Какую виртуальную группу придумали Деймон Албарн и Джейми Хьюлетт?",
+"answers": [
+"Aqua",
+"Blur",
+"Gorillaz",
+"Daft Punk"
+],
+"correct": 2,
+"explanation": "Gorillaz — проект с рисованными участниками."
+},
+{
+"id": "club_music_061",
+"theme": "music",
+"group": "song-030",
+"question": "Какая пара хитов принадлежит Oasis?",
+"answers": [
+"Wonderwall + Don't Look Back in Anger",
+"Ручки + Ты меня не ищи",
+"Бухгалтер + American Boy",
+"Варвара + Полковнику никто не пишет"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Oasis."
+},
+{
+"id": "club_music_062",
+"theme": "music",
+"group": "song-030",
+"question": "Кто спел «Rehab» и «Back to Black»?",
+"answers": [
+"Шакира",
+"Кристина Агилера",
+"Адель",
+"Эми Уайнхаус"
+],
+"correct": 3,
+"explanation": "Оба хита входят в репертуар Эми Уайнхаус."
+},
+{
+"id": "club_music_063",
+"theme": "music",
+"group": "song-031",
+"question": "Какая пара хитов принадлежит МакSим?",
+"answers": [
+"Pump It + I Gotta Feeling",
+"Мой рай + Нежность",
+"Хали-гали паратрупер + Пятница",
+"Бухгалтер + American Boy"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара МакSим."
+},
+{
+"id": "club_music_064",
+"theme": "music",
+"group": "song-031",
+"question": "Чья песня «Viva la Vida» известна обложкой с картиной Делакруа?",
+"answers": [
+"U2",
+"Coldplay",
+"Muse",
+"Keane"
+],
+"correct": 1,
+"explanation": "Хит Coldplay вошёл в альбом Viva la Vida."
+},
+{
+"id": "club_music_065",
+"theme": "music",
+"group": "song-032",
+"question": "Какая пара хитов принадлежит Серёга?",
+"answers": [
+"Самолёт + Часики",
+"Иногда + Зимний сон",
+"Ручки + Ты меня не ищи",
+"Возле дома твоего + Небо"
+],
+"correct": 3,
+"explanation": "Оба трека — из репертуара Серёга."
+},
+{
+"id": "club_music_066",
+"theme": "music",
+"group": "song-032",
+"question": "Чью «Take On Me» узнают по клипу, где девушка попадает в комикс?",
+"answers": [
+"Depeche Mode",
+"a-ha",
+"Roxette",
+"Alphaville"
+],
+"correct": 1,
+"explanation": "Клип a-ha объединяет рисунок и живое видео."
+},
+{
+"id": "club_music_067",
+"theme": "music",
+"group": "song-033",
+"question": "Какая пара хитов принадлежит Алсу?",
+"answers": [
+"Что такое осень + Родина",
+"Иногда + Зимний сон",
+"Алёшка + 18 мне уже",
+"Нас не догонят + Я сошла с ума"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Алсу."
+},
+{
+"id": "club_music_068",
+"theme": "music",
+"group": "song-033",
+"question": "В чьём клипе «Around the World» танцуют группы персонажей в костюмах?",
+"answers": [
+"Faithless",
+"Eiffel 65",
+"Daft Punk",
+"The Prodigy"
+],
+"correct": 2,
+"explanation": "Мишель Гондри снял знаменитый клип Daft Punk."
+},
+{
+"id": "club_music_069",
+"theme": "music",
+"group": "song-034",
+"question": "Какая пара хитов принадлежит Red Hot Chili Peppers?",
+"answers": [
+"Otherside + Californication",
+"Швайне + Юра",
+"Осколок льда + Беспечный ангел",
+"Ручки + Ты меня не ищи"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Red Hot Chili Peppers."
+},
+{
+"id": "club_music_070",
+"theme": "music",
+"group": "song-034",
+"question": "Какая поп-группа пела «Wannabe» и прославила фразу girl power?",
+"answers": [
+"TLC",
+"Destiny's Child",
+"All Saints",
+"Spice Girls"
+],
+"correct": 3,
+"explanation": "Spice Girls сделали girl power своим лозунгом."
+},
+{
+"id": "club_music_071",
+"theme": "music",
+"group": "song-035",
+"question": "Какая пара хитов принадлежит Руки Вверх!?",
+"answers": [
+"Крылья + Дыхание",
+"Алёшка + 18 мне уже",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"MMMBop + Where's the Love?"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Руки Вверх!."
+},
+{
+"id": "club_music_072",
+"theme": "music",
+"group": "song-035",
+"question": "Какая группа записала «Everybody (Backstreet's Back)»?",
+"answers": [
+"NSYNC",
+"Westlife",
+"Backstreet Boys",
+"Five"
+],
+"correct": 2,
+"explanation": "Это один из фирменных хитов Backstreet Boys."
+},
+{
+"id": "club_music_073",
+"theme": "music",
+"group": "song-036",
+"question": "Какая пара хитов принадлежит Агата Кристи?",
+"answers": [
+"Швайне + Юра",
+"Как на войне + Сказочная тайга",
+"Boom, Boom, Boom, Boom!! + We Like to Party!",
+"Around the World + One More Time"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Агата Кристи."
+},
+{
+"id": "club_music_074",
+"theme": "music",
+"group": "song-036",
+"question": "Какому бойз-бенду принадлежит хит «Bye Bye Bye»?",
+"answers": [
+"Five",
+"Take That",
+"NSYNC",
+"Backstreet Boys"
+],
+"correct": 2,
+"explanation": "Bye Bye Bye — трек NSYNC."
+},
+{
+"id": "club_music_075",
+"theme": "music",
+"group": "song-037",
+"question": "Какая пара хитов принадлежит Вирус!?",
+"answers": [
+"Numb + Crawling",
+"Что такое осень + Родина",
+"Ручки + Ты меня не ищи",
+"Grace Kelly + Relax Take It Easy"
+],
+"correct": 2,
+"explanation": "Оба трека — из репертуара Вирус!."
+},
+{
+"id": "club_music_076",
+"theme": "music",
+"group": "song-037",
+"question": "Кого слушали под «All That She Wants» и «The Sign»?",
+"answers": [
+"La Bouche",
+"Aqua",
+"Corona",
+"Ace of Base"
+],
+"correct": 3,
+"explanation": "Оба хита принадлежат шведской группе Ace of Base."
+},
+{
+"id": "club_music_077",
+"theme": "music",
+"group": "song-038",
+"question": "Какая пара хитов принадлежит Валерия?",
+"answers": [
+"Самолёт + Часики",
+"The Sign + It's a Beautiful Life",
+"Такие девчонки + Владивосток 2000",
+"Крылья + Дыхание"
+],
+"correct": 0,
+"explanation": "Оба трека — из репертуара Валерия."
+},
+{
+"id": "club_music_078",
+"theme": "music",
+"group": "song-038",
+"question": "Какая певица исполнила «Whenever, Wherever»?",
+"answers": [
+"Шакира",
+"Кристина Агилера",
+"Рианна",
+"Бейонсе"
+],
+"correct": 0,
+"explanation": "Whenever, Wherever — международный хит Шакиры."
+},
+{
+"id": "club_music_079",
+"theme": "music",
+"group": "song-039",
+"question": "Какая пара хитов принадлежит Наташа Королёва?",
+"answers": [
+"Всё что касается + Районы-кварталы",
+"Маленькая страна + Жёлтые тюльпаны",
+"Smells Like Teen Spirit + Come as You Are",
+"Take a Look Around + Rollin'"
+],
+"correct": 1,
+"explanation": "Оба трека — из репертуара Наташа Королёва."
+},
+{
+"id": "club_music_080",
+"theme": "music",
+"group": "song-039",
+"question": "Кто записал «Freestyler», главный герой клипа которого управляет временем плеером?",
+"answers": [
+"The Prodigy",
+"Bomfunk MC's",
+"Faithless",
+"Scooter"
+],
+"correct": 1,
+"explanation": "В клипе Freestyler парень манипулирует происходящим с помощью плеера."
+},
+{
+"id": "club_music_081",
+"theme": "music",
+"group": "song-040",
+"question": "Кто исполнил песню «The Rhythm of the Night» (1993)?",
+"answers": [
+"Mr. President",
+"Corona",
+"Hanson",
+"Eminem"
+],
+"correct": 1,
+"explanation": "«The Rhythm of the Night» — песня исполнителя Corona."
+},
+{
+"id": "club_music_082",
+"theme": "music",
+"group": "song-040",
+"question": "Какая группа известна словами «It's my life» в одноимённом рок-хите?",
+"answers": [
+"Bon Jovi",
+"Nirvana",
+"Linkin Park",
+"Green Day"
+],
+"correct": 0,
+"explanation": "It's My Life — хит Bon Jovi."
+},
+{
+"id": "club_music_083",
+"theme": "music",
+"group": "song-041",
+"question": "Кто исполнил песню «Losing My Religion» (1991)?",
+"answers": [
+"Britney Spears",
+"Eiffel 65",
+"Corona",
+"R.E.M."
+],
+"correct": 3,
+"explanation": "«Losing My Religion» — песня исполнителя R.E.M.."
+},
+{
+"id": "club_music_084",
+"theme": "music",
+"group": "song-041",
+"question": "Какая российская группа записала «Вечно молодой»?",
+"answers": [
+"Звери",
+"Сплин",
+"Смысловые галлюцинации",
+"Би-2"
+],
+"correct": 2,
+"explanation": "Песня «Вечно молодой» связана с фильмом «Брат 2»."
+},
+{
+"id": "club_music_085",
+"theme": "music",
+"group": "song-042",
+"question": "Кто исполнил песню «American Boy» (1990)?",
+"answers": [
+"Дискотека Авария",
+"Блестящие feat. Arash",
+"Комбинация",
+"ДДТ"
+],
+"correct": 2,
+"explanation": "«American Boy» — песня исполнителя Комбинация."
+},
+{
+"id": "club_music_086",
+"theme": "music",
+"group": "song-042",
+"question": "В каком фильме звучит «Полковнику никто не пишет» Би-2?",
+"answers": [
+"Жмурки",
+"Бумер",
+"Ночной дозор",
+"Брат 2"
+],
+"correct": 3,
+"explanation": "Песня Би-2 стала одной из музыкальных визиток «Брата 2»."
+},
+{
+"id": "club_music_087",
+"theme": "music",
+"group": "song-043",
+"question": "Кто исполнил песню «Если хочешь остаться» (2005)?",
+"answers": [
+"АукцЫон",
+"Дискотека Авария",
+"t.A.T.u.",
+"ДДТ"
+],
+"correct": 1,
+"explanation": "«Если хочешь остаться» — песня исполнителя Дискотека Авария."
+},
+{
+"id": "club_music_088",
+"theme": "music",
+"group": "song-043",
+"question": "Кто пел «Выхода нет»?",
+"answers": [
+"Би-2",
+"Сплин",
+"Звери",
+"Мумий Тролль"
+],
+"correct": 1,
+"explanation": "«Выхода нет» — песня «Сплина»."
+},
+{
+"id": "club_music_089",
+"theme": "music",
+"group": "song-044",
+"question": "Кто исполнил песню «Плачет девушка в автомате» (1992)?",
+"answers": [
+"МакSим",
+"Дискотека Авария",
+"Евгений Осин",
+"Глюкоза"
+],
+"correct": 2,
+"explanation": "«Плачет девушка в автомате» — песня исполнителя Евгений Осин."
+},
+{
+"id": "club_music_090",
+"theme": "music",
+"group": "song-044",
+"question": "Какой группе принадлежит хит «Как на войне»?",
+"answers": [
+"Кино",
+"Наутилус Помпилиус",
+"Агата Кристи",
+"ДДТ"
+],
+"correct": 2,
+"explanation": "«Как на войне» — песня «Агаты Кристи»."
+},
+{
+"id": "club_music_091",
+"theme": "music",
+"group": "song-045",
+"question": "Кто исполнил песню «Kids» (2007)?",
+"answers": [
+"Eminem",
+"Red Hot Chili Peppers",
+"MGMT",
+"James Blunt"
+],
+"correct": 2,
+"explanation": "«Kids» — песня исполнителя MGMT."
+},
+{
+"id": "club_music_092",
+"theme": "music",
+"group": "song-045",
+"question": "Кого зовут Валерием Кипеловым?",
+"answers": [
+"Бывшего вокалиста «Арии»",
+"Вокалиста «Сплина»",
+"Лидера «Мумий Тролля»",
+"Солиста «Руки Вверх!»"
+],
+"correct": 0,
+"explanation": "Кипелов долгие годы был вокалистом «Арии»."
+},
+{
+"id": "club_music_093",
+"theme": "music",
+"group": "song-046",
+"question": "Кто исполнил песню «Нас не догонят» (2001)?",
+"answers": [
+"Би-2",
+"Григорий Лепс",
+"Иракли",
+"t.A.T.u."
+],
+"correct": 3,
+"explanation": "«Нас не догонят» — песня исполнителя t.A.T.u.."
+},
+{
+"id": "club_music_094",
+"theme": "music",
+"group": "song-046",
+"question": "Какую группу возглавлял Виктор Цой?",
+"answers": [
+"Наутилус Помпилиус",
+"ДДТ",
+"Алиса",
+"Кино"
+],
+"correct": 3,
+"explanation": "Виктор Цой — лидер группы «Кино»."
+},
+{
+"id": "club_music_095",
+"theme": "music",
+"group": "song-047",
+"question": "Кто исполнил песню «Мало-помалу» (2003)?",
+"answers": [
+"Комбинация",
+"Звери",
+"Дискотека Авария",
+"Кипелов"
+],
+"correct": 2,
+"explanation": "«Мало-помалу» — песня исполнителя Дискотека Авария."
+},
+{
+"id": "club_music_096",
+"theme": "music",
+"group": "song-047",
+"question": "Какую группу возглавлял Юрий Шевчук?",
+"answers": [
+"Би-2",
+"Чайф",
+"ДДТ",
+"Кино"
+],
+"correct": 2,
+"explanation": "Юрий Шевчук — фронтмен ДДТ."
+},
+{
+"id": "club_music_097",
+"theme": "music",
+"group": "song-048",
+"question": "Кто исполнил песню «Новогодняя» (1999)?",
+"answers": [
+"Ария",
+"Дискотека Авария",
+"Блестящие feat. Arash",
+"Леприконсы"
+],
+"correct": 1,
+"explanation": "«Новогодняя» — песня исполнителя Дискотека Авария."
+},
+{
+"id": "club_music_098",
+"theme": "music",
+"group": "song-048",
+"question": "Кто исполнял «Тополиный пух»?",
+"answers": [
+"Дискотека Авария",
+"Демо",
+"Руки Вверх!",
+"Иванушки International"
+],
+"correct": 3,
+"explanation": "«Тополиный пух» — хит «Иванушек International»."
+},
+{
+"id": "club_music_099",
+"theme": "music",
+"group": "song-049",
+"question": "Кто исполнил песню «...Baby One More Time» (1998)?",
+"answers": [
+"Britney Spears",
+"Bomfunk MC's",
+"Hanson",
+"Baha Men"
+],
+"correct": 0,
+"explanation": "«...Baby One More Time» — песня исполнителя Britney Spears."
+},
+{
+"id": "club_music_100",
+"theme": "music",
+"group": "song-049",
+"question": "Какую песню t.A.T.u. выпустили в англоязычной версии под названием All the Things She Said?",
+"answers": [
+"Я сошла с ума",
+"Мальчик-гей",
+"Полчаса",
+"Нас не догонят"
+],
+"correct": 0,
+"explanation": "Это международная версия «Я сошла с ума»."
+},
+{
+"id": "club_music_101",
+"theme": "music",
+"group": "song-050",
+"question": "Кто исполнил песню «Ветер с моря дул» (1997)?",
+"answers": [
+"Кипелов",
+"Демо",
+"Валерия",
+"Натали"
+],
+"correct": 3,
+"explanation": "«Ветер с моря дул» — песня исполнителя Натали."
+},
+{
+"id": "club_music_102",
+"theme": "music",
+"group": "song-050",
+"question": "В каком дуэте пел Сергей Жуков?",
+"answers": [
+"Иванушки International",
+"Руки Вверх!",
+"Демо",
+"Чай вдвоём"
+],
+"correct": 1,
+"explanation": "Сергей Жуков — фронтмен «Руки Вверх!»."
+},
+{
+"id": "club_music_103",
+"theme": "music",
+"group": "song-051",
+"question": "Кто исполнил песню «Хали-гали паратрупер» (1999)?",
+"answers": [
+"Айдамир Мугу",
+"Валерия",
+"Наталья Ветлицкая",
+"Леприконсы"
+],
+"correct": 3,
+"explanation": "«Хали-гали паратрупер» — песня исполнителя Леприконсы."
+},
+{
+"id": "club_music_104",
+"theme": "music",
+"group": "song-051",
+"question": "Кто исполнил «Чёрный бумер»?",
+"answers": [
+"Тимати",
+"Серёга",
+"Децл",
+"Баста"
+],
+"correct": 1,
+"explanation": "«Чёрный бумер» — хит Серёги."
+},
+{
+"id": "club_music_105",
+"theme": "music",
+"group": "song-052",
+"question": "Кто исполнил песню «Незабудка» (1994)?",
+"answers": [
+"Игорь Николаев и Наташа Королёва",
+"Кино",
+"Татьяна Буланова",
+"t.A.T.u."
+],
+"correct": 2,
+"explanation": "«Незабудка» — песня исполнителя Татьяна Буланова."
+},
+{
+"id": "club_music_106",
+"theme": "music",
+"group": "song-052",
+"question": "С какой песней ассоциируется мультяшный образ певицы Глюкозы?",
+"answers": [
+"Белые розы",
+"Пачка сигарет",
+"Полковнику никто не пишет",
+"Невеста"
+],
+"correct": 3,
+"explanation": "Первые клипы Глюкозы активно использовали анимацию."
+},
+{
+"id": "club_music_107",
+"theme": "music",
+"group": "song-053",
+"question": "Кто исполнил песню «Smack My Bitch Up» (1997)?",
+"answers": [
+"The Prodigy",
+"Mr. President",
+"Ace of Base",
+"Backstreet Boys"
+],
+"correct": 0,
+"explanation": "«Smack My Bitch Up» — песня исполнителя The Prodigy."
+},
+{
+"id": "club_music_108",
+"theme": "music",
+"group": "song-053",
+"question": "Какую новогоднюю песню записала «Дискотека Авария»?",
+"answers": [
+"Седая ночь",
+"18 мне уже",
+"Миллион алых роз",
+"Новогодняя"
+],
+"correct": 3,
+"explanation": "«Новогодняя» — известный хит «Дискотеки Авария»."
+},
+{
+"id": "club_music_109",
+"theme": "music",
+"group": "song-054",
+"question": "Кто исполнил песню «Дыхание» (1996)?",
+"answers": [
+"Мумий Тролль",
+"t.A.T.u.",
+"Наутилус Помпилиус",
+"Иракли"
+],
+"correct": 2,
+"explanation": "«Дыхание» — песня исполнителя Наутилус Помпилиус."
+},
+{
+"id": "club_music_110",
+"theme": "music",
+"group": "song-054",
+"question": "Какой певице принадлежит песня «Знаешь ли ты»?",
+"answers": [
+"Татьяна Буланова",
+"Алсу",
+"МакSим",
+"Катя Лель"
+],
+"correct": 2,
+"explanation": "«Знаешь ли ты» — хит МакSим."
+},
+{
+"id": "club_music_111",
+"theme": "music",
+"group": "song-055",
+"question": "Кто исполнил песню «Music» (2000)?",
+"answers": [
+"Madonna",
+"2 Unlimited",
+"Eminem",
+"System of a Down"
+],
+"correct": 0,
+"explanation": "«Music» — песня исполнителя Madonna."
+},
+{
+"id": "club_music_112",
+"theme": "music",
+"group": "song-055",
+"question": "Какая группа пела «Бухгалтер» и «American Boy»?",
+"answers": [
+"Вирус!",
+"Комбинация",
+"Мираж",
+"Руки Вверх!"
+],
+"correct": 1,
+"explanation": "Оба хита — репертуар группы «Комбинация»."
+},
+{
+"id": "club_music_113",
+"theme": "music",
+"group": "song-056",
+"question": "Кто исполнил песню «Нежность» (2007)?",
+"answers": [
+"МакSим",
+"Наутилус Помпилиус",
+"Глюкоза",
+"Катя Лель"
+],
+"correct": 0,
+"explanation": "«Нежность» — песня исполнителя МакSим."
+},
+{
+"id": "club_music_114",
+"theme": "music",
+"group": "song-056",
+"question": "Какая артистка пела «Мой мармеладный»?",
+"answers": [
+"Катя Лель",
+"Вера Брежнева",
+"Натали",
+"Глюкоза"
+],
+"correct": 0,
+"explanation": "«Мой мармеладный» — хит Кати Лель."
+},
+{
+"id": "club_music_115",
+"theme": "music",
+"group": "song-057",
+"question": "Кто исполнил песню «Чёрные глаза» (2004)?",
+"answers": [
+"Глюкоза",
+"Игорь Николаев и Наташа Королёва",
+"Айдамир Мугу",
+"Наталья Ветлицкая"
+],
+"correct": 2,
+"explanation": "«Чёрные глаза» — песня исполнителя Айдамир Мугу."
+},
+{
+"id": "club_music_116",
+"theme": "music",
+"group": "song-057",
+"question": "С какой песней Дима Билан победил на «Евровидении»?",
+"answers": [
+"На берегу неба",
+"Невозможное возможно",
+"Небо",
+"Believe"
+],
+"correct": 3,
+"explanation": "Дима Билан выиграл «Евровидение» с Believe."
+},
+{
+"id": "club_music_117",
+"theme": "music",
+"group": "song-058",
+"question": "Кто исполнил песню «Come as You Are» (1991)?",
+"answers": [
+"Nirvana",
+"Daft Punk",
+"Lady Gaga",
+"Whigfield"
+],
+"correct": 0,
+"explanation": "«Come as You Are» — песня исполнителя Nirvana."
+},
+{
+"id": "club_music_118",
+"theme": "music",
+"group": "song-058",
+"question": "Какая группа пела «Хали-гали паратрупер»?",
+"answers": [
+"Жуки",
+"Браво",
+"Леприконсы",
+"Ляпис Трубецкой"
+],
+"correct": 2,
+"explanation": "«Хали-гали паратрупер» — хит «Леприконсов»."
+},
+{
+"id": "club_music_119",
+"theme": "music",
+"group": "song-059",
+"question": "Кто исполнил песню «Numb» (2003)?",
+"answers": [
+"Linkin Park",
+"MGMT",
+"Los del Río",
+"Gnarls Barkley"
+],
+"correct": 0,
+"explanation": "«Numb» — песня исполнителя Linkin Park."
+},
+{
+"id": "club_music_120",
+"theme": "music",
+"group": "song-059",
+"question": "Кто написал и исполнил песню «Группа крови»?",
+"answers": [
+"Юрий Шевчук",
+"Илья Лагутенко",
+"Вячеслав Бутусов",
+"Виктор Цой"
+],
+"correct": 3,
+"explanation": "Песню записала группа «Кино», вокал — Виктор Цой."
+},
+{
+"id": "club_music_121",
+"theme": "music",
+"group": "song-060",
+"question": "Кто исполнил песню «Жёлтые тюльпаны» (1990)?",
+"answers": [
+"Блестящие",
+"Звери",
+"Дима Билан",
+"Наташа Королёва"
+],
+"correct": 3,
+"explanation": "«Жёлтые тюльпаны» — песня исполнителя Наташа Королёва."
+},
+{
+"id": "club_music_122",
+"theme": "music",
+"group": "song-060",
+"question": "Какая группа записала «Утекай» и «Владивосток 2000»?",
+"answers": [
+"Мумий Тролль",
+"Би-2",
+"Земфира",
+"Сплин"
+],
+"correct": 0,
+"explanation": "Обе песни — хиты «Мумий Тролля»."
+},
+{
+"id": "club_music_123",
+"theme": "music",
+"group": "song-061",
+"question": "Кто исполнил песню «Ручки» (2000)?",
+"answers": [
+"Алсу",
+"Леприконсы",
+"Вирус!",
+"Блестящие feat. Arash"
+],
+"correct": 2,
+"explanation": "«Ручки» — песня исполнителя Вирус!."
+},
+{
+"id": "club_music_124",
+"theme": "music",
+"group": "song-061",
+"question": "Вокалистом какой группы был солист Энтони Кидис?",
+"answers": [
+"Red Hot Chili Peppers",
+"System of a Down",
+"Green Day",
+"Linkin Park"
+],
+"correct": 0,
+"explanation": "Энтони Кидис — вокалист RHCP."
+},
+{
+"id": "club_music_125",
+"theme": "music",
+"group": "song-062",
+"question": "Кто исполнил песню «Я свободен» (2003)?",
+"answers": [
+"Блестящие feat. Arash",
+"Вирус!",
+"Дима Билан",
+"Кипелов"
+],
+"correct": 3,
+"explanation": "«Я свободен» — песня исполнителя Кипелов."
+},
+{
+"id": "club_music_126",
+"theme": "music",
+"group": "song-062",
+"question": "Кто исполнил песню «Smells Like Teen Spirit»?",
+"answers": [
+"Pearl Jam",
+"Alice in Chains",
+"Soundgarden",
+"Nirvana"
+],
+"correct": 3,
+"explanation": "Хит Nirvana — символ гранжа."
+},
+{
+"id": "club_music_127",
+"theme": "music",
+"group": "song-063",
+"question": "Кто исполнил песню «Иногда» (1999)?",
+"answers": [
+"Алсу",
+"Катя Лель",
+"Сплин",
+"Дима Билан"
+],
+"correct": 0,
+"explanation": "«Иногда» — песня исполнителя Алсу."
+},
+{
+"id": "club_music_128",
+"theme": "music",
+"group": "song-063",
+"question": "Кто из участников Linkin Park обычно читал рэп-партии?",
+"answers": [
+"Роб Бурдон",
+"Майк Шинода",
+"Брэд Делсон",
+"Честер Беннингтон"
+],
+"correct": 1,
+"explanation": "Майк Шинода отвечает за рэп и часть вокала группы."
+},
+{
+"id": "club_music_129",
+"theme": "music",
+"group": "song-064",
+"question": "Кто исполнил песню «Кукушка» (1990)?",
+"answers": [
+"Кино",
+"Глюкоза",
+"Катя Лель",
+"Наутилус Помпилиус"
+],
+"correct": 0,
+"explanation": "«Кукушка» — песня исполнителя Кино."
+},
+{
+"id": "club_music_130",
+"theme": "music",
+"group": "song-064",
+"question": "Какую песню чаще всего связывают с персонажем Шрека в начале первого фильма?",
+"answers": [
+"Sandstorm",
+"All Star",
+"What I've Done",
+"Toxic"
+],
+"correct": 1,
+"explanation": "All Star группы Smash Mouth играет в начале «Шрека»."
+},
+{
+"id": "club_music_131",
+"theme": "music",
+"group": "song-065",
+"question": "Кто исполнил песню «Linger» (1993)?",
+"answers": [
+"Corona",
+"The Cranberries",
+"Lady Gaga",
+"Backstreet Boys"
+],
+"correct": 1,
+"explanation": "«Linger» — песня исполнителя The Cranberries."
+},
+{
+"id": "club_music_132",
+"theme": "music",
+"group": "song-065",
+"question": "Какая композиция Aerosmith звучит в фильме «Армагеддон»?",
+"answers": [
+"Cryin'",
+"Dream On",
+"I Don't Want to Miss a Thing",
+"Crazy"
+],
+"correct": 2,
+"explanation": "Песня стала главным романтическим хитом «Армагеддона»."
+},
+{
+"id": "club_music_133",
+"theme": "music",
+"group": "song-066",
+"question": "Кто исполнил песню «Зло» (2006)?",
+"answers": [
+"Натали",
+"Сплин",
+"Блестящие",
+"Дискотека Авария"
+],
+"correct": 3,
+"explanation": "«Зло» — песня исполнителя Дискотека Авария."
+},
+{
+"id": "club_music_134",
+"theme": "music",
+"group": "song-066",
+"question": "Кто поёт «In the Shadows»?",
+"answers": [
+"The Killers",
+"The Rasmus",
+"Green Day",
+"Evanescence"
+],
+"correct": 1,
+"explanation": "In the Shadows — хит финской группы The Rasmus."
+},
+{
+"id": "club_music_135",
+"theme": "music",
+"group": "song-067",
+"question": "Кто исполнил песню «Mambo No. 5» (1999)?",
+"answers": [
+"Gorillaz",
+"Shakira",
+"Lou Bega",
+"Christina Aguilera"
+],
+"correct": 2,
+"explanation": "«Mambo No. 5» — песня исполнителя Lou Bega."
+},
+{
+"id": "club_music_136",
+"theme": "music",
+"group": "song-067",
+"question": "В какой группе был вокалистом Вилле Вало?",
+"answers": [
+"Korn",
+"The Rasmus",
+"Limp Bizkit",
+"HIM"
+],
+"correct": 3,
+"explanation": "Вилле Вало — фронтмен HIM."
+},
+{
+"id": "club_music_137",
+"theme": "music",
+"group": "song-068",
+"question": "Кто исполнил песню «Rollin'» (2000)?",
+"answers": [
+"Nirvana",
+"Radiohead",
+"Oasis",
+"Limp Bizkit"
+],
+"correct": 3,
+"explanation": "«Rollin'» — песня исполнителя Limp Bizkit."
+},
+{
+"id": "club_music_138",
+"theme": "music",
+"group": "song-068",
+"question": "Какая песня группы Rammstein названа в честь столицы России?",
+"answers": [
+"Moskau",
+"Amerika",
+"Du Hast",
+"Sonne"
+],
+"correct": 0,
+"explanation": "Moskau — трек группы Rammstein."
+},
+{
+"id": "club_music_139",
+"theme": "music",
+"group": "song-069",
+"question": "Кто исполнил песню «Крошка моя» (1998)?",
+"answers": [
+"Дима Билан",
+"Демо",
+"Би-2",
+"Руки Вверх!"
+],
+"correct": 3,
+"explanation": "«Крошка моя» — песня исполнителя Руки Вверх!."
+},
+{
+"id": "club_music_140",
+"theme": "music",
+"group": "song-069",
+"question": "Какой персонаж в клипе Gorillaz «Clint Eastwood» читает рэп?",
+"answers": [
+"Эминем",
+"Призрак Дел",
+"Бендер",
+"Сквидвард"
+],
+"correct": 1,
+"explanation": "В клипе появляется дух рэпера Del the Funky Homosapien."
+},
+{
+"id": "club_music_141",
+"theme": "music",
+"group": "song-070",
+"question": "Кто исполнил песню «Pump It» (2005)?",
+"answers": [
+"Bomfunk MC's",
+"Backstreet Boys",
+"The Black Eyed Peas",
+"Cher"
+],
+"correct": 2,
+"explanation": "«Pump It» — песня исполнителя The Black Eyed Peas."
+},
+{
+"id": "club_music_142",
+"theme": "music",
+"group": "song-070",
+"question": "Кто исполнил тему фильма «Миссия невыполнима» в электронном ремиксе к фильму?",
+"answers": [
+"Korn",
+"Daft Punk",
+"U2",
+"Limp Bizkit"
+],
+"correct": 3,
+"explanation": "Limp Bizkit записали Take a Look Around на основе темы «Миссия невыполнима»."
+},
+{
+"id": "club_music_143",
+"theme": "music",
+"group": "song-071",
+"question": "Кто исполнил песню «I Want It That Way» (1999)?",
+"answers": [
+"Backstreet Boys",
+"Eminem",
+"Lady Gaga",
+"Oasis"
+],
+"correct": 0,
+"explanation": "«I Want It That Way» — песня исполнителя Backstreet Boys."
+},
+{
+"id": "club_music_144",
+"theme": "music",
+"group": "song-071",
+"question": "Какую песню Мадонны узнают по сэмплу ABBA «Gimme! Gimme! Gimme!»?",
+"answers": [
+"Vogue",
+"Frozen",
+"Hung Up",
+"Music"
+],
+"correct": 2,
+"explanation": "В Hung Up используется известный мотив ABBA."
+},
+{
+"id": "club_music_145",
+"theme": "music",
+"group": "song-072",
+"question": "Кто исполнил песню «Дельфин и русалка» (1990)?",
+"answers": [
+"Татьяна Буланова",
+"Игорь Николаев и Наташа Королёва",
+"Звери",
+"Блестящие feat. Arash"
+],
+"correct": 1,
+"explanation": "«Дельфин и русалка» — песня исполнителя Игорь Николаев и Наташа Королёва."
+},
+{
+"id": "club_music_146",
+"theme": "music",
+"group": "song-072",
+"question": "Кто выступал вместе с Jay-Z в треке «Numb/Encore»?",
+"answers": [
+"Korn",
+"Limp Bizkit",
+"Eminem",
+"Linkin Park"
+],
+"correct": 3,
+"explanation": "Это совместный трек Jay-Z и Linkin Park."
+},
+{
+"id": "club_music_147",
+"theme": "music",
+"group": "song-073",
+"question": "Кто исполнил песню «Ты меня не ищи» (1999)?",
+"answers": [
+"Иванушки International",
+"Айдамир Мугу",
+"Вирус!",
+"Мумий Тролль"
+],
+"correct": 2,
+"explanation": "«Ты меня не ищи» — песня исполнителя Вирус!."
+},
+{
+"id": "club_music_148",
+"theme": "music",
+"group": "song-073",
+"question": "Какая песня Кино стала лозунгом перемен для многих слушателей?",
+"answers": [
+"Кукушка",
+"Восьмиклассница",
+"Пачка сигарет",
+"Перемен!"
+],
+"correct": 3,
+"explanation": "«Перемен!» — один из символов группы «Кино»."
+},
+{
+"id": "club_music_149",
+"theme": "music",
+"group": "song-074",
+"question": "Кто исполнил песню «Родина» (1992)?",
+"answers": [
+"АукцЫон",
+"Звери",
+"ДДТ",
+"Кипелов"
+],
+"correct": 2,
+"explanation": "«Родина» — песня исполнителя ДДТ."
+},
+{
+"id": "club_music_150",
+"theme": "music",
+"group": "song-074",
+"question": "Какая группа исполнила саундтрек «Брат 2» под названием «Вечно молодой»?",
+"answers": [
+"Наутилус Помпилиус",
+"Смысловые галлюцинации",
+"ДДТ",
+"Сплин"
+],
+"correct": 1,
+"explanation": "«Вечно молодой» звучит в фильме «Брат 2»."
+},
+{
+"id": "club_music_151",
+"theme": "music",
+"group": "song-075",
+"question": "Кто исполнил песню «Everybody Hurts» (1992)?",
+"answers": [
+"Amy Winehouse",
+"Linkin Park",
+"Nirvana",
+"R.E.M."
+],
+"correct": 3,
+"explanation": "«Everybody Hurts» — песня исполнителя R.E.M.."
+},
+{
+"id": "club_music_152",
+"theme": "music",
+"group": "song-075",
+"question": "Чей голос звучит в песне «Мой рок-н-ролл» вместе с «Би-2»?",
+"answers": [
+"Алсу",
+"Земфира",
+"Юлия Чичерина",
+"Диана Арбенина"
+],
+"correct": 2,
+"explanation": "«Мой рок-н-ролл» — дуэт Би-2 и Чичериной."
+},
+{
+"id": "club_music_153",
+"theme": "music",
+"group": "song-076",
+"question": "Кто исполнил песню «Самолёт» (2003)?",
+"answers": [
+"Валерия",
+"Серёга",
+"Смысловые галлюцинации",
+"Кино"
+],
+"correct": 0,
+"explanation": "«Самолёт» — песня исполнителя Валерия."
+},
+{
+"id": "club_music_154",
+"theme": "music",
+"group": "song-076",
+"question": "Какая группа выпустила «Орбит без сахара»?",
+"answers": [
+"Звери",
+"Кино",
+"Сплин",
+"Агата Кристи"
+],
+"correct": 2,
+"explanation": "Трек «Орбит без сахара» — хит «Сплина»."
+},
+{
+"id": "club_music_155",
+"theme": "music",
+"group": "song-077",
+"question": "Кто исполнил песню «Hips Don't Lie» (2006)?",
+"answers": [
+"TLC",
+"Evanescence",
+"Shakira",
+"Christina Aguilera"
+],
+"correct": 2,
+"explanation": "«Hips Don't Lie» — песня исполнителя Shakira."
+},
+{
+"id": "club_music_156",
+"theme": "music",
+"group": "song-077",
+"question": "Кто пел «Белые розы» в «Ласковом мае»?",
+"answers": [
+"Женя Белоусов",
+"Юрий Шатунов",
+"Дима Билан",
+"Сергей Жуков"
+],
+"correct": 1,
+"explanation": "Юрий Шатунов — главный голос «Ласкового мая»."
+},
+{
+"id": "club_music_157",
+"theme": "music",
+"group": "song-078",
+"question": "Кто исполнил песню «Он тебя целует» (2002)?",
+"answers": [
+"Руки Вверх!",
+"Би-2",
+"Сплин",
+"Наталья Ветлицкая"
+],
+"correct": 0,
+"explanation": "«Он тебя целует» — песня исполнителя Руки Вверх!."
+},
+{
+"id": "club_music_158",
+"theme": "music",
+"group": "song-078",
+"question": "Какая песня «Руки Вверх!» стала гимном совершеннолетия?",
+"answers": [
+"Студент",
+"18 мне уже",
+"Алёшка",
+"Крошка моя"
+],
+"correct": 1,
+"explanation": "«18 мне уже» — хит группы «Руки Вверх!»."
+},
+{
+"id": "club_music_159",
+"theme": "music",
+"group": "song-079",
+"question": "Кто исполнил песню «Freestyler» (1999)?",
+"answers": [
+"System of a Down",
+"Gnarls Barkley",
+"Shakira",
+"Bomfunk MC's"
+],
+"correct": 3,
+"explanation": "«Freestyler» — песня исполнителя Bomfunk MC's."
+},
+{
+"id": "club_music_160",
+"theme": "music",
+"group": "song-079",
+"question": "Кто исполнил «Тучи» и «Тополиный пух»?",
+"answers": [
+"Дискотека Авария",
+"Демо",
+"Иванушки International",
+"Руки Вверх!"
+],
+"correct": 2,
+"explanation": "Оба хита — репертуар «Иванушек»."
+},
+{
+"id": "club_music_161",
+"theme": "music",
+"group": "song-080",
+"question": "Кто исполнил песню «Harder Better Faster Stronger» (2001)?",
+"answers": [
+"Daft Punk",
+"Gorillaz",
+"Backstreet Boys",
+"The Prodigy"
+],
+"correct": 0,
+"explanation": "«Harder Better Faster Stronger» — песня исполнителя Daft Punk."
+},
+{
+"id": "club_music_162",
+"theme": "music",
+"group": "song-080",
+"question": "Кто был лидером группы «Мумий Тролль»?",
+"answers": [
+"Валерий Кипелов",
+"Илья Лагутенко",
+"Бутусов",
+"Сергей Жуков"
+],
+"correct": 1,
+"explanation": "Илья Лагутенко — вокалист и лидер «Мумий Тролля»."
+},
+{
+"id": "club_music_163",
+"theme": "music",
+"group": "song-081",
+"question": "Кто исполнил песню «Возле дома твоего» (2005)?",
+"answers": [
+"Игорь Николаев и Наташа Королёва",
+"Кипелов",
+"Кино",
+"Серёга"
+],
+"correct": 3,
+"explanation": "«Возле дома твоего» — песня исполнителя Серёга."
+},
+{
+"id": "club_music_164",
+"theme": "music",
+"group": "song-081",
+"question": "Какой из этих треков ты услышишь на концерте Серёга?",
+"answers": [
+"Иногда",
+"Возле дома твоего",
+"Сказочная тайга",
+"Орбит без сахара"
+],
+"correct": 1,
+"explanation": "«Возле дома твоего» — запись Серёга."
+},
+{
+"id": "club_music_165",
+"theme": "music",
+"group": "song-082",
+"question": "Кто исполнил песню «Посмотри в глаза» (1992)?",
+"answers": [
+"Вирус!",
+"Наталья Ветлицкая",
+"t.A.T.u.",
+"Звери"
+],
+"correct": 1,
+"explanation": "«Посмотри в глаза» — песня исполнителя Наталья Ветлицкая."
+},
+{
+"id": "club_music_166",
+"theme": "music",
+"group": "song-082",
+"question": "Какая из четырёх композиций у Наталья Ветлицкая в репертуаре?",
+"answers": [
+"Viva la Vida",
+"Пятница",
+"Вечно молодой",
+"Посмотри в глаза"
+],
+"correct": 3,
+"explanation": "«Посмотри в глаза» — запись Наталья Ветлицкая."
+},
+{
+"id": "club_music_167",
+"theme": "music",
+"group": "song-083",
+"question": "Кто исполнил песню «Viva la Vida» (2008)?",
+"answers": [
+"R.E.M.",
+"Whigfield",
+"Linkin Park",
+"Coldplay"
+],
+"correct": 3,
+"explanation": "«Viva la Vida» — песня исполнителя Coldplay."
+},
+{
+"id": "club_music_168",
+"theme": "music",
+"group": "song-083",
+"question": "На какой песне стоит искать имя Coldplay?",
+"answers": [
+"It's a Beautiful Life",
+"Sandstorm",
+"Viva la Vida",
+"Орбит без сахара"
+],
+"correct": 2,
+"explanation": "«Viva la Vida» — запись Coldplay."
+},
+{
+"id": "club_music_169",
+"theme": "music",
+"group": "song-084",
+"question": "Кто исполнил песню «Там только там» (1997)?",
+"answers": [
+"Демо",
+"Айдамир Мугу",
+"Блестящие",
+"Ария"
+],
+"correct": 2,
+"explanation": "«Там только там» — песня исполнителя Блестящие."
+},
+{
+"id": "club_music_170",
+"theme": "music",
+"group": "song-084",
+"question": "Какой хит оставили нам Блестящие?",
+"answers": [
+"The Bad Touch",
+"Karma Police",
+"Numb/Encore",
+"Там только там"
+],
+"correct": 3,
+"explanation": "«Там только там» — запись Блестящие."
+},
+{
+"id": "club_music_171",
+"theme": "music",
+"group": "song-085",
+"question": "Кто исполнил песню «Wonderwall» (1995)?",
+"answers": [
+"Soundgarden",
+"Oasis",
+"Gnarls Barkley",
+"Haddaway"
+],
+"correct": 1,
+"explanation": "«Wonderwall» — песня исполнителя Oasis."
+},
+{
+"id": "club_music_172",
+"theme": "music",
+"group": "song-085",
+"question": "Какой из этих треков записали Oasis?",
+"answers": [
+"Feel Good Inc.",
+"Wonderwall",
+"Coco Jamboo",
+"The Bad Touch"
+],
+"correct": 1,
+"explanation": "«Wonderwall» — запись Oasis."
+},
+{
+"id": "club_music_173",
+"theme": "music",
+"group": "song-086",
+"question": "Кто исполнил песню «Районы-кварталы» (2004)?",
+"answers": [
+"Игорь Николаев и Наташа Королёва",
+"Иванушки International",
+"Звери",
+"Смысловые галлюцинации"
+],
+"correct": 2,
+"explanation": "«Районы-кварталы» — песня исполнителя Звери."
+},
+{
+"id": "club_music_174",
+"theme": "music",
+"group": "song-086",
+"question": "На какой песне стоит искать имя Звери?",
+"answers": [
+"Районы-кварталы",
+"Крылья",
+"Такие девчонки",
+"MMMBop"
+],
+"correct": 0,
+"explanation": "«Районы-кварталы» — запись Звери."
+},
+{
+"id": "club_music_175",
+"theme": "music",
+"group": "song-087",
+"question": "Кто исполнил песню «Владивосток 2000» (1997)?",
+"answers": [
+"Смысловые галлюцинации",
+"ДДТ",
+"Иванушки International",
+"Мумий Тролль"
+],
+"correct": 3,
+"explanation": "«Владивосток 2000» — песня исполнителя Мумий Тролль."
+},
+{
+"id": "club_music_176",
+"theme": "music",
+"group": "song-087",
+"question": "Какой из этих треков ты услышишь на концерте Мумий Тролль?",
+"answers": [
+"Я сошла с ума",
+"The Sign",
+"Владивосток 2000",
+"Крошка моя"
+],
+"correct": 2,
+"explanation": "«Владивосток 2000» — запись Мумий Тролль."
+},
+{
+"id": "club_music_177",
+"theme": "music",
+"group": "song-088",
+"question": "Кто исполнил песню «Швайне» (2003)?",
+"answers": [
+"Ария",
+"Мумий Тролль",
+"Глюкоза",
+"Звери"
+],
+"correct": 2,
+"explanation": "«Швайне» — песня исполнителя Глюкоза."
+},
+{
+"id": "club_music_178",
+"theme": "music",
+"group": "song-088",
+"question": "Какую песню из списка узнают поклонники Глюкоза?",
+"answers": [
+"Алёшка",
+"Швайне",
+"Мало-помалу",
+"Numb/Encore"
+],
+"correct": 1,
+"explanation": "«Швайне» — запись Глюкоза."
+},
+{
+"id": "club_music_179",
+"theme": "music",
+"group": "song-089",
+"question": "Кто исполнил песню «The Bad Touch» (1999)?",
+"answers": [
+"2 Unlimited",
+"Céline Dion",
+"System of a Down",
+"Bloodhound Gang"
+],
+"correct": 3,
+"explanation": "«The Bad Touch» — песня исполнителя Bloodhound Gang."
+},
+{
+"id": "club_music_180",
+"theme": "music",
+"group": "song-089",
+"question": "Какая композиция из списка связана с Bloodhound Gang?",
+"answers": [
+"The Bad Touch",
+"Without Me",
+"We Like to Party!",
+"Clocks"
+],
+"correct": 0,
+"explanation": "«The Bad Touch» — запись Bloodhound Gang."
+},
+{
+"id": "club_music_181",
+"theme": "music",
+"group": "song-090",
+"question": "Кто исполнил песню «Два кусочека колбаски» (1992)?",
+"answers": [
+"Дима Билан",
+"Комбинация",
+"АукцЫон",
+"Смысловые галлюцинации"
+],
+"correct": 1,
+"explanation": "«Два кусочека колбаски» — песня исполнителя Комбинация."
+},
+{
+"id": "club_music_182",
+"theme": "music",
+"group": "song-090",
+"question": "Какую песню записали Комбинация, а не другие артисты?",
+"answers": [
+"Нас не догонят",
+"Два кусочека колбаски",
+"Without Me",
+"Who Let the Dogs Out"
+],
+"correct": 1,
+"explanation": "«Два кусочека колбаски» — запись Комбинация."
+},
+{
+"id": "club_music_183",
+"theme": "music",
+"group": "song-091",
+"question": "Кто исполнил песню «Crawling» (2000)?",
+"answers": [
+"2 Unlimited",
+"Bloodhound Gang",
+"TLC",
+"Linkin Park"
+],
+"correct": 3,
+"explanation": "«Crawling» — песня исполнителя Linkin Park."
+},
+{
+"id": "club_music_184",
+"theme": "music",
+"group": "song-091",
+"question": "Какой из этих треков записали Linkin Park?",
+"answers": [
+"Возле дома твоего",
+"Toxic",
+"I Want It That Way",
+"Crawling"
+],
+"correct": 3,
+"explanation": "«Crawling» — запись Linkin Park."
+},
+{
+"id": "club_music_185",
+"theme": "music",
+"group": "song-092",
+"question": "Кто исполнил песню «Saturday Night» (1994)?",
+"answers": [
+"2 Unlimited",
+"R.E.M.",
+"Cher",
+"Whigfield"
+],
+"correct": 3,
+"explanation": "«Saturday Night» — песня исполнителя Whigfield."
+},
+{
+"id": "club_music_186",
+"theme": "music",
+"group": "song-092",
+"question": "Какая композиция из списка связана с Whigfield?",
+"answers": [
+"Ландыши",
+"Saturday Night",
+"Чёрный бумер",
+"Around the World"
+],
+"correct": 1,
+"explanation": "«Saturday Night» — запись Whigfield."
+},
+{
+"id": "club_music_187",
+"theme": "music",
+"group": "song-093",
+"question": "Кто исполнил песню «Better Off Alone» (1999)?",
+"answers": [
+"Jay-Z & Linkin Park",
+"Alice Deejay",
+"Cher",
+"Céline Dion"
+],
+"correct": 1,
+"explanation": "«Better Off Alone» — песня исполнителя Alice Deejay."
+},
+{
+"id": "club_music_188",
+"theme": "music",
+"group": "song-093",
+"question": "Какой из этих треков записали Alice Deejay?",
+"answers": [
+"Who Let the Dogs Out",
+"Как на войне",
+"Better Off Alone",
+"Юра"
+],
+"correct": 2,
+"explanation": "«Better Off Alone» — запись Alice Deejay."
+},
+{
+"id": "club_music_189",
+"theme": "music",
+"group": "song-094",
+"question": "Кто исполнил песню «You're Beautiful» (2004)?",
+"answers": [
+"The Prodigy",
+"The Verve",
+"James Blunt",
+"Céline Dion"
+],
+"correct": 2,
+"explanation": "«You're Beautiful» — песня исполнителя James Blunt."
+},
+{
+"id": "club_music_190",
+"theme": "music",
+"group": "song-094",
+"question": "Какая композиция из списка связана с James Blunt?",
+"answers": [
+"My Heart Will Go On",
+"Швайне",
+"You're Beautiful",
+"Крылья"
+],
+"correct": 2,
+"explanation": "«You're Beautiful» — запись James Blunt."
+},
+{
+"id": "club_music_191",
+"theme": "music",
+"group": "song-095",
+"question": "Кто исполнил песню «Часики» (2003)?",
+"answers": [
+"Валерия",
+"Игорь Николаев и Наташа Королёва",
+"Руки Вверх!",
+"Алсу"
+],
+"correct": 0,
+"explanation": "«Часики» — песня исполнителя Валерия."
+},
+{
+"id": "club_music_192",
+"theme": "music",
+"group": "song-095",
+"question": "Какую песню записали Валерия, а не другие артисты?",
+"answers": [
+"Часики",
+"Мало-помалу",
+"Зло",
+"Потерянный рай"
+],
+"correct": 0,
+"explanation": "«Часики» — запись Валерия."
+},
+{
+"id": "club_music_193",
+"theme": "music",
+"group": "song-096",
+"question": "Кто исполнил песню «Blue (Da Ba Dee)» (1998)?",
+"answers": [
+"Darude",
+"James Blunt",
+"Eiffel 65",
+"MGMT"
+],
+"correct": 2,
+"explanation": "«Blue (Da Ba Dee)» — песня исполнителя Eiffel 65."
+},
+{
+"id": "club_music_194",
+"theme": "music",
+"group": "song-096",
+"question": "Что поставить на дискотеке для поклонников Eiffel 65?",
+"answers": [
+"Нежность",
+"Blue (Da Ba Dee)",
+"My Heart Will Go On",
+"Что такое осень"
+],
+"correct": 1,
+"explanation": "«Blue (Da Ba Dee)» — запись Eiffel 65."
+},
+{
+"id": "club_music_195",
+"theme": "music",
+"group": "song-097",
+"question": "Кто исполнил песню «MMMBop» (1997)?",
+"answers": [
+"Hanson",
+"The Cranberries",
+"Whigfield",
+"The Verve"
+],
+"correct": 0,
+"explanation": "«MMMBop» — песня исполнителя Hanson."
+},
+{
+"id": "club_music_196",
+"theme": "music",
+"group": "song-097",
+"question": "Сможешь выбрать хит Hanson из четырёх песен?",
+"answers": [
+"MMMBop",
+"Потерянный рай",
+"Плейбой",
+"Нежность"
+],
+"correct": 0,
+"explanation": "«MMMBop» — запись Hanson."
+},
+{
+"id": "club_music_197",
+"theme": "music",
+"group": "song-098",
+"question": "Кто исполнил песню «Это всё» (1995)?",
+"answers": [
+"Агата Кристи",
+"Блестящие",
+"Би-2",
+"ДДТ"
+],
+"correct": 3,
+"explanation": "«Это всё» — песня исполнителя ДДТ."
+},
+{
+"id": "club_music_198",
+"theme": "music",
+"group": "song-098",
+"question": "Какую песню из списка узнают поклонники ДДТ?",
+"answers": [
+"Это всё",
+"До скорой встречи",
+"Who Let the Dogs Out",
+"Он тебя целует"
+],
+"correct": 0,
+"explanation": "«Это всё» — запись ДДТ."
+},
+{
+"id": "club_music_199",
+"theme": "music",
+"group": "song-099",
+"question": "Кто исполнил песню «Орбит без сахара» (1998)?",
+"answers": [
+"Сплин",
+"Леприконсы",
+"Кипелов",
+"Вирус!"
+],
+"correct": 0,
+"explanation": "«Орбит без сахара» — песня исполнителя Сплин."
+},
+{
+"id": "club_music_200",
+"theme": "music",
+"group": "song-099",
+"question": "Сможешь выбрать хит Сплин из четырёх песен?",
+"answers": [
+"American Boy",
+"Орбит без сахара",
+"Пятница",
+"Believe"
+],
+"correct": 1,
+"explanation": "«Орбит без сахара» — запись Сплин."
+},
+{
+"id": "club_music_201",
+"theme": "music",
+"group": "song-100",
+"question": "Кто исполнил песню «Macarena» (1993)?",
+"answers": [
+"System of a Down",
+"Korn",
+"Los del Río",
+"Vengaboys"
+],
+"correct": 2,
+"explanation": "«Macarena» — песня исполнителя Los del Río."
+},
+{
+"id": "club_music_202",
+"theme": "music",
+"group": "song-100",
+"question": "Какой из этих треков ты услышишь на концерте Los del Río?",
+"answers": [
+"Пятница",
+"Losing My Religion",
+"Karma Police",
+"Macarena"
+],
+"correct": 3,
+"explanation": "«Macarena» — запись Los del Río."
+},
+{
+"id": "club_music_203",
+"theme": "music",
+"group": "song-101",
+"question": "Кто исполнил песню «Школьная пора» (1995)?",
+"answers": [
+"Алсу",
+"Татьяна Овсиенко",
+"Смысловые галлюцинации",
+"Валерия"
+],
+"correct": 1,
+"explanation": "«Школьная пора» — песня исполнителя Татьяна Овсиенко."
+},
+{
+"id": "club_music_204",
+"theme": "music",
+"group": "song-101",
+"question": "Какую песню записали Татьяна Овсиенко, а не другие артисты?",
+"answers": [
+"Швайне",
+"Школьная пора",
+"Otherside",
+"Такие девчонки"
+],
+"correct": 1,
+"explanation": "«Школьная пора» — запись Татьяна Овсиенко."
+},
+{
+"id": "club_music_205",
+"theme": "music",
+"group": "song-102",
+"question": "Кто исполнил песню «Небо» (2005)?",
+"answers": [
+"Серёга",
+"Ария",
+"Айдамир Мугу",
+"Наташа Королёва"
+],
+"correct": 0,
+"explanation": "«Небо» — песня исполнителя Серёга."
+},
+{
+"id": "club_music_206",
+"theme": "music",
+"group": "song-102",
+"question": "Сможешь выбрать хит Серёга из четырёх песен?",
+"answers": [
+"Losing My Religion",
+"Зачем топтать мою любовь",
+"Небо",
+"Хали-гали паратрупер"
+],
+"correct": 2,
+"explanation": "«Небо» — запись Серёга."
+},
+{
+"id": "club_music_207",
+"theme": "music",
+"group": "song-103",
+"question": "Кто исполнил песню «Without Me» (2002)?",
+"answers": [
+"Gnarls Barkley",
+"The Prodigy",
+"Shakira",
+"Eminem"
+],
+"correct": 3,
+"explanation": "«Without Me» — песня исполнителя Eminem."
+},
+{
+"id": "club_music_208",
+"theme": "music",
+"group": "song-103",
+"question": "Какой из этих треков ты услышишь на концерте Eminem?",
+"answers": [
+"Without Me",
+"Тучи",
+"It's My Life",
+"The Rhythm of the Night"
+],
+"correct": 0,
+"explanation": "«Without Me» — запись Eminem."
+},
+{
+"id": "club_music_209",
+"theme": "music",
+"group": "song-104",
+"question": "Кто исполнил песню «До скорой встречи» (2005)?",
+"answers": [
+"Звери",
+"Кипелов",
+"Дима Билан",
+"Иракли"
+],
+"correct": 0,
+"explanation": "«До скорой встречи» — песня исполнителя Звери."
+},
+{
+"id": "club_music_210",
+"theme": "music",
+"group": "song-104",
+"question": "Сможешь выбрать хит Звери из четырёх песен?",
+"answers": [
+"Юра",
+"До скорой встречи",
+"Я сошла с ума",
+"No Limit"
+],
+"correct": 1,
+"explanation": "«До скорой встречи» — запись Звери."
+},
+{
+"id": "club_music_211",
+"theme": "music",
+"group": "song-105",
+"question": "Кто исполнил песню «Clocks» (2002)?",
+"answers": [
+"Coldplay",
+"Hanson",
+"R.E.M.",
+"Green Day"
+],
+"correct": 0,
+"explanation": "«Clocks» — песня исполнителя Coldplay."
+},
+{
+"id": "club_music_212",
+"theme": "music",
+"group": "song-105",
+"question": "Какую песню из списка узнают поклонники Coldplay?",
+"answers": [
+"Я сошла с ума",
+"Сказочная тайга",
+"Clocks",
+"Тучи"
+],
+"correct": 2,
+"explanation": "«Clocks» — запись Coldplay."
+},
+{
+"id": "club_music_213",
+"theme": "music",
+"group": "song-106",
+"question": "Кто исполнил песню «Рюмка водки на столе» (2002)?",
+"answers": [
+"Валерия",
+"Кипелов",
+"Леприконсы",
+"Григорий Лепс"
+],
+"correct": 3,
+"explanation": "«Рюмка водки на столе» — песня исполнителя Григорий Лепс."
+},
+{
+"id": "club_music_214",
+"theme": "music",
+"group": "song-106",
+"question": "Какую песню из списка узнают поклонники Григорий Лепс?",
+"answers": [
+"Мой рай",
+"Рюмка водки на столе",
+"No Limit",
+"Poker Face"
+],
+"correct": 1,
+"explanation": "«Рюмка водки на столе» — запись Григорий Лепс."
+},
+{
+"id": "club_music_215",
+"theme": "music",
+"group": "song-107",
+"question": "Кто исполнил песню «In da Club» (2003)?",
+"answers": [
+"50 Cent",
+"Red Hot Chili Peppers",
+"Hanson",
+"Alice Deejay"
+],
+"correct": 0,
+"explanation": "«In da Club» — песня исполнителя 50 Cent."
+},
+{
+"id": "club_music_216",
+"theme": "music",
+"group": "song-107",
+"question": "Какую песню записали 50 Cent, а не другие артисты?",
+"answers": [
+"Boom, Boom, Boom, Boom!!",
+"Creep",
+"In da Club",
+"Black Hole Sun"
+],
+"correct": 2,
+"explanation": "«In da Club» — запись 50 Cent."
+},
+{
+"id": "club_music_217",
+"theme": "music",
+"group": "song-108",
+"question": "Кто исполнил песню «Потерянный рай» (2000)?",
+"answers": [
+"Наутилус Помпилиус",
+"Наталья Ветлицкая",
+"Ария",
+"Кино"
+],
+"correct": 2,
+"explanation": "«Потерянный рай» — песня исполнителя Ария."
+},
+{
+"id": "club_music_218",
+"theme": "music",
+"group": "song-108",
+"question": "Какой из этих треков ты услышишь на концерте Ария?",
+"answers": [
+"Полковнику никто не пишет",
+"MMMBop",
+"Yellow",
+"Потерянный рай"
+],
+"correct": 3,
+"explanation": "«Потерянный рай» — запись Ария."
+},
+{
+"id": "club_music_219",
+"theme": "music",
+"group": "song-109",
+"question": "Кто исполнил песню «Вечно молодой» (2000)?",
+"answers": [
+"Смысловые галлюцинации",
+"Кипелов",
+"Ария",
+"Леприконсы"
+],
+"correct": 0,
+"explanation": "«Вечно молодой» — песня исполнителя Смысловые галлюцинации."
+},
+{
+"id": "club_music_220",
+"theme": "music",
+"group": "song-109",
+"question": "На какой трек нужно поставить иглу фанату Смысловые галлюцинации?",
+"answers": [
+"Wonderwall",
+"Орбит без сахара",
+"Вечно молодой",
+"Районы-кварталы"
+],
+"correct": 2,
+"explanation": "«Вечно молодой» — запись Смысловые галлюцинации."
+},
+{
+"id": "club_music_221",
+"theme": "music",
+"group": "song-110",
+"question": "Кто исполнил песню «Creep» (1992)?",
+"answers": [
+"Alice Deejay",
+"Radiohead",
+"The Prodigy",
+"Eiffel 65"
+],
+"correct": 1,
+"explanation": "«Creep» — песня исполнителя Radiohead."
+},
+{
+"id": "club_music_222",
+"theme": "music",
+"group": "song-110",
+"question": "Какой хит оставили нам Radiohead?",
+"answers": [
+"Blue (Da Ba Dee)",
+"Варвара",
+"Beautiful",
+"Creep"
+],
+"correct": 3,
+"explanation": "«Creep» — запись Radiohead."
+},
+{
+"id": "club_music_223",
+"theme": "music",
+"group": "song-111",
+"question": "Кто исполнил песню «Плейбой» (1992)?",
+"answers": [
+"Иванушки International",
+"Наталья Ветлицкая",
+"Кипелов",
+"Комбинация"
+],
+"correct": 1,
+"explanation": "«Плейбой» — песня исполнителя Наталья Ветлицкая."
+},
+{
+"id": "club_music_224",
+"theme": "music",
+"group": "song-111",
+"question": "Что поставить на дискотеке для поклонников Наталья Ветлицкая?",
+"answers": [
+"Плейбой",
+"Ландыши",
+"I Want It That Way",
+"Crawling"
+],
+"correct": 0,
+"explanation": "«Плейбой» — запись Наталья Ветлицкая."
+},
+{
+"id": "club_music_225",
+"theme": "music",
+"group": "song-112",
+"question": "Кто исполнил песню «Студент» (1997)?",
+"answers": [
+"Руки Вверх!",
+"Наташа Королёва",
+"Дискотека Авария",
+"Алсу"
+],
+"correct": 0,
+"explanation": "«Студент» — песня исполнителя Руки Вверх!."
+},
+{
+"id": "club_music_226",
+"theme": "music",
+"group": "song-112",
+"question": "На какой песне стоит искать имя Руки Вверх!?",
+"answers": [
+"Everybody Hurts",
+"Студент",
+"Небо",
+"Come as You Are"
+],
+"correct": 1,
+"explanation": "«Студент» — запись Руки Вверх!."
+},
+{
+"id": "club_music_227",
+"theme": "music",
+"group": "song-113",
+"question": "Кто исполнил песню «The Sign» (1993)?",
+"answers": [
+"Ace of Base",
+"Eiffel 65",
+"The Prodigy",
+"Modest Mouse"
+],
+"correct": 0,
+"explanation": "«The Sign» — песня исполнителя Ace of Base."
+},
+{
+"id": "club_music_228",
+"theme": "music",
+"group": "song-113",
+"question": "Сможешь выбрать хит Ace of Base из четырёх песен?",
+"answers": [
+"Just Dance",
+"Macarena",
+"The Sign",
+"Полковнику никто не пишет"
+],
+"correct": 2,
+"explanation": "«The Sign» — запись Ace of Base."
+},
+{
+"id": "club_music_229",
+"theme": "music",
+"group": "song-114",
+"question": "Кто исполнил песню «Numb/Encore» (2004)?",
+"answers": [
+"Bon Jovi",
+"Jay-Z & Linkin Park",
+"Los del Río",
+"Vengaboys"
+],
+"correct": 1,
+"explanation": "«Numb/Encore» — песня исполнителя Jay-Z & Linkin Park."
+},
+{
+"id": "club_music_230",
+"theme": "music",
+"group": "song-114",
+"question": "Сможешь выбрать хит Jay-Z & Linkin Park из четырёх песен?",
+"answers": [
+"Маленькая страна",
+"Мой рай",
+"The Bad Touch",
+"Numb/Encore"
+],
+"correct": 3,
+"explanation": "«Numb/Encore» — запись Jay-Z & Linkin Park."
+},
+{
+"id": "club_music_231",
+"theme": "music",
+"group": "song-115",
+"question": "Кто исполнил песню «Выхода нет» (1998)?",
+"answers": [
+"Кино",
+"Дискотека Авария",
+"Сплин",
+"МакSим"
+],
+"correct": 2,
+"explanation": "«Выхода нет» — песня исполнителя Сплин."
+},
+{
+"id": "club_music_232",
+"theme": "music",
+"group": "song-115",
+"question": "Какой из этих треков записали Сплин?",
+"answers": [
+"Выхода нет",
+"Everybody Hurts",
+"Пятница",
+"Grace Kelly"
+],
+"correct": 0,
+"explanation": "«Выхода нет» — запись Сплин."
+},
+{
+"id": "club_music_233",
+"theme": "music",
+"group": "song-116",
+"question": "Кто исполнил песню «Just Dance» (2008)?",
+"answers": [
+"Céline Dion",
+"Hanson",
+"Lady Gaga",
+"Modest Mouse"
+],
+"correct": 2,
+"explanation": "«Just Dance» — песня исполнителя Lady Gaga."
+},
+{
+"id": "club_music_234",
+"theme": "music",
+"group": "song-116",
+"question": "Какую песню записали Lady Gaga, а не другие артисты?",
+"answers": [
+"Don't Look Back in Anger",
+"What Is Love",
+"Just Dance",
+"It's a Beautiful Life"
+],
+"correct": 2,
+"explanation": "«Just Dance» — запись Lady Gaga."
+},
+{
+"id": "club_music_235",
+"theme": "music",
+"group": "song-117",
+"question": "Кто исполнил песню «Чёрный бумер» (2004)?",
+"answers": [
+"Сплин",
+"Мумий Тролль",
+"Серёга",
+"Ария"
+],
+"correct": 2,
+"explanation": "«Чёрный бумер» — песня исполнителя Серёга."
+},
+{
+"id": "club_music_236",
+"theme": "music",
+"group": "song-117",
+"question": "Какая из четырёх композиций у Серёга в репертуаре?",
+"answers": [
+"Believe",
+"Чёрный бумер",
+"Viva la Vida",
+"No Scrubs"
+],
+"correct": 1,
+"explanation": "«Чёрный бумер» — запись Серёга."
+},
+{
+"id": "club_music_237",
+"theme": "music",
+"group": "song-118",
+"question": "Кто исполнил песню «Отпускаю» (2006)?",
+"answers": [
+"Женя Белоусов",
+"Иракли",
+"Кино",
+"МакSим"
+],
+"correct": 3,
+"explanation": "«Отпускаю» — песня исполнителя МакSим."
+},
+{
+"id": "club_music_238",
+"theme": "music",
+"group": "song-118",
+"question": "Сможешь выбрать хит МакSим из четырёх песен?",
+"answers": [
+"Отпускаю",
+"Алёшка",
+"Ветер с моря дул",
+"Там только там"
+],
+"correct": 0,
+"explanation": "«Отпускаю» — запись МакSим."
+},
+{
+"id": "club_music_239",
+"theme": "music",
+"group": "song-119",
+"question": "Кто исполнил песню «Lose Yourself» (2002)?",
+"answers": [
+"Eminem",
+"Darude",
+"Limp Bizkit",
+"The Prodigy"
+],
+"correct": 0,
+"explanation": "«Lose Yourself» — песня исполнителя Eminem."
+},
+{
+"id": "club_music_240",
+"theme": "music",
+"group": "song-119",
+"question": "Какой хит оставили нам Eminem?",
+"answers": [
+"Lose Yourself",
+"Creep",
+"Я сошла с ума",
+"Чёрные глаза"
+],
+"correct": 0,
+"explanation": "«Lose Yourself» — запись Eminem."
+},
+{
+"id": "club_music_241",
+"theme": "music",
+"group": "song-120",
+"question": "Кто исполнил песню «No Scrubs» (1999)?",
+"answers": [
+"TLC",
+"Los del Río",
+"Hanson",
+"Eiffel 65"
+],
+"correct": 0,
+"explanation": "«No Scrubs» — песня исполнителя TLC."
+},
+{
+"id": "club_music_242",
+"theme": "music",
+"group": "song-120",
+"question": "Какая из четырёх композиций у TLC в репертуаре?",
+"answers": [
+"Школьная пора",
+"Чёрный бумер",
+"No Scrubs",
+"Where's the Love?"
+],
+"correct": 2,
+"explanation": "«No Scrubs» — запись TLC."
+},
+{
+"id": "club_music_243",
+"theme": "music",
+"group": "song-121",
+"question": "Кто исполнил песню «Crazy» (2006)?",
+"answers": [
+"Daft Punk",
+"Backstreet Boys",
+"Linkin Park",
+"Gnarls Barkley"
+],
+"correct": 3,
+"explanation": "«Crazy» — песня исполнителя Gnarls Barkley."
+},
+{
+"id": "club_music_244",
+"theme": "music",
+"group": "song-121",
+"question": "На какой трек нужно поставить иглу фанату Gnarls Barkley?",
+"answers": [
+"Karma Police",
+"Лондон-Париж",
+"Как на войне",
+"Crazy"
+],
+"correct": 3,
+"explanation": "«Crazy» — запись Gnarls Barkley."
+},
+{
+"id": "club_music_245",
+"theme": "music",
+"group": "song-122",
+"question": "Кто исполнил песню «Toxic» (2003)?",
+"answers": [
+"Whigfield",
+"Lou Bega",
+"Britney Spears",
+"Ace of Base"
+],
+"correct": 2,
+"explanation": "«Toxic» — песня исполнителя Britney Spears."
+},
+{
+"id": "club_music_246",
+"theme": "music",
+"group": "song-122",
+"question": "Что поставить на дискотеке для поклонников Britney Spears?",
+"answers": [
+"Самолёт",
+"Kids",
+"Toxic",
+"It's a Beautiful Life"
+],
+"correct": 2,
+"explanation": "«Toxic» — запись Britney Spears."
+},
+{
+"id": "club_music_247",
+"theme": "music",
+"group": "song-123",
+"question": "Кто исполнил песню «Лондон-Париж» (2004)?",
+"answers": [
+"Алсу",
+"ДДТ",
+"Дискотека Авария",
+"Иракли"
+],
+"correct": 3,
+"explanation": "«Лондон-Париж» — песня исполнителя Иракли."
+},
+{
+"id": "club_music_248",
+"theme": "music",
+"group": "song-123",
+"question": "На какой трек нужно поставить иглу фанату Иракли?",
+"answers": [
+"The Rhythm of the Night",
+"2000 лет",
+"Лондон-Париж",
+"The Sign"
+],
+"correct": 2,
+"explanation": "«Лондон-Париж» — запись Иракли."
+},
+{
+"id": "club_music_249",
+"theme": "music",
+"group": "song-124",
+"question": "Кто исполнил песню «Don't Look Back in Anger» (1995)?",
+"answers": [
+"Red Hot Chili Peppers",
+"Coldplay",
+"Hanson",
+"Oasis"
+],
+"correct": 3,
+"explanation": "«Don't Look Back in Anger» — песня исполнителя Oasis."
+},
+{
+"id": "club_music_250",
+"theme": "music",
+"group": "song-124",
+"question": "Какая из четырёх композиций у Oasis в репертуаре?",
+"answers": [
+"Don't Look Back in Anger",
+"Выхода нет",
+"Creep",
+"...Baby One More Time"
+],
+"correct": 0,
+"explanation": "«Don't Look Back in Anger» — запись Oasis."
+},
+{
+"id": "club_music_251",
+"theme": "music",
+"group": "song-125",
+"question": "Кто исполнил песню «Relax Take It Easy» (2006)?",
+"answers": [
+"Lady Gaga",
+"Mika",
+"2 Unlimited",
+"Baha Men"
+],
+"correct": 1,
+"explanation": "«Relax Take It Easy» — песня исполнителя Mika."
+},
+{
+"id": "club_music_252",
+"theme": "music",
+"group": "song-125",
+"question": "Какую песню из списка узнают поклонники Mika?",
+"answers": [
+"One More Time",
+"Relax Take It Easy",
+"Where's the Love?",
+"Numb/Encore"
+],
+"correct": 1,
+"explanation": "«Relax Take It Easy» — запись Mika."
+},
+{
+"id": "club_music_253",
+"theme": "music",
+"group": "song-126",
+"question": "Кто исполнил песню «Stan» (2000)?",
+"answers": [
+"Gorillaz",
+"Eminem",
+"Ace of Base",
+"Backstreet Boys"
+],
+"correct": 1,
+"explanation": "«Stan» — песня исполнителя Eminem."
+},
+{
+"id": "club_music_254",
+"theme": "music",
+"group": "song-126",
+"question": "Что поставить на дискотеке для поклонников Eminem?",
+"answers": [
+"Stan",
+"Believe",
+"Крылья",
+"Всё что касается"
+],
+"correct": 0,
+"explanation": "«Stan» — запись Eminem."
+},
+{
+"id": "club_music_255",
+"theme": "music",
+"group": "song-127",
+"question": "Кто исполнил песню «Зимний сон» (1999)?",
+"answers": [
+"Вирус!",
+"Алсу",
+"Глюкоза",
+"Игорь Николаев и Наташа Королёва"
+],
+"correct": 1,
+"explanation": "«Зимний сон» — песня исполнителя Алсу."
+},
+{
+"id": "club_music_256",
+"theme": "music",
+"group": "song-127",
+"question": "Сможешь выбрать хит Алсу из четырёх песен?",
+"answers": [
+"Зимний сон",
+"The Rhythm of the Night",
+"Black Hole Sun",
+"You're Beautiful"
+],
+"correct": 0,
+"explanation": "«Зимний сон» — запись Алсу."
+},
+{
+"id": "club_music_257",
+"theme": "music",
+"group": "song-128",
+"question": "Кто исполнил песню «Полковнику никто не пишет» (2000)?",
+"answers": [
+"Иракли",
+"Евгений Осин",
+"t.A.T.u.",
+"Би-2"
+],
+"correct": 3,
+"explanation": "«Полковнику никто не пишет» — песня исполнителя Би-2."
+},
+{
+"id": "club_music_258",
+"theme": "music",
+"group": "song-128",
+"question": "Какой из этих треков записали Би-2?",
+"answers": [
+"Take a Look Around",
+"Just Dance",
+"The Sign",
+"Полковнику никто не пишет"
+],
+"correct": 3,
+"explanation": "«Полковнику никто не пишет» — запись Би-2."
+},
+{
+"id": "club_music_259",
+"theme": "music",
+"group": "song-129",
+"question": "Кто исполнил песню «I Gotta Feeling» (2009)?",
+"answers": [
+"The Black Eyed Peas",
+"System of a Down",
+"Whigfield",
+"Eminem"
+],
+"correct": 0,
+"explanation": "«I Gotta Feeling» — песня исполнителя The Black Eyed Peas."
+},
+{
+"id": "club_music_260",
+"theme": "music",
+"group": "song-129",
+"question": "Какая из четырёх композиций у The Black Eyed Peas в репертуаре?",
+"answers": [
+"Тучи",
+"Believe",
+"I Gotta Feeling",
+"Rollin'"
+],
+"correct": 2,
+"explanation": "«I Gotta Feeling» — запись The Black Eyed Peas."
+},
+{
+"id": "club_music_261",
+"theme": "music",
+"group": "song-130",
+"question": "Кто исполнил песню «We Like to Party!» (1998)?",
+"answers": [
+"Hanson",
+"Haddaway",
+"Vengaboys",
+"Evanescence"
+],
+"correct": 2,
+"explanation": "«We Like to Party!» — песня исполнителя Vengaboys."
+},
+{
+"id": "club_music_262",
+"theme": "music",
+"group": "song-130",
+"question": "Какую песню из списка узнают поклонники Vengaboys?",
+"answers": [
+"Алёшка",
+"We Like to Party!",
+"Вечно молодой",
+"До скорой встречи"
+],
+"correct": 1,
+"explanation": "«We Like to Party!» — запись Vengaboys."
+},
+{
+"id": "club_music_263",
+"theme": "music",
+"group": "song-131",
+"question": "Кто исполнил песню «Otherside» (1999)?",
+"answers": [
+"Christina Aguilera",
+"Red Hot Chili Peppers",
+"Jay-Z & Linkin Park",
+"Mika"
+],
+"correct": 1,
+"explanation": "«Otherside» — песня исполнителя Red Hot Chili Peppers."
+},
+{
+"id": "club_music_264",
+"theme": "music",
+"group": "song-131",
+"question": "Что поставить на дискотеке для поклонников Red Hot Chili Peppers?",
+"answers": [
+"Linger",
+"Boom, Boom, Boom, Boom!!",
+"Посмотри в глаза",
+"Otherside"
+],
+"correct": 3,
+"explanation": "«Otherside» — запись Red Hot Chili Peppers."
+},
+{
+"id": "club_music_265",
+"theme": "music",
+"group": "song-132",
+"question": "Кто исполнил песню «Я сошла с ума» (2000)?",
+"answers": [
+"Леприконсы",
+"Агата Кристи",
+"t.A.T.u.",
+"Блестящие"
+],
+"correct": 2,
+"explanation": "«Я сошла с ума» — песня исполнителя t.A.T.u.."
+},
+{
+"id": "club_music_266",
+"theme": "music",
+"group": "song-132",
+"question": "Сможешь выбрать хит t.A.T.u. из четырёх песен?",
+"answers": [
+"Самолёт",
+"Я сошла с ума",
+"Don't Look Back in Anger",
+"Мало-помалу"
+],
+"correct": 1,
+"explanation": "«Я сошла с ума» — запись t.A.T.u.."
+},
+{
+"id": "club_music_267",
+"theme": "music",
+"group": "song-133",
+"question": "Кто исполнил песню «Sandstorm» (1999)?",
+"answers": [
+"Darude",
+"Bomfunk MC's",
+"Nirvana",
+"R.E.M."
+],
+"correct": 0,
+"explanation": "«Sandstorm» — песня исполнителя Darude."
+},
+{
+"id": "club_music_268",
+"theme": "music",
+"group": "song-133",
+"question": "Какая из четырёх композиций у Darude в репертуаре?",
+"answers": [
+"Родина",
+"Numb/Encore",
+"Basket Case",
+"Sandstorm"
+],
+"correct": 3,
+"explanation": "«Sandstorm» — запись Darude."
+},
+{
+"id": "club_music_269",
+"theme": "music",
+"group": "song-134",
+"question": "Кто исполнил песню «What Is Love» (1993)?",
+"answers": [
+"Haddaway",
+"The Cranberries",
+"Limp Bizkit",
+"Christina Aguilera"
+],
+"correct": 0,
+"explanation": "«What Is Love» — песня исполнителя Haddaway."
+},
+{
+"id": "club_music_270",
+"theme": "music",
+"group": "song-134",
+"question": "На какой трек нужно поставить иглу фанату Haddaway?",
+"answers": [
+"Варвара",
+"What Is Love",
+"Юра",
+"Районы-кварталы"
+],
+"correct": 1,
+"explanation": "«What Is Love» — запись Haddaway."
+},
+{
+"id": "club_music_271",
+"theme": "music",
+"group": "song-135",
+"question": "Кто исполнил песню «Where's the Love?» (1997)?",
+"answers": [
+"Lady Gaga",
+"Los del Río",
+"Hanson",
+"Cher"
+],
+"correct": 2,
+"explanation": "«Where's the Love?» — песня исполнителя Hanson."
+},
+{
+"id": "club_music_272",
+"theme": "music",
+"group": "song-135",
+"question": "Какая композиция из списка связана с Hanson?",
+"answers": [
+"We Like to Party!",
+"Toxic",
+"Where's the Love?",
+"Небо"
+],
+"correct": 2,
+"explanation": "«Where's the Love?» — запись Hanson."
+},
+{
+"id": "club_music_273",
+"theme": "music",
+"group": "song-136",
+"question": "Кто исполнил песню «Дельфины» (1998)?",
+"answers": [
+"Григорий Лепс",
+"Мумий Тролль",
+"ДДТ",
+"Серёга"
+],
+"correct": 1,
+"explanation": "«Дельфины» — песня исполнителя Мумий Тролль."
+},
+{
+"id": "club_music_274",
+"theme": "music",
+"group": "song-136",
+"question": "Какую песню записали Мумий Тролль, а не другие артисты?",
+"answers": [
+"Дельфины",
+"Who Let the Dogs Out",
+"Выхода нет",
+"Плачет девушка в автомате"
+],
+"correct": 0,
+"explanation": "«Дельфины» — запись Мумий Тролль."
+},
+{
+"id": "club_music_275",
+"theme": "music",
+"group": "song-137",
+"question": "Кто исполнил песню «Feel Good Inc.» (2005)?",
+"answers": [
+"Gnarls Barkley",
+"Gorillaz",
+"Modest Mouse",
+"MGMT"
+],
+"correct": 1,
+"explanation": "«Feel Good Inc.» — песня исполнителя Gorillaz."
+},
+{
+"id": "club_music_276",
+"theme": "music",
+"group": "song-137",
+"question": "Угадай название песни, которую поёт Gorillaz:",
+"answers": [
+"Плачет девушка в автомате",
+"Там только там",
+"Bitter Sweet Symphony",
+"Feel Good Inc."
+],
+"correct": 3,
+"explanation": "«Feel Good Inc.» — запись Gorillaz."
+},
+{
+"id": "club_music_277",
+"theme": "music",
+"group": "song-138",
+"question": "Кто исполнил песню «It's a Beautiful Life» (1995)?",
+"answers": [
+"Ace of Base",
+"The Verve",
+"Limp Bizkit",
+"Los del Río"
+],
+"correct": 0,
+"explanation": "«It's a Beautiful Life» — песня исполнителя Ace of Base."
+},
+{
+"id": "club_music_278",
+"theme": "music",
+"group": "song-138",
+"question": "Какую песню записали Ace of Base, а не другие артисты?",
+"answers": [
+"Viva la Vida",
+"...Baby One More Time",
+"It's a Beautiful Life",
+"Зачем топтать мою любовь"
+],
+"correct": 2,
+"explanation": "«It's a Beautiful Life» — запись Ace of Base."
+},
+{
+"id": "club_music_279",
+"theme": "music",
+"group": "song-139",
+"question": "Кто исполнил песню «Зачем топтать мою любовь» (2000)?",
+"answers": [
+"Женя Белоусов",
+"Би-2",
+"Смысловые галлюцинации",
+"Айдамир Мугу"
+],
+"correct": 2,
+"explanation": "«Зачем топтать мою любовь» — песня исполнителя Смысловые галлюцинации."
+},
+{
+"id": "club_music_280",
+"theme": "music",
+"group": "song-139",
+"question": "Какую песню записали Смысловые галлюцинации, а не другие артисты?",
+"answers": [
+"It's My Life",
+"Coco Jamboo",
+"Macarena",
+"Зачем топтать мою любовь"
+],
+"correct": 3,
+"explanation": "«Зачем топтать мою любовь» — запись Смысловые галлюцинации."
+},
+{
+"id": "club_music_281",
+"theme": "music",
+"group": "song-140",
+"question": "Кто исполнил песню «Californication» (1999)?",
+"answers": [
+"Korn",
+"Lady Gaga",
+"System of a Down",
+"Red Hot Chili Peppers"
+],
+"correct": 3,
+"explanation": "«Californication» — песня исполнителя Red Hot Chili Peppers."
+},
+{
+"id": "club_music_282",
+"theme": "music",
+"group": "song-140",
+"question": "Какая из четырёх композиций у Red Hot Chili Peppers в репертуаре?",
+"answers": [
+"Дельфин и русалка",
+"Coco Jamboo",
+"Crawling",
+"Californication"
+],
+"correct": 3,
+"explanation": "«Californication» — запись Red Hot Chili Peppers."
+},
+{
+"id": "club_music_283",
+"theme": "music",
+"group": "song-141",
+"question": "Кто исполнил песню «Poker Face» (2008)?",
+"answers": [
+"Hanson",
+"Linkin Park",
+"Lady Gaga",
+"System of a Down"
+],
+"correct": 2,
+"explanation": "«Poker Face» — песня исполнителя Lady Gaga."
+},
+{
+"id": "club_music_284",
+"theme": "music",
+"group": "song-141",
+"question": "Какой из этих треков ты услышишь на концерте Lady Gaga?",
+"answers": [
+"Ландыши",
+"Poker Face",
+"I Want It That Way",
+"Осколок льда"
+],
+"correct": 1,
+"explanation": "«Poker Face» — запись Lady Gaga."
+},
+{
+"id": "club_music_285",
+"theme": "music",
+"group": "song-142",
+"question": "Кто исполнил песню «Beautiful» (2002)?",
+"answers": [
+"Mika",
+"Christina Aguilera",
+"Radiohead",
+"Ace of Base"
+],
+"correct": 1,
+"explanation": "«Beautiful» — песня исполнителя Christina Aguilera."
+},
+{
+"id": "club_music_286",
+"theme": "music",
+"group": "song-142",
+"question": "Какая композиция из списка связана с Christina Aguilera?",
+"answers": [
+"American Boy",
+"Sandstorm",
+"Coco Jamboo",
+"Beautiful"
+],
+"correct": 3,
+"explanation": "«Beautiful» — запись Christina Aguilera."
+},
+{
+"id": "club_music_287",
+"theme": "music",
+"group": "song-143",
+"question": "Кто исполнил песню «Karma Police» (1997)?",
+"answers": [
+"Linkin Park",
+"The Prodigy",
+"Radiohead",
+"Coldplay"
+],
+"correct": 2,
+"explanation": "«Karma Police» — песня исполнителя Radiohead."
+},
+{
+"id": "club_music_288",
+"theme": "music",
+"group": "song-143",
+"question": "Какой из этих треков ты услышишь на концерте Radiohead?",
+"answers": [
+"Варвара",
+"Karma Police",
+"Where's the Love?",
+"Basket Case"
+],
+"correct": 1,
+"explanation": "«Karma Police» — запись Radiohead."
+},
+{
+"id": "club_music_289",
+"theme": "music",
+"group": "song-144",
+"question": "Кто исполнил песню «Пятница» (1999)?",
+"answers": [
+"Звери",
+"t.A.T.u.",
+"Натали",
+"Леприконсы"
+],
+"correct": 3,
+"explanation": "«Пятница» — песня исполнителя Леприконсы."
+},
+{
+"id": "club_music_290",
+"theme": "music",
+"group": "song-144",
+"question": "Какой хит оставили нам Леприконсы?",
+"answers": [
+"Мой рай",
+"Лондон-Париж",
+"Пятница",
+"Кукушка"
+],
+"correct": 2,
+"explanation": "«Пятница» — запись Леприконсы."
+},
+{
+"id": "club_music_291",
+"theme": "music",
+"group": "song-145",
+"question": "Кто исполнил песню «My Heart Will Go On» (1997)?",
+"answers": [
+"Christina Aguilera",
+"Eminem",
+"Céline Dion",
+"Evanescence"
+],
+"correct": 2,
+"explanation": "«My Heart Will Go On» — песня исполнителя Céline Dion."
+},
+{
+"id": "club_music_292",
+"theme": "music",
+"group": "song-145",
+"question": "На какой трек нужно поставить иглу фанату Céline Dion?",
+"answers": [
+"Ветер с моря дул",
+"My Heart Will Go On",
+"Посмотри в глаза",
+"The Bad Touch"
+],
+"correct": 1,
+"explanation": "«My Heart Will Go On» — запись Céline Dion."
+},
+{
+"id": "club_music_293",
+"theme": "music",
+"group": "song-146",
+"question": "Кто исполнил песню «Basket Case» (1994)?",
+"answers": [
+"Britney Spears",
+"Céline Dion",
+"Bloodhound Gang",
+"Green Day"
+],
+"correct": 3,
+"explanation": "«Basket Case» — песня исполнителя Green Day."
+},
+{
+"id": "club_music_294",
+"theme": "music",
+"group": "song-146",
+"question": "Какая из четырёх композиций у Green Day в репертуаре?",
+"answers": [
+"Вечно молодой",
+"Мало-помалу",
+"Believe",
+"Basket Case"
+],
+"correct": 3,
+"explanation": "«Basket Case» — запись Green Day."
+},
+{
+"id": "club_music_295",
+"theme": "music",
+"group": "song-147",
+"question": "Кто исполнил песню «Rehab» (2006)?",
+"answers": [
+"Daft Punk",
+"Baha Men",
+"Amy Winehouse",
+"Haddaway"
+],
+"correct": 2,
+"explanation": "«Rehab» — песня исполнителя Amy Winehouse."
+},
+{
+"id": "club_music_296",
+"theme": "music",
+"group": "song-147",
+"question": "Что поставить на дискотеке для поклонников Amy Winehouse?",
+"answers": [
+"Feel Good Inc.",
+"18 мне уже",
+"Saturday Night",
+"Rehab"
+],
+"correct": 3,
+"explanation": "«Rehab» — запись Amy Winehouse."
+},
+{
+"id": "club_music_297",
+"theme": "music",
+"group": "song-148",
+"question": "Кто исполнил песню «Bitter Sweet Symphony» (1997)?",
+"answers": [
+"Soundgarden",
+"The Cranberries",
+"The Verve",
+"Red Hot Chili Peppers"
+],
+"correct": 2,
+"explanation": "«Bitter Sweet Symphony» — песня исполнителя The Verve."
+},
+{
+"id": "club_music_298",
+"theme": "music",
+"group": "song-148",
+"question": "Какой из этих треков ты услышишь на концерте The Verve?",
+"answers": [
+"Bitter Sweet Symphony",
+"Студент",
+"Невозможное возможно",
+"Who Let the Dogs Out"
+],
+"correct": 0,
+"explanation": "«Bitter Sweet Symphony» — запись The Verve."
+},
+{
+"id": "club_music_299",
+"theme": "music",
+"group": "song-149",
+"question": "Кто исполнил песню «Юра» (2003)?",
+"answers": [
+"Блестящие feat. Arash",
+"Дискотека Авария",
+"МакSим",
+"Глюкоза"
+],
+"correct": 3,
+"explanation": "«Юра» — песня исполнителя Глюкоза."
+},
+{
+"id": "club_music_300",
+"theme": "music",
+"group": "song-149",
+"question": "Какой из этих треков записали Глюкоза?",
+"answers": [
+"Bring Me to Life",
+"Юра",
+"Linger",
+"Я свободен"
+],
+"correct": 1,
+"explanation": "«Юра» — запись Глюкоза."
+},
+{
+"id": "club_tv_001",
+"theme": "tv",
+"group": "tv-000",
+"question": "Какую программу узнают по барабану, трём игрокам и сектору «Приз»?",
+"answers": [
+"Своя игра",
+"Сто к одному",
+"Поле чудес",
+"Угадай мелодию"
+],
+"correct": 2,
+"explanation": "Барабан и секторы — фирменный реквизит «Поля чудес»."
+},
+{
+"id": "club_tv_002",
+"theme": "tv",
+"group": "tv-000",
+"question": "Что продаёт Хэнк Хилл? [«Царь горы»]",
+"answers": [
+"Пиццу",
+"Пропан",
+"Стиральные машины",
+"Автомобили"
+],
+"correct": 1,
+"explanation": "Верно: Пропан. Это факт о «Царь горы»."
+},
+{
+"id": "club_tv_003",
+"theme": "tv",
+"group": "tv-001",
+"question": "Кто кричал детям «Зов джунглей!» в телеигре девяностых?",
+"answers": [
+"Александр Гуревич",
+"Валдис Пельш",
+"Сергей Супонев",
+"Александр Пушной"
+],
+"correct": 2,
+"explanation": "Сергей Супонев вёл «Зов джунглей»."
+},
+{
+"id": "club_tv_004",
+"theme": "tv",
+"group": "tv-001",
+"question": "Какой жанр объединял ведущих «Взгляда»? [«Взгляд»]",
+"answers": [
+"Спортивный обзор",
+"Телемагазин",
+"Молодёжная информационно-публицистическая передача",
+"Детская викторина"
+],
+"correct": 2,
+"explanation": "Верно: Молодёжная информационно-публицистическая передача. Это факт о «Взгляд»."
+},
+{
+"id": "club_tv_005",
+"theme": "tv",
+"group": "tv-002",
+"question": "Какую передачу узнают по командам «хищников» и «травоядных»?",
+"answers": [
+"КВН",
+"Сто к одному",
+"Форт Боярд",
+"Зов джунглей"
+],
+"correct": 3,
+"explanation": "Две команды боролись в «Зове джунглей»."
+},
+{
+"id": "club_tv_006",
+"theme": "tv",
+"group": "tv-002",
+"question": "Как зовут главного героя, которого играет Зак Брафф? [«Клиника»]",
+"answers": [
+"Джон Дориан",
+"Персиваль Кокс",
+"Боб Келсо",
+"Кристофер Тёрк"
+],
+"correct": 0,
+"explanation": "Верно: Джон Дориан. Это факт о «Клиника»."
+},
+{
+"id": "club_tv_007",
+"theme": "tv",
+"group": "tv-003",
+"question": "Где зрители угадывали музыку с первых нот?",
+"answers": [
+"Своя игра",
+"Слабое звено",
+"Угадай мелодию",
+"Поле чудес"
+],
+"correct": 2,
+"explanation": "В «Угадай мелодию» узнавали песни по кратким фрагментам."
+},
+{
+"id": "club_tv_008",
+"theme": "tv",
+"group": "tv-003",
+"question": "Как зовут героиню Наталии Орейро? [«Дикий ангел»]",
+"answers": [
+"Паола",
+"Милагрос",
+"Эсмеральда",
+"Кассандра"
+],
+"correct": 1,
+"explanation": "Верно: Милагрос. Это факт о «Дикий ангел»."
+},
+{
+"id": "club_tv_009",
+"theme": "tv",
+"group": "tv-004",
+"question": "Какая передача делала из обычных детей звёзд за задания на экране?",
+"answers": [
+"Звёздный час",
+"Окна",
+"Сам себе режиссёр",
+"Фабрика звёзд"
+],
+"correct": 0,
+"explanation": "«Звёздный час» — знаменитая детская телеигра."
+},
+{
+"id": "club_tv_010",
+"theme": "tv",
+"group": "tv-004",
+"question": "Как зовут няню, которую сыграла Анастасия Заворотнюк? [«Моя прекрасная няня»]",
+"answers": [
+"Катя Пушкарёва",
+"Даша Букина",
+"Вика Прутковская",
+"Галя Сергеева"
+],
+"correct": 2,
+"explanation": "Верно: Вика Прутковская. Это факт о «Моя прекрасная няня»."
+},
+{
+"id": "club_tv_011",
+"theme": "tv",
+"group": "tv-005",
+"question": "Где поклонники приставок впервые массово увидели Сергея Супонева с Dendy?",
+"answers": [
+"КВН",
+"Денди — Новая реальность",
+"Галилео",
+"МузОбоз"
+],
+"correct": 1,
+"explanation": "Супонев рассказывал про игры и приставки в «Денди»."
+},
+{
+"id": "club_tv_012",
+"theme": "tv",
+"group": "tv-005",
+"question": "Где преимущественно живут студенты в «Универе»? [«Универ»]",
+"answers": [
+"В усадьбе",
+"На корабле",
+"На космической станции",
+"В общежитии"
+],
+"correct": 3,
+"explanation": "Верно: В общежитии. Это факт о «Универ»."
+},
+{
+"id": "club_tv_013",
+"theme": "tv",
+"group": "tv-006",
+"question": "Какую программу прославил звук волчка и чёрный ящик?",
+"answers": [
+"Что? Где? Когда?",
+"Поле чудес",
+"Слабое звено",
+"Своя игра"
+],
+"correct": 0,
+"explanation": "В ЧГК игроки крутят волчок и исследуют чёрный ящик."
+},
+{
+"id": "club_tv_014",
+"theme": "tv",
+"group": "tv-006",
+"question": "Кто руководит отделением Dunder Mifflin в Скрантоне? [«Офис»]",
+"answers": [
+"Майкл Скотт",
+"Кевин Мэлоун",
+"Джим Халперт",
+"Дуайт Шрут"
+],
+"correct": 0,
+"explanation": "Верно: Майкл Скотт. Это факт о «Офис»."
+},
+{
+"id": "club_tv_015",
+"theme": "tv",
+"group": "tv-007",
+"question": "В какой передаче игроков безжалостно называли «самым слабым звеном»?",
+"answers": [
+"Слабое звено",
+"Своя игра",
+"Сто к одному",
+"О, счастливчик!"
+],
+"correct": 0,
+"explanation": "Название — главная фраза телеигры."
+},
+{
+"id": "club_tv_016",
+"theme": "tv",
+"group": "tv-007",
+"question": "Кем по профессии является Ричард Касл? [«Касл»]",
+"answers": [
+"Писателем",
+"Психологом",
+"Журналистом",
+"Пожарным"
+],
+"correct": 0,
+"explanation": "Верно: Писателем. Это факт о «Касл»."
+},
+{
+"id": "club_tv_017",
+"theme": "tv",
+"group": "tv-008",
+"question": "У какой телевикторины были четыре варианта ответа и подсказка «Звонок другу»?",
+"answers": [
+"Кто хочет стать миллионером?",
+"Что? Где? Когда?",
+"Своя игра",
+"Поле чудес"
+],
+"correct": 0,
+"explanation": "Формат «Миллионера» включает несколько подсказок."
+},
+{
+"id": "club_tv_018",
+"theme": "tv",
+"group": "tv-008",
+"question": "С кем прежде всего ассоциируется ток-шоу «Пусть говорят»? [«Пусть говорят»]",
+"answers": [
+"Пётр Кулешов",
+"Сергей Супонев",
+"Валдис Пельш",
+"Андрей Малахов"
+],
+"correct": 3,
+"explanation": "Верно: Андрей Малахов. Это факт о «Пусть говорят»."
+},
+{
+"id": "club_tv_019",
+"theme": "tv",
+"group": "tv-009",
+"question": "Кто был в центре скетчей «Деревня Дураков»?",
+"answers": [
+"Гена и Вован",
+"Коля и Миша",
+"Равшан и Джамшут",
+"Мужик и Морячок"
+],
+"correct": 3,
+"explanation": "«Деревня Дураков» — скетчи шоу «Каламбур»."
+},
+{
+"id": "club_tv_020",
+"theme": "tv",
+"group": "tv-009",
+"question": "Кто был ведущим «МузОбоза»? [«МузОбоз»]",
+"answers": [
+"Владислав Листьев",
+"Валдис Пельш",
+"Юрий Николаев",
+"Иван Демидов"
+],
+"correct": 3,
+"explanation": "Верно: Иван Демидов. Это факт о «МузОбоз»."
+},
+{
+"id": "club_tv_021",
+"theme": "tv",
+"group": "tv-010",
+"question": "Из какого шоу вышел мем с летучим самолётом «Крутое пике»?",
+"answers": [
+"Большая разница",
+"Городок",
+"Каламбур",
+"ОСП-студия"
+],
+"correct": 2,
+"explanation": "«Крутое пике» — серия юмористических сценок «Каламбура»."
+},
+{
+"id": "club_tv_022",
+"theme": "tv",
+"group": "tv-010",
+"question": "Какой школьный предмет преподаёт Уолтер Уайт? [«Во все тяжкие»]",
+"answers": [
+"Химию",
+"Историю",
+"Физику",
+"Биологию"
+],
+"correct": 0,
+"explanation": "Верно: Химию. Это факт о «Во все тяжкие»."
+},
+{
+"id": "club_tv_023",
+"theme": "tv",
+"group": "tv-011",
+"question": "В каком телешоу было два комика — Олейников и Стоянов?",
+"answers": [
+"Городок",
+"Камеди Клаб",
+"Маски-шоу",
+"Осторожно, модерн!"
+],
+"correct": 0,
+"explanation": "«Городок» — дуэт Ильи Олейникова и Юрия Стоянова."
+},
+{
+"id": "club_tv_024",
+"theme": "tv",
+"group": "tv-011",
+"question": "Как зовут основателя «Что? Где? Когда?»? [«Что? Где? Когда?»]",
+"answers": [
+"Владимир Ворошилов",
+"Александр Масляков",
+"Леонид Парфёнов",
+"Владислав Листьев"
+],
+"correct": 0,
+"explanation": "Верно: Владимир Ворошилов. Это факт о «Что? Где? Когда?»."
+},
+{
+"id": "club_tv_025",
+"theme": "tv",
+"group": "tv-012",
+"question": "Какой дуэт играл практически всех персонажей в «Осторожно, модерн!»?",
+"answers": [
+"Нагиев и Рост",
+"Стоянов и Олейников",
+"Масляков и Гальцев",
+"Ургант и Светлаков"
+],
+"correct": 0,
+"explanation": "Шоу прославилось дуэтом Нагиева и Роста."
+},
+{
+"id": "club_tv_026",
+"theme": "tv",
+"group": "tv-012",
+"question": "Как зовут главного героя — коррумпированного полицейского? [«Щит»]",
+"answers": [
+"Декстер Морган",
+"Джек Бауэр",
+"Джон Лютер",
+"Вик Макки"
+],
+"correct": 3,
+"explanation": "Верно: Вик Макки. Это факт о «Щит»."
+},
+{
+"id": "club_tv_027",
+"theme": "tv",
+"group": "tv-013",
+"question": "Какого персонажа «Нашей Russia» играл Галустян рядом с Джамшутом?",
+"answers": [
+"Гена Букин",
+"Кузя",
+"Равшан",
+"Коля Наумов"
+],
+"correct": 2,
+"explanation": "Равшан — гастарбайтер из скетчей «Наша Russia»."
+},
+{
+"id": "club_tv_028",
+"theme": "tv",
+"group": "tv-013",
+"question": "Как зовут малыша с отвёрткой и круглой головой? [«Ох уж эти детки!»]",
+"answers": [
+"Томми Пиклз",
+"Чаки Финстер",
+"Дил Пиклз",
+"Фил Девилль"
+],
+"correct": 0,
+"explanation": "Верно: Томми Пиклз. Это факт о «Ох уж эти детки!»."
+},
+{
+"id": "club_tv_029",
+"theme": "tv",
+"group": "tv-014",
+"question": "Что показывали в передаче «Сам себе режиссёр»?",
+"answers": [
+"Песни с кассет",
+"Игры от Sony",
+"Любительские видеоролики",
+"Футбольные матчи"
+],
+"correct": 2,
+"explanation": "Программа показывала домашние смешные видео."
+},
+{
+"id": "club_tv_030",
+"theme": "tv",
+"group": "tv-014",
+"question": "Какой медицинской специальностью известен Грегори Хаус? [«Доктор Хаус»]",
+"answers": [
+"Стоматологией",
+"Диагностикой",
+"Педиатрией",
+"Офтальмологией"
+],
+"correct": 1,
+"explanation": "Верно: Диагностикой. Это факт о «Доктор Хаус»."
+},
+{
+"id": "club_tv_031",
+"theme": "tv",
+"group": "tv-015",
+"question": "Как зовут продавца пропана из мультсериала «Царь горы»?",
+"answers": [
+"Хэнк Хилл",
+"Питер Гриффин",
+"Тони Сопрано",
+"Гомер Симпсон"
+],
+"correct": 0,
+"explanation": "Хэнк Хилл — главный герой мультсериала «Царь горы»."
+},
+{
+"id": "club_tv_032",
+"theme": "tv",
+"group": "tv-015",
+"question": "Где происходит действие «Мелроуз-Плейс»? [«Мелроуз-Плейс»]",
+"answers": [
+"В Лос-Анджелесе",
+"В Сиэтле",
+"В Бостоне",
+"В Чикаго"
+],
+"correct": 0,
+"explanation": "Верно: В Лос-Анджелесе. Это факт о «Мелроуз-Плейс»."
+},
+{
+"id": "club_tv_033",
+"theme": "tv",
+"group": "tv-016",
+"question": "В каком мультсериале мальчика постоянно убивают, а он возвращается?",
+"answers": [
+"Футурама",
+"Симпсоны",
+"Гриффины",
+"Южный Парк"
+],
+"correct": 3,
+"explanation": "Это повторяющийся гэг с Кенни."
+},
+{
+"id": "club_tv_034",
+"theme": "tv",
+"group": "tv-016",
+"question": "С каким журналистом ассоциируется «Намедни»? [«Намедни»]",
+"answers": [
+"Владимир Познер",
+"Леонид Парфёнов",
+"Александр Невзоров",
+"Иван Ургант"
+],
+"correct": 1,
+"explanation": "Верно: Леонид Парфёнов. Это факт о «Намедни»."
+},
+{
+"id": "club_tv_035",
+"theme": "tv",
+"group": "tv-017",
+"question": "У какого персонажа «Симпсонов» любимое слово «D'oh!»?",
+"answers": [
+"Мистер Бёрнс",
+"Барт Симпсон",
+"Нед Фландерс",
+"Гомер Симпсон"
+],
+"correct": 3,
+"explanation": "D'oh! — знаменитое восклицание Гомера."
+},
+{
+"id": "club_tv_036",
+"theme": "tv",
+"group": "tv-017",
+"question": "Кем работает Эл Банди? [«Женаты... с детьми»]",
+"answers": [
+"Продавцом обуви",
+"Врачом",
+"Таксистом",
+"Учителем"
+],
+"correct": 0,
+"explanation": "Верно: Продавцом обуви. Это факт о «Женаты... с детьми»."
+},
+{
+"id": "club_tv_037",
+"theme": "tv",
+"group": "tv-018",
+"question": "Кто в «Футураме» работает роботом-сгибателем и любит алкоголь?",
+"answers": [
+"Профессор Фарнсворт",
+"Зойдберг",
+"Фрай",
+"Бендер"
+],
+"correct": 3,
+"explanation": "Бендер — робот и один из главных героев «Футурамы»."
+},
+{
+"id": "club_tv_038",
+"theme": "tv",
+"group": "tv-018",
+"question": "В каком городе происходит действие «Ликвидации»? [«Ликвидация»]",
+"answers": [
+"Ленинград",
+"Москва",
+"Одесса",
+"Киев"
+],
+"correct": 2,
+"explanation": "Верно: Одесса. Это факт о «Ликвидация»."
+},
+{
+"id": "club_tv_039",
+"theme": "tv",
+"group": "tv-019",
+"question": "Как зовут инопланетянина, который хочет съесть кошку семьи Таннер?",
+"answers": [
+"Марвин",
+"Альф",
+"Йода",
+"Зойдберг"
+],
+"correct": 1,
+"explanation": "Альф постоянно шутит о кошках."
+},
+{
+"id": "club_tv_040",
+"theme": "tv",
+"group": "tv-019",
+"question": "Кто вёл первый сезон российской «Фабрики звёзд»? [«Фабрика звёзд»]",
+"answers": [
+"Ксения Собчак",
+"Вера Брежнева",
+"Тина Канделаки",
+"Яна Чурикова"
+],
+"correct": 3,
+"explanation": "Верно: Яна Чурикова. Это факт о «Фабрика звёзд»."
+},
+{
+"id": "club_tv_041",
+"theme": "tv",
+"group": "tv-020",
+"question": "В каком сериале звучит фраза «How you doin'?» у Джоуи?",
+"answers": [
+"Друзья",
+"Клиника",
+"Сайнфелд",
+"Офис"
+],
+"correct": 0,
+"explanation": "Это коронная фраза Джоуи Триббиани."
+},
+{
+"id": "club_tv_042",
+"theme": "tv",
+"group": "tv-020",
+"question": "Кем работает Дон Дрейпер? [«Безумцы»]",
+"answers": [
+"Детективом",
+"Рекламистом",
+"Врачом",
+"Политиком"
+],
+"correct": 1,
+"explanation": "Верно: Рекламистом. Это факт о «Безумцы»."
+},
+{
+"id": "club_tv_043",
+"theme": "tv",
+"group": "tv-021",
+"question": "Кто в сериале «Друзья» постоянно говорит «We were on a break!»?",
+"answers": [
+"Чендлер",
+"Росс",
+"Гантер",
+"Джоуи"
+],
+"correct": 1,
+"explanation": "Росс оправдывает расставание с Рэйчел."
+},
+{
+"id": "club_tv_044",
+"theme": "tv",
+"group": "tv-021",
+"question": "Как зовут напарницу агента Фокса Малдера? [«Секретные материалы»]",
+"answers": [
+"Сара Коннор",
+"Оливия Данэм",
+"Дана Скалли",
+"Кейт Остин"
+],
+"correct": 2,
+"explanation": "Верно: Дана Скалли. Это факт о «Секретные материалы»."
+},
+{
+"id": "club_tv_045",
+"theme": "tv",
+"group": "tv-022",
+"question": "Какая вымышленная фирма торгует бумагой в «Офисе»?",
+"answers": [
+"Sterling Cooper",
+"Wayne Enterprises",
+"Dunder Mifflin",
+"Aperture Science"
+],
+"correct": 2,
+"explanation": "Сотрудники «Офиса» работают в Dunder Mifflin."
+},
+{
+"id": "club_tv_046",
+"theme": "tv",
+"group": "tv-022",
+"question": "На каком канале стартовал «Квартирный вопрос»? [«Квартирный вопрос»]",
+"answers": [
+"ТНТ",
+"СТС",
+"Первый",
+"НТВ"
+],
+"correct": 3,
+"explanation": "Верно: НТВ. Это факт о «Квартирный вопрос»."
+},
+{
+"id": "club_tv_047",
+"theme": "tv",
+"group": "tv-023",
+"question": "Кто в «Клинике» постоянно мечтает и ведёт закадровый монолог?",
+"answers": [
+"Боб Келсо",
+"Тёрк",
+"Доктор Кокс",
+"Джей Ди"
+],
+"correct": 3,
+"explanation": "Джей Ди — герой с богатой фантазией."
+},
+{
+"id": "club_tv_048",
+"theme": "tv",
+"group": "tv-023",
+"question": "Кто вёл передачу о необычных явлениях на ТНТ? [«Необъяснимо, но факт»]",
+"answers": [
+"Михаил Шац",
+"Леонид Парфёнов",
+"Сергей Дружко",
+"Александр Пушной"
+],
+"correct": 2,
+"explanation": "Верно: Сергей Дружко. Это факт о «Необъяснимо, но факт»."
+},
+{
+"id": "club_tv_049",
+"theme": "tv",
+"group": "tv-024",
+"question": "Чья квартира в «Теории большого взрыва» напротив двери Пенни?",
+"answers": [
+"Моники и Рэйчел",
+"Уолтера и Джесси",
+"Росса и Чендлера",
+"Шелдона и Леонарда"
+],
+"correct": 3,
+"explanation": "Соседи по квартире — Шелдон и Леонард."
+},
+{
+"id": "club_tv_050",
+"theme": "tv",
+"group": "tv-024",
+"question": "Кто долгие годы вёл «В мире животных»? [«В мире животных»]",
+"answers": [
+"Леонид Якубович",
+"Николай Дроздов",
+"Дмитрий Нагиев",
+"Сергей Супонев"
+],
+"correct": 1,
+"explanation": "Верно: Николай Дроздов. Это факт о «В мире животных»."
+},
+{
+"id": "club_tv_051",
+"theme": "tv",
+"group": "tv-025",
+"question": "Какое прозвище получил бывший учитель химии Уолтер Уайт?",
+"answers": [
+"Хаус",
+"Картман",
+"Джокер",
+"Хайзенберг"
+],
+"correct": 3,
+"explanation": "Хайзенберг — криминальный псевдоним Уолтера."
+},
+{
+"id": "club_tv_052",
+"theme": "tv",
+"group": "tv-025",
+"question": "Кто исполнил главную роль Марианны? [«Богатые тоже плачут»]",
+"answers": [
+"Вероника Кастро",
+"Лусия Мендес",
+"Наталия Орейро",
+"Талия"
+],
+"correct": 0,
+"explanation": "Верно: Вероника Кастро. Это факт о «Богатые тоже плачут»."
+},
+{
+"id": "club_tv_053",
+"theme": "tv",
+"group": "tv-026",
+"question": "Какое слово любит произносить доктор Хаус о пациентах?",
+"answers": [
+"«Элементарно»",
+"«Все лгут»",
+"«Зима близко»",
+"«Я вернусь»"
+],
+"correct": 1,
+"explanation": "«Все лгут» — фирменная идея Хауса."
+},
+{
+"id": "club_tv_054",
+"theme": "tv",
+"group": "tv-026",
+"question": "Кто вёл «Пока все дома»? [«Пока все дома»]",
+"answers": [
+"Валдис Пельш",
+"Алексей Лысенков",
+"Тимур Кизяков",
+"Николай Дроздов"
+],
+"correct": 2,
+"explanation": "Верно: Тимур Кизяков. Это факт о «Пока все дома»."
+},
+{
+"id": "club_tv_055",
+"theme": "tv",
+"group": "tv-027",
+"question": "В каком сериале рассказывают историю нападения на самолёт рейса 815?",
+"answers": [
+"Доктор Хаус",
+"24 часа",
+"Остаться в живых",
+"Побег"
+],
+"correct": 2,
+"explanation": "Oceanic 815 терпит крушение в «Остаться в живых»."
+},
+{
+"id": "club_tv_056",
+"theme": "tv",
+"group": "tv-027",
+"question": "Кто познакомил детей с игровыми приставками в «Денди»? [«Денди — Новая реальность»]",
+"answers": [
+"Сергей Супонев",
+"Борис Репетур",
+"Александр Пушной",
+"Леонид Парфёнов"
+],
+"correct": 0,
+"explanation": "Верно: Сергей Супонев. Это факт о «Денди — Новая реальность»."
+},
+{
+"id": "club_tv_057",
+"theme": "tv",
+"group": "tv-028",
+"question": "Кто из «Секретных материалов» верит в инопланетян сильнее напарницы?",
+"answers": [
+"Дейл Купер",
+"Доктор Хаус",
+"Фокс Малдер",
+"Патрик Джейн"
+],
+"correct": 2,
+"explanation": "Малдер ищет доказательства внеземной жизни."
+},
+{
+"id": "club_tv_058",
+"theme": "tv",
+"group": "tv-028",
+"question": "На каком канале выходил первоначальный «О, счастливчик!»? [«О, счастливчик!»]",
+"answers": [
+"НТВ",
+"ТНТ",
+"СТС",
+"РЕН ТВ"
+],
+"correct": 0,
+"explanation": "Верно: НТВ. Это факт о «О, счастливчик!»."
+},
+{
+"id": "club_tv_059",
+"theme": "tv",
+"group": "tv-029",
+"question": "Из какого сериала название кофейни «Central Perk»?",
+"answers": [
+"Клиника",
+"Офис",
+"Друзья",
+"Сайнфелд"
+],
+"correct": 2,
+"explanation": "Это кафе компании из «Друзей»."
+},
+{
+"id": "club_tv_060",
+"theme": "tv",
+"group": "tv-029",
+"question": "Какой из ведущих прославился благодаря Top Gear? [«Топ Гир»]",
+"answers": [
+"Стивен Фрай",
+"Джереми Кларксон",
+"Джон Оливер",
+"Гордон Рамзи"
+],
+"correct": 1,
+"explanation": "Верно: Джереми Кларксон. Это факт о «Топ Гир»."
+},
+{
+"id": "club_tv_061",
+"theme": "tv",
+"group": "tv-030",
+"question": "Какая мыльная опера рассказывает о Милагрос и Иво?",
+"answers": [
+"Клон",
+"Дикий ангел",
+"Санта-Барбара",
+"Просто Мария"
+],
+"correct": 1,
+"explanation": "Герои «Дикого ангела» — Милагрос и Иво."
+},
+{
+"id": "club_tv_062",
+"theme": "tv",
+"group": "tv-030",
+"question": "Как зовут главу семейства Букиных? [«Счастливы вместе»]",
+"answers": [
+"Саша Сергеев",
+"Гена Букин",
+"Коля Воронин",
+"Максим Шаталин"
+],
+"correct": 1,
+"explanation": "Верно: Гена Букин. Это факт о «Счастливы вместе»."
+},
+{
+"id": "club_tv_063",
+"theme": "tv",
+"group": "tv-031",
+"question": "Какая передача ассоциируется с фразой «Не переключайтесь, после рекламы...» и анонсами клипов MTV?",
+"answers": [
+"Смак",
+"Форт Боярд",
+"12 злобных зрителей",
+"Галилео"
+],
+"correct": 2,
+"explanation": "На MTV Россия «12 злобных зрителей» оценивали клипы."
+},
+{
+"id": "club_tv_064",
+"theme": "tv",
+"group": "tv-031",
+"question": "Кто работает кассиром в «Красти Краб»? [«Губка Боб Квадратные Штаны»]",
+"answers": [
+"Патрик",
+"Сквидвард",
+"Гэри",
+"Планктон"
+],
+"correct": 1,
+"explanation": "Верно: Сквидвард. Это факт о «Губка Боб Квадратные Штаны»."
+},
+{
+"id": "club_tv_065",
+"theme": "tv",
+"group": "tv-032",
+"question": "Где телеведущий говорил «А теперь поедем в Африку!» рядом с животными?",
+"answers": [
+"МузОбоз",
+"В мире животных",
+"Своя игра",
+"КВН"
+],
+"correct": 1,
+"explanation": "«В мире животных» — знаменитая программа с Дроздовым."
+},
+{
+"id": "club_tv_066",
+"theme": "tv",
+"group": "tv-032",
+"question": "Как зовут молодого Супермена? [«Тайны Смолвиля»]",
+"answers": [
+"Барри Аллен",
+"Брюс Уэйн",
+"Кларк Кент",
+"Питер Паркер"
+],
+"correct": 2,
+"explanation": "Верно: Кларк Кент. Это факт о «Тайны Смолвиля»."
+},
+{
+"id": "club_tv_067",
+"theme": "tv",
+"group": "tv-033",
+"question": "Как называлось телешоу, в котором превращали старые машины в экстравагантные?",
+"answers": [
+"Разрушители легенд",
+"Большие гонки",
+"Топ Гир",
+"Тачку на прокачку"
+],
+"correct": 3,
+"explanation": "В Pimp My Ride кастомизировали автомобили."
+},
+{
+"id": "club_tv_068",
+"theme": "tv",
+"group": "tv-033",
+"question": "Кто был ведущими «Хороших шуток»? [«Хорошие шутки»]",
+"answers": [
+"Дибров и Галкин",
+"Шац и Лазарева",
+"Пельш и Фоменко",
+"Масляков и Гальцев"
+],
+"correct": 1,
+"explanation": "Верно: Шац и Лазарева. Это факт о «Хорошие шутки»."
+},
+{
+"id": "club_tv_069",
+"theme": "tv",
+"group": "tv-034",
+"question": "Как называлась программа с Адамом Сэвиджем и Джейми Хайнеманом?",
+"answers": [
+"Смак",
+"Галилео",
+"Топ Гир",
+"Разрушители легенд"
+],
+"correct": 3,
+"explanation": "MythBusters проверяли легенды научными методами."
+},
+{
+"id": "club_tv_070",
+"theme": "tv",
+"group": "tv-034",
+"question": "Как зовут агента, которого играет Кифер Сазерленд? [«24 часа»]",
+"answers": [
+"Джек Шепард",
+"Майкл Скофилд",
+"Джейсон Борн",
+"Джек Бауэр"
+],
+"correct": 3,
+"explanation": "Верно: Джек Бауэр. Это факт о «24 часа»."
+},
+{
+"id": "club_tv_071",
+"theme": "tv",
+"group": "tv-035",
+"question": "Какая серия мультфильмов о младенцах показывала Томми и Чаки?",
+"answers": [
+"Ох уж эти детки!",
+"Эй, Арнольд!",
+"Крутые бобры",
+"Котопёс"
+],
+"correct": 0,
+"explanation": "Томми и Чаки — персонажи Rugrats."
+},
+{
+"id": "club_tv_072",
+"theme": "tv",
+"group": "tv-035",
+"question": "Кем по профессии был Фрай до заморозки? [«Футурама»]",
+"answers": [
+"Сантехником",
+"Врачом",
+"Учителем",
+"Доставщиком пиццы"
+],
+"correct": 3,
+"explanation": "Верно: Доставщиком пиццы. Это факт о «Футурама»."
+},
+{
+"id": "club_tv_073",
+"theme": "tv",
+"group": "tv-036",
+"question": "Где два брата-бобра постоянно ссорились?",
+"answers": [
+"Крутые бобры",
+"Чип и Дейл",
+"Гриффины",
+"Котопёс"
+],
+"correct": 0,
+"explanation": "Норберт и Дэггет — братья из «Крутых бобров»."
+},
+{
+"id": "club_tv_074",
+"theme": "tv",
+"group": "tv-036",
+"question": "Как зовут героя Михаила Галустяна — гастарбайтера? [«Наша Russia»]",
+"answers": [
+"Гомер",
+"Саша Белый",
+"Сергей Зверев",
+"Равшан"
+],
+"correct": 3,
+"explanation": "Верно: Равшан. Это факт о «Наша Russia»."
+},
+{
+"id": "club_tv_075",
+"theme": "tv",
+"group": "tv-037",
+"question": "Где проходит юность Кларка Кента в одноимённом сериале?",
+"answers": [
+"Смолвиль",
+"Метрополис",
+"Саннидейл",
+"Готэм"
+],
+"correct": 0,
+"explanation": "Сериал «Тайны Смолвиля» посвящён юному Кларку."
+},
+{
+"id": "club_tv_076",
+"theme": "tv",
+"group": "tv-037",
+"question": "Как звали двух главных актёров «Городка»? [«Городок»]",
+"answers": [
+"Нагиев и Рост",
+"Масляков и Гальцев",
+"Стоянов и Олейников",
+"Пельш и Фоменко"
+],
+"correct": 2,
+"explanation": "Верно: Стоянов и Олейников. Это факт о «Городок»."
+},
+{
+"id": "club_tv_077",
+"theme": "tv",
+"group": "tv-038",
+"question": "Какую героиню «Зачарованных» первой сыграла Шеннен Доэрти?",
+"answers": [
+"Пейдж",
+"Прю",
+"Фиби",
+"Пайпер"
+],
+"correct": 1,
+"explanation": "Шеннен Доэрти играла старшую сестру Прю."
+},
+{
+"id": "club_tv_078",
+"theme": "tv",
+"group": "tv-038",
+"question": "Как зовут главного героя «Бригады»? [«Бригада»]",
+"answers": [
+"Меченый",
+"Костя Воронин",
+"Саша Белый",
+"Данила Багров"
+],
+"correct": 2,
+"explanation": "Верно: Саша Белый. Это факт о «Бригада»."
+},
+{
+"id": "club_tv_079",
+"theme": "tv",
+"group": "tv-039",
+"question": "В какой серии гениальный убийца работает криминалистом по крови?",
+"answers": [
+"CSI",
+"Декстер",
+"Коломбо",
+"Менталист"
+],
+"correct": 1,
+"explanation": "Декстер Морган работает экспертом по крови."
+},
+{
+"id": "club_tv_080",
+"theme": "tv",
+"group": "tv-039",
+"question": "Как зовут вдовца — отца трёх дочерей? [«Полный дом»]",
+"answers": [
+"Джерри Сайнфелд",
+"Дэнни Таннер",
+"Росс Геллер",
+"Тед Мосби"
+],
+"correct": 1,
+"explanation": "Верно: Дэнни Таннер. Это факт о «Полный дом»."
+},
+{
+"id": "club_tv_081",
+"theme": "tv",
+"group": "tv-040",
+"question": "В какой передаче случайные люди спорили и дрались в студии у Нагиева?",
+"answers": [
+"Сто к одному",
+"Окна",
+"Пусть говорят",
+"Намедни"
+],
+"correct": 1,
+"explanation": "«Окна» — скандальное ток-шоу начала нулевых."
+},
+{
+"id": "club_tv_082",
+"theme": "tv",
+"group": "tv-040",
+"question": "Кто вёл «Утреннюю звезду»? [«Утренняя звезда»]",
+"answers": [
+"Леонид Якубович",
+"Александр Масляков",
+"Владислав Листьев",
+"Юрий Николаев"
+],
+"correct": 3,
+"explanation": "Верно: Юрий Николаев. Это факт о «Утренняя звезда»."
+},
+{
+"id": "club_tv_083",
+"theme": "tv",
+"group": "tv-041",
+"question": "Какую телепередачу узнают по поиску пропавших родственников?",
+"answers": [
+"Жди меня",
+"Смак",
+"Окна",
+"Пока все дома"
+],
+"correct": 0,
+"explanation": "«Жди меня» помогает находить пропавших людей."
+},
+{
+"id": "club_tv_084",
+"theme": "tv",
+"group": "tv-041",
+"question": "Какую задачу решает передача «Жди меня»? [«Жди меня»]",
+"answers": [
+"Ремонт квартир",
+"Угадывание мелодий",
+"Поиск пропавших людей",
+"Кулинарные конкурсы"
+],
+"correct": 2,
+"explanation": "Верно: Поиск пропавших людей. Это факт о «Жди меня»."
+},
+{
+"id": "club_tv_085",
+"theme": "tv",
+"group": "tv-042",
+"question": "Какую передачу ассоциируют со скандальным вопросом «А что в чёрном ящике?»?",
+"answers": [
+"КВН",
+"Поле чудес",
+"Что? Где? Когда?",
+"Слабое звено"
+],
+"correct": 2,
+"explanation": "Чёрный ящик — классический атрибут ЧГК."
+},
+{
+"id": "club_tv_086",
+"theme": "tv",
+"group": "tv-042",
+"question": "Как зовут детектива с множеством фобий? [«Дефективный детектив»]",
+"answers": [
+"Шерлок Холмс",
+"Коломбо",
+"Эдриан Монк",
+"Патрик Джейн"
+],
+"correct": 2,
+"explanation": "Верно: Эдриан Монк. Это факт о «Дефективный детектив»."
+},
+{
+"id": "club_tv_087",
+"theme": "tv",
+"group": "tv-043",
+"question": "Кто в «Кто хочет стать миллионером?» помогал «пятьдесят на пятьдесят»?",
+"answers": [
+"Компьютер, убирающий два варианта",
+"Редактор",
+"Человек из зала",
+"Телефонный оператор"
+],
+"correct": 0,
+"explanation": "Подсказка 50:50 убирает два неверных варианта."
+},
+{
+"id": "club_tv_088",
+"theme": "tv",
+"group": "tv-043",
+"question": "Кем является заглавный герой «Ангела»? [«Ангел»]",
+"answers": [
+"Оборотнем",
+"Инопланетянином",
+"Демоном без души",
+"Вампиром с душой"
+],
+"correct": 3,
+"explanation": "Верно: Вампиром с душой. Это факт о «Ангел»."
+},
+{
+"id": "club_tv_089",
+"theme": "tv",
+"group": "tv-044",
+"question": "Какая программа породила мем «Нельзя просто так взять и уйти из «Дома-2»»?",
+"answers": [
+"Ералаш",
+"КВН",
+"Городок",
+"Дом-2"
+],
+"correct": 3,
+"explanation": "Реалити-шоу «Дом-2» стало источником множества мемов."
+},
+{
+"id": "club_tv_090",
+"theme": "tv",
+"group": "tv-044",
+"question": "Какую необычную форму имеет голова Арнольда? [«Эй, Арнольд!»]",
+"answers": [
+"Звезды",
+"Американского футбольного мяча",
+"Треугольника",
+"Куба"
+],
+"correct": 1,
+"explanation": "У Арнольда узнаваемая вытянутая голова, напоминающая мяч для американского футбола."
+},
+{
+"id": "club_tv_091",
+"theme": "tv",
+"group": "tv-045",
+"question": "В каком сериале герой рассказывает историю «как я встретил вашу маму»?",
+"answers": [
+"Как я встретил вашу маму",
+"Друзья",
+"Офис",
+"Сайнфелд"
+],
+"correct": 0,
+"explanation": "Тед Мосби рассказывает историю детям."
+},
+{
+"id": "club_tv_092",
+"theme": "tv",
+"group": "tv-045",
+"question": "Кто сменил Владислава Листьева в роли ведущего «Поля чудес»? [«Поле чудес»]",
+"answers": [
+"Александр Масляков",
+"Леонид Якубович",
+"Михаил Шац",
+"Дмитрий Нагиев"
+],
+"correct": 1,
+"explanation": "Верно: Леонид Якубович. Это факт о «Поле чудес»."
+},
+{
+"id": "club_tv_093",
+"theme": "tv",
+"group": "tv-046",
+"question": "Кто из героев «Клиники» лучший друг Джей Ди и хирург?",
+"answers": [
+"Доктор Кокс",
+"Кристофер Тёрк",
+"Боб Келсо",
+"Эллиот Рид"
+],
+"correct": 1,
+"explanation": "Тёрк — хирург и друг Джей Ди."
+},
+{
+"id": "club_tv_094",
+"theme": "tv",
+"group": "tv-046",
+"question": "Какую фамилию носит богатая семья из «Санта-Барбары»? [«Санта-Барбара»]",
+"answers": [
+"Кэпвелл",
+"Сопрано",
+"Брейди",
+"Симпсон"
+],
+"correct": 0,
+"explanation": "Верно: Кэпвелл. Это факт о «Санта-Барбара»."
+},
+{
+"id": "club_tv_095",
+"theme": "tv",
+"group": "tv-047",
+"question": "В каком ситкоме Гена Букин продаёт обувь?",
+"answers": [
+"Счастливы вместе",
+"Моя прекрасная няня",
+"Папины дочки",
+"Универ"
+],
+"correct": 0,
+"explanation": "Гена Букин — обувной продавец в «Счастливы вместе»."
+},
+{
+"id": "club_tv_096",
+"theme": "tv",
+"group": "tv-047",
+"question": "Как зовут бессменного ведущего российской «Своей игры»? [«Своя игра»]",
+"answers": [
+"Максим Галкин",
+"Михаил Шац",
+"Пётр Кулешов",
+"Александр Гуревич"
+],
+"correct": 2,
+"explanation": "Верно: Пётр Кулешов. Это факт о «Своя игра»."
+},
+{
+"id": "club_tv_097",
+"theme": "tv",
+"group": "tv-048",
+"question": "Как называется знакомый фанатам The O.C. город у моря?",
+"answers": [
+"Маями-Бич",
+"Раккун-Сити",
+"Беверли-Хиллз",
+"Ньюпорт-Бич"
+],
+"correct": 3,
+"explanation": "Действие «Одиноких сердец» разворачивается в Ньюпорт-Бич."
+},
+{
+"id": "club_tv_098",
+"theme": "tv",
+"group": "tv-048",
+"question": "Кто расследует убийство Лоры Палмер? [«Твин Пикс»]",
+"answers": [
+"Дейл Купер",
+"Джек Бауэр",
+"Коломбо",
+"Фокс Малдер"
+],
+"correct": 0,
+"explanation": "Верно: Дейл Купер. Это факт о «Твин Пикс»."
+},
+{
+"id": "club_tv_099",
+"theme": "tv",
+"group": "tv-049",
+"question": "В какой детской телеигре Супонев делил детей на хищников и травоядных?",
+"answers": [
+"Поле чудес",
+"Сто к одному",
+"Зов джунглей",
+"Звёздный час"
+],
+"correct": 2,
+"explanation": "«Зов джунглей» — состязание команд хищников и травоядных."
+},
+{
+"id": "club_tv_100",
+"theme": "tv",
+"group": "tv-049",
+"question": "Кто вёл «Зов джунглей»? [«Зов джунглей»]",
+"answers": [
+"Сергей Белоголовцев",
+"Сергей Супонев",
+"Николай Дроздов",
+"Юрий Николаев"
+],
+"correct": 1,
+"explanation": "Верно: Сергей Супонев. Это факт о «Зов джунглей»."
+},
+{
+"id": "club_tv_101",
+"theme": "tv",
+"group": "tv-050",
+"question": "Как называется планета, где работает доставка Planet Express?",
+"answers": [
+"Татуин",
+"Криптон",
+"Земля",
+"Марс"
+],
+"correct": 2,
+"explanation": "Штаб Planet Express находится в Новом Нью-Йорке на Земле."
+},
+{
+"id": "club_tv_102",
+"theme": "tv",
+"group": "tv-050",
+"question": "В каком городе работала оригинальная команда CSI? [«CSI: Место преступления»]",
+"answers": [
+"Сиэтл",
+"Нью-Йорк",
+"Майами",
+"Лас-Вегас"
+],
+"correct": 3,
+"explanation": "Верно: Лас-Вегас. Это факт о «CSI: Место преступления»."
+},
+{
+"id": "club_tv_103",
+"theme": "tv",
+"group": "tv-051",
+"question": "Какой персонаж «Друзей» работал палеонтологом?",
+"answers": [
+"Чендлер Бинг",
+"Гантер",
+"Джоуи Триббиани",
+"Росс Геллер"
+],
+"correct": 3,
+"explanation": "Росс Геллер — палеонтолог."
+},
+{
+"id": "club_tv_104",
+"theme": "tv",
+"group": "tv-051",
+"question": "Каким жанром известна «Большая разница»? [«Большая разница»]",
+"answers": [
+"Мультсериал",
+"Научные опыты",
+"Телепародиями",
+"Новости"
+],
+"correct": 2,
+"explanation": "Верно: Телепародиями. Это факт о «Большая разница»."
+},
+{
+"id": "club_tv_105",
+"theme": "tv",
+"group": "tv-052",
+"question": "Как зовут девушку Чендлера из «Друзей», на которой он женится?",
+"answers": [
+"Дженис",
+"Моника",
+"Фиби",
+"Рэйчел"
+],
+"correct": 1,
+"explanation": "Чендлер женится на Монике Геллер."
+},
+{
+"id": "club_tv_106",
+"theme": "tv",
+"group": "tv-052",
+"question": "Кто вёл «600 секунд»? [«600 секунд»]",
+"answers": [
+"Владислав Листьев",
+"Леонид Парфёнов",
+"Андрей Малахов",
+"Александр Невзоров"
+],
+"correct": 3,
+"explanation": "Верно: Александр Невзоров. Это факт о «600 секунд»."
+},
+{
+"id": "club_tv_107",
+"theme": "tv",
+"group": "tv-053",
+"question": "Кто из «Доктора Хауса» часто спорит с ним как онколог и лучший друг?",
+"answers": [
+"Тауб",
+"Форман",
+"Чейз",
+"Джеймс Уилсон"
+],
+"correct": 3,
+"explanation": "Уилсон — онколог и близкий друг Хауса."
+},
+{
+"id": "club_tv_108",
+"theme": "tv",
+"group": "tv-053",
+"question": "Как зовут консультанта CBI? [«Менталист»]",
+"answers": [
+"Шон Спенсер",
+"Патрик Джейн",
+"Касл",
+"Эдриан Монк"
+],
+"correct": 1,
+"explanation": "Верно: Патрик Джейн. Это факт о «Менталист»."
+},
+{
+"id": "club_tv_109",
+"theme": "tv",
+"group": "tv-054",
+"question": "Как зовут мечтательного доктора Джей Ди?",
+"answers": [
+"Майкл Скотт",
+"Джеймс Уилсон",
+"Джон Дориан",
+"Леонард Хофстедтер"
+],
+"correct": 2,
+"explanation": "Инициалы J.D. означают John Dorian."
+},
+{
+"id": "club_tv_110",
+"theme": "tv",
+"group": "tv-054",
+"question": "В какой стране изначально придумали Fort Boyard? [«Форт Боярд»]",
+"answers": [
+"Германия",
+"Италия",
+"Россия",
+"Франция"
+],
+"correct": 3,
+"explanation": "Верно: Франция. Это факт о «Форт Боярд»."
+},
+{
+"id": "club_tv_111",
+"theme": "tv",
+"group": "tv-055",
+"question": "Кто обычно встречается с Барни Стинсоном в баре MacLaren's?",
+"answers": [
+"Фокс Малдер и Скалли",
+"Уолтер и Джесси",
+"Гомер и Барт",
+"Тед и друзья"
+],
+"correct": 3,
+"explanation": "Герои «Как я встретил вашу маму» ходят в MacLaren's."
+},
+{
+"id": "club_tv_112",
+"theme": "tv",
+"group": "tv-055",
+"question": "Какой номер носит рейс разбившегося самолёта? [«Остаться в живых»]",
+"answers": [
+"815",
+"747",
+"911",
+"316"
+],
+"correct": 0,
+"explanation": "Верно: 815. Это факт о «Остаться в живых»."
+},
+{
+"id": "club_tv_113",
+"theme": "tv",
+"group": "tv-056",
+"question": "Как называется бармен «Симпсонов» по имени Мо?",
+"answers": [
+"Стэн Смит",
+"Мо Сизлак",
+"Эл Банди",
+"Бендер"
+],
+"correct": 1,
+"explanation": "Мо владеет таверной Спрингфилда."
+},
+{
+"id": "club_tv_114",
+"theme": "tv",
+"group": "tv-056",
+"question": "В каком районе Нью-Йорка в основном живут герои Gossip Girl? [«Сплетница»]",
+"answers": [
+"Бруклин",
+"Бронкс",
+"Верхний Ист-Сайд",
+"Квинс"
+],
+"correct": 2,
+"explanation": "Верно: Верхний Ист-Сайд. Это факт о «Сплетница»."
+},
+{
+"id": "club_tv_115",
+"theme": "tv",
+"group": "tv-057",
+"question": "Как называется загадочный город из одноимённого сериала Дэвида Линча?",
+"answers": [
+"Раккун-Сити",
+"Смолвиль",
+"Твин Пикс",
+"Саннидейл"
+],
+"correct": 2,
+"explanation": "В Твин Пикс расследуют убийство Лоры Палмер."
+},
+{
+"id": "club_tv_116",
+"theme": "tv",
+"group": "tv-057",
+"question": "Кто вёл ток-шоу «Окна»? [«Окна»]",
+"answers": [
+"Андрей Малахов",
+"Владимир Познер",
+"Александр Гордон",
+"Дмитрий Нагиев"
+],
+"correct": 3,
+"explanation": "Верно: Дмитрий Нагиев. Это факт о «Окна»."
+},
+{
+"id": "club_tv_117",
+"theme": "tv",
+"group": "tv-058",
+"question": "В каком мультсериале маленький Барт говорит «Eat my shorts!»?",
+"answers": [
+"Южный Парк",
+"Гриффины",
+"Футурама",
+"Симпсоны"
+],
+"correct": 3,
+"explanation": "Барт Симпсон — автор известной фразы."
+},
+{
+"id": "club_tv_118",
+"theme": "tv",
+"group": "tv-058",
+"question": "Как зовут главную героиню «Клона»? [«Клон»]",
+"answers": [
+"Милагрос",
+"Жади",
+"Изаура",
+"Марисса"
+],
+"correct": 1,
+"explanation": "Верно: Жади. Это факт о «Клон»."
+},
+{
+"id": "club_tv_119",
+"theme": "tv",
+"group": "tv-059",
+"question": "В каком сериале есть газета Daily Planet?",
+"answers": [
+"Друзья",
+"Клан Сопрано",
+"Лоис и Кларк",
+"Во все тяжкие"
+],
+"correct": 2,
+"explanation": "Daily Planet — газета Кларка Кента и Лоис Лейн."
+},
+{
+"id": "club_tv_120",
+"theme": "tv",
+"group": "tv-059",
+"question": "Как называется больница из ER? [«Скорая помощь»]",
+"answers": [
+"County General",
+"Princeton-Plainsboro",
+"Seattle Grace",
+"Sacred Heart"
+],
+"correct": 0,
+"explanation": "Верно: County General. Это факт о «Скорая помощь»."
+},
+{
+"id": "club_tv_121",
+"theme": "tv",
+"group": "tv-060",
+"question": "Какую передачу узнают по гонкам с заданиями во французском форте?",
+"answers": [
+"Большие гонки",
+"КВН",
+"Что? Где? Когда?",
+"Форт Боярд"
+],
+"correct": 3,
+"explanation": "Fort Boyard — шоу с испытаниями в форте."
+},
+{
+"id": "club_tv_122",
+"theme": "tv",
+"group": "tv-060",
+"question": "Как зовут адвоката до принятия имени Сол Гудман? [«Лучше звоните Солу»]",
+"answers": [
+"Джимми Макгилл",
+"Майк Эрмантраут",
+"Джесси Пинкман",
+"Уолтер Уайт"
+],
+"correct": 0,
+"explanation": "Верно: Джимми Макгилл. Это факт о «Лучше звоните Солу»."
+},
+{
+"id": "club_tv_123",
+"theme": "tv",
+"group": "tv-061",
+"question": "Кому на «МузОбозе» принадлежали фирменные чёрные очки?",
+"answers": [
+"Александру Пушному",
+"Ивану Демидову",
+"Сергею Супоневу",
+"Валдису Пельшу"
+],
+"correct": 1,
+"explanation": "Иван Демидов — узнаваемый ведущий «МузОбоза»."
+},
+{
+"id": "club_tv_124",
+"theme": "tv",
+"group": "tv-061",
+"question": "Кто вёл оригинальную «Угадай мелодию»? [«Угадай мелодию»]",
+"answers": [
+"Валдис Пельш",
+"Александр Пушной",
+"Леонид Якубович",
+"Максим Галкин"
+],
+"correct": 0,
+"explanation": "Верно: Валдис Пельш. Это факт о «Угадай мелодию»."
+},
+{
+"id": "club_tv_125",
+"theme": "tv",
+"group": "tv-062",
+"question": "Как звали главного ведущего «Галилео», который проводил эксперименты?",
+"answers": [
+"Александр Пушной",
+"Николай Дроздов",
+"Якубович",
+"Сергей Дружко"
+],
+"correct": 0,
+"explanation": "«Галилео» вёл Александр Пушной."
+},
+{
+"id": "club_tv_126",
+"theme": "tv",
+"group": "tv-062",
+"question": "На каком телеканале начинался «Дом-2»? [«Дом-2»]",
+"answers": [
+"ТНТ",
+"СТС",
+"НТВ",
+"Первый"
+],
+"correct": 0,
+"explanation": "Верно: ТНТ. Это факт о «Дом-2»."
+},
+{
+"id": "club_tv_127",
+"theme": "tv",
+"group": "tv-063",
+"question": "Какой герой «Реальных пацанов» приехал из Перми и постоянно влипал в истории?",
+"answers": [
+"Гена Букин",
+"Коля Наумов",
+"Саша Белый",
+"Максим Шаталин"
+],
+"correct": 1,
+"explanation": "Главный герой «Реальных пацанов» — Коля."
+},
+{
+"id": "club_tv_128",
+"theme": "tv",
+"group": "tv-063",
+"question": "Как называется кафе, где собираются герои «Друзей»? [«Друзья»]",
+"answers": [
+"MacLaren's",
+"Central Perk",
+"Monk's Café",
+"The Max"
+],
+"correct": 1,
+"explanation": "Верно: Central Perk. Это факт о «Друзья»."
+},
+{
+"id": "club_tv_129",
+"theme": "tv",
+"group": "tv-064",
+"question": "В каком ситкоме главная героиня Катя Пушкарёва работала в модной компании?",
+"answers": [
+"Не родись красивой",
+"Папины дочки",
+"Воронины",
+"Моя прекрасная няня"
+],
+"correct": 0,
+"explanation": "Катя Пушкарёва — героиня «Не родись красивой»."
+},
+{
+"id": "club_tv_130",
+"theme": "tv",
+"group": "tv-064",
+"question": "Кто был первым ведущим «Смака»? [«Смак»]",
+"answers": [
+"Андрей Макаревич",
+"Иван Ургант",
+"Борис Бурда",
+"Константин Ивлев"
+],
+"correct": 0,
+"explanation": "Верно: Андрей Макаревич. Это факт о «Смак»."
+},
+{
+"id": "club_tv_131",
+"theme": "tv",
+"group": "tv-065",
+"question": "Из какого скетчкома — персонажи Равшан и Джамшут?",
+"answers": [
+"Каламбур",
+"Маски-шоу",
+"Наша Russia",
+"ОСП-студия"
+],
+"correct": 2,
+"explanation": "Это герои «Нашей Russia»."
+},
+{
+"id": "club_tv_132",
+"theme": "tv",
+"group": "tv-065",
+"question": "Как называется детский юмористический киножурнал? [«Ералаш»]",
+"answers": [
+"Фитиль",
+"Крокодил",
+"Каламбур",
+"Ералаш"
+],
+"correct": 3,
+"explanation": "Верно: Ералаш. Это факт о «Ералаш»."
+},
+{
+"id": "club_tv_133",
+"theme": "tv",
+"group": "tv-066",
+"question": "Какая передача собирала двенадцать человек оценивать музыкальные клипы?",
+"answers": [
+"Сто к одному",
+"Галилео",
+"Поле чудес",
+"12 злобных зрителей"
+],
+"correct": 3,
+"explanation": "На MTV Россия участники оценивали клипы."
+},
+{
+"id": "club_tv_134",
+"theme": "tv",
+"group": "tv-066",
+"question": "Как зовут говорящего пса в семье Гриффинов? [«Гриффины»]",
+"answers": [
+"Спайк",
+"Брайан",
+"Снупи",
+"Скуби"
+],
+"correct": 1,
+"explanation": "Верно: Брайан. Это факт о «Гриффины»."
+},
+{
+"id": "club_tv_135",
+"theme": "tv",
+"group": "tv-067",
+"question": "Кто из ведущих «Разрушителей легенд» любил усы и шляпу?",
+"answers": [
+"Джейми Хайнеман",
+"Адам Сэвидж",
+"Ричард Хаммонд",
+"Джереми Кларксон"
+],
+"correct": 0,
+"explanation": "Джейми — спокойный экспериментатор с усами."
+},
+{
+"id": "club_tv_136",
+"theme": "tv",
+"group": "tv-067",
+"question": "Какое действие следует после полицейского расследования в Law & Order? [«Закон и порядок»]",
+"answers": [
+"Танцевальный конкурс",
+"Космические бои",
+"Борьба с пришельцами",
+"Судебное преследование"
+],
+"correct": 3,
+"explanation": "Верно: Судебное преследование. Это факт о «Закон и порядок»."
+},
+{
+"id": "club_tv_137",
+"theme": "tv",
+"group": "tv-068",
+"question": "В каком сериале был персонаж Майкл Скофилд с татуировкой плана тюрьмы?",
+"answers": [
+"Остаться в живых",
+"Побег",
+"24 часа",
+"Во все тяжкие"
+],
+"correct": 1,
+"explanation": "В «Побеге» татуировка помогает Майклу спланировать спасение брата."
+},
+{
+"id": "club_tv_138",
+"theme": "tv",
+"group": "tv-068",
+"question": "Кто вёл российское «Слабое звено» в начале? [«Слабое звено»]",
+"answers": [
+"Оксана Пушкина",
+"Тина Канделаки",
+"Мария Киселёва",
+"Яна Чурикова"
+],
+"correct": 2,
+"explanation": "Верно: Мария Киселёва. Это факт о «Слабое звено»."
+},
+{
+"id": "club_tv_139",
+"theme": "tv",
+"group": "tv-069",
+"question": "Где можно встретить «Спортивным журналистом»?",
+"answers": [
+"CSI: Майами",
+"Воронины",
+"Сплетница",
+"Как я встретил вашу маму"
+],
+"correct": 1,
+"explanation": "«Воронины»: Кем по профессии является Костя Воронин — Спортивным журналистом."
+},
+{
+"id": "club_tv_140",
+"theme": "tv",
+"group": "tv-069",
+"question": "Кем по профессии является Костя Воронин? [«Воронины»]",
+"answers": [
+"Учителем",
+"Спортивным журналистом",
+"Врачом",
+"Полицейским"
+],
+"correct": 1,
+"explanation": "Верно: Спортивным журналистом. Это факт о «Воронины»."
+},
+{
+"id": "club_tv_141",
+"theme": "tv",
+"group": "tv-070",
+"question": "Из какой передачи или сериала знакома деталь «Доктора Быкова»?",
+"answers": [
+"Секретные материалы",
+"Интерны",
+"О, счастливчик!",
+"Приключения мультяшек"
+],
+"correct": 1,
+"explanation": "«Интерны»: Кого сыграл Иван Охлобыстин в «Интернах» — Доктора Быкова."
+},
+{
+"id": "club_tv_142",
+"theme": "tv",
+"group": "tv-070",
+"question": "Кого сыграл Иван Охлобыстин в «Интернах»? [«Интерны»]",
+"answers": [
+"Купитмана",
+"Романенко",
+"Доктора Быкова",
+"Доктора Хауса"
+],
+"correct": 2,
+"explanation": "Верно: Доктора Быкова. Это факт о «Интерны»."
+},
+{
+"id": "club_tv_143",
+"theme": "tv",
+"group": "tv-071",
+"question": "Где можно встретить «Бастер Банни»?",
+"answers": [
+"Приключения мультяшек",
+"Губка Боб Квадратные Штаны",
+"Квартирный вопрос",
+"Окна"
+],
+"correct": 0,
+"explanation": "«Приключения мультяшек»: Как зовут главного кролика Tiny Toon Adventures — Бастер Банни."
+},
+{
+"id": "club_tv_144",
+"theme": "tv",
+"group": "tv-071",
+"question": "Как зовут главного кролика Tiny Toon Adventures? [«Приключения мультяшек»]",
+"answers": [
+"Багз Банни",
+"Кролик Питер",
+"Бастер Банни",
+"Роджер Рэббит"
+],
+"correct": 2,
+"explanation": "Верно: Бастер Банни. Это факт о «Приключения мультяшек»."
+},
+{
+"id": "club_tv_145",
+"theme": "tv",
+"group": "tv-072",
+"question": "Какое шоу или сериал узнают по подсказке «Сэм и Дин»?",
+"answers": [
+"Офис",
+"Касл",
+"Сверхъестественное",
+"Тачку на прокачку"
+],
+"correct": 2,
+"explanation": "«Сверхъестественное»: Как зовут братьев-охотников — Сэм и Дин."
+},
+{
+"id": "club_tv_146",
+"theme": "tv",
+"group": "tv-072",
+"question": "Как зовут братьев-охотников? [«Сверхъестественное»]",
+"answers": [
+"Джек и Локк",
+"Сэм и Дин",
+"Майкл и Линкольн",
+"Тед и Барни"
+],
+"correct": 1,
+"explanation": "Верно: Сэм и Дин. Это факт о «Сверхъестественное»."
+},
+{
+"id": "club_tv_147",
+"theme": "tv",
+"group": "tv-073",
+"question": "Какое шоу или сериал узнают по подсказке «Сергей Глухарёв»?",
+"answers": [
+"Настоящие монстры",
+"Глухарь",
+"Тайны следствия",
+"Зов джунглей"
+],
+"correct": 1,
+"explanation": "«Глухарь»: Как зовут главного героя «Глухаря» — Сергей Глухарёв."
+},
+{
+"id": "club_tv_148",
+"theme": "tv",
+"group": "tv-073",
+"question": "Как зовут главного героя «Глухаря»? [«Глухарь»]",
+"answers": [
+"Сергей Глухарёв",
+"Карпов",
+"Максим Аверин",
+"Игорь Плахов"
+],
+"correct": 0,
+"explanation": "Верно: Сергей Глухарёв. Это факт о «Глухарь»."
+},
+{
+"id": "club_tv_149",
+"theme": "tv",
+"group": "tv-074",
+"question": "Где можно встретить «Александр Турецкий»?",
+"answers": [
+"Шоу Рена и Стимпи",
+"Марш Турецкого",
+"Шоу Бенни Хилла",
+"Клуб путешественников"
+],
+"correct": 1,
+"explanation": "«Марш Турецкого»: Как зовут главного героя-следователя — Александр Турецкий."
+},
+{
+"id": "club_tv_150",
+"theme": "tv",
+"group": "tv-074",
+"question": "Как зовут главного героя-следователя? [«Марш Турецкого»]",
+"answers": [
+"Александр Турецкий",
+"Игорь Плахов",
+"Давид Гоцман",
+"Глеб Жеглов"
+],
+"correct": 0,
+"explanation": "Верно: Александр Турецкий. Это факт о «Марш Турецкого»."
+},
+{
+"id": "club_tv_151",
+"theme": "tv",
+"group": "tv-075",
+"question": "Какое шоу или сериал узнают по подсказке «Кенни»?",
+"answers": [
+"Южный Парк",
+"Даёшь молодёжь!",
+"Своя игра",
+"Прожекторперисхилтон"
+],
+"correct": 0,
+"explanation": "«Южный Парк»: Как зовут мальчика, которого часто убивают — Кенни."
+},
+{
+"id": "club_tv_152",
+"theme": "tv",
+"group": "tv-075",
+"question": "Как зовут мальчика, которого часто убивают? [«Южный Парк»]",
+"answers": [
+"Картман",
+"Кайл",
+"Кенни",
+"Стэн"
+],
+"correct": 2,
+"explanation": "Верно: Кенни. Это факт о «Южный Парк»."
+},
+{
+"id": "club_tv_153",
+"theme": "tv",
+"group": "tv-076",
+"question": "Какое шоу или сериал узнают по подсказке «Адам Сэвидж и Джейми Хайнеман»?",
+"answers": [
+"Счастливы вместе",
+"Утренняя звезда",
+"Разрушители легенд",
+"Котопёс"
+],
+"correct": 2,
+"explanation": "«Разрушители легенд»: Как зовут двух ведущих MythBusters — Адам Сэвидж и Джейми Хайнеман."
+},
+{
+"id": "club_tv_154",
+"theme": "tv",
+"group": "tv-076",
+"question": "Как зовут двух ведущих MythBusters? [«Разрушители легенд»]",
+"answers": [
+"Адам Сэвидж и Джейми Хайнеман",
+"Пенн и Теллер",
+"Мэтт и Трей",
+"Рик и Морти"
+],
+"correct": 0,
+"explanation": "Верно: Адам Сэвидж и Джейми Хайнеман. Это факт о «Разрушители легенд»."
+},
+{
+"id": "club_tv_155",
+"theme": "tv",
+"group": "tv-077",
+"question": "Из какой передачи или сериала знакома деталь «Деревня Дураков»?",
+"answers": [
+"Городок",
+"Гриффины",
+"Каламбур",
+"Зов джунглей"
+],
+"correct": 2,
+"explanation": "«Каламбур»: Какой скетч был постоянной частью «Каламбура» — Деревня Дураков."
+},
+{
+"id": "club_tv_156",
+"theme": "tv",
+"group": "tv-077",
+"question": "Какой скетч был постоянной частью «Каламбура»? [«Каламбур»]",
+"answers": [
+"Уральские пельмени",
+"Деревня Дураков",
+"Кто хочет стать миллионером?",
+"Поле чудес"
+],
+"correct": 1,
+"explanation": "Верно: Деревня Дураков. Это факт о «Каламбур»."
+},
+{
+"id": "club_tv_157",
+"theme": "tv",
+"group": "tv-078",
+"question": "Какое шоу или сериал узнают по подсказке «Народные новости»?",
+"answers": [
+"Времечко",
+"Последний герой",
+"Шоу Рена и Стимпи",
+"Мистер Бин"
+],
+"correct": 0,
+"explanation": "«Времечко»: Какой формат известен по передаче «Времечко» — Народные новости."
+},
+{
+"id": "club_tv_158",
+"theme": "tv",
+"group": "tv-078",
+"question": "Какой формат известен по передаче «Времечко»? [«Времечко»]",
+"answers": [
+"Народные новости",
+"Игровой стрим",
+"Шоу талантов",
+"Телеспектакль"
+],
+"correct": 0,
+"explanation": "Верно: Народные новости. Это факт о «Времечко»."
+},
+{
+"id": "club_tv_159",
+"theme": "tv",
+"group": "tv-079",
+"question": "Какое шоу или сериал узнают по подсказке «Бразилия»?",
+"answers": [
+"Отчаянные домохозяйки",
+"Рабыня Изаура",
+"Кухня",
+"Жизнь с Луи"
+],
+"correct": 1,
+"explanation": "«Рабыня Изаура»: В какой стране снята «Рабыня Изаура» — Бразилия."
+},
+{
+"id": "club_tv_160",
+"theme": "tv",
+"group": "tv-079",
+"question": "В какой стране снята «Рабыня Изаура»? [«Рабыня Изаура»]",
+"answers": [
+"Испания",
+"Бразилия",
+"Аргентина",
+"Мексика"
+],
+"correct": 1,
+"explanation": "Верно: Бразилия. Это факт о «Рабыня Изаура»."
+},
+{
+"id": "club_tv_161",
+"theme": "tv",
+"group": "tv-080",
+"question": "Какое шоу или сериал узнают по подсказке «Тони Сопрано»?",
+"answers": [
+"Клан Сопрано",
+"Шоу Рена и Стимпи",
+"Секс в большом городе",
+"Баффи — истребительница вампиров"
+],
+"correct": 0,
+"explanation": "«Клан Сопрано»: Как зовут босса мафии из сериала — Тони Сопрано."
+},
+{
+"id": "club_tv_162",
+"theme": "tv",
+"group": "tv-080",
+"question": "Как зовут босса мафии из сериала? [«Клан Сопрано»]",
+"answers": [
+"Майкл Скофилд",
+"Вито Корлеоне",
+"Пол Уолнутс",
+"Тони Сопрано"
+],
+"correct": 3,
+"explanation": "Верно: Тони Сопрано. Это факт о «Клан Сопрано»."
+},
+{
+"id": "club_tv_163",
+"theme": "tv",
+"group": "tv-081",
+"question": "Где можно встретить «Саннидейл»?",
+"answers": [
+"Баффи — истребительница вампиров",
+"Офис",
+"Анатомия страсти",
+"Угадай мелодию"
+],
+"correct": 0,
+"explanation": "«Баффи — истребительница вампиров»: В каком городе живёт Баффи — Саннидейл."
+},
+{
+"id": "club_tv_164",
+"theme": "tv",
+"group": "tv-081",
+"question": "В каком городе живёт Баффи? [«Баффи — истребительница вампиров»]",
+"answers": [
+"Мистик-Фоллс",
+"Саннидейл",
+"Сиэтл",
+"Смолвиль"
+],
+"correct": 1,
+"explanation": "Верно: Саннидейл. Это факт о «Баффи — истребительница вампиров»."
+},
+{
+"id": "club_tv_165",
+"theme": "tv",
+"group": "tv-082",
+"question": "Из какой передачи или сериала знакома деталь «В муниципальном колледже Гриндейл»?",
+"answers": [
+"12 злобных зрителей",
+"Даёшь молодёжь!",
+"Ликвидация",
+"Сообщество"
+],
+"correct": 3,
+"explanation": "«Сообщество»: Где учатся герои Community — В муниципальном колледже Гриндейл."
+},
+{
+"id": "club_tv_166",
+"theme": "tv",
+"group": "tv-082",
+"question": "Где учатся герои Community? [«Сообщество»]",
+"answers": [
+"В школе Саннидейла",
+"В Хогвартсе",
+"В Гарварде",
+"В муниципальном колледже Гриндейл"
+],
+"correct": 3,
+"explanation": "Верно: В муниципальном колледже Гриндейл. Это факт о «Сообщество»."
+},
+{
+"id": "club_tv_167",
+"theme": "tv",
+"group": "tv-083",
+"question": "Где можно встретить «ТНТ»?",
+"answers": [
+"Вечерний Ургант",
+"ОСП-студия",
+"Comedy Club",
+"Wipeout"
+],
+"correct": 2,
+"explanation": "«Comedy Club»: На каком канале стартовал российский Comedy Club — ТНТ."
+},
+{
+"id": "club_tv_168",
+"theme": "tv",
+"group": "tv-083",
+"question": "На каком канале стартовал российский Comedy Club? [«Comedy Club»]",
+"answers": [
+"Первый",
+"НТВ",
+"ТНТ",
+"СТС"
+],
+"correct": 2,
+"explanation": "Верно: ТНТ. Это факт о «Comedy Club»."
+},
+{
+"id": "club_tv_169",
+"theme": "tv",
+"group": "tv-084",
+"question": "Где можно встретить «Xzibit»?",
+"answers": [
+"Тачку на прокачку",
+"Футурама",
+"Коломбо",
+"Американский папаша"
+],
+"correct": 0,
+"explanation": "«Тачку на прокачку»: Кто вёл Pimp My Ride — Xzibit."
+},
+{
+"id": "club_tv_170",
+"theme": "tv",
+"group": "tv-084",
+"question": "Кто вёл Pimp My Ride? [«Тачку на прокачку»]",
+"answers": [
+"Snoop Dogg",
+"Dr. Dre",
+"Xzibit",
+"Eminem"
+],
+"correct": 2,
+"explanation": "Верно: Xzibit. Это факт о «Тачку на прокачку»."
+},
+{
+"id": "club_tv_171",
+"theme": "tv",
+"group": "tv-085",
+"question": "Какое шоу или сериал узнают по подсказке «Екатеринбург»?",
+"answers": [
+"Уральские пельмени",
+"Клиника",
+"Смак",
+"Побег"
+],
+"correct": 0,
+"explanation": "«Уральские пельмени»: С каким российским городом связана команда «Уральские пельмени» — Екатеринбург."
+},
+{
+"id": "club_tv_172",
+"theme": "tv",
+"group": "tv-085",
+"question": "С каким российским городом связана команда «Уральские пельмени»? [«Уральские пельмени»]",
+"answers": [
+"Екатеринбург",
+"Пермь",
+"Тюмень",
+"Челябинск"
+],
+"correct": 0,
+"explanation": "Верно: Екатеринбург. Это факт о «Уральские пельмени»."
+},
+{
+"id": "club_tv_173",
+"theme": "tv",
+"group": "tv-086",
+"question": "Какое шоу или сериал узнают по подсказке «Полицейский пёс»?",
+"answers": [
+"Мистер Бин",
+"О, счастливчик!",
+"Фабрика звёзд",
+"Комиссар Рекс"
+],
+"correct": 3,
+"explanation": "«Комиссар Рекс»: Кто такой Рекс — Полицейский пёс."
+},
+{
+"id": "club_tv_174",
+"theme": "tv",
+"group": "tv-086",
+"question": "Кто такой Рекс? [«Комиссар Рекс»]",
+"answers": [
+"Полицейский пёс",
+"Частный детектив",
+"Лошадь",
+"Попугай"
+],
+"correct": 0,
+"explanation": "Верно: Полицейский пёс. Это факт о «Комиссар Рекс»."
+},
+{
+"id": "club_tv_175",
+"theme": "tv",
+"group": "tv-087",
+"question": "Где можно встретить «Леонард»?",
+"answers": [
+"Маски-шоу",
+"Дикий ангел",
+"Теория большого взрыва",
+"Разрушители легенд"
+],
+"correct": 2,
+"explanation": "«Теория большого взрыва»: Как зовут соседа Шелдона по квартире в начале сериала — Леонард."
+},
+{
+"id": "club_tv_176",
+"theme": "tv",
+"group": "tv-087",
+"question": "Как зовут соседа Шелдона по квартире в начале сериала? [«Теория большого взрыва»]",
+"answers": [
+"Стюарт",
+"Радж",
+"Леонард",
+"Говард"
+],
+"correct": 2,
+"explanation": "Верно: Леонард. Это факт о «Теория большого взрыва»."
+},
+{
+"id": "club_tv_177",
+"theme": "tv",
+"group": "tv-088",
+"question": "Какое шоу или сериал узнают по подсказке «Майкл Скофилд»?",
+"answers": [
+"Побег",
+"Снимите это немедленно!",
+"Реальные пацаны",
+"Касл"
+],
+"correct": 0,
+"explanation": "«Побег»: Как зовут инженера, который помогает брату сбежать — Майкл Скофилд."
+},
+{
+"id": "club_tv_178",
+"theme": "tv",
+"group": "tv-088",
+"question": "Как зовут инженера, который помогает брату сбежать? [«Побег»]",
+"answers": [
+"Джеймс Сойер",
+"Джек Бауэр",
+"Майкл Скофилд",
+"Декстер Морган"
+],
+"correct": 2,
+"explanation": "Верно: Майкл Скофилд. Это факт о «Побег»."
+},
+{
+"id": "club_tv_179",
+"theme": "tv",
+"group": "tv-089",
+"question": "Где можно встретить «Энди Андерсон»?",
+"answers": [
+"Звёздный час",
+"Жизнь с Луи",
+"Пока все дома",
+"Шоу Бенни Хилла"
+],
+"correct": 1,
+"explanation": "«Жизнь с Луи»: Как зовут отца Луи — Энди Андерсон."
+},
+{
+"id": "club_tv_180",
+"theme": "tv",
+"group": "tv-089",
+"question": "Как зовут отца Луи? [«Жизнь с Луи»]",
+"answers": [
+"Гомер Симпсон",
+"Питер Гриффин",
+"Энди Андерсон",
+"Фрэнк Костанза"
+],
+"correct": 2,
+"explanation": "Верно: Энди Андерсон. Это факт о «Жизнь с Луи»."
+},
+{
+"id": "club_tv_181",
+"theme": "tv",
+"group": "tv-090",
+"question": "Какое шоу или сериал узнают по подсказке «Иван Ургант»?",
+"answers": [
+"Вечерний Ургант",
+"Форт Боярд",
+"Тайны следствия",
+"33 квадратных метра"
+],
+"correct": 0,
+"explanation": "«Вечерний Ургант»: Кто был ведущим «Вечернего Урганта» — Иван Ургант."
+},
+{
+"id": "club_tv_182",
+"theme": "tv",
+"group": "tv-090",
+"question": "Кто был ведущим «Вечернего Урганта»? [«Вечерний Ургант»]",
+"answers": [
+"Михаил Шац",
+"Иван Ургант",
+"Максим Галкин",
+"Леонид Якубович"
+],
+"correct": 1,
+"explanation": "Верно: Иван Ургант. Это факт о «Вечерний Ургант»."
+},
+{
+"id": "club_tv_183",
+"theme": "tv",
+"group": "tv-091",
+"question": "Из какой передачи или сериала знакома деталь «Анастасия Каменская»?",
+"answers": [
+"Парки и зоны отдыха",
+"Wipeout",
+"Каменская",
+"Ангел"
+],
+"correct": 2,
+"explanation": "«Каменская»: Как зовут главную героиню-следователя — Анастасия Каменская."
+},
+{
+"id": "club_tv_184",
+"theme": "tv",
+"group": "tv-091",
+"question": "Как зовут главную героиню-следователя? [«Каменская»]",
+"answers": [
+"Мария Швецова",
+"Екатерина Пушкарёва",
+"Анастасия Каменская",
+"Марго Реброва"
+],
+"correct": 2,
+"explanation": "Верно: Анастасия Каменская. Это факт о «Каменская»."
+},
+{
+"id": "club_tv_185",
+"theme": "tv",
+"group": "tv-092",
+"question": "Какое шоу или сериал узнают по подсказке «Александр Пушной»?",
+"answers": [
+"Дефективный детектив",
+"Галилео",
+"33 квадратных метра",
+"Разрушители легенд"
+],
+"correct": 1,
+"explanation": "«Галилео»: Кто вёл популярное российское научно-развлекательное шоу — Александр Пушной."
+},
+{
+"id": "club_tv_186",
+"theme": "tv",
+"group": "tv-092",
+"question": "Кто вёл популярное российское научно-развлекательное шоу? [«Галилео»]",
+"answers": [
+"Валдис Пельш",
+"Александр Пушной",
+"Иван Ургант",
+"Сергей Супонев"
+],
+"correct": 1,
+"explanation": "Верно: Александр Пушной. Это факт о «Галилео»."
+},
+{
+"id": "club_tv_187",
+"theme": "tv",
+"group": "tv-093",
+"question": "Где можно встретить «Звездуновых»?",
+"answers": [
+"33 квадратных метра",
+"Пусть говорят",
+"Своя игра",
+"Хорошие шутки"
+],
+"correct": 0,
+"explanation": "«33 квадратных метра»: Какую семью показывает сериал «33 квадратных метра» — Звездуновых."
+},
+{
+"id": "club_tv_188",
+"theme": "tv",
+"group": "tv-093",
+"question": "Какую семью показывает сериал «33 квадратных метра»? [«33 квадратных метра»]",
+"answers": [
+"Ворониных",
+"Папиных",
+"Звездуновых",
+"Букиных"
+],
+"correct": 2,
+"explanation": "Верно: Звездуновых. Это факт о «33 квадратных метра»."
+},
+{
+"id": "club_tv_189",
+"theme": "tv",
+"group": "tv-094",
+"question": "Из какой передачи или сериала знакома деталь «Санкт-Петербурге»?",
+"answers": [
+"Бандитский Петербург",
+"Царь горы",
+"Жди меня",
+"Щит"
+],
+"correct": 0,
+"explanation": "«Бандитский Петербург»: В каком городе происходит действие «Бандитского Петербурга» — Санкт-Петербурге."
+},
+{
+"id": "club_tv_190",
+"theme": "tv",
+"group": "tv-094",
+"question": "В каком городе происходит действие «Бандитского Петербурга»? [«Бандитский Петербург»]",
+"answers": [
+"Одессе",
+"Москве",
+"Казани",
+"Санкт-Петербурге"
+],
+"correct": 3,
+"explanation": "Верно: Санкт-Петербурге. Это факт о «Бандитский Петербург»."
+},
+{
+"id": "club_tv_191",
+"theme": "tv",
+"group": "tv-095",
+"question": "Какое шоу или сериал узнают по подсказке «Пермь»?",
+"answers": [
+"Реальные пацаны",
+"Звёздный час",
+"33 квадратных метра",
+"Марш Турецкого"
+],
+"correct": 0,
+"explanation": "«Реальные пацаны»: В каком российском городе происходит действие «Реальных пацанов» — Пермь."
+},
+{
+"id": "club_tv_192",
+"theme": "tv",
+"group": "tv-095",
+"question": "В каком российском городе происходит действие «Реальных пацанов»? [«Реальные пацаны»]",
+"answers": [
+"Пермь",
+"Самара",
+"Саратов",
+"Ижевск"
+],
+"correct": 0,
+"explanation": "Верно: Пермь. Это факт о «Реальные пацаны»."
+},
+{
+"id": "club_tv_193",
+"theme": "tv",
+"group": "tv-096",
+"question": "Какое шоу или сериал узнают по подсказке «Полоса препятствий»?",
+"answers": [
+"Wipeout",
+"Американский папаша",
+"Настоящие монстры",
+"Беверли-Хиллз, 90210"
+],
+"correct": 0,
+"explanation": "«Wipeout»: Какой формат был у Wipeout — Полоса препятствий."
+},
+{
+"id": "club_tv_194",
+"theme": "tv",
+"group": "tv-096",
+"question": "Какой формат был у Wipeout? [«Wipeout»]",
+"answers": [
+"Викторина",
+"Шоу пародий",
+"Полоса препятствий",
+"Кулинарный конкурс"
+],
+"correct": 2,
+"explanation": "Верно: Полоса препятствий. Это факт о «Wipeout»."
+},
+{
+"id": "club_tv_195",
+"theme": "tv",
+"group": "tv-097",
+"question": "Из какой передачи или сериала знакома деталь «Мередит Грей»?",
+"answers": [
+"Сто к одному",
+"Интерны",
+"Офис",
+"Анатомия страсти"
+],
+"correct": 3,
+"explanation": "«Анатомия страсти»: Как зовут главную героиню — Мередит Грей."
+},
+{
+"id": "club_tv_196",
+"theme": "tv",
+"group": "tv-097",
+"question": "Как зовут главную героиню? [«Анатомия страсти»]",
+"answers": [
+"Кристина Янг",
+"Миранда Бейли",
+"Эддисон Монтгомери",
+"Мередит Грей"
+],
+"correct": 3,
+"explanation": "Верно: Мередит Грей. Это факт о «Анатомия страсти»."
+},
+{
+"id": "club_tv_197",
+"theme": "tv",
+"group": "tv-098",
+"question": "Из какой передачи или сериала знакома деталь «Уилл»?",
+"answers": [
+"Тайны следствия",
+"Принц из Беверли-Хиллз",
+"Разрушители легенд",
+"Осторожно, модерн!"
+],
+"correct": 1,
+"explanation": "«Принц из Беверли-Хиллз»: Как зовут главного героя — Уилл."
+},
+{
+"id": "club_tv_198",
+"theme": "tv",
+"group": "tv-098",
+"question": "Как зовут главного героя? [«Принц из Беверли-Хиллз»]",
+"answers": [
+"Карлтон",
+"Уилл",
+"Джеффри",
+"Филипп"
+],
+"correct": 1,
+"explanation": "Верно: Уилл. Это факт о «Принц из Беверли-Хиллз»."
+},
+{
+"id": "club_tv_199",
+"theme": "tv",
+"group": "tv-099",
+"question": "Из какой передачи или сериала знакома деталь «Выживание на острове»?",
+"answers": [
+"Жди меня",
+"Крутые бобры",
+"Кто хочет стать миллионером?",
+"Последний герой"
+],
+"correct": 3,
+"explanation": "«Последний герой»: В каком формате соревнуются участники «Последнего героя» — Выживание на острове."
+},
+{
+"id": "club_tv_200",
+"theme": "tv",
+"group": "tv-099",
+"question": "В каком формате соревнуются участники «Последнего героя»? [«Последний герой»]",
+"answers": [
+"Выживание на острове",
+"Гонки на автомобилях",
+"Музыкальный конкурс",
+"Шахматный турнир"
+],
+"correct": 0,
+"explanation": "Верно: Выживание на острове. Это факт о «Последний герой»."
+},
+{
+"id": "club_tv_201",
+"theme": "tv",
+"group": "tv-100",
+"question": "Из какой передачи или сериала знакома деталь «Скетчком»?",
+"answers": [
+"6 кадров",
+"Маски-шоу",
+"Денди — Новая реальность",
+"Царь горы"
+],
+"correct": 0,
+"explanation": "«6 кадров»: К какому жанру относится шоу «6 кадров» — Скетчком."
+},
+{
+"id": "club_tv_202",
+"theme": "tv",
+"group": "tv-100",
+"question": "К какому жанру относится шоу «6 кадров»? [«6 кадров»]",
+"answers": [
+"Скетчком",
+"Документалистика",
+"Детектив",
+"Телевикторина"
+],
+"correct": 0,
+"explanation": "Верно: Скетчком. Это факт о «6 кадров»."
+},
+{
+"id": "club_tv_203",
+"theme": "tv",
+"group": "tv-101",
+"question": "Какое шоу или сериал узнают по подсказке «Монтгомери Бёрнс»?",
+"answers": [
+"КВН",
+"Времечко",
+"Симпсоны",
+"Слава богу, ты пришёл!"
+],
+"correct": 2,
+"explanation": "«Симпсоны»: Как зовут владельца атомной электростанции — Монтгомери Бёрнс."
+},
+{
+"id": "club_tv_204",
+"theme": "tv",
+"group": "tv-101",
+"question": "Как зовут владельца атомной электростанции? [«Симпсоны»]",
+"answers": [
+"Нед Фландерс",
+"Монтгомери Бёрнс",
+"Сеймур Скиннер",
+"Мо Сизлак"
+],
+"correct": 1,
+"explanation": "Верно: Монтгомери Бёрнс. Это факт о «Симпсоны»."
+},
+{
+"id": "club_tv_205",
+"theme": "tv",
+"group": "tv-102",
+"question": "Из какой передачи или сериала знакома деталь «Почтовый индекс»?",
+"answers": [
+"Беверли-Хиллз, 90210",
+"Смак",
+"Полный дом",
+"Марш Турецкого"
+],
+"correct": 0,
+"explanation": "«Беверли-Хиллз, 90210»: Что означают цифры 90210 в названии сериала — Почтовый индекс."
+},
+{
+"id": "club_tv_206",
+"theme": "tv",
+"group": "tv-102",
+"question": "Что означают цифры 90210 в названии сериала? [«Беверли-Хиллз, 90210»]",
+"answers": [
+"Номер квартиры",
+"Дата выпуска",
+"Номер школы",
+"Почтовый индекс"
+],
+"correct": 3,
+"explanation": "Верно: Почтовый индекс. Это факт о «Беверли-Хиллз, 90210»."
+},
+{
+"id": "club_tv_207",
+"theme": "tv",
+"group": "tv-103",
+"question": "Какое шоу или сериал узнают по подсказке «Очень смешная передача»?",
+"answers": [
+"Морская полиция: Спецотдел",
+"ОСП-студия",
+"Футурама",
+"Секретные материалы"
+],
+"correct": 1,
+"explanation": "«ОСП-студия»: Что означает ОСП в названии «ОСП-студия» — Очень смешная передача."
+},
+{
+"id": "club_tv_208",
+"theme": "tv",
+"group": "tv-103",
+"question": "Что означает ОСП в названии «ОСП-студия»? [«ОСП-студия»]",
+"answers": [
+"Очень смешная передача",
+"Общественная студия пародий",
+"Областная служба погоды",
+"Открытая спортивная программа"
+],
+"correct": 0,
+"explanation": "Верно: Очень смешная передача. Это факт о «ОСП-студия»."
+},
+{
+"id": "club_tv_209",
+"theme": "tv",
+"group": "tv-104",
+"question": "Какое шоу или сериал узнают по подсказке «Лесли Ноуп»?",
+"answers": [
+"Эй, Арнольд!",
+"Парки и зоны отдыха",
+"Бандитский Петербург",
+"6 кадров"
+],
+"correct": 1,
+"explanation": "«Парки и зоны отдыха»: Как зовут энергичную работницу городской администрации — Лесли Ноуп."
+},
+{
+"id": "club_tv_210",
+"theme": "tv",
+"group": "tv-104",
+"question": "Как зовут энергичную работницу городской администрации? [«Парки и зоны отдыха»]",
+"answers": [
+"Пенни",
+"Лесли Ноуп",
+"Лиз Лемон",
+"Фиби Буффе"
+],
+"correct": 1,
+"explanation": "Верно: Лесли Ноуп. Это факт о «Парки и зоны отдыха»."
+},
+{
+"id": "club_tv_211",
+"theme": "tv",
+"group": "tv-105",
+"question": "Из какой передачи или сериала знакома деталь «Айкис»?",
+"answers": [
+"Сплетница",
+"Настоящие монстры",
+"Шоу Рена и Стимпи",
+"Царь горы"
+],
+"correct": 1,
+"explanation": "«Настоящие монстры»: Как зовут маленького красного монстра с большими ушами — Айкис."
+},
+{
+"id": "club_tv_212",
+"theme": "tv",
+"group": "tv-105",
+"question": "Как зовут маленького красного монстра с большими ушами? [«Настоящие монстры»]",
+"answers": [
+"Гир",
+"Айкис",
+"Крамм",
+"Облина"
+],
+"correct": 1,
+"explanation": "Верно: Айкис. Это факт о «Настоящие монстры»."
+},
+{
+"id": "club_tv_213",
+"theme": "tv",
+"group": "tv-106",
+"question": "Из какой передачи или сериала знакома деталь «Катя Пушкарёва»?",
+"answers": [
+"Твин Пикс",
+"Котопёс",
+"Необъяснимо, но факт",
+"Не родись красивой"
+],
+"correct": 3,
+"explanation": "«Не родись красивой»: Как зовут главную героиню — Катя Пушкарёва."
+},
+{
+"id": "club_tv_214",
+"theme": "tv",
+"group": "tv-106",
+"question": "Как зовут главную героиню? [«Не родись красивой»]",
+"answers": [
+"Марго Реброва",
+"Вика Прутковская",
+"Катя Пушкарёва",
+"Даша Васнецова"
+],
+"correct": 2,
+"explanation": "Верно: Катя Пушкарёва. Это факт о «Не родись красивой»."
+},
+{
+"id": "club_tv_215",
+"theme": "tv",
+"group": "tv-107",
+"question": "В какой телеигре Супонева дети соревновались на табло и получали звёзды?",
+"answers": [
+"Угадай мелодию",
+"Зов джунглей",
+"Звёздный час",
+"Денди — Новая реальность"
+],
+"correct": 2,
+"explanation": "«Звёздный час» — детская телеигра с призами за задания."
+},
+{
+"id": "club_tv_216",
+"theme": "tv",
+"group": "tv-107",
+"question": "Кто запомнился как ведущий «Звёздного часа»? [«Звёздный час»]",
+"answers": [
+"Сергей Супонев",
+"Валдис Пельш",
+"Александр Друзь",
+"Андрей Малахов"
+],
+"correct": 0,
+"explanation": "Верно: Сергей Супонев. Это факт о «Звёздный час»."
+},
+{
+"id": "club_tv_217",
+"theme": "tv",
+"group": "tv-108",
+"question": "Какое шоу или сериал узнают по подсказке «Claude Monet»?",
+"answers": [
+"Кухня",
+"Поле чудес",
+"Разрушители легенд",
+"Ангел"
+],
+"correct": 0,
+"explanation": "«Кухня»: Как называется ресторан из первых сезонов «Кухни» — Claude Monet."
+},
+{
+"id": "club_tv_218",
+"theme": "tv",
+"group": "tv-108",
+"question": "Как называется ресторан из первых сезонов «Кухни»? [«Кухня»]",
+"answers": [
+"MacLaren's",
+"Moe's",
+"Central Perk",
+"Claude Monet"
+],
+"correct": 3,
+"explanation": "Верно: Claude Monet. Это факт о «Кухня»."
+},
+{
+"id": "club_tv_219",
+"theme": "tv",
+"group": "tv-109",
+"question": "Какое шоу или сериал узнают по подсказке «О преображении стиля»?",
+"answers": [
+"Зов джунглей",
+"Футурама",
+"Снимите это немедленно!",
+"Американский папаша"
+],
+"correct": 2,
+"explanation": "«Снимите это немедленно!»: О чём была программа «Снимите это немедленно!» — О преображении стиля."
+},
+{
+"id": "club_tv_220",
+"theme": "tv",
+"group": "tv-109",
+"question": "О чём была программа «Снимите это немедленно!»? [«Снимите это немедленно!»]",
+"answers": [
+"О футбольных матчах",
+"О преображении стиля",
+"О лечении зубов",
+"О кулинарных рецептах"
+],
+"correct": 1,
+"explanation": "Верно: О преображении стиля. Это факт о «Снимите это немедленно!»."
+},
+{
+"id": "club_tv_221",
+"theme": "tv",
+"group": "tv-110",
+"question": "Из какой передачи или сериала знакома деталь «Александр Гуревич»?",
+"answers": [
+"Секс в большом городе",
+"Бригада",
+"Твин Пикс",
+"Сто к одному"
+],
+"correct": 3,
+"explanation": "«Сто к одному»: Кто был первым ведущим российского «Сто к одному» — Александр Гуревич."
+},
+{
+"id": "club_tv_222",
+"theme": "tv",
+"group": "tv-110",
+"question": "Кто был первым ведущим российского «Сто к одному»? [«Сто к одному»]",
+"answers": [
+"Александр Масляков",
+"Николай Фоменко",
+"Пётр Кулешов",
+"Александр Гуревич"
+],
+"correct": 3,
+"explanation": "Верно: Александр Гуревич. Это факт о «Сто к одному»."
+},
+{
+"id": "club_tv_223",
+"theme": "tv",
+"group": "tv-111",
+"question": "Из какой передачи или сериала знакома деталь «СТС»?",
+"answers": [
+"Даёшь молодёжь!",
+"КВН",
+"Менталист",
+"Кухня"
+],
+"correct": 0,
+"explanation": "«Даёшь молодёжь!»: На каком канале выходило «Даёшь молодёжь!» — СТС."
+},
+{
+"id": "club_tv_224",
+"theme": "tv",
+"group": "tv-111",
+"question": "На каком канале выходило «Даёшь молодёжь!»? [«Даёшь молодёжь!»]",
+"answers": [
+"НТВ",
+"СТС",
+"Россия 1",
+"ТНТ"
+],
+"correct": 1,
+"explanation": "Верно: СТС. Это факт о «Даёшь молодёжь!»."
+},
+{
+"id": "club_tv_225",
+"theme": "tv",
+"group": "tv-112",
+"question": "Какое шоу или сериал узнают по подсказке «В ЦРУ»?",
+"answers": [
+"Во все тяжкие",
+"Эй, Арнольд!",
+"Американский папаша",
+"Комиссар Рекс"
+],
+"correct": 2,
+"explanation": "«Американский папаша»: Где работает Стэн Смит — В ЦРУ."
+},
+{
+"id": "club_tv_226",
+"theme": "tv",
+"group": "tv-112",
+"question": "Где работает Стэн Смит? [«Американский папаша»]",
+"answers": [
+"На почте",
+"В ФБР",
+"В ЦРУ",
+"В полиции"
+],
+"correct": 2,
+"explanation": "Верно: В ЦРУ. Это факт о «Американский папаша»."
+},
+{
+"id": "club_tv_227",
+"theme": "tv",
+"group": "tv-113",
+"question": "Где можно встретить «Бенни Хилл»?",
+"answers": [
+"Комиссар Рекс",
+"Пока все дома",
+"Шоу Бенни Хилла",
+"Коломбо"
+],
+"correct": 2,
+"explanation": "«Шоу Бенни Хилла»: Как зовут британского комика — ведущего шоу — Бенни Хилл."
+},
+{
+"id": "club_tv_228",
+"theme": "tv",
+"group": "tv-113",
+"question": "Как зовут британского комика — ведущего шоу? [«Шоу Бенни Хилла»]",
+"answers": [
+"Роуэн Аткинсон",
+"Питер Селлерс",
+"Бенни Хилл",
+"Джим Керри"
+],
+"correct": 2,
+"explanation": "Верно: Бенни Хилл. Это факт о «Шоу Бенни Хилла»."
+},
+{
+"id": "club_tv_229",
+"theme": "tv",
+"group": "tv-114",
+"question": "Где можно встретить «Одесса»?",
+"answers": [
+"Сам себе режиссёр",
+"Маски-шоу",
+"Парки и зоны отдыха",
+"Южный Парк"
+],
+"correct": 1,
+"explanation": "«Маски-шоу»: Из какого города родом комик-труппа «Маски» — Одесса."
+},
+{
+"id": "club_tv_230",
+"theme": "tv",
+"group": "tv-114",
+"question": "Из какого города родом комик-труппа «Маски»? [«Маски-шоу»]",
+"answers": [
+"Москва",
+"Казань",
+"Одесса",
+"Киев"
+],
+"correct": 2,
+"explanation": "Верно: Одесса. Это факт о «Маски-шоу»."
+},
+{
+"id": "club_tv_231",
+"theme": "tv",
+"group": "tv-115",
+"question": "Какое шоу или сериал узнают по подсказке «Игорь Плахов»?",
+"answers": [
+"Ералаш",
+"Американский папаша",
+"КВН",
+"Убойная сила"
+],
+"correct": 3,
+"explanation": "«Убойная сила»: Как зовут милиционера, которого сыграл Константин Хабенский — Игорь Плахов."
+},
+{
+"id": "club_tv_232",
+"theme": "tv",
+"group": "tv-115",
+"question": "Как зовут милиционера, которого сыграл Константин Хабенский? [«Убойная сила»]",
+"answers": [
+"Ларин",
+"Александр Волков",
+"Игорь Плахов",
+"Дукалис"
+],
+"correct": 2,
+"explanation": "Верно: Игорь Плахов. Это факт о «Убойная сила»."
+},
+{
+"id": "club_tv_233",
+"theme": "tv",
+"group": "tv-116",
+"question": "Из какой передачи или сериала знакома деталь «Мария Швецова»?",
+"answers": [
+"Тайны следствия",
+"Уральские пельмени",
+"Денди — Новая реальность",
+"Лучше звоните Солу"
+],
+"correct": 0,
+"explanation": "«Тайны следствия»: Как зовут героиню Анны Ковальчук — Мария Швецова."
+},
+{
+"id": "club_tv_234",
+"theme": "tv",
+"group": "tv-116",
+"question": "Как зовут героиню Анны Ковальчук? [«Тайны следствия»]",
+"answers": [
+"Марго Реброва",
+"Анна Платонова",
+"Мария Швецова",
+"Анастасия Каменская"
+],
+"correct": 2,
+"explanation": "Верно: Мария Швецова. Это факт о «Тайны следствия»."
+},
+{
+"id": "club_tv_235",
+"theme": "tv",
+"group": "tv-117",
+"question": "Какое шоу или сериал узнают по подсказке «Кошек»?",
+"answers": [
+"Щит",
+"Универ",
+"Даёшь молодёжь!",
+"Альф"
+],
+"correct": 3,
+"explanation": "«Альф»: Какую еду больше всего любит Альф — Кошек."
+},
+{
+"id": "club_tv_236",
+"theme": "tv",
+"group": "tv-117",
+"question": "Какую еду больше всего любит Альф? [«Альф»]",
+"answers": [
+"Спагетти",
+"Пиццу",
+"Кошек",
+"Рыбу"
+],
+"correct": 2,
+"explanation": "Верно: Кошек. Это факт о «Альф»."
+},
+{
+"id": "club_tv_237",
+"theme": "tv",
+"group": "tv-118",
+"question": "Из какой передачи или сериала знакома деталь «Пять»?",
+"answers": [
+"Утренняя звезда",
+"Секс в большом городе",
+"Своя игра",
+"Папины дочки"
+],
+"correct": 3,
+"explanation": "«Папины дочки»: Сколько дочерей воспитывает главный герой — Пять."
+},
+{
+"id": "club_tv_238",
+"theme": "tv",
+"group": "tv-118",
+"question": "Сколько дочерей воспитывает главный герой? [«Папины дочки»]",
+"answers": [
+"Четыре",
+"Пять",
+"Три",
+"Шесть"
+],
+"correct": 1,
+"explanation": "Верно: Пять. Это факт о «Папины дочки»."
+},
+{
+"id": "club_tv_239",
+"theme": "tv",
+"group": "tv-119",
+"question": "Где можно встретить «Монти Пайтон»?",
+"answers": [
+"ОСП-студия",
+"Американский папаша",
+"Монти Пайтон: Летающий цирк",
+"Кухня"
+],
+"correct": 2,
+"explanation": "«Монти Пайтон: Летающий цирк»: Как называется британская комедийная группа — Монти Пайтон."
+},
+{
+"id": "club_tv_240",
+"theme": "tv",
+"group": "tv-119",
+"question": "Как называется британская комедийная группа? [«Монти Пайтон: Летающий цирк»]",
+"answers": [
+"Кривое зеркало",
+"Монти Пайтон",
+"Лига смеха",
+"Квартет И"
+],
+"correct": 1,
+"explanation": "Верно: Монти Пайтон. Это факт о «Монти Пайтон: Летающий цирк»."
+},
+{
+"id": "club_tv_241",
+"theme": "tv",
+"group": "tv-120",
+"question": "Из какой передачи или сериала знакома деталь «Служанкой»?",
+"answers": [
+"Просто Мария",
+"Что? Где? Когда?",
+"12 злобных зрителей",
+"Пусть говорят"
+],
+"correct": 0,
+"explanation": "«Просто Мария»: Кем работает героиня Мария в начале истории — Служанкой."
+},
+{
+"id": "club_tv_242",
+"theme": "tv",
+"group": "tv-120",
+"question": "Кем работает героиня Мария в начале истории? [«Просто Мария»]",
+"answers": [
+"Служанкой",
+"Телеведущей",
+"Врачом",
+"Полицейской"
+],
+"correct": 0,
+"explanation": "Верно: Служанкой. Это факт о «Просто Мария»."
+},
+{
+"id": "club_tv_243",
+"theme": "tv",
+"group": "tv-121",
+"question": "Из какой передачи или сериала знакома деталь «Прю, Пайпер и Фиби»?",
+"answers": [
+"Наша Russia",
+"Квартирный вопрос",
+"Зачарованные",
+"В мире животных"
+],
+"correct": 2,
+"explanation": "«Зачарованные»: Как зовут трёх первых сестёр-ведьм — Прю, Пайпер и Фиби."
+},
+{
+"id": "club_tv_244",
+"theme": "tv",
+"group": "tv-121",
+"question": "Как зовут трёх первых сестёр-ведьм? [«Зачарованные»]",
+"answers": [
+"Прю, Пайпер и Фиби",
+"Баффи, Уиллоу и Тара",
+"Моника, Рэйчел и Фиби",
+"Кейт, Джульет и Сойер"
+],
+"correct": 0,
+"explanation": "Верно: Прю, Пайпер и Фиби. Это факт о «Зачарованные»."
+},
+{
+"id": "club_tv_245",
+"theme": "tv",
+"group": "tv-122",
+"question": "Какое шоу или сериал узнают по подсказке «Александр Масляков»?",
+"answers": [
+"600 секунд",
+"Форт Боярд",
+"Во все тяжкие",
+"КВН"
+],
+"correct": 3,
+"explanation": "«КВН»: Кто десятилетиями вёл КВН с 1986 года — Александр Масляков."
+},
+{
+"id": "club_tv_246",
+"theme": "tv",
+"group": "tv-122",
+"question": "Кто десятилетиями вёл КВН с 1986 года? [«КВН»]",
+"answers": [
+"Валдис Пельш",
+"Максим Галкин",
+"Леонид Якубович",
+"Александр Масляков"
+],
+"correct": 3,
+"explanation": "Верно: Александр Масляков. Это факт о «КВН»."
+},
+{
+"id": "club_tv_247",
+"theme": "tv",
+"group": "tv-123",
+"question": "Из какой передачи или сериала знакома деталь «Вистерия Лейн»?",
+"answers": [
+"Осторожно, модерн!",
+"КВН",
+"30 потрясений",
+"Отчаянные домохозяйки"
+],
+"correct": 3,
+"explanation": "«Отчаянные домохозяйки»: Как называется улица, где живут героини — Вистерия Лейн."
+},
+{
+"id": "club_tv_248",
+"theme": "tv",
+"group": "tv-123",
+"question": "Как называется улица, где живут героини? [«Отчаянные домохозяйки»]",
+"answers": [
+"Бейкер-стрит",
+"Ломбард-стрит",
+"Парк-авеню",
+"Вистерия Лейн"
+],
+"correct": 3,
+"explanation": "Верно: Вистерия Лейн. Это факт о «Отчаянные домохозяйки»."
+},
+{
+"id": "club_tv_249",
+"theme": "tv",
+"group": "tv-124",
+"question": "Где можно встретить «Ньюпорт-Бич»?",
+"answers": [
+"Comedy Club",
+"Одинокие сердца",
+"Остаться в живых",
+"Женаты... с детьми"
+],
+"correct": 1,
+"explanation": "«Одинокие сердца»: Какой прибрежный город является местом действия The O.C. — Ньюпорт-Бич."
+},
+{
+"id": "club_tv_250",
+"theme": "tv",
+"group": "tv-124",
+"question": "Какой прибрежный город является местом действия The O.C.? [«Одинокие сердца»]",
+"answers": [
+"Ньюпорт-Бич",
+"Санта-Моника",
+"Сан-Диего",
+"Майами"
+],
+"correct": 0,
+"explanation": "Верно: Ньюпорт-Бич. Это факт о «Одинокие сердца»."
+},
+{
+"id": "club_tv_251",
+"theme": "tv",
+"group": "tv-125",
+"question": "Из какой передачи или сериала знакома деталь «Тедди»?",
+"answers": [
+"Беверли-Хиллз, 90210",
+"Слабое звено",
+"Мистер Бин",
+"Комиссар Рекс"
+],
+"correct": 2,
+"explanation": "«Мистер Бин»: Как зовут медвежонка Бина — Тедди."
+},
+{
+"id": "club_tv_252",
+"theme": "tv",
+"group": "tv-125",
+"question": "Как зовут медвежонка Бина? [«Мистер Бин»]",
+"answers": [
+"Руперт",
+"Бенни",
+"Фредди",
+"Тедди"
+],
+"correct": 3,
+"explanation": "Верно: Тедди. Это факт о «Мистер Бин»."
+},
+{
+"id": "club_tv_253",
+"theme": "tv",
+"group": "tv-126",
+"question": "Какое шоу или сериал узнают по подсказке «Яна Чурикова»?",
+"answers": [
+"12 злобных зрителей",
+"Взгляд",
+"Тачку на прокачку",
+"Звёздный час"
+],
+"correct": 0,
+"explanation": "«12 злобных зрителей»: С какой ведущей прежде всего ассоциировалось шоу MTV Россия — Яна Чурикова."
+},
+{
+"id": "club_tv_254",
+"theme": "tv",
+"group": "tv-126",
+"question": "С какой ведущей прежде всего ассоциировалось шоу MTV Россия? [«12 злобных зрителей»]",
+"answers": [
+"Ксения Собчак",
+"Яна Чурикова",
+"Тина Канделаки",
+"Лера Кудрявцева"
+],
+"correct": 1,
+"explanation": "Верно: Яна Чурикова. Это факт о «12 злобных зрителей»."
+},
+{
+"id": "club_tv_255",
+"theme": "tv",
+"group": "tv-127",
+"question": "Какое шоу или сериал узнают по подсказке «Лиз Лемон»?",
+"answers": [
+"Богатые тоже плачут",
+"30 потрясений",
+"Просто Мария",
+"Дом-2"
+],
+"correct": 1,
+"explanation": "«30 потрясений»: Кого играет Тина Фей — Лиз Лемон."
+},
+{
+"id": "club_tv_256",
+"theme": "tv",
+"group": "tv-127",
+"question": "Кого играет Тина Фей? [«30 потрясений»]",
+"answers": [
+"Элейн Бенес",
+"Лесли Ноуп",
+"Келли Капур",
+"Лиз Лемон"
+],
+"correct": 3,
+"explanation": "Верно: Лиз Лемон. Это факт о «30 потрясений»."
+},
+{
+"id": "club_tv_257",
+"theme": "tv",
+"group": "tv-128",
+"question": "Какое шоу или сериал узнают по подсказке «Балтимор»?",
+"answers": [
+"Эй, Арнольд!",
+"Клон",
+"Прослушка",
+"Каменская"
+],
+"correct": 2,
+"explanation": "«Прослушка»: В каком городе происходит действие сериала — Балтимор."
+},
+{
+"id": "club_tv_258",
+"theme": "tv",
+"group": "tv-128",
+"question": "В каком городе происходит действие сериала? [«Прослушка»]",
+"answers": [
+"Чикаго",
+"Бостон",
+"Балтимор",
+"Майами"
+],
+"correct": 2,
+"explanation": "Верно: Балтимор. Это факт о «Прослушка»."
+},
+{
+"id": "club_tv_259",
+"theme": "tv",
+"group": "tv-129",
+"question": "Из какой передачи или сериала знакома деталь «Экспертом по брызгам крови»?",
+"answers": [
+"Декстер",
+"12 злобных зрителей",
+"24 часа",
+"Шоу Бенни Хилла"
+],
+"correct": 0,
+"explanation": "«Декстер»: Кем работает Декстер Морган — Экспертом по брызгам крови."
+},
+{
+"id": "club_tv_260",
+"theme": "tv",
+"group": "tv-129",
+"question": "Кем работает Декстер Морган? [«Декстер»]",
+"answers": [
+"Экспертом по брызгам крови",
+"Врачом",
+"Пожарным",
+"Адвокатом"
+],
+"correct": 0,
+"explanation": "Верно: Экспертом по брызгам крови. Это факт о «Декстер»."
+},
+{
+"id": "club_tv_261",
+"theme": "tv",
+"group": "tv-130",
+"question": "Какое шоу или сериал узнают по подсказке «Апельсиновую газировку»?",
+"answers": [
+"Сто к одному",
+"Клуб путешественников",
+"Последний герой",
+"Кенан и Кел"
+],
+"correct": 3,
+"explanation": "«Кенан и Кел»: Что постоянно любит пить Кел — Апельсиновую газировку."
+},
+{
+"id": "club_tv_262",
+"theme": "tv",
+"group": "tv-130",
+"question": "Что постоянно любит пить Кел? [«Кенан и Кел»]",
+"answers": [
+"Кофе",
+"Молочный коктейль",
+"Квас",
+"Апельсиновую газировку"
+],
+"correct": 3,
+"explanation": "Верно: Апельсиновую газировку. Это факт о «Кенан и Кел»."
+},
+{
+"id": "club_tv_263",
+"theme": "tv",
+"group": "tv-131",
+"question": "Где можно встретить «Иван Ургант»?",
+"answers": [
+"30 потрясений",
+"Сам себе режиссёр",
+"Прожекторперисхилтон",
+"Клан Сопрано"
+],
+"correct": 2,
+"explanation": "«Прожекторперисхилтон»: Какой из ведущих связан с «Прожекторперисхилтон» — Иван Ургант."
+},
+{
+"id": "club_tv_264",
+"theme": "tv",
+"group": "tv-131",
+"question": "Какой из ведущих связан с «Прожекторперисхилтон»? [«Прожекторперисхилтон»]",
+"answers": [
+"Иван Ургант",
+"Андрей Малахов",
+"Дмитрий Нагиев",
+"Александр Пушной"
+],
+"correct": 0,
+"explanation": "Верно: Иван Ургант. Это факт о «Прожекторперисхилтон»."
+},
+{
+"id": "club_tv_265",
+"theme": "tv",
+"group": "tv-132",
+"question": "Какое шоу или сериал узнают по подсказке «Менты»?",
+"answers": [
+"Улицы разбитых фонарей",
+"Менталист",
+"Битва экстрасенсов",
+"Разрушители легенд"
+],
+"correct": 0,
+"explanation": "«Улицы разбитых фонарей»: Как называли героев сериала в народе — Менты."
+},
+{
+"id": "club_tv_266",
+"theme": "tv",
+"group": "tv-132",
+"question": "Как называли героев сериала в народе? [«Улицы разбитых фонарей»]",
+"answers": [
+"Маршалы",
+"Менты",
+"Интерны",
+"Кадеты"
+],
+"correct": 1,
+"explanation": "Верно: Менты. Это факт о «Улицы разбитых фонарей»."
+},
+{
+"id": "club_tv_267",
+"theme": "tv",
+"group": "tv-133",
+"question": "Где можно встретить «Дмитрий Нагиев и Сергей Рост»?",
+"answers": [
+"Одинокие сердца",
+"Лучше звоните Солу",
+"Южный Парк",
+"Осторожно, модерн!"
+],
+"correct": 3,
+"explanation": "«Осторожно, модерн!»: Кто составил дуэт в «Осторожно, модерн!» — Дмитрий Нагиев и Сергей Рост."
+},
+{
+"id": "club_tv_268",
+"theme": "tv",
+"group": "tv-133",
+"question": "Кто составил дуэт в «Осторожно, модерн!»? [«Осторожно, модерн!»]",
+"answers": [
+"Дмитрий Нагиев и Сергей Рост",
+"Харламов и Батрутдинов",
+"Пельш и Фоменко",
+"Юрий Стоянов и Илья Олейников"
+],
+"correct": 0,
+"explanation": "Верно: Дмитрий Нагиев и Сергей Рост. Это факт о «Осторожно, модерн!»."
+},
+{
+"id": "club_tv_269",
+"theme": "tv",
+"group": "tv-134",
+"question": "Какое шоу или сериал узнают по подсказке «Юрий Сенкевич»?",
+"answers": [
+"Альф",
+"Comedy Club",
+"Губка Боб Квадратные Штаны",
+"Клуб путешественников"
+],
+"correct": 3,
+"explanation": "«Клуб путешественников»: Кто прославился как ведущий «Клуба путешественников» — Юрий Сенкевич."
+},
+{
+"id": "club_tv_270",
+"theme": "tv",
+"group": "tv-134",
+"question": "Кто прославился как ведущий «Клуба путешественников»? [«Клуб путешественников»]",
+"answers": [
+"Николай Дроздов",
+"Валдис Пельш",
+"Юрий Сенкевич",
+"Сергей Супонев"
+],
+"correct": 2,
+"explanation": "Верно: Юрий Сенкевич. Это факт о «Клуб путешественников»."
+},
+{
+"id": "club_tv_271",
+"theme": "tv",
+"group": "tv-135",
+"question": "Из какой передачи или сериала знакома деталь «Дмитрий Дибров»?",
+"answers": [
+"Анатомия страсти",
+"В мире животных",
+"Кто хочет стать миллионером?",
+"Воронины"
+],
+"correct": 2,
+"explanation": "«Кто хочет стать миллионером?»: Кто первым вёл российскую версию на НТВ под названием «О, счастливчик!» — Дмитрий Дибров."
+},
+{
+"id": "club_tv_272",
+"theme": "tv",
+"group": "tv-135",
+"question": "Кто первым вёл российскую версию на НТВ под названием «О, счастливчик!»? [«Кто хочет стать миллионером?»]",
+"answers": [
+"Валдис Пельш",
+"Леонид Якубович",
+"Дмитрий Дибров",
+"Максим Галкин"
+],
+"correct": 2,
+"explanation": "Верно: Дмитрий Дибров. Это факт о «Кто хочет стать миллионером?»."
+},
+{
+"id": "club_tv_273",
+"theme": "tv",
+"group": "tv-136",
+"question": "Какое шоу или сериал узнают по подсказке «Военно-морская уголовная следственная служба»?",
+"answers": [
+"Форт Боярд",
+"Бригада",
+"Морская полиция: Спецотдел",
+"Воронины"
+],
+"correct": 2,
+"explanation": "«Морская полиция: Спецотдел»: Какое ведомство расследует дела в NCIS — Военно-морская уголовная следственная служба."
+},
+{
+"id": "club_tv_274",
+"theme": "tv",
+"group": "tv-136",
+"question": "Какое ведомство расследует дела в NCIS? [«Морская полиция: Спецотдел»]",
+"answers": [
+"Пограничная охрана",
+"Военно-морская уголовная следственная служба",
+"Почтовая инспекция",
+"Налоговая полиция"
+],
+"correct": 1,
+"explanation": "Верно: Военно-морская уголовная следственная служба. Это факт о «Морская полиция: Спецотдел»."
+},
+{
+"id": "club_tv_275",
+"theme": "tv",
+"group": "tv-137",
+"question": "Из какой передачи или сериала знакома деталь ««И ещё кое-что...»»?",
+"answers": [
+"Последний герой",
+"Отчаянные домохозяйки",
+"6 кадров",
+"Коломбо"
+],
+"correct": 3,
+"explanation": "«Коломбо»: Какая привычная фраза известна по детективу Коломбо — «И ещё кое-что...»."
+},
+{
+"id": "club_tv_276",
+"theme": "tv",
+"group": "tv-137",
+"question": "Какая привычная фраза известна по детективу Коломбо? [«Коломбо»]",
+"answers": [
+"«Зима близко»",
+"«Я вернусь»",
+"«Элементарно!»",
+"«И ещё кое-что...»"
+],
+"correct": 3,
+"explanation": "Верно: «И ещё кое-что...». Это факт о «Коломбо»."
+},
+{
+"id": "club_tv_277",
+"theme": "tv",
+"group": "tv-138",
+"question": "Где можно встретить «Журналисткой»?",
+"answers": [
+"Лоис и Кларк",
+"CSI: Майами",
+"Зачарованные",
+"Баффи — истребительница вампиров"
+],
+"correct": 0,
+"explanation": "«Лоис и Кларк»: Кем работает Лоис Лейн — Журналисткой."
+},
+{
+"id": "club_tv_278",
+"theme": "tv",
+"group": "tv-138",
+"question": "Кем работает Лоис Лейн? [«Лоис и Кларк»]",
+"answers": [
+"Певицей",
+"Юристом",
+"Журналисткой",
+"Врачом"
+],
+"correct": 2,
+"explanation": "Верно: Журналисткой. Это факт о «Лоис и Кларк»."
+},
+{
+"id": "club_tv_279",
+"theme": "tv",
+"group": "tv-139",
+"question": "Какое шоу или сериал узнают по подсказке «Самого себя»?",
+"answers": [
+"Дикий ангел",
+"Щит",
+"Менталист",
+"Сайнфелд"
+],
+"correct": 3,
+"explanation": "«Сайнфелд»: Кого играет Джерри Сайнфелд в «Сайнфелде» — Самого себя."
+},
+{
+"id": "club_tv_280",
+"theme": "tv",
+"group": "tv-139",
+"question": "Кого играет Джерри Сайнфелд в «Сайнфелде»? [«Сайнфелд»]",
+"answers": [
+"Джоуи Триббиани",
+"Теда Мосби",
+"Майкла Скотта",
+"Самого себя"
+],
+"correct": 3,
+"explanation": "Верно: Самого себя. Это факт о «Сайнфелд»."
+},
+{
+"id": "club_tv_281",
+"theme": "tv",
+"group": "tv-140",
+"question": "Какое шоу или сериал узнают по подсказке «MacLaren's»?",
+"answers": [
+"Галилео",
+"Битва экстрасенсов",
+"Кенан и Кел",
+"Как я встретил вашу маму"
+],
+"correct": 3,
+"explanation": "«Как я встретил вашу маму»: В каком баре часто встречаются герои — MacLaren's."
+},
+{
+"id": "club_tv_282",
+"theme": "tv",
+"group": "tv-140",
+"question": "В каком баре часто встречаются герои? [«Как я встретил вашу маму»]",
+"answers": [
+"Moe's Tavern",
+"MacLaren's",
+"The Max",
+"Central Perk"
+],
+"correct": 1,
+"explanation": "Верно: MacLaren's. Это факт о «Как я встретил вашу маму»."
+},
+{
+"id": "club_tv_283",
+"theme": "tv",
+"group": "tv-141",
+"question": "Из какой передачи или сериала знакома деталь «Норберт и Дэггет»?",
+"answers": [
+"Кухня",
+"Женаты... с детьми",
+"Крутые бобры",
+"Прожекторперисхилтон"
+],
+"correct": 2,
+"explanation": "«Крутые бобры»: Как зовут двух братьев-бобров — Норберт и Дэггет."
+},
+{
+"id": "club_tv_284",
+"theme": "tv",
+"group": "tv-141",
+"question": "Как зовут двух братьев-бобров? [«Крутые бобры»]",
+"answers": [
+"Норберт и Дэггет",
+"Том и Джерри",
+"Билл и Тед",
+"Чип и Дейл"
+],
+"correct": 0,
+"explanation": "Верно: Норберт и Дэггет. Это факт о «Крутые бобры»."
+},
+{
+"id": "club_tv_285",
+"theme": "tv",
+"group": "tv-142",
+"question": "Какое шоу или сериал узнают по подсказке «Колумнисткой»?",
+"answers": [
+"Секс в большом городе",
+"Разрушители легенд",
+"Симпсоны",
+"Необъяснимо, но факт"
+],
+"correct": 0,
+"explanation": "«Секс в большом городе»: Кем работает Кэрри Брэдшоу — Колумнисткой."
+},
+{
+"id": "club_tv_286",
+"theme": "tv",
+"group": "tv-142",
+"question": "Кем работает Кэрри Брэдшоу? [«Секс в большом городе»]",
+"answers": [
+"Полицейской",
+"Певицей",
+"Колумнисткой",
+"Врачом"
+],
+"correct": 2,
+"explanation": "Верно: Колумнисткой. Это факт о «Секс в большом городе»."
+},
+{
+"id": "club_tv_287",
+"theme": "tv",
+"group": "tv-143",
+"question": "Из какой передачи или сериала знакома деталь «Горацио Кейн»?",
+"answers": [
+"Приключения мультяшек",
+"Сам себе режиссёр",
+"Рабыня Изаура",
+"CSI: Майами"
+],
+"correct": 3,
+"explanation": "«CSI: Майами»: Как зовут руководителя команды CSI: Miami — Горацио Кейн."
+},
+{
+"id": "club_tv_288",
+"theme": "tv",
+"group": "tv-143",
+"question": "Как зовут руководителя команды CSI: Miami? [«CSI: Майами»]",
+"answers": [
+"Дон Флэк",
+"Гил Гриссом",
+"Рик Граймс",
+"Горацио Кейн"
+],
+"correct": 3,
+"explanation": "Верно: Горацио Кейн. Это факт о «CSI: Майами»."
+},
+{
+"id": "club_tv_289",
+"theme": "tv",
+"group": "tv-144",
+"question": "Какое шоу или сериал узнают по подсказке «Котом»?",
+"answers": [
+"Вечерний Ургант",
+"Шоу Рена и Стимпи",
+"Просто Мария",
+"Слабое звено"
+],
+"correct": 1,
+"explanation": "«Шоу Рена и Стимпи»: Кем является Стимпи — Котом."
+},
+{
+"id": "club_tv_290",
+"theme": "tv",
+"group": "tv-144",
+"question": "Кем является Стимпи? [«Шоу Рена и Стимпи»]",
+"answers": [
+"Котом",
+"Уткой",
+"Чихуахуа",
+"Хомяком"
+],
+"correct": 0,
+"explanation": "Верно: Котом. Это факт о «Шоу Рена и Стимпи»."
+},
+{
+"id": "club_tv_291",
+"theme": "tv",
+"group": "tv-145",
+"question": "Какое шоу или сериал узнают по подсказке «Мистическое реалити-шоу»?",
+"answers": [
+"Эй, Арнольд!",
+"Закон и порядок",
+"Битва экстрасенсов",
+"Пусть говорят"
+],
+"correct": 2,
+"explanation": "«Битва экстрасенсов»: Какой жанр у «Битвы экстрасенсов» — Мистическое реалити-шоу."
+},
+{
+"id": "club_tv_292",
+"theme": "tv",
+"group": "tv-145",
+"question": "Какой жанр у «Битвы экстрасенсов»? [«Битва экстрасенсов»]",
+"answers": [
+"Мистическое реалити-шоу",
+"Новости спорта",
+"Музыкальная викторина",
+"Комедийный сериал"
+],
+"correct": 0,
+"explanation": "Верно: Мистическое реалити-шоу. Это факт о «Битва экстрасенсов»."
+},
+{
+"id": "club_tv_293",
+"theme": "tv",
+"group": "tv-146",
+"question": "Из какой передачи или сериала знакома деталь «Большие гонки»?",
+"answers": [
+"Воронины",
+"Большие гонки",
+"Намедни",
+"Секс в большом городе"
+],
+"correct": 1,
+"explanation": "«Большие гонки»: Какая передача была адаптацией французского Intervilles — Большие гонки."
+},
+{
+"id": "club_tv_294",
+"theme": "tv",
+"group": "tv-146",
+"question": "Какая передача была адаптацией французского Intervilles? [«Большие гонки»]",
+"answers": [
+"Форт Боярд",
+"Галилео",
+"Битва экстрасенсов",
+"Большие гонки"
+],
+"correct": 3,
+"explanation": "Верно: Большие гонки. Это факт о «Большие гонки»."
+},
+{
+"id": "club_tv_295",
+"theme": "tv",
+"group": "tv-147",
+"question": "Из какой передачи или сериала знакома деталь «Импровизационная комедия»?",
+"answers": [
+"Санта-Барбара",
+"Угадай мелодию",
+"Слава богу, ты пришёл!",
+"24 часа"
+],
+"correct": 2,
+"explanation": "«Слава богу, ты пришёл!»: В каком жанре проходила передача «Слава богу, ты пришёл!» — Импровизационная комедия."
+},
+{
+"id": "club_tv_296",
+"theme": "tv",
+"group": "tv-147",
+"question": "В каком жанре проходила передача «Слава богу, ты пришёл!»? [«Слава богу, ты пришёл!»]",
+"answers": [
+"Спортивная викторина",
+"Ситком",
+"Детектив",
+"Импровизационная комедия"
+],
+"correct": 3,
+"explanation": "Верно: Импровизационная комедия. Это факт о «Слава богу, ты пришёл!»."
+},
+{
+"id": "club_tv_297",
+"theme": "tv",
+"group": "tv-148",
+"question": "Из какой передачи или сериала знакома деталь «Две»?",
+"answers": [
+"Глухарь",
+"Котопёс",
+"Слабое звено",
+"Ликвидация"
+],
+"correct": 1,
+"explanation": "«Котопёс»: Сколько голов у главного персонажа «Котопса» — Две."
+},
+{
+"id": "club_tv_298",
+"theme": "tv",
+"group": "tv-148",
+"question": "Сколько голов у главного персонажа «Котопса»? [«Котопёс»]",
+"answers": [
+"Одна",
+"Три",
+"Четыре",
+"Две"
+],
+"correct": 3,
+"explanation": "Верно: Две. Это факт о «Котопёс»."
+},
+{
+"id": "club_tv_299",
+"theme": "tv",
+"group": "tv-149",
+"question": "Из какой передачи или сериала знакома деталь «Алексей Лысенков»?",
+"answers": [
+"Последний герой",
+"Сам себе режиссёр",
+"Мелроуз-Плейс",
+"Касл"
+],
+"correct": 1,
+"explanation": "«Сам себе режиссёр»: Кто вёл «Сам себе режиссёр» — Алексей Лысенков."
+},
+{
+"id": "club_tv_300",
+"theme": "tv",
+"group": "tv-149",
+"question": "Кто вёл «Сам себе режиссёр»? [«Сам себе режиссёр»]",
+"answers": [
+"Алексей Лысенков",
+"Михаил Шац",
+"Сергей Супонев",
+"Леонид Якубович"
+],
+"correct": 0,
+"explanation": "Верно: Алексей Лысенков. Это факт о «Сам себе режиссёр»."
+}
+];

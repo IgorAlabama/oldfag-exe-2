@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1024">
+  <meta name="description" content="OLDfag.exe — пиксельная ретровикторина о кино, играх, музыке и телевидении. Пройди фейсконтроль в Pixel Pleasures XXX.">
+  <meta property="og:title" content="OLDfag.exe — проверь, насколько ты олдфаг">
+  <meta property="og:description" content="Фейсконтроль Артура, клуб Компы, 3 квиза и аркада Тимур vs Морженальность.">
+  <title>OLDfag.exe 2.0 — фейсконтроль, Компы и аркада</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="club.css">
+  <script src="questions.js" defer></script>
+  <script src="audio.js" defer></script>
+  <script src="arthur-dialogues.js" defer></script>
+  <script src="app.js" defer></script>
+  <script src="club-questions.js" defer></script>
+  <script src="club.js" defer></script>
+</head>
+<body>
+  <div class="crt" aria-hidden="true"></div>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="./" aria-label="OLDfag.exe — главная">OLD<span>fag</span><em>.exe</em></a>
+      <div class="top-right"><span class="status-dot" aria-hidden="true"></span> VGA COLOR · 1995-ish <span class="top-sep">|</span> <span id="playCount">ПРОХОЖДЕНИЙ: 0</span></div>
+    </header>
+
+    <div class="audio-toolbar" role="group" aria-label="Звук игры">
+      <span class="audio-indicator" aria-hidden="true">♫</span>
+      <span class="audio-trackname">NOW PLAYING: LO-LOOP GROOVE</span>
+      <button type="button" class="audio-toggle" id="musicToggle" aria-pressed="false" aria-label="Включить музыку">♪ МУЗЫКА: ВЫКЛ</button>
+      <button type="button" class="audio-settings-button" id="audioSettingsBtn" aria-label="Настройки звука">⚙ НАСТРОЙКИ</button>
+    </div>
+
+    <main>
+      <section class="intro active" id="screen-home" aria-labelledby="mainTitle">
+        <div class="scene use-image" id="scene-intro" data-scene="intro" role="img" aria-label="Пиксельный ночной клуб, суровый вышибала у входа">
+          <div class="stars" aria-hidden="true"></div>
+          <div class="scene-city" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+          <div class="scene-club" aria-hidden="true"><div class="club-sign"><span class="sign-small">THE</span><strong>PIXEL<br>PLEASURES</strong><b>XXX</b></div><div class="club-door"></div><div class="club-rope left"></div><div class="club-rope right"></div></div>
+          <div class="scene-bouncer" aria-hidden="true"><div class="bouncer-head"><span class="shades"></span><span class="mouth"></span></div><div class="bouncer-neck"></div><div class="bouncer-body"><div class="bouncer-arm left"></div><div class="bouncer-arm right"></div><small>SECURITY</small></div></div>
+          <div class="scene-caption"><span>SCENE 01 / THE DOOR</span><span>PIXEL ART BACKDROP</span></div>
+        </div>
+        <div class="menu-panel">
+          <div class="eyebrow">&gt; AGE VERIFICATION SYSTEM v2.0</div>
+          <h1 id="mainTitle">ARE YOU <span>OLD</span><br>ENOUGH TO ENTER?</h1>
+          <p class="intro-copy">В элитный пиксельный клуб пускают только тех, кто помнит времена без Wi-Fi. Документы не принимаем. Задаём странные вопросы.</p>
+          <div class="terminal-rule"></div>
+          <div class="level-heading"><span>ВЫБЕРИ УРОВЕНЬ:</span><span id="levelCount"></span></div>
+          <div class="level-grid" id="levelGrid" role="group" aria-label="Сложность"></div>
+          <div class="selected-level" id="levelDescription" aria-live="polite"></div>
+          <div class="action-row"><button class="btn primary" id="startBtn" type="button">▶ ПРОЙТИ ФЕЙСКОНТРОЛЬ</button><button class="btn secondary" id="rulesBtn" type="button">? КАК ИГРАТЬ</button></div>
+          <div class="menu-footer"><span>9 QUESTIONS · 4 ANSWERS · NO CHEATING</span><span>ESCAPE THE 90s? NEVER.</span></div>
+          
+        </div>
+      </section>
+
+            <section class="game-screen" id="screen-quiz" aria-labelledby="questionTitle" hidden>
+        <div class="game-top"><div class="game-label"><span class="pixel-icon">▣</span> FACE CONTROL <span class="muted">/ LEVEL <span id="quizLevel">1</span></span></div><button type="button" class="text-button" id="quitBtn">✕ В МЕНЮ</button></div>
+        <div class="progress-row"><span id="questionCounter">ВОПРОС 01 / 09</span><span id="scoreCounter">ВЕРНО: 0</span></div><div class="progress-track"><div id="progressFill"></div></div>
+        <div class="quiz-scene" id="quizScene" data-reaction="idle" role="group" aria-label="Охранник наблюдает за ответом игрока">
+          <div class="quiz-scene-caption"><span id="quizSceneLabel">IDLE LOOP / SECURITY SCAN</span><span id="quizSceneSub">THE PIXEL PLEASURES XXX</span></div>
+          <div class="quiz-scene-status" id="quizSceneStatus">ЖДЁМ ОТВЕТ</div>
+          <div class="scene-speech" id="sceneSpeech" data-mood="neutral" role="status" aria-live="polite" aria-atomic="true" hidden>
+            <div class="scene-speech-header"><span>▣ АРТУР</span><span id="sceneSpeechTag">SECURITY</span></div>
+            <p id="sceneSpeechLine"></p>
+          </div>
+        </div>
+        <div class="question-frame"><div class="q-corner-label">[ ПРОВЕРКА ДОКУМЕНТОВ ]</div><h2 id="questionTitle"></h2><div class="answers" id="answers" role="group" aria-label="Варианты ответа"></div></div>
+        <div class="feedback" id="feedback" role="status" aria-live="polite" hidden>
+          <div class="feedback-head"><div class="feedback-title" id="feedbackTitle"></div><button class="btn primary compact" id="nextBtn" type="button" hidden>ДАЛЬШЕ ▶</button></div>
+          <p class="answer-explanation" id="feedbackText"></p>
+        </div>
+        <div class="game-actions"><span class="keyboard-hint">КЛАВИШИ: 1–4 — ОТВЕТ, ENTER — ДАЛЬШЕ</span></div>
+      </section>
+
+
+      <section class="end-screen" id="screen-result" aria-labelledby="resultTitle" hidden>
+        <div class="result-art use-image" id="scene-result" data-scene="success" role="img" aria-label="Результат фейсконтроля"><div class="result-emblem" id="resultEmblem">★</div><div class="result-bouncer" id="resultBouncer" aria-hidden="true"><div class="guard-head"><span class="guard-brow"></span><span class="guard-shades"></span><span class="guard-mouth"></span></div><div class="guard-neck"></div><div class="guard-body"><div class="guard-arm left"></div><div class="guard-arm right"></div><small>SECURITY</small></div></div><span class="art-placeholder">PIXEL SECURITY FEED · SAME CLUB / NEW ATTITUDE</span></div>
+        <div class="result-panel"><div class="eyebrow" id="resultTag">VERIFICATION COMPLETE</div><h2 id="resultTitle"></h2><div class="score-large"><strong id="resultScore">0/9</strong><span id="resultLevelName"></span></div><p class="result-quote" id="resultQuote"></p><p class="result-record" id="resultRecord"></p><div class="action-row"><button class="btn primary" id="replayBtn" type="button">↻ ЕЩЁ РАУНД</button><button class="btn ghost" id="menuBtn" type="button">В МЕНЮ</button><button class="btn primary" id="enterClubBtn" type="button" hidden>🚪 ВОЙТИ В КОМПЫ ▶</button></div><div class="share-status" role="status" aria-live="polite" id="shareStatus"></div></div>
+      </section>
+
+  <section id="screen-club" class="club-screen" hidden aria-labelledby="clubTitle">
+    <div class="game-top"><div class="game-label">▣ LOCATION 02 / <span id="clubTitle">КОМПЫ</span></div><button class="text-button" id="clubExitBtn" type="button">← К АРТУРУ</button></div>
+    <div class="club-intro"><h2>ДОБРО ПОЖАЛОВАТЬ В <span>«КОМПЫ»</span></h2><p>Здесь не спрашивают паспорт. Здесь спрашивают, помнишь ли ты времена без стриминга. Выбирай, к кому пристать.</p></div>
+    <div class="club-picture" id="clubPicture">
+      <picture><source media="(max-width: 680px)" srcset="assets/club-room-mobile.webp"><img src="assets/club-room-desktop.webp" alt="Неоновый клуб Компы: геймер за Heroes III, усатый охранник перед телевизором, певица на сцене и игровой автомат" width="1536" height="864"></picture>
+      <button type="button" class="hotspot spot-gamer" data-go="games" aria-label="Геймер: квиз по компьютерным играм"><span>🖥 ИГРЫ</span></button>
+      <button type="button" class="hotspot spot-tv" data-go="tv" aria-label="Охранник: квиз по телевидению"><span>📺 ТВ</span></button>
+      <button type="button" class="hotspot spot-singer" data-go="music" aria-label="Певица: квиз о музыке"><span>♫ МУЗЫКА</span></button>
+      <button type="button" class="hotspot spot-arcade" data-go="arcade" aria-label="Аркадный игровой автомат с выбором игр"><span>🕹 АРКАДА</span></button>
+    </div>
+    <div class="club-footer"><span>4 ИНТЕРАКТИВНЫЕ ЗОНЫ · 3×300 ВОПРОСОВ · 1 АРКАДА</span><span>МУЗЫКА ПРОДОЛЖАЕТ ИГРАТЬ ♫</span></div>
+
+  </section>
+
+  <section id="screen-club-quiz" class="club-quiz-screen" hidden aria-labelledby="clubQuestionText">
+    <div class="game-top"><div class="game-label" id="clubQuizHeader">▣ КОМПЫ / КВИЗ</div><button type="button" class="text-button" id="clubQuit">✕ В КЛУБ</button></div>
+    <div class="progress-row"><span id="clubProgress">ВОПРОС 01 / 10</span><span id="clubScore">ВЕРНО: 0</span></div><div class="progress-track"><div id="clubProgressFill"></div></div>
+    <div class="npc-stage" id="npcStage" data-state="idle"><img id="npcPortrait" src="assets/gamer-idle.webp" alt="Персонаж смотрит на игрока"><div class="npc-dialog"><div class="npc-name" id="npcName">КОМПЬЮТЕРЩИК • ЖДЁТ ОТВЕТ</div><p id="npcLine" aria-live="polite"></p></div></div>
+    <div class="question-frame"><div class="q-corner-label" id="clubQuestionType">[ ТЕМАТИЧЕСКИЙ КВИЗ ]</div><h2 id="clubQuestionText"></h2><div class="answers" id="clubAnswers" role="group" aria-label="Варианты ответа"></div></div>
+    <div class="feedback" id="clubFeedback" hidden><div class="feedback-head"><div class="feedback-title" id="clubFeedbackTitle"></div><button type="button" class="btn primary compact" id="clubNext">ДАЛЬШЕ ▶</button></div><p class="answer-explanation" id="clubExplanation"></p></div>
+    <div class="game-actions"><span class="keyboard-hint">1–4 — ОТВЕТ · ENTER — ДАЛЬШЕ</span></div>
+  </section>
+
+  <section id="screen-club-result" class="club-result-screen" hidden aria-labelledby="clubResultTitle">
+    <div class="club-result-card"><img id="clubResultPortrait" src="assets/gamer-good.webp" alt="Персонаж подводит итог" width="132" height="150"><div><div class="eyebrow" id="clubResultLabel">QUIZ COMPLETE</div><h2 id="clubResultTitle">ИТОГ РАУНДА</h2><p class="club-result-score" id="clubResultScore">0/10</p><p class="result-quote" id="clubResultQuote"></p><p class="result-record" id="clubBest"></p></div></div>
+    <div class="action-row"><button type="button" class="btn primary" id="clubAgain">↻ ЕЩЁ 10 ВОПРОСОВ</button><button type="button" class="btn secondary" id="clubToRoom">← В КЛУБ</button></div>
+  </section>
+      <section id="screen-arcade" class="arcade-screen" hidden aria-labelledby="arcadeScreenTitle">
+        <div class="game-top"><div class="game-label">▣ LOCATION 03 / АРКАДНЫЙ АВТОМАТ</div><button id="arcadeExitBtn" type="button" class="text-button">← В КЛУБ «КОМПЫ»</button></div>
+        <div class="arcade-screen-heading"><h2 id="arcadeScreenTitle">ТИМУР <span>VS</span> МОРЖЕНАЛЬНОСТЬ</h2><p>3 УРОВНЯ · 3 ЖИЗНИ · ТАП ДЛЯ УДАРА · ЗАЖМИ И ВЕДИ ПАЛЕЦ ДЛЯ ХОДЬБЫ</p></div>
+        <div class="arcade-frame"><iframe id="arcadeIframe" title="Тимур vs Морженальность — аркада" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
+      </section>
+    </main>
+
+    <footer><span>© 2026 OLDfag.exe · НЕ НАСТОЯЩАЯ ПРОВЕРКА ВОЗРАСТА</span><span>MADE FOR PEOPLE WHO REMEMBER THE SOUND OF DIAL-UP</span></footer>
+  </div>
+
+  <dialog class="audio-dialog" id="audioDialog" aria-labelledby="audioTitle">
+    <div class="dialog-head"><strong id="audioTitle">SOUND BLASTER SETUP</strong><button type="button" id="audioCloseBtn" class="text-button" aria-label="Закрыть настройки звука">✕</button></div>
+    <p class="audio-help">Фоновая тема Lo-Loop Groove и 8-битные звуковые эффекты. Настройки запоминаются на этом устройстве.</p>
+    <label class="audio-checkbox"><input type="checkbox" id="audioMusicEnabled"> <span>ФОНОВАЯ МУЗЫКА</span></label>
+    <label class="audio-checkbox"><input type="checkbox" id="audioEffectsEnabled"> <span>ЗВУКОВЫЕ ЭФФЕКТЫ</span></label>
+    <label class="audio-volume-label" for="audioVolume">ГРОМКОСТЬ <output id="audioVolumeValue" for="audioVolume">30%</output></label>
+    <input type="range" id="audioVolume" min="0" max="100" value="30" step="5" aria-label="Громкость">
+    <div class="audio-dialog-buttons"><button type="button" class="btn secondary" id="audioTestBtn">▶ ТЕСТ ЗВУКА</button><button type="button" class="btn primary" id="audioDoneBtn">ГОТОВО ✓</button></div>
+  </dialog>
+
+  <dialog id="clubIntroDialog" class="club-modal" aria-labelledby="clubIntroTitle"><div class="dialog-head"><strong id="clubIntroTitle">ГОВОРЯЩАЯ ГОЛОВА</strong><button type="button" class="text-button" id="clubIntroClose">✕</button></div><div class="club-modal-body"><img id="clubIntroPortrait" src="assets/gamer-idle.webp" alt="Персонаж" width="120" height="140"><div><p id="clubIntroText"></p><p class="modal-info">10 ВОПРОСОВ · ОДИН УРОВЕНЬ · 300 В БАЗЕ</p></div></div><div class="action-row"><button type="button" class="btn primary" id="clubIntroStart">▶ НАЧАТЬ КВИЗ</button><button type="button" class="btn secondary" id="clubIntroBack">НЕ СЕЙЧАС</button></div></dialog>
+  <dialog id="clubArcadeDialog" class="club-modal arcade-selector" aria-labelledby="arcadeTitle">
+    <div class="dialog-head"><strong id="arcadeTitle">▣ АРКАДНЫЙ АВТОМАТ // GAME SELECT</strong><button type="button" class="text-button" id="arcadeClose" aria-label="Закрыть автомат">✕</button></div>
+    <p class="arcade-selector-lead">INSERT COIN? НЕТ, У НАС БЕСПЛАТНО. ВЫБЕРИ ИГРУ.</p>
+    <div class="arcade-picker-grid">
+      <button type="button" id="arcadeLaunch" class="arcade-game-card arcade-game-ready" aria-label="Начать игру Тимур vs Морженальность">
+        <span class="arcade-card-num">01 / READY TO PLAY</span>
+        <span class="arcade-game-glyph">👊</span>
+        <strong>ТИМУР <em>VS</em> МОРЖЕНАЛЬНОСТЬ</strong>
+        <small>BEAT ’EM UP · 3 УРОВНЯ · 3 ЖИЗНИ</small>
+        <span class="arcade-cta">▶ ИГРАТЬ</span>
+      </button>
+      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">02 / LOCKED</span><span class="arcade-game-glyph">🚀</span><strong>АРКАДА № 2</strong><span>COMING SOON</span></div>
+      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">03 / LOCKED</span><span class="arcade-game-glyph">👾</span><strong>АРКАДА № 3</strong><span>COMING SOON</span></div>
+      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">04 / LOCKED</span><span class="arcade-game-glyph">?</span><strong>СЕКРЕТНЫЙ СЛОТ</strong><span>COMING SOON</span></div>
+    </div>
+    <button type="button" class="btn secondary arcade-selector-back" id="arcadeBack">← ВЕРНУТЬСЯ В КОМПЫ</button>
+  </dialog>
+
+  <dialog id="rulesDialog" class="rules-dialog"><div class="dialog-head"><strong>README.TXT</strong><button type="button" id="closeRulesBtn" class="text-button" aria-label="Закрыть правила">✕</button></div><h2>ПРАВИЛА ФЕЙСКОНТРОЛЯ</h2><p>Выбирай один из пяти уровней сложности. В каждом раунде — 9 случайных вопросов о культуре 80-х, 90-х и нулевых.</p><p>Четыре варианта, только один правильный. После ответа покажем объяснение. Исправить ответ нельзя.</p><p>Порог прохода зависит от сложности: <strong>уровень 1 — 9/9; уровень 2 — 8/9; уровень 3 — 7/9; уровень 4 — 6/9; уровень 5 — 5/9</strong>. Чем сложнее вопросы, тем меньше правильных ответов требует Артур. Лучший результат сохраняется на этом устройстве.</p><p class="muted">Это шуточная игра, а не проверка реального возраста. Рейтинг между разными игроками пока отсутствует.</p><form method="dialog"><button class="btn primary" type="submit">ПОНЯТНО, БОСС ▶</button></form></dialog>
+</body>
+</html>

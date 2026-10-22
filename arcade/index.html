@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="dark"><title>Тимур vs Морженальность — OLDfag.exe ARCADE</title>
+<style>
+:root {color-scheme:dark; --cyan:#4ce8f9; --hot:#fa3f89; --paper:#d5eaff}
+* {box-sizing:border-box} body {margin:0; min-height:100svh; background:radial-gradient(ellipse at 45% 0%,#172a49 0%,#080d18 56%,#03060a 100%);color:#e2eaf6;font-family:'Trebuchet MS',Verdana,sans-serif}
+.page {width:min(1120px,100%);padding:12px 14px 30px;margin:0 auto}
+.top {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin:8px 0 14px}
+.title {font-size:clamp(18px,2.5vw,28px);letter-spacing:1.5px;margin:0;text-transform:uppercase;color:#e5f7ff;text-shadow:2px 2px #304b78}
+.kicker {font:700 11px/1.2 monospace;letter-spacing:2px;color:#76b6e7;margin:0 0 6px}
+.tag {font:700 12px/1 monospace;color:#86f4e7;border:1px solid #2c666f;padding:8px 10px;background:#0b1c28;border-radius:6px}
+.game-shell {background:#050912;border:2px solid #4874bb;box-shadow:0 0 0 3px #111e37,0 0 40px #0b60ad33;border-radius:8px;overflow:hidden}
+.stage {position:relative;width:100%;aspect-ratio:16/9;background:#071221;user-select:none;overflow:hidden}
+#game {width:100%;height:100%;display:block;image-rendering:pixelated;touch-action:none;cursor:crosshair}
+.overlay {position:absolute;inset:0;display:flex;align-items:center;justify-content:center;padding:20px;background:#030611b9;backdrop-filter:blur(2px);overflow-y:auto}
+.overlay[hidden] {display:none}
+.modal {width:min(490px,100%);padding:24px 22px;text-align:center;background:linear-gradient(180deg,#182940f2,#081322f5);border:2px solid #62a4ef;box-shadow:inset 0 0 0 3px #0a1e33,0 13px 35px #000b;max-height:100%;overflow-y:auto}
+.modal h2 {font-size:clamp(19px,3vw,26px);color:#f7dc72;text-shadow:2px 2px #473e39;letter-spacing:1px;margin:4px 0 12px}
+.modal p {font-size:14px;line-height:1.5;color:#d7e5f5;margin:10px 0}
+.modal small {color:#90aac9;font:12px/1.45 monospace}
+.controls {display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap;padding:11px 12px;background:#0d1929;border-top:1px solid #253b5d}
+.buttons {display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.btn {border:1px solid #5d99ec;box-shadow:inset 0 0 0 1px #192c44,0 3px 0 #09101b;background:linear-gradient(#244575,#122941);color:#f0faff;min-height:38px;cursor:pointer;padding:9px 14px;border-radius:4px;letter-spacing:.4px;font-weight:700;font-size:13px}
+.btn[hidden]{display:none!important}.next-level{background:linear-gradient(#188d67,#0b604d)!important;border:2px solid #9cffc8!important;box-shadow:0 0 15px #45e69a66!important;font-size:15px!important;order:-1}.debug-tools{background:#0b1729;padding:7px 12px;border-top:1px solid #253b5d}.debug-tools summary{cursor:pointer;font:12px monospace;color:#789ab9;padding:5px 0}.debug-tools .buttons{padding:9px 0 5px}.btn:active {transform:translateY(2px);box-shadow:none}.btn:focus-visible {outline:3px solid #f2d870;outline-offset:2px}.btn.hot {background:linear-gradient(#aa4367,#662e4e);border-color:#ed8dad}.btn:disabled {opacity:.5;cursor:default}
+.msg {font:12px/1.4 monospace;color:#a9cde0}.how {margin-top:14px;border:1px solid #294560;border-radius:6px;background:#081325;padding:12px 14px;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.how strong {display:block;font-size:13px;color:#f3da85;margin-bottom:5px}.how span {font-size:13px;color:#aebfda;line-height:1.45}
+.footer {margin:11px 0 0;font:12px/1.5 monospace;color:#6785a5;text-align:center}
+:fullscreen .stage {aspect-ratio:auto;height:calc(100vh - 64px)}:fullscreen .game-shell{height:100%}
+@media(max-width:700px) and (orientation:portrait){.page{padding:8px 7px 22px}.top{margin:5px 0 10px}.stage{aspect-ratio:4/3}.controls{padding:9px;gap:8px}.btn{font-size:12px;padding:9px 10px}.msg{font-size:11px}.how{grid-template-columns:1fr}.modal{padding:16px 10px}.modal p{font-size:12px}.modal h2{font-size:17px}}
+@media(max-height:420px){.overlay{padding:4px}.modal{padding:7px 12px}.modal p{margin:5px 0}.modal h2{margin:3px 0 7px}}
+</style>
+</head>
+<body>
+<main class="page">
+<header class="top"><div><div class="kicker">OLDfag.exe / ARCADE MACHINE / FULL GAME</div><h1 class="title">ТИМУР VS МОРЖЕНАЛЬНОСТЬ</h1></div><div class="tag" id="stageTag">STAGE 01 — ДВОР / УЛИЦА</div></header>
+<section class="game-shell" id="shell" aria-label="Игровой экран">
+  <div class="stage" id="stage"><canvas id="game" width="960" height="540" aria-label="Игра beat'em up, управление пальцем либо клавиатурой"></canvas>
+  <div class="overlay" id="overlay"><div class="modal" id="modal">
+  <h2 id="modalTitle">МУСОРНЫЙ БУНТ</h2>
+  <p id="modalText">Ночь, улица, мусорка с характером. Тимуру предстоит навести порядок.</p>
+  <p><strong>Телефон:</strong> короткий тап — удар. Зажми и веди палец — ходьба в направлении движения. <strong>Компьютер:</strong> WASD или стрелки — движение, пробел / J — удар.</p>
+  <button id="play" class="btn hot" type="button" disabled>ЗАГРУЗКА…</button><div style="height:7px"></div><small>Три уровня: улица → офис → магазин · 3 жизни · финальный ролик</small>
+  </div></div></div>
+  <div class="controls"><div class="buttons"><button id="next" class="btn hot next-level" type="button" hidden>ДАЛЕЕ →</button><button id="restart" class="btn" type="button">↻ Заново</button><button id="pause" class="btn" type="button">Ⅱ Пауза</button><button id="sound" class="btn" type="button" aria-pressed="true">♫ Звук: ON</button><button id="fullscreen" class="btn" type="button">⛶ На весь экран</button></div><span class="msg" id="status">Подготовка аркады…</span></div>
+</section>
+<section class="how"><div><strong>📱 Сенсорное управление</strong><span>Тапни по сцене, чтобы ударить. Удерживай палец и сдвигай в нужную сторону, чтобы идти. Можно перемещаться также вверх и вниз по полу.</span></div><div><strong>⌨️ Клавиатура</strong><span>W/A/S/D или стрелки — ходьба по двум осям. Пробел / J — удар. P — пауза. R — перезапуск.</span></div></section>
+<p class="footer">OLDfag.exe 2.0 · Аркадный автомат «Компы».</p>
+</main>
+<script>window.FIGHTER_ASSETS={"stage":"assets/street.webp","office":"assets/office.png","store":"assets/store.webp","timur-walk":"assets/timur-walk.png","timur-punch":"assets/timur-punch.png","timur-victory":"assets/timur-victory.png","trash-idle":"assets/trash-idle.png","trash-walk":"assets/trash-walk.png","trash-attack":"assets/trash-attack.png","trash-death":"assets/trash-death.png","sap-idlewalk":"assets/sap-idlewalk.png","sap-attack":"assets/sap-attack.png","sap-death":"assets/sap-death.png","bag-walk":"assets/bag-walk.png","bag-death":"assets/bag-death.png","bag-spit":"assets/bag-spit.png","lollipop-projectile":"assets/lollipop-projectile.png","prepack-walk":"assets/prepack-walk.png","prepack-attack":"assets/prepack-attack.png","prepack-death":"assets/prepack-death.png","walrus-idle":"assets/walrus-idle.png","walrus-walk":"assets/walrus-walk.png","walrus-attack":"assets/walrus-attack.png","walrus-charge":"assets/walrus-charge.png","walrus-platform":"assets/walrus-platform.png","walrus-platform-attack":"assets/walrus-platform-attack.png","cutscene-windup":"assets/cutscene-windup.png","cutscene-punch":"assets/cutscene-punch.png","walrus-death":"assets/walrus-death.png"};</script>
+<script src="game.js"></script>
+</body></html>
