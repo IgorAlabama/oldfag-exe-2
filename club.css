@@ -113,3 +113,7 @@
 .arcade-frame{border-width:2px}
 .arcade-frame iframe{height:72dvh;min-height:530px}
 }
+
+/* Cover art for The Adventures of Тимур! */
+.arcade-game-cover{width:100%;max-width:430px;max-height:175px;aspect-ratio:3/2;object-fit:cover;display:block;border:2px solid #edb857;box-shadow:0 3px 12px #0009;border-radius:3px;image-rendering:pixelated}
+@media(max-width:700px){.arcade-game-cover{max-height:110px}}
