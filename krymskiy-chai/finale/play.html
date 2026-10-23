@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Крымский чай — финал</title><style>
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#040716;color:#ffe49f}
+body{display:grid;place-items:center}
+.stage{position:relative;width:min(100vw,177.7778dvh);aspect-ratio:16/9;max-width:100vw;max-height:100dvh}
+canvas{display:block;width:100%;height:100%;object-fit:contain;image-rendering:auto;background:#040716}
+.loading{position:absolute;inset:0;display:grid;place-items:center;font:700 15px monospace;background:#060a16;color:#ffe49f;text-align:center}
+.loading.hidden{opacity:0;pointer-events:none;transition:opacity .32s}
+#restart,#toggle,#finale,#fullscreen,#seek,#timer{display:none}
+</style></head><body data-embedded="yes">
+<div class="stage" id="stage"><canvas id="movie" width="1280" height="720"></canvas><div class="loading" id="loading"><div id="loadingText">Загружаем кадры…</div></div></div>
+<button id="restart"></button><button id="toggle"></button><button id="finale"></button><button id="fullscreen"></button>
+<input type="range" id="seek" min="0" max="1000"><span id="timer"></span>
+<script src="cutscene.js"></script></body></html>
