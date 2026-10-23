@@ -51,12 +51,23 @@
  $('clubIntroClose').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroBack').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroStart').addEventListener('click',()=>{$('clubIntroDialog').close();begin(pending);});
  $('arcadeClose').addEventListener('click',()=>$('clubArcadeDialog').close());
  $('arcadeBack').addEventListener('click',()=>$('clubArcadeDialog').close());
- $('arcadeLaunch').addEventListener('click',()=>{
+ function launchArcade(path,title,description) {
    audio.sfx('click');$('clubArcadeDialog').close();
-   show('screen-arcade');
+   $('arcadeScreenTitle').textContent=title;
+   $('arcadeGameDescription').textContent=description;
    const frame=$('arcadeIframe');
-   frame.src='arcade/index.html';
- });
+   frame.title=title+' — аркада';
+   frame.src=path;
+   show('screen-arcade');
+ }
+ $('arcadeLaunch').addEventListener('click',()=>launchArcade(
+   'arcade/index.html','The Adventures of Тимур!',
+   '3 УРОВНЯ · 3 ЖИЗНИ · ТАП ДЛЯ УДАРА · ЗАЖМИ И ВЕДИ ПАЛЕЦ ДЛЯ ХОДЬБЫ'
+ ));
+ $('arcadeLaunchTea').addEventListener('click',()=>launchArcade(
+   'krymskiy-chai/index.html','Крымский чай',
+   '400 ОЧКОВ ДО ПОБЕДЫ · ЧАЙНЫЕ ПАКЕТИКИ · ЧАЙНИК И КОЛЯ'
+ ));
  $('arcadeExitBtn').addEventListener('click',()=>{
    audio.sfx('click');
    $('arcadeIframe').src='about:blank';

@@ -110,7 +110,7 @@
   </section>
       <section id="screen-arcade" class="arcade-screen" hidden aria-labelledby="arcadeScreenTitle">
         <div class="game-top"><div class="game-label">▣ LOCATION 03 / АРКАДНЫЙ АВТОМАТ</div><button id="arcadeExitBtn" type="button" class="text-button">← В КЛУБ «КОМПЫ»</button></div>
-        <div class="arcade-screen-heading"><h2 id="arcadeScreenTitle">The Adventures of <span>Тимур!</span></h2><p>3 УРОВНЯ · 3 ЖИЗНИ · ТАП ДЛЯ УДАРА · ЗАЖМИ И ВЕДИ ПАЛЕЦ ДЛЯ ХОДЬБЫ</p></div>
+        <div class="arcade-screen-heading"><h2 id="arcadeScreenTitle">The Adventures of <span>Тимур!</span></h2><p id="arcadeGameDescription">3 УРОВНЯ · 3 ЖИЗНИ · ТАП ДЛЯ УДАРА · ЗАЖМИ И ВЕДИ ПАЛЕЦ ДЛЯ ХОДЬБЫ</p></div>
         <div class="arcade-frame"><iframe id="arcadeIframe" title="The Adventures of Тимур! — аркада" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
       </section>
     </main>
@@ -140,7 +140,13 @@
         <small>BEAT ’EM UP · 3 УРОВНЯ · 3 ЖИЗНИ</small>
         <span class="arcade-cta">▶ ИГРАТЬ</span>
       </button>
-      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">02 / LOCKED</span><span class="arcade-game-glyph">🚀</span><strong>АРКАДА № 2</strong><span>COMING SOON</span></div>
+      <button type="button" id="arcadeLaunchTea" class="arcade-game-card arcade-game-ready" aria-label="Начать игру Крымский чай">
+        <span class="arcade-card-num">02 / READY TO PLAY</span>
+        <img class="arcade-game-cover" src="krymskiy-chai/arcade_icon.webp" alt="Обложка игры «Крымский чай»: кружка с чайными пакетиками и электрический чайник" width="512" height="512" loading="lazy">
+        <strong>Крымский <em>чай</em></strong>
+        <small>ЧАЙНЫЙ АРКАДНЫЙ ЭКШЕН · 400 ОЧКОВ</small>
+        <span class="arcade-cta">▶ ИГРАТЬ</span>
+      </button>
       <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">03 / LOCKED</span><span class="arcade-game-glyph">👾</span><strong>АРКАДА № 3</strong><span>COMING SOON</span></div>
       <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">04 / LOCKED</span><span class="arcade-game-glyph">?</span><strong>СЕКРЕТНЫЙ СЛОТ</strong><span>COMING SOON</span></div>
     </div>
