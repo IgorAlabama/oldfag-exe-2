@@ -10,7 +10,7 @@
   <title>OLDfag.exe 2.0 — фейсконтроль, Компы и аркада</title>
   <link rel="icon" href="assets/timur-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="club.css">
+  <link rel="stylesheet" href="club.css?v=arcade-tiles-20261023">
   <script src="questions.js" defer></script>
   <script src="audio.js" defer></script>
   <script src="arthur-dialogues.js" defer></script>
@@ -132,25 +132,21 @@
   <dialog id="clubArcadeDialog" class="club-modal arcade-selector" aria-labelledby="arcadeTitle">
     <div class="dialog-head"><strong id="arcadeTitle">▣ АРКАДНЫЙ АВТОМАТ // GAME SELECT</strong><button type="button" class="text-button" id="arcadeClose" aria-label="Закрыть автомат">✕</button></div>
     <p class="arcade-selector-lead">INSERT COIN? НЕТ, У НАС БЕСПЛАТНО. ВЫБЕРИ ИГРУ.</p>
-    <div class="arcade-picker-grid">
-      <button type="button" id="arcadeLaunch" class="arcade-game-card arcade-game-ready" aria-label="Играть в The Adventures of Тимур!">
-        <span class="arcade-card-num">01 / READY TO PLAY</span>
-        <span class="arcade-cover-wrap">
-          <img class="arcade-game-cover" src="assets/timur-cover-square.webp" alt="The Adventures of Тимур!: Тимур наносит удар моржу-боссу" width="1024" height="1024" loading="lazy">
-          <span class="arcade-cover-play" aria-hidden="true">▶ ИГРАТЬ</span>
-        </span>
-        <strong class="arcade-game-title">The Adventures of <em>Тимур!</em></strong>
+    <div class="arcade-picker-grid" aria-label="Выбор игры">
+      <button type="button" id="arcadeLaunch" class="arcade-cover-tile arcade-cover-tile--timur" aria-label="Играть в The Adventures of Тимур!">
+        <img src="assets/timur-cover-square.webp" alt="The Adventures of Тимур! — обложка" width="1024" height="1024" loading="lazy">
       </button>
-      <button type="button" id="arcadeLaunchTea" class="arcade-game-card arcade-game-ready" aria-label="Играть в Крымский чай">
-        <span class="arcade-card-num">02 / READY TO PLAY</span>
-        <span class="arcade-cover-wrap">
-          <img class="arcade-game-cover" src="krymskiy-chai/arcade_icon.webp" alt="Крымский чай: литровая кружка и электрический чайник" width="512" height="512" loading="lazy">
-          <span class="arcade-cover-play" aria-hidden="true">▶ ИГРАТЬ</span>
-        </span>
-        <strong class="arcade-game-title">Крымский <em>чай</em></strong>
+      <button type="button" id="arcadeLaunchTea" class="arcade-cover-tile arcade-cover-tile--tea" aria-label="Играть в Крымский чай">
+        <img src="krymskiy-chai/arcade_icon.webp" alt="Крымский чай — обложка" width="512" height="512" loading="lazy">
       </button>
-      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">03 / LOCKED</span><span class="arcade-game-glyph">👾</span><strong>АРКАДА № 3</strong><span>COMING SOON</span></div>
-      <div class="arcade-game-card arcade-coming-soon" aria-disabled="true"><span class="arcade-card-num">04 / LOCKED</span><span class="arcade-game-glyph">?</span><strong>СЕКРЕТНЫЙ СЛОТ</strong><span>COMING SOON</span></div>
+      <div class="arcade-slot-locked" aria-label="Следующая игра скоро">
+        <span class="arcade-locked-symbol" aria-hidden="true">👾</span>
+        <span>COMING SOON</span>
+      </div>
+      <div class="arcade-slot-locked" aria-label="Секретная игра скоро">
+        <span class="arcade-locked-symbol" aria-hidden="true">?</span>
+        <span>COMING SOON</span>
+      </div>
     </div>
     <button type="button" class="btn secondary arcade-selector-back" id="arcadeBack">← ВЕРНУТЬСЯ В КОМПЫ</button>
   </dialog>
