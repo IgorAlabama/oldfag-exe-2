@@ -117,3 +117,25 @@
 /* Cover art for The Adventures of Тимур! */
 .arcade-game-cover{width:100%;max-width:430px;max-height:175px;aspect-ratio:3/2;object-fit:cover;display:block;border:2px solid #edb857;box-shadow:0 3px 12px #0009;border-radius:3px;image-rendering:pixelated}
 @media(max-width:700px){.arcade-game-cover{max-height:110px}}
+
+/* Arcade cabinet: uncropped square cover grid (2026-10-23). */
+.arcade-selector{width:min(940px,calc(100vw - 22px));}
+.arcade-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:15px;}
+.arcade-game-card.arcade-game-ready{min-width:0;min-height:0;justify-content:flex-start;gap:9px;padding:13px 13px 17px;}
+.arcade-cover-wrap{display:block;position:relative;width:100%;max-width:380px;aspect-ratio:1/1;align-self:center;overflow:hidden;box-shadow:0 3px 14px #0008;border:2px solid #edb857;background:#0b1328;}
+.arcade-game-cover{display:block;width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:1/1;object-fit:contain;object-position:center;border:0;border-radius:0;box-shadow:none;image-rendering:auto;}
+.arcade-cover-play{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);padding:8px 13px;color:#07221c;background:#a5facd;border:2px solid #eafff2;white-space:nowrap;font:clamp(10px,1.2vw,13px)/1.4 'Press Start 2P',monospace;box-shadow:0 2px 0 #123b31,0 4px 10px #0009;opacity:0;transition:opacity .15s ease;}
+.arcade-game-ready:hover .arcade-cover-play,.arcade-game-ready:focus-visible .arcade-cover-play{opacity:1;}
+.arcade-game-title{display:block;min-height:3.2em;max-width:100%;font:clamp(10px,1.35vw,15px)/1.55 'Press Start 2P',Consolas,monospace;}
+.arcade-card-num{letter-spacing:.04em;}
+.arcade-coming-soon{min-height:160px;}
+@media (max-width:680px){
+ .arcade-selector{width:calc(100vw - 12px);padding:10px 8px;}
+ .arcade-picker-grid{gap:8px;}
+ .arcade-game-card.arcade-game-ready{padding:7px 6px 11px;gap:7px;}
+ .arcade-cover-wrap{border-width:2px;}
+ .arcade-game-title{font-size:clamp(8px,2.1vw,11px);line-height:1.6;min-height:3.3em;}
+ .arcade-card-num{font-size:clamp(8px,2.3vw,11px);}
+ .arcade-cover-play{display:none;}
+}
+@media (prefers-reduced-motion:reduce){.arcade-cover-play{transition:none;}}
