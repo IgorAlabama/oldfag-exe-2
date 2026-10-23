@@ -78,64 +78,35 @@
 }
 @media(max-width:360px){.npc-stage img{width:80px;height:97px}.npc-dialog p{font-size:19px}.npc-name{font-size:7px}.hotspot span{font-size:11px}}
 
-/* Production arcade selector and game embed */
-.arcade-selector{width:min(900px,calc(100vw - 22px));max-height:min(90dvh,930px);overflow:auto;padding:16px}
-.arcade-selector-lead{font:clamp(18px,2.1vw,25px)/1.1 'VT323',Consolas,monospace;color:#f6d98a;margin:12px 0 18px}
-.arcade-picker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.arcade-game-card{min-height:210px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;text-align:center;padding:15px 12px;background:#181a33;border:3px solid #394466;box-shadow:4px 4px #070611;color:#e7dbfa}
-.arcade-game-ready{border-color:#f9ce67;background:linear-gradient(155deg,#482249,#211637 52%,#112b46);cursor:pointer}
-.arcade-game-ready:hover,.arcade-game-ready:focus-visible{outline:3px solid #a9fcfe;outline-offset:2px;background:linear-gradient(155deg,#62305f,#281a4a 50%,#16405f)}
-.arcade-game-card strong{font:clamp(11px,1.55vw,18px)/1.65 'Press Start 2P',Consolas,monospace;overflow-wrap:anywhere}
-.arcade-game-card strong em{color:#ff79be;font-style:normal}
-.arcade-game-card small{font:clamp(14px,1.6vw,19px)/1.1 'VT323',Consolas,monospace;color:#b1ddeb}
-.arcade-card-num{font:clamp(10px,1.4vw,15px)/1.15 'VT323',Consolas,monospace;color:#a3cafa;align-self:flex-start}
-.arcade-game-glyph{font-size:32px;line-height:1.2}
-.arcade-cta{color:#0a1826;background:#9cf9c5;border:2px solid #e8ffec;padding:8px 20px;font:clamp(11px,1.5vw,15px)/1.5 'Press Start 2P',Consolas,monospace}
-.arcade-coming-soon{filter:saturate(.5);color:#7782a1}
-.arcade-coming-soon .arcade-game-glyph{opacity:.5}
-.arcade-coming-soon>span:last-child{letter-spacing:2px;font:clamp(13px,2.0vw,19px) 'VT323',Consolas,monospace;color:#ffbb6b}
-.arcade-selector-back{margin-top:18px;width:100%}
-.arcade-screen[hidden]{display:none!important}
-.arcade-screen{padding:8px 0 24px}
-.arcade-screen-heading h2{font:clamp(13px,2.5vw,23px)/1.6 'Press Start 2P',monospace;color:#f8d9ff;margin:12px 0 8px}
-.arcade-screen-heading h2 span{color:#ff75bf}
-.arcade-screen-heading p{font:clamp(14px,1.4vw,17px)/1.2 'VT323',Consolas,monospace;color:#a6d8eb;margin:0 0 14px}
-.arcade-frame{border:4px solid #9e70e2;box-shadow:0 0 0 2px #331a59,0 12px 30px #02020aaa;background:#030914}
-.arcade-frame iframe{border:0;display:block;width:100%;height:min(82dvh,825px);min-height:600px;background:#050b13}
+/* Unified arcade-cabinet game selector. One square = one playable game. */
+.arcade-selector{width:min(880px,calc(100vw - 24px));max-height:90dvh;overflow-y:auto;padding:16px;}
+.arcade-selector-lead{font:clamp(18px,2.1vw,25px)/1.1 'VT323',Consolas,monospace;color:#f6d98a;margin:12px 0 18px;}
+.arcade-picker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;}
+.arcade-cover-tile,.arcade-slot-locked{box-sizing:border-box;aspect-ratio:1/1;min-width:0;width:100%;padding:0;margin:0;border:4px solid #e8b95a;border-radius:3px;background:#0a1025;box-shadow:0 5px 0 #080818,0 10px 20px #0008;overflow:hidden;}
+.arcade-cover-tile{display:block;cursor:pointer;position:relative;transition:border-color .12s,box-shadow .12s,transform .12s;}
+.arcade-cover-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:auto;}
+/* Both artworks contain their game titles: no duplicate labels, banners, numbers or Play buttons. */
+.arcade-cover-tile--timur img{transform:scale(1.18);transform-origin:center;}
+.arcade-cover-tile:hover,.arcade-cover-tile:focus-visible{border-color:#bdfafa;outline:2px solid #bdfafa;outline-offset:3px;box-shadow:0 5px 0 #080818,0 0 24px #6df3ff75;}
+.arcade-cover-tile:active{transform:translateY(2px);}
+.arcade-slot-locked{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;color:#877e9d;background:repeating-linear-gradient(0deg,#12182d,#12182d 8px,#151b31 8px,#151b31 16px);border-color:#41445e;box-shadow:0 5px 0 #080818;}
+.arcade-slot-locked .arcade-locked-symbol{font:44px/1 'VT323',Consolas,monospace;filter:grayscale(1);opacity:.46;}
+.arcade-slot-locked>span:last-child{font:clamp(16px,2.2vw,22px)/1.1 'VT323',Consolas,monospace;color:#c4a779;letter-spacing:2px;}
+.arcade-selector-back{margin-top:20px;width:100%;}
+.arcade-screen[hidden]{display:none!important;}
+.arcade-screen{padding:8px 0 24px;}
+.arcade-screen-heading h2{font:clamp(13px,2.5vw,23px)/1.6 'Press Start 2P',monospace;color:#f8d9ff;margin:12px 0 8px;}
+.arcade-screen-heading h2 span{color:#ff75bf;}
+.arcade-screen-heading p{font:clamp(14px,1.4vw,17px)/1.2 'VT323',Consolas,monospace;color:#a6d8eb;margin:0 0 14px;}
+.arcade-frame{border:4px solid #9e70e2;box-shadow:0 0 0 2px #331a59,0 12px 30px #02020aaa;background:#030914;}
+.arcade-frame iframe{border:0;display:block;width:100%;height:min(82dvh,825px);min-height:600px;background:#050b13;}
 @media(max-width:680px){
-.arcade-selector{padding:11px 8px}
-.arcade-picker-grid{gap:8px}
-.arcade-game-card{padding:9px 5px;min-height:177px;gap:8px;border-width:2px}
-.arcade-game-card strong{font-size:9px;line-height:1.6}
-.arcade-game-card small{font-size:12px}
-.arcade-card-num{font-size:10px}
-.arcade-cta{font-size:10px;padding:7px 8px}
-.arcade-frame{border-width:2px}
-.arcade-frame iframe{height:72dvh;min-height:530px}
-}
-
-/* Cover art for The Adventures of Тимур! */
-.arcade-game-cover{width:100%;max-width:430px;max-height:175px;aspect-ratio:3/2;object-fit:cover;display:block;border:2px solid #edb857;box-shadow:0 3px 12px #0009;border-radius:3px;image-rendering:pixelated}
-@media(max-width:700px){.arcade-game-cover{max-height:110px}}
-
-/* Arcade cabinet: uncropped square cover grid (2026-10-23). */
-.arcade-selector{width:min(940px,calc(100vw - 22px));}
-.arcade-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch;gap:15px;}
-.arcade-game-card.arcade-game-ready{min-width:0;min-height:0;justify-content:flex-start;gap:9px;padding:13px 13px 17px;}
-.arcade-cover-wrap{display:block;position:relative;width:100%;max-width:380px;aspect-ratio:1/1;align-self:center;overflow:hidden;box-shadow:0 3px 14px #0008;border:2px solid #edb857;background:#0b1328;}
-.arcade-game-cover{display:block;width:100%;height:100%;max-width:none;max-height:none;aspect-ratio:1/1;object-fit:contain;object-position:center;border:0;border-radius:0;box-shadow:none;image-rendering:auto;}
-.arcade-cover-play{position:absolute;left:50%;bottom:12px;transform:translateX(-50%);padding:8px 13px;color:#07221c;background:#a5facd;border:2px solid #eafff2;white-space:nowrap;font:clamp(10px,1.2vw,13px)/1.4 'Press Start 2P',monospace;box-shadow:0 2px 0 #123b31,0 4px 10px #0009;opacity:0;transition:opacity .15s ease;}
-.arcade-game-ready:hover .arcade-cover-play,.arcade-game-ready:focus-visible .arcade-cover-play{opacity:1;}
-.arcade-game-title{display:block;min-height:3.2em;max-width:100%;font:clamp(10px,1.35vw,15px)/1.55 'Press Start 2P',Consolas,monospace;}
-.arcade-card-num{letter-spacing:.04em;}
-.arcade-coming-soon{min-height:160px;}
-@media (max-width:680px){
- .arcade-selector{width:calc(100vw - 12px);padding:10px 8px;}
+ .arcade-selector{width:calc(100vw - 12px);padding:11px 8px;}
  .arcade-picker-grid{gap:8px;}
- .arcade-game-card.arcade-game-ready{padding:7px 6px 11px;gap:7px;}
- .arcade-cover-wrap{border-width:2px;}
- .arcade-game-title{font-size:clamp(8px,2.1vw,11px);line-height:1.6;min-height:3.3em;}
- .arcade-card-num{font-size:clamp(8px,2.3vw,11px);}
- .arcade-cover-play{display:none;}
+ .arcade-cover-tile,.arcade-slot-locked{border-width:2px;}
+ .arcade-slot-locked .arcade-locked-symbol{font-size:31px;}
+ .arcade-slot-locked>span:last-child{font-size:clamp(12px,3vw,17px);}
+ .arcade-frame{border-width:2px;}
+ .arcade-frame iframe{height:72dvh;min-height:530px;}
 }
-@media (prefers-reduced-motion:reduce){.arcade-cover-play{transition:none;}}
+@media(prefers-reduced-motion:reduce){.arcade-cover-tile{transition:none;}}
