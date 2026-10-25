@@ -1,0 +1,68 @@
+name: Android debug APK
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'android/**'
+      - '.github/workflows/android-debug.yml'
+      - 'index.html'
+      - 'app.js'
+      - 'club.js'
+      - 'progress.js'
+      - 'progress.css'
+      - 'arcade/**'
+      - 'krymskiy-chai/**'
+      - 'toffi-rage/**'
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 30
+    steps:
+      - name: Check out all game files
+        uses: actions/checkout@v4
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Install Gradle 8.13
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+      - name: Install Android API 36
+        run: sdkmanager --install "platforms;android-36" "build-tools;35.0.0"
+      - name: Bundle website and games for offline play
+        shell: bash
+        run: |
+          set -euo pipefail
+          dest=android/app/src/main/assets/site
+          mkdir -p "$dest"
+          for f in index.html styles.css club.css app.js questions.js audio.js arthur-dialogues.js club-questions.js progress.js progress.css; do
+            test -s "$f" || { echo "Missing website file: $f"; exit 1; }
+            cp "$f" "$dest/"
+          done
+          for dir in assets arcade krymskiy-chai toffi-rage; do
+            test -d "$dir" || { echo "Missing game folder: $dir"; exit 1; }
+            cp -R "$dir" "$dest/"
+          done
+          test -s "$dest/toffi-rage/music/toffiksorekhim8bit.mp3"
+          test -s "$dest/toffi-rage/music/plokhayamarzha8bit.mp3"
+          test -s "$dest/arcade/assets/zachem8bit.mp3"
+          test -s "$dest/krymskiy-chai/assets/vstolovkuda8bit.mp3"
+          echo "Bundled files:"
+          du -sh "$dest"
+      - name: Build Android debug APK
+        run: gradle -p android --no-daemon :app:assembleDebug
+      - name: Upload installable APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: OLDfag-Android-debug-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
