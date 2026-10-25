@@ -28,12 +28,12 @@ body.android-arcade-active #arcadeIframe{
  text-shadow:1px 2px #0009;z-index:3;
 }
 #nativeArcadeModal{display:none}
-#nativeArcadeLayer:not([hidden]) #nativeArcadeModal{
+#nativeArcadeLayer.menu-open #nativeArcadeModal{
  display:flex;pointer-events:auto;position:absolute;inset:0;
  align-items:center;justify-content:center;padding:clamp(10px,3vw,24px);
  background:#020511dd;overflow:auto;
 }
-#nativeArcadeLayer:not([hidden]) #nativeArcadePause{visibility:hidden}
+#nativeArcadeLayer.menu-open #nativeArcadePause{visibility:hidden}
 .native-arcade-panel{
  background:#0e1a32;border:3px solid #d5b56a;
  box-shadow:0 0 0 3px #06101c,7px 7px 0 #0008;
