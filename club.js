@@ -45,7 +45,7 @@
  function render(){answered=false;const q=questions[index];$('clubProgress').textContent='ВОПРОС '+String(index+1).padStart(2,'0')+' / 10';$('clubScore').textContent='ВЕРНО: '+score;$('clubProgressFill').style.width=(index/count*100)+'%';$('clubQuestionText').textContent=q.question;react('idle');$('clubAnswers').replaceChildren();const order=shuffle([0,1,2,3]);for(let i=0;i<4;i++){const pos=order[i];const b=document.createElement('button');b.className='answer-btn';b.type='button';b.dataset.pos=String(pos);const key=document.createElement('span');key.className='key';key.textContent=(i+1)+'.';const val=document.createElement('span');val.textContent=q.answers[pos];b.append(key,val);b.addEventListener('click',()=>choose(pos,b));$('clubAnswers').append(b);}$('clubFeedback').hidden=true;$('clubNext').textContent=index===count-1?'РЕЗУЛЬТАТ ▶':'ДАЛЬШЕ ▶';}
  function choose(pos,clicked){if(answered)return;answered=true;const q=questions[index],good=pos===q.correct;if(good){score++;correctStreak++;audio.sfx('correct');if(correctStreak===3)setTimeout(()=>audio.sfx('streak'),270);}else{correctStreak=0;audio.sfx('wrong');}react(good?'good':'bad');$('clubScore').textContent='ВЕРНО: '+score;Array.from($('clubAnswers').children).forEach(b=>{b.disabled=true;const win=Number(b.dataset.pos)===q.correct;b.classList.toggle('correct',win);b.classList.toggle('wrong',b===clicked&&!good);b.classList.toggle('dimmed',!win&&b!==clicked);});$('clubFeedbackTitle').textContent=good?'✓ ПРАВИЛЬНО':'✕ НЕПРАВИЛЬНО';$('clubExplanation').textContent=q.explanation;$('clubFeedback').classList.toggle('fail',!good);$('clubFeedback').hidden=false;$('clubNext').focus({preventScroll:true});requestAnimationFrame(()=>{const r=$('npcStage').getBoundingClientRect();if(r.top<5||r.bottom>window.innerHeight-20)$('npcStage').scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion:reduce)').matches?'instant':'smooth'});});}
  function next(){if(!answered)return;audio.sfx('click');if(index===count-1){finish();return;}index++;render();}
- function finish(){show('screen-club-result');$('clubResultTitle').textContent=C[theme].caption;$('clubResultLabel').textContent=score>=7?'ACCESS GRANTED · КРАСАВЧИК':'QUIZ COMPLETE · ПОДТЯНИ ЗНАНИЯ';$('clubResultScore').textContent=score+'/10';$('clubResultPortrait').src=npcImage(score>=7?'good':'bad');$('clubResultQuote').textContent=C[theme].name+': «'+say(theme,score>=7?'good':'bad')+'»';let best=0;try{best=Number(localStorage.getItem('oldfag-club-best-'+theme)||0);if(score>best){best=score;localStorage.setItem('oldfag-club-best-'+theme,String(best));}}catch{}$('clubBest').textContent='ЛИЧНЫЙ РЕКОРД: '+best+'/10 · В БАНКЕ ЕЩЁ 300 ВОПРОСОВ';if(score===10)audio.sfx('streak');}
+ function finish(){window.OLDfagProgress?.recordQuiz(theme,score);show('screen-club-result');$('clubResultTitle').textContent=C[theme].caption;$('clubResultLabel').textContent=score>=7?'ACCESS GRANTED · КРАСАВЧИК':'QUIZ COMPLETE · ПОДТЯНИ ЗНАНИЯ';$('clubResultScore').textContent=score+'/10';$('clubResultPortrait').src=npcImage(score>=7?'good':'bad');$('clubResultQuote').textContent=C[theme].name+': «'+say(theme,score>=7?'good':'bad')+'»';let best=0;try{best=Number(localStorage.getItem('oldfag-club-best-'+theme)||0);if(score>best){best=score;localStorage.setItem('oldfag-club-best-'+theme,String(best));}}catch{}$('clubBest').textContent='ЛИЧНЫЙ РЕКОРД: '+best+'/10 · В БАНКЕ ЕЩЁ 300 ВОПРОСОВ';if(score===10)audio.sfx('streak');}
  for(const btn of document.querySelectorAll('[data-go]'))btn.addEventListener('click',()=>openHotspot(btn.dataset.go));
  $('enterClubBtn').addEventListener('click',room);$('clubExitBtn').addEventListener('click',()=>{audio.sfx('click');show('screen-home');});$('clubQuit').addEventListener('click',room);$('clubToRoom').addEventListener('click',room);$('clubAgain').addEventListener('click',()=>begin(theme));$('clubNext').addEventListener('click',next);
  $('clubIntroClose').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroBack').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroStart').addEventListener('click',()=>{$('clubIntroDialog').close();begin(pending);});
@@ -106,6 +106,24 @@
      const code=`(function(){
        if(window.__oldfagToffiBridge)return;
        window.__oldfagToffiBridge=true;
+       // Toffi persists its progress on every stage victory; count the third
+       // (main-campaign final) stage once per completion, including replays.
+       const originalSetItem=Storage.prototype.setItem;
+       Storage.prototype.setItem=function(key,value){
+         const result=originalSetItem.call(this,key,value);
+         if(key==='toffi-rage-unified-save-v1'){
+           try{
+             const level=window.__toffiUnified?.getLevel();
+             const saved=JSON.parse(value);
+             if(level===2 && saved.completed?.[2]){
+               window.parent.OLDfagProgress?.recordArcadeWin('toffi');
+             }else if(level===3 && saved.completed?.[3]){
+               window.parent.OLDfagProgress?.recordArcadeWin('toffiBonus');
+             }
+           }catch(err){console.warn('Toffi victory tracking',err);}
+         }
+         return result;
+       };
        const sound=document.getElementById('soundToggle');
        const full=document.getElementById('fullscreenToggle');
        const exit=document.getElementById('exitButton');
