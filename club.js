@@ -51,13 +51,105 @@
  $('clubIntroClose').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroBack').addEventListener('click',()=>$('clubIntroDialog').close());$('clubIntroStart').addEventListener('click',()=>{$('clubIntroDialog').close();begin(pending);});
  $('arcadeClose').addEventListener('click',()=>$('clubArcadeDialog').close());
  $('arcadeBack').addEventListener('click',()=>$('clubArcadeDialog').close());
+ // Toffi Rage owns its own sound and fullscreen controls.
+ let toffiActive=false, toffiPseudoFullscreen=false;
+ const arcadeFrame=$('arcadeIframe'), arcadeScreen=$('screen-arcade');
+ function syncToffiFullscreen(){
+   if(!toffiActive)return;
+   try{
+     const btn=arcadeFrame.contentDocument?.getElementById('fullscreenToggle');
+     if(!btn)return;
+     const active=toffiPseudoFullscreen || document.fullscreenElement===arcadeScreen;
+     btn.textContent=active?'🗗 ОКНО':'⛶ ВО ВЕСЬ ЭКРАН';
+     btn.title=active?'Выйти из полноэкранного режима':'Развернуть на весь экран';
+   }catch(e){}
+ }
+ function setToffiPseudoFullscreen(active){
+   toffiPseudoFullscreen=!!active;
+   arcadeScreen.classList.toggle('toffi-pseudo-fullscreen',toffiPseudoFullscreen);
+   document.body.classList.toggle('toffi-pseudo-fullscreen',toffiPseudoFullscreen);
+   syncToffiFullscreen();
+ }
+ async function toggleToffiFullscreen(){
+   if(!toffiActive)return;
+   if(document.fullscreenElement===arcadeScreen){
+     try{await document.exitFullscreen();}catch(e){setToffiPseudoFullscreen(false);}
+   }else if(toffiPseudoFullscreen){
+     setToffiPseudoFullscreen(false);
+   }else{
+     try{
+       if(!arcadeScreen.requestFullscreen)throw Error('Fullscreen unavailable');
+       await arcadeScreen.requestFullscreen();
+     }catch(e){
+       // iPhone Safari / embedded browsers may not support element fullscreen.
+       setToffiPseudoFullscreen(true);
+     }
+   }
+   syncToffiFullscreen();
+ }
+ function leaveArcade(){
+   const wasToffi=toffiActive;
+   toffiActive=false;
+   setToffiPseudoFullscreen(false);
+   if(document.fullscreenElement===arcadeScreen)document.exitFullscreen().catch(()=>{});
+   arcadeFrame.onload=null;
+   arcadeFrame.src='about:blank';
+   if(wasToffi)audio.setArcadeMode?.(false);
+   room();
+ }
+ window.OLDfagToffiHost={toggleFullscreen:toggleToffiFullscreen,exit:leaveArcade};
+ document.addEventListener('fullscreenchange',syncToffiFullscreen);
+ function connectToffiControls(){
+   if(!toffiActive)return;
+   try{
+     const doc=arcadeFrame.contentDocument, win=arcadeFrame.contentWindow;
+     if(!doc?.getElementById('soundToggle') || !win?.__toffiUnified)return;
+     const code=`(function(){
+       if(window.__oldfagToffiBridge)return;
+       window.__oldfagToffiBridge=true;
+       const sound=document.getElementById('soundToggle');
+       const full=document.getElementById('fullscreenToggle');
+       const exit=document.getElementById('exitButton');
+       // Autoplay where permitted; the first real tap unlocks audio on iOS.
+       try{GameAudio.start();}catch(e){}
+       document.addEventListener('pointerdown',function(){
+         try{GameAudio.start();}catch(e){}
+       },{capture:true,once:true});
+       if(sound)sound.addEventListener('click',function(e){
+         e.preventDefault();e.stopImmediatePropagation();
+         try{
+           const muted=GameAudio.setMute(!GameAudio.isMute());
+           sound.textContent=muted?'♪ ЗВУК: ВЫКЛ':'♪ ЗВУК: ВКЛ';
+           sound.setAttribute('aria-pressed',String(!muted));
+           if(!muted){GameAudio.start();GameAudio.effect('click');}
+         }catch(err){console.warn('Toffi audio error',err);}
+       },true);
+       if(full)full.addEventListener('click',function(e){
+         e.preventDefault();e.stopImmediatePropagation();
+         window.parent.OLDfagToffiHost.toggleFullscreen();
+       },true);
+       if(exit)exit.addEventListener('click',function(e){
+         e.preventDefault();e.stopImmediatePropagation();
+         window.parent.OLDfagToffiHost.exit();
+       },true);
+     })();`;
+     const script=doc.createElement('script');
+     script.textContent=code;
+     doc.body.appendChild(script);
+     syncToffiFullscreen();
+   }catch(e){console.warn('Toffi arcade connection error',e);}
+ }
  function launchArcade(path,title,description) {
    audio.sfx('click');$('clubArcadeDialog').close();
    $('arcadeScreenTitle').textContent=title;
    $('arcadeGameDescription').textContent=description;
-   const frame=$('arcadeIframe');
-   frame.title=title+' — аркада';
-   frame.src=path;
+   toffiActive=path==='toffi-rage/index.html';
+   setToffiPseudoFullscreen(false);
+   audio.setArcadeMode?.(toffiActive);
+   arcadeFrame.title=title+' — аркада';
+   arcadeFrame.setAttribute('allow','fullscreen; autoplay');
+   arcadeFrame.onload=toffiActive?connectToffiControls:null;
+   arcadeFrame.src=path;
    show('screen-arcade');
  }
  $('arcadeLaunch').addEventListener('click',()=>launchArcade(
@@ -74,8 +166,7 @@
  ));
  $('arcadeExitBtn').addEventListener('click',()=>{
    audio.sfx('click');
-   $('arcadeIframe').src='about:blank';
-   room();
+   leaveArcade();
  });
  document.addEventListener('keydown',e=>{if($('screen-club-quiz').hidden||$('clubIntroDialog').open||$('clubArcadeDialog').open)return;if(!answered&&e.key.length===1&&'1234'.includes(e.key)){const b=$('clubAnswers').children[Number(e.key)-1];if(b)b.click();}else if(answered&&e.key==='Enter'&&e.target!==$('clubNext')){e.preventDefault();next();}});
  // Locally testable telemetry, no network traffic and no personal information.
