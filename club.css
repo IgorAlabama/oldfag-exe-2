@@ -84,18 +84,15 @@
 .arcade-picker-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:stretch;}
 .arcade-cover-tile,.arcade-slot-locked{box-sizing:border-box;aspect-ratio:1/1;min-width:0;width:100%;padding:0;margin:0;border:4px solid #e8b95a;border-radius:3px;background:#0a1025;box-shadow:0 5px 0 #080818,0 10px 20px #0008;overflow:hidden;}
 .arcade-cover-tile{display:block;cursor:pointer;position:relative;transition:border-color .12s,box-shadow .12s,transform .12s;}
-.arcade-cover-tile img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:auto;}
-/* Both artworks contain their game titles: no duplicate labels, banners, numbers or Play buttons. */
-.arcade-cover-tile--timur img{transform:scale(1.18);transform-origin:center;}
-/* Match tea artwork to Timur's inset landscape cartridge window. */
-.arcade-cover-tile--tea{background:#030713;}
-.arcade-cover-tile--tea img{
-  position:absolute;
-  left:9%;top:17%;
-  width:82%;height:66%;
-  object-fit:cover;
-  object-position:center bottom;
-  border-radius:6%;
+/* Unified square 1254px game covers: each artwork has its own inset frame and
+   title/characters breaking out of it; preserve the whole image in every slot. */
+.arcade-cover-tile img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:center;
+  image-rendering:auto;
   transform:none;
 }
 
