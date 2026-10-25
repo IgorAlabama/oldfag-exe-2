@@ -75,12 +75,12 @@
    pausedByHost=actualPause();
    menuOpen=true;showMain();
    overlay.querySelector('#nativeArcadeGame').textContent=names[game];
-   overlay.hidden=false;
+   overlay.classList.add('menu-open');
    overlay.querySelector('#nativeArcadeContinue').focus({preventScroll:true});
  }
  function closeMenu(resume=true){
    if(!menuOpen)return;
-   overlay.hidden=true;menuOpen=false;
+   overlay.classList.remove('menu-open');menuOpen=false;
    showMain();
    if(resume)actualResume();else pausedByHost=false;
  }
@@ -107,13 +107,14 @@
    closeMenu(false);
    document.body.classList.remove('android-arcade-active');
    game=null;pausedByHost=false;menuOpen=false;settingMode=false;
-   if(overlay)overlay.hidden=true;
+   if(overlay){overlay.hidden=true;overlay.classList.remove('menu-open');}
    phoneOrientation('auto');
  }
  function start(gameName){
    resetArcade();
    game=gameName;
    document.body.classList.add('android-arcade-active');
+   if(overlay)overlay.hidden=false;
    phoneOrientation(game==='timur'?'landscape':'auto');
  }
  function init(){
