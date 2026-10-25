@@ -83,6 +83,7 @@ function hideFinale(){
 function startFinale(){
  if(finaleTriggered)return;
  finaleTriggered=true;
+ try{window.parent.OLDfagProgress?.recordArcadeWin('tea');}catch(e){}
  saveBest();
  setPhase('victory');hideDialog();
  const e=$('finaleOverlay'),f=$('finaleFrame');
