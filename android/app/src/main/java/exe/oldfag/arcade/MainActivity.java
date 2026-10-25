@@ -2,6 +2,7 @@ package exe.oldfag.arcade;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
@@ -14,6 +15,7 @@ import android.webkit.WebResourceRequest;
 import android.webkit.WebResourceResponse;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
+import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
 
 import androidx.webkit.WebViewAssetLoader;
@@ -65,6 +67,9 @@ public class MainActivity extends Activity {
         settings.setAllowUniversalAccessFromFileURLs(false);
         settings.setMediaPlaybackRequiresUserGesture(false);
         settings.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
+        // Exposed only to bundled, offline game documents. Lets Timur request landscape
+        // and resets orientation whenever the player returns to the club.
+        browser.addJavascriptInterface(new ArcadeOrientationBridge(), "OldfagAndroid");
         browser.setBackgroundColor(0xFF050816);
         browser.setVerticalScrollBarEnabled(false);
         browser.setHorizontalScrollBarEnabled(false);
@@ -112,6 +117,19 @@ public class MainActivity extends Activity {
             browser.restoreState(savedInstanceState);
         } else {
             browser.loadUrl(START_URL);
+        }
+    }
+
+    private final class ArcadeOrientationBridge {
+        @JavascriptInterface
+        public void setOrientation(String value) {
+            runOnUiThread(() -> {
+                if ("landscape".equals(value)) {
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
+                } else {
+                    setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_UNSPECIFIED);
+                }
+            });
         }
     }
 
