@@ -10,13 +10,15 @@
   <title>OLDfag.exe 2.0 — фейсконтроль, Компы и аркада</title>
   <link rel="icon" href="assets/timur-icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="progress.css?v=android-save-1">
   <link rel="stylesheet" href="club.css?v=icons-unified-20261025">
   <script src="questions.js" defer></script>
   <script src="audio.js?v=toffi-audio-fullscreen-20261025" defer></script>
   <script src="arthur-dialogues.js" defer></script>
-  <script src="app.js" defer></script>
+  <script src="progress.js?v=android-save-1" defer></script>
+  <script src="app.js?v=android-save-1" defer></script>
   <script src="club-questions.js" defer></script>
-  <script src="club.js?v=krymskiy-chai-music-20261025" defer></script>
+  <script src="club.js?v=android-save-1" defer></script>
 </head>
 <body>
   <div class="crt" aria-hidden="true"></div>
@@ -91,6 +93,7 @@
       <button type="button" class="hotspot spot-singer" data-go="music" aria-label="Певица: квиз о музыке"><span>♫ МУЗЫКА</span></button>
       <button type="button" class="hotspot spot-arcade" data-go="arcade" aria-label="Аркадный игровой автомат с выбором игр"><span>🕹 АРКАДА</span></button>
     </div>
+    <button id="progressOpen" type="button" class="progress-launch">▣ МОЯ СТАТИСТИКА</button>
     <div class="club-footer"><span>4 ИНТЕРАКТИВНЫЕ ЗОНЫ · 3×300 ВОПРОСОВ · 1 АРКАДА</span><span>МУЗЫКА ПРОДОЛЖАЕТ ИГРАТЬ ♫</span></div>
 
   </section>
@@ -149,6 +152,8 @@
     </div>
     <button type="button" class="btn secondary arcade-selector-back" id="arcadeBack">← ВЕРНУТЬСЯ В КОМПЫ</button>
   </dialog>
+
+  <dialog id="progressDialog" class="progress-dialog" aria-labelledby="progressTitle"><h2 id="progressTitle">▣ МОЯ СТАТИСТИКА</h2><div id="progressStats"></div><button type="button" id="progressClose">← В КЛУБ</button></dialog>
 
   <dialog id="rulesDialog" class="rules-dialog"><div class="dialog-head"><strong>README.TXT</strong><button type="button" id="closeRulesBtn" class="text-button" aria-label="Закрыть правила">✕</button></div><h2>ПРАВИЛА ФЕЙСКОНТРОЛЯ</h2><p>Выбирай один из пяти уровней сложности. В каждом раунде — 9 случайных вопросов о культуре 80-х, 90-х и нулевых.</p><p>Четыре варианта, только один правильный. После ответа покажем объяснение. Исправить ответ нельзя.</p><p>Порог прохода зависит от сложности: <strong>уровень 1 — 9/9; уровень 2 — 8/9; уровень 3 — 7/9; уровень 4 — 6/9; уровень 5 — 5/9</strong>. Чем сложнее вопросы, тем меньше правильных ответов требует Артур. Лучший результат сохраняется на этом устройстве.</p><p class="muted">Это шуточная игра, а не проверка реального возраста. Рейтинг между разными игроками пока отсутствует.</p><form method="dialog"><button class="btn primary" type="submit">ПОНЯТНО, БОСС ▶</button></form></dialog>
 </body>
