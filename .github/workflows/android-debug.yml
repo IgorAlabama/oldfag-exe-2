@@ -45,7 +45,7 @@ jobs:
           set -euo pipefail
           dest=android/app/src/main/assets/site
           mkdir -p "$dest"
-          for f in index.html styles.css club.css app.js questions.js audio.js arthur-dialogues.js club-questions.js progress.js progress.css; do
+          for f in index.html styles.css club.css app.js club.js questions.js audio.js arthur-dialogues.js club-questions.js progress.js progress.css; do
             test -s "$f" || { echo "Missing website file: $f"; exit 1; }
             cp "$f" "$dest/"
           done
@@ -53,14 +53,30 @@ jobs:
             test -d "$dir" || { echo "Missing game folder: $dir"; exit 1; }
             cp -R "$dir" "$dest/"
           done
+          test -s "$dest/club.js" || { echo "CRITICAL: club.js is missing from APK source"; exit 1; }
           test -s "$dest/toffi-rage/music/toffiksorekhim8bit.mp3"
           test -s "$dest/toffi-rage/music/plokhayamarzha8bit.mp3"
           test -s "$dest/arcade/assets/zachem8bit.mp3"
           test -s "$dest/krymskiy-chai/assets/vstolovkuda8bit.mp3"
           echo "Bundled files:"
           du -sh "$dest"
+      # Preserve the same debug signing identity for future beta updates.
+      # This cannot retrofit the first APK, whose ephemeral key was lost.
+      - name: Restore persistent test signing key
+        uses: actions/cache@v4
+        with:
+          path: ~/.android/debug.keystore
+          key: oldfag-android-debug-signing-v1
       - name: Build Android debug APK
         run: gradle -p android --no-daemon :app:assembleDebug
+      - name: Verify APK includes essential scripts
+        run: |
+          set -euo pipefail
+          apk="android/app/build/outputs/apk/debug/app-debug.apk"
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/club.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/app.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/progress.js'
+          echo "Main, club, and progress scripts are inside the APK."
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
         with:
