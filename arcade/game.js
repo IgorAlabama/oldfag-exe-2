@@ -916,6 +916,7 @@ function officeEnd(){
  status.textContent='Уровень 2 пройден. Босс ПРЕПАК побеждён.';
 }
 function storeEnd(){
+ try{window.parent.OLDfagProgress?.recordArcadeWin('timur');}catch(e){}
  changePhase('won','ФИНАЛ! МОРЖЕНАЛЬЕОСТЬ ПОВЕРЖЕНА!','Тимур прошёл три уровня и победил Морженальеость в двух фазах. Теперь у босса есть спрайты, платформа и луч, который сжигает даже обычных врагов.','ПРОЙТИ ЗАНОВО С НАЧАЛА');
  status.textContent='Три уровня пройдены — финальный босс побеждён!';
 }
