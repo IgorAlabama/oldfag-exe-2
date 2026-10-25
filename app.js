@@ -47,7 +47,7 @@
     });
   }
   const PASS_BY_LEVEL = [9, 8, 7, 6, 5];
-  let clubAccessGranted = false;
+  let clubAccessGranted = !!(window.OLDfagIsAndroidApp && window.OLDfagProgress?.hasClubPass());
   const $ = id => document.getElementById(id);
   const screenIds = ['screen-home','screen-quiz','screen-result','screen-club','screen-club-quiz','screen-club-result','screen-arcade'];
   let selectedLevel = 4, round=[], index=0, score=0, answered=false, currentLevel=4;
@@ -118,7 +118,7 @@
   function start(){
     round=pickQuestions(selectedLevel);
     if(round.length!==ROUNDSIZE){alert('Для этого уровня пока недостаточно вопросов.');return;}
-    clubAccessGranted=false;currentLevel=selectedLevel;index=0;score=0;answered=false;winStreak=0;wrongStreak=0;wrongCount=0;audio.cancelDoor();audio.sfx('click');
+    clubAccessGranted=!!(window.OLDfagIsAndroidApp && window.OLDfagProgress?.hasClubPass());currentLevel=selectedLevel;index=0;score=0;answered=false;winStreak=0;wrongStreak=0;wrongCount=0;audio.cancelDoor();audio.sfx('click');
     $('quizLevel').textContent=String(currentLevel);
     screen('screen-quiz');renderQuestion();
   }
@@ -180,8 +180,9 @@
     $('playCount').textContent=`ПРОХОЖДЕНИЙ: ${saved.plays}`;
     const required=PASS_BY_LEVEL[currentLevel-1];
     const passed=score>=required;
-    clubAccessGranted=passed;
-    $('enterClubBtn').hidden=!passed;
+    window.OLDfagProgress?.recordGate({score,passed});
+    clubAccessGranted=passed || !!(window.OLDfagIsAndroidApp && window.OLDfagProgress?.hasClubPass());
+    $('enterClubBtn').hidden=!clubAccessGranted;
     $('scene-result').dataset.scene=passed?'success':'denied';
     $('scene-result').setAttribute('aria-label',passed?'Охранник пропускает игрока':'Охранник отказывает во входе');
     $('resultEmblem').textContent=passed?'★':'✕';
@@ -231,4 +232,5 @@
   });
   initLevels();
   $('playCount').textContent=`ПРОХОЖДЕНИЙ: ${Number(saved.plays)||0}`;
+  if(window.OLDfagIsAndroidApp && clubAccessGranted)screen('screen-club');
 })();
