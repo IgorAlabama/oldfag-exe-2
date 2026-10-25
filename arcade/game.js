@@ -19,6 +19,26 @@ const WALRUS_GROUND_HP=190,WALRUS_AIR_HP=190, WALRUS_SCALE=.44;
 const STORE_BOSS_KILL_THRESHOLD=5;
 
 let audioCtx=null,soundOn=true;
+// Original 8-bit song, independent of the existing arcade combat sound effects.
+const soundtrack = new Audio('assets/zachem8bit.mp3');
+soundtrack.loop = true;
+soundtrack.preload = 'none';
+soundtrack.volume = .30;
+function syncSoundtrack(){
+  if(soundOn && phase==='playing' && !document.hidden){
+    const playback = soundtrack.play();
+    if(playback && typeof playback.catch==='function'){
+      playback.catch(err=>{
+        // Missing MP3 or browser autoplay policy must never block gameplay.
+        if(err?.name!=='NotAllowedError' && err?.name!=='NotSupportedError'){
+          console.warn('Тимур: фоновая музыка недоступна',err);
+        }
+      });
+    }
+  }else{
+    soundtrack.pause();
+  }
+}
 let uidCounter=1;
 const clamp=(v,lo,hi)=>Math.max(lo,Math.min(hi,v));
 const rand=(a,b)=>a+Math.random()*(b-a);
@@ -43,7 +63,7 @@ function maybePlayFinisherAudio(){const a=ensureFinisherAudio();if(!a)return 2.2
 function heroRespawnPosition(){return {x:clamp(cam+W*.5,120,worldW-120),y:heroGroundY()}}
 function resize(){const r=stage.getBoundingClientRect();const a=(r.width&&r.height)?r.width/r.height:16/9;W=clamp(Math.round(H*a),640,1800);canvas.width=W;canvas.height=H;ctx.imageSmoothingEnabled=false;if(p)cam=clamp(cam,0,Math.max(0,worldW-W));}
 window.addEventListener('resize',resize);document.addEventListener('fullscreenchange',resize);resize();
-function changePhase(next,headline='',body='',action=''){phase=next;if(['intro','won','lost','paused','loading','officePreview'].includes(phase)){overlay.hidden=false;if(headline)title.textContent=headline;if(body)modalText.textContent=body;if(action)play.textContent=action;play.disabled=phase==='loading';}else{overlay.hidden=true;}}
+function changePhase(next,headline='',body='',action=''){phase=next;if(['intro','won','lost','paused','loading','officePreview'].includes(phase)){overlay.hidden=false;if(headline)title.textContent=headline;if(body)modalText.textContent=body;if(action)play.textContent=action;play.disabled=phase==='loading';}else{overlay.hidden=true;}syncSoundtrack();}
 function setState(ent,s){if(ent.state!==s){ent.state=s;ent.anim=0;ent.attackHit=false;}}
 function respawnPlayerAfterLifeLoss(){const sp=heroRespawnPosition();p.x=sp.x;p.y=sp.y;p.hp=p.maxHp;p.dir=1;p.cd=0;p.stun=0;p.blink=RESPAWN_BLINK;p.invuln=RESPAWN_INVULN;setState(p,'idle');shots=shots.filter(sh=>Math.abs(sh.x-p.x)>120||Math.abs(sh.y-p.y)>80);status.textContent=`Тимур потерял жизнь! Осталось жизней: ${lives}`;fx(p.x,p.y-170,'RESPAWN!','#8ff0ff',true);beep(330,.12,'triangle',.04,520);}
 function activeEnemies(){return enemies.filter(e=>!e.deadBody)}
@@ -911,9 +931,14 @@ $('next').addEventListener('click',goToNextStage);
 
 
 $('restart').addEventListener('click',restart);$('pause').addEventListener('click',togglePause);
-$('sound').addEventListener('click',()=>{soundOn=!soundOn;$('sound').textContent='♫ Звук: '+(soundOn?'ON':'OFF');$('sound').setAttribute('aria-pressed',String(soundOn));if(soundOn)confirmBeep()});
+$('sound').addEventListener('click',()=>{soundOn=!soundOn;$('sound').textContent='♫ Звук: '+(soundOn?'ON':'OFF');$('sound').setAttribute('aria-pressed',String(soundOn));syncSoundtrack();if(soundOn)confirmBeep()});
 $('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('shell').requestFullscreen()}catch{}resize()});
 play.addEventListener('click',()=>{if(phase==='paused'){changePhase('playing')}else start()});
+document.addEventListener('visibilitychange',()=>{
+  if(document.hidden && phase==='playing')togglePause();
+  syncSoundtrack();
+});
+window.addEventListener('pagehide',()=>soundtrack.pause());
 Promise.all(Object.entries(window.FIGHTER_ASSETS).map(([name,url])=>new Promise((res,rej)=>{const im=new Image();im.onload=()=>{IM[name]=im;res()};im.onerror=()=>rej(Error('Cannot load: '+name));im.src=url}))).then(()=>{worldW=H*IM.stage.naturalWidth/IM.stage.naturalHeight;changePhase('intro','The Adventures of Тимур!','Три полноценных уровня, 3 жизни на всю игру и финальный удар по Моржу. Пройди улицу, офис и магазин по порядку через кнопку «ДАЛЕЕ».','НАЧАТЬ ИГРУ');status.textContent='Готово. Тапай по экрану или используй клавиатуру.';play.disabled=false}).catch(err=>{changePhase('loading','ОШИБКА ЗАГРУЗКИ',err.message,'НЕДОСТУПНО');status.textContent=err.message;});
 window.__fighterDebug=()=>({phase,currentStage,player:p&&{x:p.x,y:p.y,hp:p.hp,state:p.state,dir:p.dir},enemies:enemies.map(e=>({id:e.id,kind:e.kind,x:e.x,y:e.y,hp:e.hp,state:e.state,dir:e.dir})),potions:potions.map(pt=>({x:pt.x,y:pt.y,state:pt.state})),cam,worldW,viewW:W,loaded:Object.keys(IM).length,victoryReady,heroScale:HERO_SCALE,regularKills,spawnedTrashCount,bossSpawned,bossDefeated,officeSpawned,officeKills,officeBagKills,officeTrashKills,storeSpawned,storeKills,storeBagKills,storePrepackKills,storeCleared,storeBossThreshold:STORE_BOSS_KILL_THRESHOLD,liveEnemyCount:liveEnemies().length,walrus:walrus&&{mode:walrus.mode,phase:walrus.phase,state:walrus.state,anim:walrus.anim,attackHit:walrus.attackHit,clock:walrus.flightClock,hp:walrus.hp,maxHp:walrus.maxHp,aimX:walrus.aimX,x:walrus.x},shots:shots.map(sh=>({x:sh.x,y:sh.y,dir:sh.dir})),left:enemiesLeftCount(),visibleRange:[cam,cam+W],corpses:enemies.filter(e=>e.state==='dead').length,potionDropTimer,lives,officeQueue:officeSpawnQueue.slice(),storeQueue:storeSpawnQueue.slice(),officeObstacles:currentStage==='office'?OFFICE_FURNITURE:[],storeObstacles:currentStage==='store'?STORE_FURNITURE:[],blockedAtPlayer:blockedByFence(p?.x??200,p?.y??448,19)});
 requestAnimationFrame(tick);
