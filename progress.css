@@ -1,0 +1,14 @@
+/* Retro progress card shares the visual language of the club. */
+.progress-launch{margin:12px 0 4px;background:#111c3a;border:2px solid #e8b95a;color:#fff2c3;box-shadow:3px 3px 0 #060813;padding:10px 14px;cursor:pointer;font:14px/1.5 'Press Start 2P',monospace;}
+.progress-launch:hover,.progress-launch:focus-visible{border-color:#8af4fc;color:white;}
+.progress-dialog{border:3px solid #bd67e6;background:#0b1330;color:#e5edff;box-shadow:8px 8px 0 #09051e;width:min(660px,calc(100vw - 20px));max-height:90dvh;overflow:auto;padding:20px;font:16px/1.55 'VT323',monospace;}
+.progress-dialog::backdrop{background:#02040bdf;}
+.progress-dialog h2{font:17px/1.5 'Press Start 2P',monospace;color:#f8dc8e;}
+.progress-dialog h3{color:#8cefff;margin:16px 0 6px;}
+.progress-dialog table{width:100%;border-collapse:collapse;font-size:18px;}
+.progress-dialog th,.progress-dialog td{border:1px solid #4b587f;padding:6px;text-align:left;}
+.progress-dialog td{text-align:center;}
+.progress-dialog p{margin:10px 0;}
+.progress-dialog .progress-note{color:#b2bed8;font-size:16px;}
+.progress-dialog button{border:2px solid #f6d27b;padding:8px 12px;color:#f6d27b;background:#161d39;cursor:pointer;}
+@media(max-width:500px){.progress-dialog{padding:12px}.progress-dialog h2{font-size:13px}.progress-dialog table{font-size:14px}.progress-launch{font-size:11px;}}
