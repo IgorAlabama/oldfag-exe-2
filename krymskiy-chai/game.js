@@ -12,6 +12,26 @@ const lanes={
 const groups=['ul','dl','ur','dr'];
 let phase='loading',score=0,paceScore=0,lives=3,best=0,elapsed=0,spawnClock=1.4,items=[],particles=[],pose='dl',selectedLane='dl',selTime=0,toast='',toastTime=0,streak=0,spawnIndex=0,clock=0,soundOn=true,level=1,startLevel=1;
 let last=0,audioCtx=null,feedbackPulse=0,nextLifeScore=100,popup1upTime=0,popup1upText='1 UP!';
+// Dedicated 8-bit background song. Sound effects still use the existing oscillator.
+const soundtrack = new Audio('assets/vstolovkuda8bit.mp3');
+soundtrack.loop = true;
+soundtrack.preload = 'none';
+soundtrack.volume = .35;
+function syncSoundtrack(){
+  if(soundOn && phase === 'playing' && !document.hidden){
+    const promise = soundtrack.play();
+    if(promise && typeof promise.catch === 'function'){
+      promise.catch(err=>{
+        // An audio file that has not yet been published must never block gameplay.
+        if(err?.name !== 'NotAllowedError' && err?.name !== 'NotSupportedError'){
+          console.warn('Крымский чай: фоновая музыка недоступна',err);
+        }
+      });
+    }
+  }else{
+    soundtrack.pause();
+  }
+}
 let pauseAction='resume';
 let panelReveal=0,panelTarget=0;
 let kettleState='hidden',kettleTimer=0,employeeState='none',employeeProgress=0;
@@ -42,7 +62,7 @@ function noise(f=540,d=.12,kind='square'){if(!soundOn)return;try{audioCtx ||=new
 function showDialog(title,message,note,b1='▶ ПРОДОЛЖИТЬ'){ $('dialogTitle').textContent=title; $('dialogText').textContent=message; $('dialogNote').textContent=note; $('startBtn').textContent=b1; $('overlay').hidden=false; }
 function showStartDialog(){ showDialog('КРЫМСКИЙ ЧАЙ','Лови чайные пакетики, избегай кофе и сахара. Собери 400 очков, чтобы победить!','Нажимай на нужный из четырёх секторов экрана.','▶ НАЧАТЬ ИГРУ'); }
 function hideDialog(){$('overlay').hidden=true}
-function setPhase(x){phase=x;$('pauseBtn').disabled=!(x==='playing'||x==='paused');$('pauseBtn').textContent=x==='paused'?'▶ ПРОДОЛЖИТЬ':'Ⅱ ПАУЗА';}
+function setPhase(x){phase=x;$('pauseBtn').disabled=!(x==='playing'||x==='paused');$('pauseBtn').textContent=x==='paused'?'▶ ПРОДОЛЖИТЬ':'Ⅱ ПАУЗА';syncSoundtrack();}
 function saveBest(){try{if(score>best){best=score;localStorage.setItem('krymskiy-tea-highscore',String(score))}}catch(_e){}}
 function reset(){
    hideFinale(); finalWarningShown=false; finalWarningTime=0; finaleTriggered=false;
@@ -450,8 +470,9 @@ window.addEventListener('keydown',ev=>{ if(phase!=='playing')return; const m={'1
 $('startBtn').addEventListener('click',()=>{if(phase==='paused'){setPhase('playing');hideDialog();return;}reset();});
 $('pauseBtn').addEventListener('click',()=>{ if(phase==='playing'){ setPhase('paused'); pauseAction='resume'; showDialog('ПАУЗА','Максим решил немного остудить чай.','Нажми, чтобы продолжить ловлю.','▶ ПРОДОЛЖИТЬ'); } else if(phase==='paused'){ setPhase('playing'); hideDialog(); }});
 $('restartBtn').addEventListener('click',reset);
-$('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent='♪ ЗВУК: '+(soundOn?'ВКЛ':'ВЫКЛ')});
-document.addEventListener('visibilitychange',()=>{if(document.hidden&&phase==='playing'){$('pauseBtn').click()}});
+$('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent='♪ ЗВУК: '+(soundOn?'ВКЛ':'ВЫКЛ');syncSoundtrack();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden&&phase==='playing'){$('pauseBtn').click()}syncSoundtrack();});
+window.addEventListener('pagehide',()=>soundtrack.pause());
 Promise.all(Object.entries(files).map(([key,url])=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[key]=im;resolve()};im.onerror=()=>reject(new Error('Не загрузилось изображение: '+url));im.src=url;}))).then(()=>{ setPhase('ready'); showStartDialog(); }).catch(err=>{setPhase('error');showDialog('ОШИБКА ЗАГРУЗКИ',err.message,'Попробуй открыть автономную HTML-версию.','↻ ПЕРЕЗАГРУЗИТЬ');$('startBtn').onclick=()=>location.reload();});
 hud(); requestAnimationFrame(frame);
 })();
