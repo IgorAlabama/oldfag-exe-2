@@ -29,6 +29,7 @@
   }));
   const active = new Set();
   let musicAttempt = 0;
+  let arcadeMode = false;
   function persist(){try{localStorage.setItem(KEY,JSON.stringify(settings));}catch{}}
   function updateUI(){
     const btn=$('musicToggle');
@@ -45,14 +46,20 @@
   async function syncMusic(){
     ++musicAttempt;
     const attempt=musicAttempt;
-    if(!settings.music || settings.volume===0){bgm.pause();return;}
+    if(arcadeMode || !settings.music || settings.volume===0){bgm.pause();return;}
     try {
       await bgm.play();
-      if(attempt!==musicAttempt || !settings.music)bgm.pause();
+      if(attempt!==musicAttempt || !settings.music || arcadeMode)bgm.pause();
     } catch(err) {
       // Autoplay is restricted until the visitor interacts; settings stay saved.
       if(err.name !== 'NotAllowedError') console.warn('Background audio unavailable:',err);
     }
+  }
+  function setArcadeMode(value){
+    arcadeMode=Boolean(value);
+    ++musicAttempt;
+    if(arcadeMode)bgm.pause();
+    else syncMusic();
   }
   function setMusic(value){settings.music=Boolean(value);persist();updateUI();syncMusic();}
   function setEffects(value){settings.effects=Boolean(value);persist();updateUI();}
@@ -86,9 +93,9 @@
   $('audioVolume').addEventListener('input',e=>setVolume(e.target.value));
   $('audioTestBtn').addEventListener('click',()=>sfx('correct'));
   // A remembered ON setting can resume on the first click; never force autoplay on page load.
-  document.addEventListener('pointerdown',()=>{if(settings.music && bgm.paused)syncMusic();},{capture:true});
-  document.addEventListener('keydown',()=>{if(settings.music && bgm.paused)syncMusic();},{capture:true});
-  document.addEventListener('visibilitychange',()=>{if(!document.hidden && settings.music && bgm.paused)syncMusic();});
+  document.addEventListener('pointerdown',()=>{if(!arcadeMode && settings.music && bgm.paused)syncMusic();},{capture:true});
+  document.addEventListener('keydown',()=>{if(!arcadeMode && settings.music && bgm.paused)syncMusic();},{capture:true});
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden && !arcadeMode && settings.music && bgm.paused)syncMusic();});
   updateUI();
-  window.OLDfagAudio={sfx,successfulEntry,cancelDoor};
+  window.OLDfagAudio={sfx,successfulEntry,cancelDoor,setArcadeMode};
 })();
