@@ -88,13 +88,12 @@
    syncToffiFullscreen();
  }
  function leaveArcade(){
-   const wasToffi=toffiActive;
    toffiActive=false;
    setToffiPseudoFullscreen(false);
    if(document.fullscreenElement===arcadeScreen)document.exitFullscreen().catch(()=>{});
    arcadeFrame.onload=null;
    arcadeFrame.src='about:blank';
-   if(wasToffi)audio.setArcadeMode?.(false);
+   audio.setArcadeMode?.(false);
    room();
  }
  window.OLDfagToffiHost={toggleFullscreen:toggleToffiFullscreen,exit:leaveArcade};
@@ -145,7 +144,7 @@
    $('arcadeGameDescription').textContent=description;
    toffiActive=path==='toffi-rage/index.html';
    setToffiPseudoFullscreen(false);
-   audio.setArcadeMode?.(toffiActive);
+   audio.setArcadeMode?.(true);
    arcadeFrame.title=title+' — аркада';
    arcadeFrame.setAttribute('allow','fullscreen; autoplay');
    arcadeFrame.onload=toffiActive?connectToffiControls:null;
