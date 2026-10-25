@@ -58,6 +58,10 @@ jobs:
           test -s "$dest/toffi-rage/music/plokhayamarzha8bit.mp3"
           test -s "$dest/arcade/assets/zachem8bit.mp3"
           test -s "$dest/krymskiy-chai/assets/vstolovkuda8bit.mp3"
+          python3 android/build-site.py
+          test -s "$dest/android-arcade-shell.js"
+          test -s "$dest/android-game-timur.css"
+          test -s "$dest/android-game-tea.css"
           echo "Bundled files:"
           du -sh "$dest"
       # Preserve the same debug signing identity for future beta updates.
@@ -76,6 +80,9 @@ jobs:
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/club.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/app.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/progress.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-arcade-shell.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-timur.css'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-tea.css'
           echo "Main, club, and progress scripts are inside the APK."
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
