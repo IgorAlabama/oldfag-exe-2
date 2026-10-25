@@ -68,6 +68,10 @@
    'krymskiy-chai/index.html','Крымский чай',
    '400 ОЧКОВ ДО ПОБЕДЫ · ЧАЙНЫЕ ПАКЕТИКИ · ЧАЙНИК И КОЛЯ'
  ));
+ $('arcadeLaunchToffi').addEventListener('click',()=>launchArcade(
+   'toffi-rage/index.html','Toffi Rage',
+   'ARCADE EDITION v2.2 · 4 РЕЙСА · МУЗЫКА · ПОЛНЫЙ ЭКРАН'
+ ));
  $('arcadeExitBtn').addEventListener('click',()=>{
    audio.sfx('click');
    $('arcadeIframe').src='about:blank';
