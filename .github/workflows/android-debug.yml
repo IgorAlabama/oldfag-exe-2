@@ -64,13 +64,24 @@ jobs:
           test -s "$dest/android-game-tea.css"
           echo "Bundled files:"
           du -sh "$dest"
-      # Preserve the same debug signing identity for future beta updates.
-      # This cannot retrofit the first APK, whose ephemeral key was lost.
+      # Keep a dedicated signing identity across future Android betas.
+      # Caching is for test builds only; the release key belongs in GitHub Secrets.
       - name: Restore persistent test signing key
         uses: actions/cache@v4
         with:
-          path: ~/.android/debug.keystore
-          key: oldfag-android-debug-signing-v1
+          path: android/.signing/debug.keystore
+          key: oldfag-android-debug-signing-v2
+      - name: Create test signing key once
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p android/.signing
+          if [ ! -f android/.signing/debug.keystore ]; then
+            keytool -genkeypair -noprompt -keyalg RSA -keysize 2048 -validity 10000 \
+              -keystore android/.signing/debug.keystore \
+              -storepass android -keypass android -alias androiddebugkey \
+              -dname "CN=OLDfag Android Beta,O=Last of Games,C=US"
+          fi
       - name: Build Android debug APK
         run: gradle -p android --no-daemon :app:assembleDebug
       - name: Verify APK includes essential scripts
