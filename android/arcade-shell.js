@@ -106,6 +106,7 @@
  function resetArcade(){
    closeMenu(false);
    document.body.classList.remove('android-arcade-active');
+   delete document.body.dataset.androidGame;
    game=null;pausedByHost=false;menuOpen=false;settingMode=false;
    if(overlay){overlay.hidden=true;overlay.classList.remove('menu-open');}
    phoneOrientation('auto');
@@ -114,6 +115,7 @@
    resetArcade();
    game=gameName;
    document.body.classList.add('android-arcade-active');
+   document.body.dataset.androidGame=gameName;
    if(overlay)overlay.hidden=false;
    phoneOrientation(game==='timur'?'landscape':'auto');
  }
