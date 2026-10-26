@@ -7,7 +7,7 @@
  const screen=$('screen-arcade');
  const names={timur:'ПРИКЛЮЧЕНИЯ ТИМУРА',tea:'КРЫМСКИЙ ЧАЙ',toffi:'TOFFI RAGE'};
  let game=null,pausedByHost=false,menuOpen=false,settingMode=false;
- let overlay=null;
+ let overlay=null, pauseBtn=null;
  const inner=()=>{try{return frame.contentDocument}catch(e){return null}};
  const innerWindow=()=>{try{return frame.contentWindow}catch(e){return null}};
  const clickInner=id=>{const el=inner()?.getElementById(id);if(!el||el.disabled)return false;el.click();return true;};
@@ -19,6 +19,24 @@
  }
  function phoneOrientation(mode){
    try{window.OldfagAndroid?.setOrientation?.(mode)}catch(e){}
+ }
+ // Native button must appear only during player-controlled driving.
+ // Hide it in the game's main menu, briefings, scripted parking finish
+ // and every dialogue/cinematic, without changing other arcade games.
+ function updatePauseVisibility(){
+   if(pauseBtn){
+     let show=game!==null && !menuOpen;
+     if(game==='toffi'){
+       try{
+         const child=toffiAPI();
+         const mode=child?.state?.()?.mode;
+         const b2Active=innerWindow()?.__toffiB2?.active?.()===true;
+         show=show && b2Active && mode==='run';
+       }catch(e){show=false;}
+     }
+     pauseBtn.style.display=show?'block':'none';
+   }
+   requestAnimationFrame(updatePauseVisibility);
  }
  function actualPause(){
    if(!game)return false;
@@ -109,6 +127,7 @@
    delete document.body.dataset.androidGame;
    game=null;pausedByHost=false;menuOpen=false;settingMode=false;
    if(overlay){overlay.hidden=true;overlay.classList.remove('menu-open');}
+   if(pauseBtn)pauseBtn.style.display='none';
    phoneOrientation('auto');
  }
  function start(gameName){
@@ -142,8 +161,10 @@
      </div>`;
    screen.appendChild(overlay);
    // Pause stays available above each game's own graphics, even for full-screen iframes.
-   const pause=overlay.querySelector('#nativeArcadePause');
-   pause.addEventListener('click',openMenu);
+   pauseBtn=overlay.querySelector('#nativeArcadePause');
+   pauseBtn.style.display='none';
+   pauseBtn.addEventListener('click',openMenu);
+   requestAnimationFrame(updatePauseVisibility);
    overlay.querySelector('#nativeArcadeContinue').addEventListener('click',()=>closeMenu(true));
    overlay.querySelector('#nativeArcadeRestart').addEventListener('click',restart);
    overlay.querySelector('#nativeArcadeOptions').addEventListener('click',showSettings);
