@@ -1,0 +1,161 @@
+/* Android-exclusive Toffi Rage UI chrome, v0.3.4.
+   Game art, scenes, music and HUD remain sourced from the original game.
+   The font is bundled offline in the APK; licence is at toffi-rage/ui/OFL.txt. */
+@font-face{
+ font-family:'ToffiPixel';src:url('toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');
+ font-style:normal;font-weight:400 900;font-display:swap;
+}
+:root{
+ --tr-gold:#dfb873;--tr-light:#f1e2bd;--tr-chrome:#91a5b1;
+ --tr-panel:#132639;--tr-dark:#071321;--tr-font:'ToffiPixel','Courier New',monospace;
+}
+#header{
+ height:58px;min-height:58px;gap:5px;padding:0 7px;
+ background:linear-gradient(180deg,#293d4a 0%,#13273b 9%,#071521 89%,#2a4050 100%);
+ border-bottom:3px solid #b39b78;
+ box-shadow:inset 0 -5px 0 #0a1824,inset 0 0 0 2px #506877,0 5px 0 #050c15;
+}
+#brand{
+ font:400 clamp(9px,2.45vw,14px)/1.3 var(--tr-font);
+ letter-spacing:0;color:#f0dcad;
+ text-shadow:2px 2px 0 #9f4936,3px 3px 0 #040c15;
+ white-space:nowrap;flex-shrink:0;
+}
+#version{font:400 7px/1.35 var(--tr-font);color:#9db8bc}
+#header .grow{min-width:0}
+#header .action,#playToolbar .action,#settingsClose{
+ appearance:none;min-height:35px;max-height:45px;padding:6px 8px;min-width:0;
+ background:linear-gradient(180deg,#385063 0%,#1c3448 15%,#0a1a2b 78%,#273e4a 100%);
+ border:2px solid #a7b0ab;border-radius:5px;
+ color:var(--tr-light);font:400 8px/1.55 var(--tr-font);letter-spacing:0;
+ text-shadow:1px 1px 0 #020a14;
+ box-shadow:inset 0 0 0 2px #061221,inset 0 3px 0 #496273,2px 3px 0 #010810;
+ white-space:nowrap;
+}
+#header #soundToggle{border-color:#dbc289;color:#ffe2a5}
+#header #fullscreenToggle{border-color:#95a8b4}
+#header #menuTop{border-color:#9ab0b5}
+#header .action:focus-visible,#header .action:hover,
+#playToolbar .action:focus-visible,#playToolbar .action:hover,
+#settingsClose:focus-visible{
+ border-color:#ffe19b;background:linear-gradient(#4a6170,#1b3448 25%,#12293b 85%,#375269);
+ outline:2px solid #f2d290;outline-offset:2px;
+}
+#header .action:active,#playToolbar .action:active,#settingsClose:active{
+ transform:translate(1px,2px);box-shadow:inset 0 0 0 2px #061221;
+}
+#header .action:disabled,#playToolbar .action:disabled{opacity:.48}
+#playToolbar{
+ min-height:45px;height:45px;
+ background:linear-gradient(180deg,#24394b,#0a192a 85%,#294452);
+ border-bottom:3px solid #bea06c;
+ box-shadow:inset 0 0 0 2px #475b65;
+}
+#playingTitle{font:400 8px/1.6 var(--tr-font);color:#c9d5d4;letter-spacing:0}
+#notice,#loadingText{font:400 9px/1.5 var(--tr-font);color:#e5ddba;text-shadow:1px 2px #030b11}
+/* Main menu: a unified armored-dashboard surface. */
+#menu{
+ background:
+  linear-gradient(90deg,transparent 96%,#182b3933 97%),
+  repeating-linear-gradient(0deg,#07111b 0 7px,#0a1723 8px 10px);
+}
+#menu:before{background:repeating-linear-gradient(0deg,transparent 0 3px,#00000021 4px 5px);top:58px}
+#menuInside{width:min(660px,100%);padding:13px 12px 25px}
+.arcadeHorizon{
+ border:3px solid #8797a0;border-radius:9px;
+ box-shadow:inset 0 0 0 3px #101e29,inset 0 4px 0 #405666,0 4px 0 #030a12;
+}
+.arcadeLogo{
+ font:400 clamp(23px,7vw,44px)/1.3 var(--tr-font);
+ letter-spacing:0;white-space:nowrap;color:#ffcc75;margin:14px auto;
+ text-shadow:2px 2px #ae4b33,4px 4px #50253a,6px 6px #06101b;
+}
+.arcadeSmall{
+ font:400 clamp(7px,1.7vw,9px)/1.7 var(--tr-font);
+ color:#a2c6cf;letter-spacing:0;
+}
+.arcadeTag{
+ font:400 clamp(7px,1.75vw,10px)/1.7 var(--tr-font);
+ color:#c6d4d4;letter-spacing:0;margin:14px auto 20px;
+}
+.arcadeButtons{gap:11px;max-width:380px}
+.arcadeButton{
+ appearance:none;position:relative;min-height:59px;height:auto;text-align:left;padding:16px 13px 14px;
+ background:linear-gradient(180deg,#3e5565 0%,#1b3246 13%,#0b1b2b 78%,#263e4d 100%);
+ border:3px solid #9faeb7;border-radius:9px;color:#f9e4ae;
+ box-shadow:inset 0 0 0 2px #071322,inset 0 3px 0 #506576,4px 5px 0 #010711;
+ font:400 clamp(10px,2.4vw,13px)/1.7 var(--tr-font);letter-spacing:0;
+ text-shadow:2px 2px #050a12;transition:filter .08s,transform .08s;
+}
+.arcadeButton:before{content:'▶';display:inline-block;margin-right:10px;color:#ffb862;font:400 9px var(--tr-font)}
+.arcadeButton:focus-visible,.arcadeButton:hover{
+ background:linear-gradient(#425e6e,#234058 15%,#162b40 82%,#2d485d);
+ border-color:#ffe6a6;outline:2px solid #ecc27c;outline-offset:3px;
+}
+.arcadeButton:active{transform:translate(2px,2px);box-shadow:inset 0 0 0 2px #061321,1px 2px 0 #000}
+.arcadeFooter{font:400 clamp(6px,1.45vw,8px)/1.75 var(--tr-font);letter-spacing:0;color:#829daa;margin-top:23px}
+#settingsModal{background:#020712db}
+.settingsCard{
+ width:min(460px,100%);border:4px solid #b5aa8a;border-radius:13px;
+ background:linear-gradient(#314756 0%,#12283b 8%,#081623 91%,#20394b);
+ box-shadow:inset 0 0 0 3px #06111c,inset 0 5px 0 #617581,6px 7px 0 #010711;
+ padding:25px 17px;
+}
+.settingsTitle{font:400 clamp(10px,3vw,14px)/1.6 var(--tr-font);letter-spacing:0;color:#ffca7a}
+.settingsJoke{font:400 clamp(8px,2vw,10px)/2.0 var(--tr-font);color:#d9e0da;letter-spacing:0}
+#settingsClose{height:auto;max-height:none;min-height:44px;padding:13px 15px;font-size:9px}
+/* Intermission overlays retain their exact 435x518 animation geometry.
+   Only the UI labels, boxes and pixel typography change. */
+#storyTitle,#storyCount,#storyName,#storyText,#storyMore,#storyEndWord,#storyEndHint{letter-spacing:0;text-shadow:1px 2px 0 #030913}
+#storyTitle{
+ font:400 9px/1.55 var(--tr-font);color:#f8dfa3;
+ background:linear-gradient(#284456,#0b1b2d);border:2px solid #c5ae83;border-radius:6px;
+ box-shadow:inset 0 0 0 2px #09182a,2px 3px 0 #010910;
+ padding:8px 9px;
+}
+#storyCount{
+ font:400 8px/1.6 var(--tr-font);color:#c8dae1;
+ background:#11283b;border:2px solid #869caa;border-radius:5px;
+ box-shadow:inset 0 0 0 2px #061525;padding:7px 8px;
+}
+#storyPanel{
+ background:linear-gradient(#273d51,#112639 15%,#081827 94%);
+ border:3px solid #b9ad8e;border-radius:12px;
+ box-shadow:inset 0 0 0 3px #0b1a2a,inset 0 5px 0 #415971,4px 5px 0 #000a;
+}
+#storyName{
+ font:400 9px/1.7 var(--tr-font);letter-spacing:0;
+ border:2px solid #ffdfaa;border-radius:4px;background:#c89860;color:#0d1b29;
+ box-shadow:2px 2px 0 #020913;
+}
+#storyText{
+ font:400 10px/1.72 var(--tr-font);letter-spacing:0;color:#f2eee1;
+ padding:30px 12px 0 12px;overflow-wrap:anywhere;
+ text-shadow:1px 1px 0 #020911;
+}
+#storyMore{
+ font:400 8px/1.3 var(--tr-font);letter-spacing:0;
+ color:#f7c879;background:#0b1b2e;padding:4px 4px 3px 10px;border-radius:3px;
+}
+#storyEndWord{font:400 39px/1.3 var(--tr-font);letter-spacing:1px;color:#f6d9a1}
+#storyEndHint{font:400 8px/1.7 var(--tr-font);letter-spacing:0}
+@media(max-width:620px){
+ #header{height:54px;min-height:54px;gap:3px;padding:0 4px}
+ #brand{font-size:clamp(8px,2.3vw,10px)}
+ #version{display:none}
+ #header .action{font-size:7px;padding:6px 5px;min-height:33px}
+ .arcadeHorizon{height:96px}
+ .arcadeLogo{font-size:clamp(20px,6vw,27px)}
+ .arcadeSmall{font-size:7px}
+ .arcadeTag{font-size:7px}
+ #storyText{font-size:9px;line-height:1.7}
+ #storyTitle{font-size:8px}
+ #storyName{font-size:8px}
+}
+@media(max-height:650px){
+ #menuInside{padding-top:7px}
+ .arcadeHorizon{height:70px}
+ .arcadeTag{margin:8px auto 10px}
+ .arcadeButtons{gap:7px}
+ .arcadeButton{min-height:48px}
+}
