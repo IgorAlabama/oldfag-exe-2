@@ -1,7 +1,7 @@
 /* Toffi Rage Android HUD B2: canvas/pixel typography, original game telemetry and portrait. */
 (()=>{'use strict';
 if(window.__toffiB2)return;
-const W=424,H=224,el=document.createElement('div');el.id='toffiB2';el.hidden=true;
+const W=424,H=236,el=document.createElement('div');el.id='toffiB2';el.hidden=true;
 el.innerHTML='<div id="toffiB2World"><canvas id="toffiB2Road"></canvas><button id="toffiB2Left" class="b2Dir">◀</button><button id="toffiB2Right" class="b2Dir">▶</button></div><div id="toffiB2Head"><canvas id="toffiB2HUD" width="424" height="224"></canvas></div>';
 document.body.appendChild(el);
 const $=id=>document.getElementById(id),hud=$('toffiB2HUD'),world=$('toffiB2Road'),g=hud.getContext('2d'),r=world.getContext('2d',{alpha:false}),mini=document.createElement('canvas'),mc=mini.getContext('2d');
@@ -27,22 +27,61 @@ function casing(x,y,w,h){
  for(const [dx,dy] of [[7,7],[w-8,7],[7,h-8],[w-8,h-8]]){rect(x+dx-1,y+dy-1,3,3,'#050c15');rect(x+dx,y+dy,1,1,'#cfb997')}
 }
 const fmt=n=>{n=Math.max(0,Math.ceil(n));return String(Math.floor(n/60)).padStart(2,'0')+':'+String(n%60).padStart(2,'0')};
+function drawSpeedometer(x,y,speed){
+ const cx=x+22,cy=y+35,rad=10.5,start=Math.PI*.82,sweep=Math.PI*1.40;
+ g.save();g.lineCap='square';
+ for(let i=0;i<25;i++){
+  const a=start+(sweep*i/24);g.strokeStyle=i<13?'#55c36e':i<19?'#f3ca5b':'#e4744d';
+  g.lineWidth=2.3;g.beginPath();g.arc(cx,cy,rad,a,a+sweep/27);g.stroke();
+ }
+ for(let i=0;i<=9;i++){
+  const a=start+sweep*i/9;
+  const x1=cx+Math.cos(a)*7.7,y1=cy+Math.sin(a)*7.7;
+  const x2=cx+Math.cos(a)*12.6,y2=cy+Math.sin(a)*12.6;
+  g.strokeStyle=i===0||i===9?'#e0d7bb':'#a9c5bb';g.lineWidth=i%3===0?1.4:1;
+  g.beginPath();g.moveTo(Math.round(x1),Math.round(y1));g.lineTo(Math.round(x2),Math.round(y2));g.stroke();
+ }
+ const ang=start+sweep*clamp(Number(speed)||0,0,180)/180;
+ const endX=cx+Math.cos(ang)*8.5,endY=cy+Math.sin(ang)*8.5;
+ g.strokeStyle='#101923';g.lineWidth=3.4;g.beginPath();g.moveTo(cx,cy);g.lineTo(endX,endY);g.stroke();
+ g.strokeStyle='#ffe8b0';g.lineWidth=1.9;g.beginPath();g.moveTo(cx,cy);g.lineTo(endX,endY);g.stroke();
+ g.fillStyle='#ff9945';g.beginPath();g.arc(cx,cy,2.3,0,Math.PI*2);g.fill();g.restore();
+}
+function drawTruckHealth(x,y,w,h,health){
+ const hp=clamp(Number(health)||0,0,100),by=y+30;
+ // Original HUD motif: the truck's cargo box IS the damage gauge.
+ // Trailer and cab share one chassis, instead of separate gauge and icon.
+ rect(x+8,by-4,69,19,'#050e19');rect(x+10,by-3,53,13,'#8b9ca7');
+ rect(x+12,by-1,49,9,'#1a3336');
+ const fill=hp>60?'#4bdd67':hp>30?'#e9c04a':'#eb6250';
+ rect(x+12,by-1,Math.round(49*hp/100),9,fill);
+ for(let xx=18;xx<62;xx+=7)rect(x+xx,by-1,1,9,'#101e28aa');
+ // White pixel-art cab with front glass, bumper, trailer wheels.
+ rect(x+63,by-1,11,10,'#dbe5e9');rect(x+63,by+1,10,2,'#9daebd');
+ rect(x+68,by+1,5,4,'#45677b');rect(x+73,by+4,3,5,'#b5c0ca');
+ rect(x+9,by+10,67,2,'#8495a5');
+ for(const wx of [x+20,x+55,x+68]){rect(wx,by+10,7,4,'#050c15');rect(wx+2,by+11,3,3,'#405869')}
+ type(Math.round(hp)+'%',x+w-6,y+27,15.3,hp>60?'#ffb95f':hp>30?'#ffd46b':'#ff9176',35,'right');
+}
+function drawRouteTruck(cx,cy){
+ const x=Math.round(cx),y=Math.round(cy);
+ // Orange rolling cargo marker follows the rail between checkpoints.
+ rect(x-10,y-6,19,13,'#08121a');rect(x-8,y-4,11,7,'#f6a342');
+ rect(x-6,y-3,7,4,'#f7d295');rect(x+3,y-2,5,5,'#dbe8e7');
+ rect(x+5,y-1,2,2,'#63869b');rect(x-6,y+4,4,3,'#182733');rect(x+4,y+4,4,3,'#182733');
+ rect(x-5,y+5,2,1,'#b4c3c9');rect(x+5,y+5,2,1,'#b4c3c9');
+}
 function meter(kind,x,y,w,h,t){
  casing(x,y,w,h);
  const label=kind==='time'?'ВРЕМЯ':kind==='speed'?'СКОРОСТЬ':'СОСТОЯНИЕ';
  type(label,x+9,y+7,10.5,'#b7ccd7',w-18);
  if(kind==='time'){type('◷',x+9,y+22,15,'#deebdf',20);type(fmt(t.time),x+34,y+22,21,'#f1f5ee',w-40)}
  if(kind==='speed'){
-  g.beginPath();g.arc(x+20,y+38,10,3.4,6);g.strokeStyle='#78d17c';g.lineWidth=2;g.stroke();
-  type(t.speed,x+33,y+22,22,'#ffa848',w-56);type('КМ/Ч',x+w-7,y+32,8.3,'#e6ba75',27,'right');
+  drawSpeedometer(x,y,t.speed);
+  type(t.speed,x+43,y+22,21.5,'#ffa848',46);
+  type('КМ/Ч',x+w-5,y+32,8.5,'#e6ba75',30,'right');
  }
- if(kind==='health'){
-  const hp=clamp(t.health,0,100),bx=x+9,by=y+31,bw=w-54;
-  rect(bx-2,by-2,bw+4,15,'#040b13');rect(bx,by,bw,11,'#152f38');
-  rect(bx,by,Math.round(bw*hp/100),11,hp>60?'#62d96b':hp>30?'#e9c54c':'#e96050');
-  for(let i=0;i<bw;i+=8)rect(bx+i,by,2,11,'#17313a');
-  type(hp+'%',x+w-6,y+26,16,'#ffb65c',44,'right');
- }
+ if(kind==='health')drawTruckHealth(x,y,w,h,t.health);
 }
 const firstStops=['СКЛАД','ГОРОД','ТРАССА','ТАМОЖНЯ'];
 function route(t){
@@ -60,6 +99,8 @@ function route(t){
   rect(bx-5,yy-4,11,10,'#05101a');rect(bx-3,yy-2,7,6,cur?'#ffa544':passed?'#85ce9c':'#728da0');
   type(name,x+29,yy-6,9,cur?'#fff2c7':'#bdcfd9',w-34);
  });
+ // Draw over the checkpoints so it always visibly follows the route.
+ drawRouteTruck(x+9,by+gap*3*a);
  rect(x+9,y+135,w-18,1,'#516b7b');
  type('ПРОЙДЕНО',x+9,y+141,8,'#c0d1db',58);
  type(t.progress+'%',x+w-8,y+140,14,'#ffaf51',38,'right');
@@ -83,20 +124,36 @@ const chats={
  worry:['Блин...','Надо аккуратнее.'],bruised:['Фуру потрепало...','Но едем дальше!'],alarm:['Топливо на нуле!','Надо заправиться!']
 };
 function talk(state){
- const x=253,y=184,w=164,h=36,tip=341;
+ const x=249,y=188,w=171,h=44,tip=338;
  g.save();g.shadowBlur=3;g.shadowColor='#000b';g.shadowOffsetY=2;
  g.fillStyle='#070d14';g.beginPath();g.moveTo(x+3,y);g.lineTo(tip-10,y);g.lineTo(tip,y-10);g.lineTo(tip+10,y);g.lineTo(x+w-3,y);g.lineTo(x+w,y+3);g.lineTo(x+w,y+h-3);g.lineTo(x+w-3,y+h);g.lineTo(x+3,y+h);g.lineTo(x,y+h-3);g.lineTo(x,y+3);g.closePath();g.fill();g.restore();
  g.fillStyle='#eae6de';g.beginPath();g.moveTo(x+4,y+3);g.lineTo(tip-8,y+3);g.lineTo(tip,y-7);g.lineTo(tip+8,y+3);g.lineTo(x+w-4,y+3);g.lineTo(x+w-3,y+4);g.lineTo(x+w-3,y+h-4);g.lineTo(x+w-4,y+h-3);g.lineTo(x+4,y+h-3);g.lineTo(x+3,y+h-4);g.lineTo(x+3,y+4);g.closePath();g.fill();
  const words=chats[state.emo]||chats.neutral;
- type(words[0],x+8,y+6,10.1,'#14202c',w-16);type(words[1],x+8,y+19,10.1,'#14202c',w-16);
+ // The original dialogue used plain native bold text. Render it directly
+ // at pixel scale to avoid blurry double-resampling of miniature Cyrillic glyphs.
+ g.save();g.imageSmoothingEnabled=false;g.textAlign='left';g.textBaseline='top';
+ g.font='bold 11px Arial,sans-serif';g.fillStyle='#14212b';
+ g.fillText(words[0],x+8,y+10,w-16);
+ g.fillText(words[1],x+8,y+24,w-16);
+ g.restore();
 }
 function paint(t,st,scene){
  g.clearRect(0,0,W,H);
- const grad=g.createLinearGradient(0,0,0,H);grad.addColorStop(0,'#070f1a');grad.addColorStop(1,'#1a3443');rect(0,0,W,H,grad);
- casing(58,5,167,40);type('TOFFI',65,9,23,'#f9dfa8',86);type('RAGE',148,9,23,'#f69a4e',72);
- type('РЕЙС '+String(stage+1).padStart(2,'0'),W-8,16,11,'#b6ccd7',64,'right');
+ const grad=g.createLinearGradient(0,0,0,224);grad.addColorStop(0,'#070f1a');grad.addColorStop(1,'#1a3443');rect(0,0,W,224,grad);
+ // The left-aligned name stays clear of the centered OnePlus camera cutout.
+ casing(7,5,164,39);
+ type('TOFFI',13,10,22,'#f9dfa8',84);
+ type('RAGE',95,10,22,'#f69a4e',69);
+ type('РЕЙС '+String(stage+1).padStart(2,'0'),W-8,17,11,'#b6ccd7',64,'right');
  meter('time',6,56,127,50,t);meter('speed',6,110,127,50,t);meter('health',6,164,127,50,t);
- route(t);portrait(scene);talk(st);rect(0,221,W,3,'#8197a0');
+ route(t);portrait(scene);
+ // A stylized dashboard lip: metal edge + inset glass seam and fasteners.
+ rect(0,217,W,2,'#0a141f');
+ rect(0,219,W,2,'#6f8390');
+ rect(0,221,W,2,'#b1a28d');
+ rect(0,223,W,1,'#111b25');
+ for(let xx=13;xx<W;xx+=44){rect(xx,219,4,3,'#07111a');rect(xx+1,219,2,1,'#b8a98c')}
+ talk(st);
 }
 function roadDraw(scene){
  const b=world.getBoundingClientRect();if(!b.width||!b.height)return;
