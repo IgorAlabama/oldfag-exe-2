@@ -2,7 +2,7 @@
 (()=>{'use strict';
 if(window.__toffiB2)return;
 const W=424,H=236,el=document.createElement('div');el.id='toffiB2';el.hidden=true;
-el.innerHTML='<div id="toffiB2World"><canvas id="toffiB2Road"></canvas><button id="toffiB2Left" class="b2Dir">◀</button><button id="toffiB2Right" class="b2Dir">▶</button></div><div id="toffiB2Head"><canvas id="toffiB2HUD" width="424" height="224"></canvas></div>';
+el.innerHTML='<div id="toffiB2World"><canvas id="toffiB2Road"></canvas><button id="toffiB2Left" class="b2Dir">◀</button><button id="toffiB2Right" class="b2Dir">▶</button></div><div id="toffiB2Head"><canvas id="toffiB2HUD" width="424" height="236"></canvas></div>';
 document.body.appendChild(el);
 const $=id=>document.getElementById(id),hud=$('toffiB2HUD'),world=$('toffiB2Road'),g=hud.getContext('2d'),r=world.getContext('2d',{alpha:false}),mini=document.createElement('canvas'),mc=mini.getContext('2d');
 const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));let active=false,api=null,last=null,detail=false,tickNo=0,lastTime=0,stage=-1;
@@ -51,16 +51,19 @@ function drawTruckHealth(x,y,w,h,health){
  const hp=clamp(Number(health)||0,0,100),by=y+30;
  // Original HUD motif: the truck's cargo box IS the damage gauge.
  // Trailer and cab share one chassis, instead of separate gauge and icon.
- rect(x+8,by-4,69,19,'#050e19');rect(x+10,by-3,53,13,'#8b9ca7');
- rect(x+12,by-1,49,9,'#1a3336');
+ // A left-facing cab and a rightward cargo gauge. Damage still eats the
+ // cargo bar from RIGHT to LEFT; only the cab direction/position changes.
+ rect(x+7,by-4,70,19,'#050e19');
+ rect(x+23,by-3,52,13,'#8b9ca7');
+ rect(x+25,by-1,48,9,'#1a3336');
  const fill=hp>60?'#4bdd67':hp>30?'#e9c04a':'#eb6250';
- rect(x+12,by-1,Math.round(49*hp/100),9,fill);
- for(let xx=18;xx<62;xx+=7)rect(x+xx,by-1,1,9,'#101e28aa');
- // White pixel-art cab with front glass, bumper, trailer wheels.
- rect(x+63,by-1,11,10,'#dbe5e9');rect(x+63,by+1,10,2,'#9daebd');
- rect(x+68,by+1,5,4,'#45677b');rect(x+73,by+4,3,5,'#b5c0ca');
- rect(x+9,by+10,67,2,'#8495a5');
- for(const wx of [x+20,x+55,x+68]){rect(wx,by+10,7,4,'#050c15');rect(wx+2,by+11,3,3,'#405869')}
+ rect(x+25,by-1,Math.round(48*hp/100),9,fill);
+ for(let xx=32;xx<73;xx+=7)rect(x+xx,by-1,1,9,'#101e28aa');
+ // Cab faces left: windshield and bumper are on its left-hand edge.
+ rect(x+9,by-2,15,12,'#dbe5e9');rect(x+10,by,13,2,'#9daebd');
+ rect(x+9,by+1,6,5,'#45677b');rect(x+7,by+5,3,4,'#b5c0ca');
+ rect(x+9,by+10,66,2,'#8495a5');
+ for(const wx of [x+11,x+35,x+66]){rect(wx,by+10,7,4,'#050c15');rect(wx+2,by+11,3,3,'#405869')}
  type(Math.round(hp)+'%',x+w-6,y+27,15.3,hp>60?'#ffb95f':hp>30?'#ffd46b':'#ff9176',35,'right');
 }
 function drawRouteTruck(cx,cy){
@@ -100,7 +103,7 @@ function route(t){
   type(name,x+29,yy-6,9,cur?'#fff2c7':'#bdcfd9',w-34);
  });
  // Draw over the checkpoints so it always visibly follows the route.
- drawRouteTruck(x+9,by+gap*3*a);
+ drawRouteTruck(bx+3,by+gap*3*a);
  rect(x+9,y+135,w-18,1,'#516b7b');
  type('ПРОЙДЕНО',x+9,y+141,8,'#c0d1db',58);
  type(t.progress+'%',x+w-8,y+140,14,'#ffaf51',38,'right');
@@ -172,7 +175,9 @@ function frame(now){
  const inStory=story&&story.classList.contains('active');
  const briefing=$('gameFrame')?.contentDocument?.getElementById('briefing');
  const briefingVisible=briefing&&getComputedStyle(briefing).display!=='none';
- const should=!!s&&['run','pause','cinematic'].includes(s.st.mode)&&!inStory&&!briefingVisible;
+ // The scripted customs-parking arrival uses 'finish', not 'cinematic'.
+ // Keep the same portrait HUD and full-width road throughout the animation.
+ const should=!!s&&['run','pause','cinematic','finish'].includes(s.st.mode)&&!inStory&&!briefingVisible;
  if(active!==should){active=should;el.hidden=!active;document.body.classList.toggle('toffi-b2-active',active)}
  if(!active)return;
  api=s.child;last=s.st;stage=s.wrap.getLevel?.()??0;
