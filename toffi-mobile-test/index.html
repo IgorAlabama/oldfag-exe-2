@@ -12,7 +12,7 @@
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#030911;color:#e5eff4;overscroll-behavior:none;touch-action:pan-x pan-y}body{font-family:monospace}button{cursor:pointer}
 #screen{position:relative;overflow:hidden;width:100vw;height:100dvh;isolation:isolate;background:#0b1420}
 :root{--top-inset:env(safe-area-inset-top,0px)}
-#topBar{top:var(--top-inset)!important}
+#topBar{top:var(--top-inset)!important;pointer-events:auto!important}
 #dashboard{height:calc(238px + var(--top-inset))!important}
 #dashCards{top:calc(43px + var(--top-inset))!important}
 #roadZone{top:calc(238px + var(--top-inset))!important}
