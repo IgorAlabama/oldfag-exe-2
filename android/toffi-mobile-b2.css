@@ -14,3 +14,30 @@ body.toffi-b2-active #loading{z-index:48!important}
 #toffiB2 .b2Dir{position:absolute;bottom:max(13px,env(safe-area-inset-bottom));width:51px;height:52px;background:#102d43d9;color:#fff5d4;border:3px solid #94abbc;box-shadow:inset 0 0 0 2px #0b1827,2px 3px 0 #0009;font:bold 23px monospace;touch-action:manipulation;z-index:4}
 #toffiB2 #toffiB2Left{left:max(12px,env(safe-area-inset-left))}
 #toffiB2 #toffiB2Right{right:max(12px,env(safe-area-inset-right))}
+/* Standalone mission objective; float over the roadside, never consume cockpit space. */
+#toffiB2Folders[hidden]{display:none!important}
+#toffiB2Folders{
+ position:absolute;
+ top:calc(min(52.8302vw,36dvh) + clamp(22px,5.7vw,31px));
+ right:max(9px,env(safe-area-inset-right));
+ z-index:7;display:flex;align-items:center;gap:5px;
+ min-height:34px;padding:6px 8px 6px 7px;pointer-events:none;
+ background:#0b1c2ee6;border:2px solid #8b9fac;border-radius:5px;
+ box-shadow:inset 0 0 0 2px #152b3c,3px 3px 0 #030910b8;
+ color:#f3d691;
+ font:900 clamp(10px,2.65vw,12px)/1.1 'Courier New',monospace;
+ letter-spacing:.3px;text-shadow:1px 1px 0 #020913;
+}
+#toffiB2Folders .b2FolderIcon{
+ position:relative;display:inline-block;flex:0 0 15px;height:11px;
+ background:#c89a53;border:2px solid #f1cb7f;
+ box-shadow:inset 0 -2px 0 #976b37,1px 2px 0 #030d15;
+ image-rendering:pixelated;
+}
+#toffiB2Folders .b2FolderIcon::before{
+ content:'';position:absolute;left:-2px;top:-6px;width:9px;height:4px;
+ background:#f1cb7f;border:1px solid #72552e;
+}
+#toffiB2Folders .b2FolderValue{font-size:clamp(14px,3.6vw,17px);color:#ffc567;white-space:nowrap}
+#toffiB2Folders.complete{border-color:#78c79a;color:#d7f4db;background:#0b2925eb}
+#toffiB2Folders.complete .b2FolderValue{color:#7af5a2}
