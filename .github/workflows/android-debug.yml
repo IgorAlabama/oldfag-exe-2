@@ -62,6 +62,9 @@ jobs:
           test -s "$dest/android-arcade-shell.js"
           test -s "$dest/android-game-timur.css"
           test -s "$dest/android-game-tea.css"
+          test -s "$dest/android-toffi-mobile-b2.js"
+          test -s "$dest/android-toffi-mobile-b2.css"
+          grep -Fq '../android-toffi-mobile-b2.js' "$dest/toffi-rage/index.html"
           echo "Bundled files:"
           du -sh "$dest"
       # Keep a dedicated signing identity across future Android betas.
@@ -94,6 +97,8 @@ jobs:
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-arcade-shell.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-timur.css'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-tea.css'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.css'
           echo "Main, club, and progress scripts are inside the APK."
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
