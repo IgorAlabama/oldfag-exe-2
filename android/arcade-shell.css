@@ -33,10 +33,13 @@ body.android-arcade-active #arcadeIframe{
 body.android-arcade-active[data-android-game="timur"] #nativeArcadePause{
  left:min(calc(54dvh + max(8px,env(safe-area-inset-left))),calc(100vw - 64px));
 }
-/* Keep Toffi's native pause on the slim top strip; never obscure the three gauges. */
+/* Toffi pause belongs on the playable road, just below the cockpit HUD.
+   Do not cover the timer or the camera-safe title. */
 body.android-arcade-active[data-android-game="toffi"] #nativeArcadePause{
- top:max(5px,env(safe-area-inset-top));left:max(5px,env(safe-area-inset-left));
- min-width:35px;min-height:32px;padding:3px 6px;font-size:14px;border-width:2px;
+ top:calc(min(52.8302vw,36dvh) + 12px);
+ left:max(10px,env(safe-area-inset-left));
+ min-width:43px;min-height:43px;padding:6px 10px;font-size:18px;border-width:2px;
+ background:#132f42e8;
 }
 #nativeArcadeModal{display:none}
 #nativeArcadeLayer.menu-open #nativeArcadeModal{
