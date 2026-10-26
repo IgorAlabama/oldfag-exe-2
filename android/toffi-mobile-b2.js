@@ -65,7 +65,7 @@ function route(t){
  type(t.progress+'%',x+w-8,y+140,14,'#ffaf51',38,'right');
 }
 function portrait(scene){
- const x=257,y=56,w=160,h=111;casing(x,y,w,h);type('ИГОРЬ',x+10,y+6,10,'#d5e0e9',65);
+ const x=257,y=56,w=160,h=132;casing(x,y,w,h);type('ИГОРЬ',x+10,y+6,10,'#d5e0e9',65);
  g.save();rounded(x+6,y+21,w-12,h-27,4);g.clip();rect(x+6,y+21,w-12,h-27,'#07131f');
  // Copy the actual original driver's sprite from the live mission canvas.
  // Its changing emotions, hands, seatbelt, steering wheel, and cab stay intact.
@@ -77,12 +77,12 @@ const chats={
  worry:['Блин...','Надо аккуратнее.'],bruised:['Фуру потрепало...','Но едем дальше!'],alarm:['Топливо на нуле!','Надо заправиться!']
 };
 function talk(state){
- const x=253,y=171,w=164,h=44,tip=341;
+ const x=253,y=184,w=164,h=36,tip=341;
  g.save();g.shadowBlur=3;g.shadowColor='#000b';g.shadowOffsetY=2;
  g.fillStyle='#070d14';g.beginPath();g.moveTo(x+3,y);g.lineTo(tip-10,y);g.lineTo(tip,y-10);g.lineTo(tip+10,y);g.lineTo(x+w-3,y);g.lineTo(x+w,y+3);g.lineTo(x+w,y+h-3);g.lineTo(x+w-3,y+h);g.lineTo(x+3,y+h);g.lineTo(x,y+h-3);g.lineTo(x,y+3);g.closePath();g.fill();g.restore();
  g.fillStyle='#eae6de';g.beginPath();g.moveTo(x+4,y+3);g.lineTo(tip-8,y+3);g.lineTo(tip,y-7);g.lineTo(tip+8,y+3);g.lineTo(x+w-4,y+3);g.lineTo(x+w-3,y+4);g.lineTo(x+w-3,y+h-4);g.lineTo(x+w-4,y+h-3);g.lineTo(x+4,y+h-3);g.lineTo(x+3,y+h-4);g.lineTo(x+3,y+4);g.closePath();g.fill();
  const words=chats[state.emo]||chats.neutral;
- type(words[0],x+8,y+10,10.8,'#14202c',w-16);type(words[1],x+8,y+25,10.8,'#14202c',w-16);
+ type(words[0],x+8,y+6,10.1,'#14202c',w-16);type(words[1],x+8,y+19,10.1,'#14202c',w-16);
 }
 function paint(t,st,scene){
  g.clearRect(0,0,W,H);
@@ -106,8 +106,10 @@ function sample(){
 function frame(now){
  requestAnimationFrame(frame);
  const s=sample(),story=$('storyLayer');
- const inStory=story&&getComputedStyle(story).display!=='none'&&getComputedStyle(story).opacity!=='0';
- const should=!!s&&['run','pause','cinematic'].includes(s.st.mode)&&!inStory;
+ const inStory=story&&story.classList.contains('active');
+ const briefing=$('gameFrame')?.contentDocument?.getElementById('briefing');
+ const briefingVisible=briefing&&getComputedStyle(briefing).display!=='none';
+ const should=!!s&&['run','pause','cinematic'].includes(s.st.mode)&&!inStory&&!briefingVisible;
  if(active!==should){active=should;el.hidden=!active;document.body.classList.toggle('toffi-b2-active',active)}
  if(!active)return;
  api=s.child;last=s.st;stage=s.wrap.getLevel?.()??0;
