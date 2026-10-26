@@ -3,6 +3,7 @@
 <title>TOFFI RAGE — редактор HUD</title>
 <style>html,body{margin:0;background:#08121f;color:#ffd88d;font:16px monospace}main{margin:25vh auto;max-width:600px;padding:24px;text-align:center}</style></head>
 <body><main><h1>TOFFI RAGE · HUD EDITOR</h1><p id="status">Загружаем редактор и оригинальную первую миссию…</p></main>
+<script src="mobile-upgrade.js?v=2"></script>
 <script>
 (async()=>{
  try{
@@ -11,7 +12,7 @@
   const binary=atob(b64),bytes=new Uint8Array(binary.length);
   for(let i=0;i<binary.length;i++)bytes[i]=binary.charCodeAt(i);
   const stream=new Blob([bytes]).stream().pipeThrough(new DecompressionStream('gzip'));
-  const html=await new Response(stream).text();
+  const html=window.OLDfagHudMobileUpgrade(await new Response(stream).text());
   if(!html.includes('TOFFI RAGE')||!html.includes("wrapper.src='../toffi-rage/index.html'"))throw Error('Повреждён пакет редактора');
   document.open();document.write(html);document.close();
  }catch(err){
