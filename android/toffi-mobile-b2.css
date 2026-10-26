@@ -1,0 +1,15 @@
+/* Only the APK bundles this stylesheet. Keep the public Toffi Rage unchanged. */
+body.toffi-b2-active #header,body.toffi-b2-active #playToolbar{display:none!important}
+body.toffi-b2-active #play{display:block!important;position:absolute!important;inset:0!important;height:100dvh!important;overflow:hidden!important}
+body.toffi-b2-active #gameScreen{position:absolute!important;inset:0!important;height:100%!important;min-height:0!important;overflow:hidden!important}
+body.toffi-b2-active #gameFrame{position:absolute!important;left:0!important;top:0!important;width:435px!important;height:518px!important;min-height:518px!important;max-width:none!important;opacity:0!important;pointer-events:none!important;transform:none!important;z-index:0!important}
+body.toffi-b2-active #loading{z-index:48!important}
+#toffiB2[hidden]{display:none!important}
+#toffiB2{position:absolute;inset:0;z-index:49;overflow:hidden;background:#07111d;touch-action:none;isolation:isolate}
+#toffiB2 #toffiB2Head{position:absolute;inset:0 0 auto;height:calc(224 / 424 * 100vw);max-height:36dvh;background:#0b1626;border-bottom:2px solid #87969d;box-shadow:0 3px 6px #000b;z-index:3}
+#toffiB2 #toffiB2HUD{display:block;width:100%;height:100%;image-rendering:pixelated;touch-action:manipulation}
+#toffiB2 #toffiB2World{position:absolute;left:0;right:0;bottom:0;top:min(calc(224 / 424 * 100vw),36dvh);background:#111d28;touch-action:none}
+#toffiB2 #toffiB2Road{display:block;width:100%;height:100%;image-rendering:pixelated;touch-action:none}
+#toffiB2 .b2Dir{position:absolute;bottom:max(13px,env(safe-area-inset-bottom));width:51px;height:52px;background:#102d43d9;color:#fff5d4;border:3px solid #94abbc;box-shadow:inset 0 0 0 2px #0b1827,2px 3px 0 #0009;font:bold 23px monospace;touch-action:manipulation;z-index:4}
+#toffiB2 #toffiB2Left{left:max(12px,env(safe-area-inset-left))}
+#toffiB2 #toffiB2Right{right:max(12px,env(safe-area-inset-right))}
