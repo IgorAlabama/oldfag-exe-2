@@ -2,10 +2,10 @@
 (()=>{'use strict';
 if(window.__toffiB2)return;
 const W=424,H=236,el=document.createElement('div');el.id='toffiB2';el.hidden=true;
-el.innerHTML='<div id="toffiB2World"><canvas id="toffiB2Road"></canvas><button id="toffiB2Left" class="b2Dir">◀</button><button id="toffiB2Right" class="b2Dir">▶</button></div><div id="toffiB2Head"><canvas id="toffiB2HUD" width="424" height="236"></canvas></div>';
+el.innerHTML='<div id="toffiB2World"><canvas id="toffiB2Road"></canvas><button id="toffiB2Left" class="b2Dir">◀</button><button id="toffiB2Right" class="b2Dir">▶</button></div><div id="toffiB2Head"><canvas id="toffiB2HUD" width="424" height="236"></canvas></div><div id="toffiB2Folders" aria-label="Собранные папки" hidden><span class="b2FolderIcon" aria-hidden="true"></span><span class="b2FolderTitle">ПАПКИ</span><span id="toffiB2FolderValue" class="b2FolderValue">0/5</span></div>';
 document.body.appendChild(el);
 const $=id=>document.getElementById(id),hud=$('toffiB2HUD'),world=$('toffiB2Road'),g=hud.getContext('2d'),r=world.getContext('2d',{alpha:false}),mini=document.createElement('canvas'),mc=mini.getContext('2d');
-const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));let active=false,api=null,last=null,detail=false,tickNo=0,lastTime=0,stage=-1;
+const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));const folderBadge=$('toffiB2Folders'),folderValue=$('toffiB2FolderValue');let active=false,api=null,last=null,detail=false,tickNo=0,lastTime=0,stage=-1;
 function rect(x,y,w,h,c){g.fillStyle=c;g.fillRect(x,y,w,h)}
 function rounded(x,y,w,h,rr){g.beginPath();g.roundRect(x,y,w,h,rr)}
 function type(s,x,y,n=11,c='#dce6eb',mw=100,align='left'){
@@ -158,6 +158,20 @@ function paint(t,st,scene){
  for(let xx=13;xx<W;xx+=44){rect(xx,219,4,3,'#07111a');rect(xx+1,219,2,1,'#b8a98c')}
  talk(st);
 }
+
+function syncFolderCounter(telemetry){
+ // Only the third main mission exposes docs and requiredDocs.
+ // Read values from the original engine; never maintain a second count.
+ const got=Number(telemetry?.docs),need=Number(telemetry?.requiredDocs);
+ const visible=active&&Number.isFinite(got)&&Number.isFinite(need)&&need>0;
+ folderBadge.hidden=!visible;
+ if(!visible)return;
+ const collected=Math.max(0,Math.trunc(got)),required=Math.trunc(need);
+ const display=collected+'/'+required;
+ if(folderValue.textContent!==display)folderValue.textContent=display;
+ folderBadge.classList.toggle('complete',collected>=required);
+ folderBadge.setAttribute('aria-label','Папки: '+collected+' из '+required);
+}
 function roadDraw(scene){
  const b=world.getBoundingClientRect();if(!b.width||!b.height)return;
  const dpr=Math.min(2,devicePixelRatio||1),w=Math.round(b.width*dpr),h=Math.round(b.height*dpr);
@@ -178,11 +192,11 @@ function frame(now){
  // The scripted customs-parking arrival uses 'finish', not 'cinematic'.
  // Keep the same portrait HUD and full-width road throughout the animation.
  const should=!!s&&['run','pause','cinematic','finish','win'].includes(s.st.mode)&&!inStory&&!briefingVisible;
- if(active!==should){active=should;el.hidden=!active;document.body.classList.toggle('toffi-b2-active',active)}
+ if(active!==should){active=should;el.hidden=!active;if(!active)folderBadge.hidden=true;document.body.classList.toggle('toffi-b2-active',active)}
  if(!active)return;
  api=s.child;last=s.st;stage=s.wrap.getLevel?.()??0;
  if(++tickNo%2===0){try{roadDraw(s.scene)}catch(e){}}
- if(now-lastTime>75){lastTime=now;try{paint(api.hudTelemetry(),s.st,s.scene)}catch(e){console.warn('Toffi B2:',e)}}
+ if(now-lastTime>75){lastTime=now;try{const telemetry=api.hudTelemetry();paint(telemetry,s.st,s.scene);syncFolderCounter(telemetry)}catch(e){console.warn('Toffi B2:',e)}}
 }
 function move(d){if(last?.mode==='run')try{api?.move?.(d)}catch(e){}}
 $('toffiB2Left').addEventListener('pointerdown',e=>{e.preventDefault();move(-1)});
