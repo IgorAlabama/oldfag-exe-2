@@ -1,0 +1,19 @@
+{
+  "name": "Toffi Rage — тест мобильного HUD",
+  "short_name": "Toffi HUD",
+  "id": "./",
+  "start_url": "./?v=3",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#030911",
+  "theme_color": "#030911",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "../toffi-rage/arcade_icon.png",
+      "sizes": "any",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
