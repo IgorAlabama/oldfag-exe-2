@@ -33,6 +33,11 @@ body.android-arcade-active #arcadeIframe{
 body.android-arcade-active[data-android-game="timur"] #nativeArcadePause{
  left:min(calc(54dvh + max(8px,env(safe-area-inset-left))),calc(100vw - 64px));
 }
+/* Keep Toffi's native pause on the slim top strip; never obscure the three gauges. */
+body.android-arcade-active[data-android-game="toffi"] #nativeArcadePause{
+ top:max(5px,env(safe-area-inset-top));left:max(5px,env(safe-area-inset-left));
+ min-width:35px;min-height:32px;padding:3px 6px;font-size:14px;border-width:2px;
+}
 #nativeArcadeModal{display:none}
 #nativeArcadeLayer.menu-open #nativeArcadeModal{
  display:flex;pointer-events:auto;position:absolute;inset:0;
