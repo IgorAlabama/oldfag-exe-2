@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<title>Toffi Rage — мобильный тест HUD A/B</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#030911;color:#e5eff4;overscroll-behavior:none;touch-action:pan-x pan-y}body{font-family:monospace}button{cursor:pointer}
+#screen{position:relative;overflow:hidden;width:100vw;height:100dvh;isolation:isolate;background:#0b1420}
+#roadZone{position:absolute;top:238px;bottom:0;left:0;right:0;background:#050d17;touch-action:none}
+#road{width:100%;height:100%;display:block;image-rendering:pixelated;touch-action:none}
+#dashboard{position:absolute;left:0;right:0;top:0;height:238px;z-index:2;background:linear-gradient(180deg,#060e17,#0d2330 98%,#182d40);border-bottom:3px solid #8b9497;box-shadow:0 5px 12px #0009;pointer-events:none}
+#dashCards{position:absolute;inset:43px 5px 6px;display:grid;gap:5px}
+#metricColumn{display:flex;flex-direction:column;gap:4px;min-height:0}
+.card{border:2px solid #748a98;box-shadow:inset 0 0 0 2px #152c3b,0 3px 4px #000c;background:linear-gradient(120deg,#152b3c,#091322);border-radius:9px;position:relative;overflow:hidden;min-width:0}
+.card:after{content:"";position:absolute;inset:4px;border:1px solid #50637275;border-radius:6px;pointer-events:none}
+.metric{flex:1 1 0;display:flex;gap:8px;align-items:center;padding:5px 9px;min-height:0}
+.metric-icon{font-size:22px;line-height:1;color:#d8d6be;text-shadow:1px 1px 2px black;flex:0 0 26px}
+.metric-copy{min-width:0;flex:1}
+.metric-label{font:bold clamp(9px,2.25vw,11px)/1.1 monospace;letter-spacing:.2px;color:#aebfd0}
+.metric-value{font:900 clamp(19px,5vw,24px)/1.2 monospace;letter-spacing:0;color:#ffc178;text-shadow:2px 2px 0 #422c1c}
+.metric:first-child .metric-value{color:#e7f1f4}
+.unit{font-size:10px;color:#f2c783}
+.healthbar{background:#061018;border:2px solid #314956;height:13px;position:relative;width:100%;margin-top:3px}
+.healthbar span{display:block;height:100%;width:100%;background:repeating-linear-gradient(90deg,transparent 0 6px,#061a206b 6px 8px),linear-gradient(90deg,#66d966,#b6ca58,#d94c43);background-size:100% 100%,100% 100%;transform-origin:left center;transform:scaleX(var(--hp,1))}
+.healthrow{display:flex;gap:5px;align-items:center}
+.hpvalue{font:900 17px monospace;color:#ffb65c;white-space:nowrap}
+#route{display:flex;flex-direction:column;min-width:0;padding:8px 7px;z-index:1}
+#route h2{font:900 12px monospace;color:#e5e7e5;margin:0 0 8px;text-align:center}
+.route-stop{display:flex;gap:6px;min-width:0;align-items:center;flex:1;font:900 clamp(8px,2.1vw,10px)/1 monospace;color:#cbd6de}
+.route-stop .dot{display:block;flex:0 0 9px;height:9px;background:#5b7b8e;border:2px solid #adb8bb;box-shadow:0 0 0 2px #111f2b}
+.route-stop.done .dot{background:#7fcea6}.route-stop.current .dot{background:#ffa641;border-color:#fee4b6}
+.route-stop.current{color:#fff3d1}
+#routeFooter{border-top:1px solid #586b7d;margin-top:7px;padding-top:6px;text-align:center;font:bold 9px monospace;color:#a9bfcc}
+#routeFooter strong{color:#ffa345;font-size:15px}
+#portraitBlock{display:flex;flex-direction:column;min-width:0;position:relative}
+#portraitBox{flex:1;min-height:0;display:flex;flex-direction:column;padding:6px;position:relative}
+#portraitTitle{color:#c7d7e1;font:bold 10px monospace;margin-bottom:4px}
+#igor{display:block;image-rendering:pixelated;width:100%;flex:1;min-height:0;object-fit:contain;background:#111b28}
+#dialog{position:relative;flex:0 0 56px;margin-top:5px;background:#e9e6da;color:#182333;border:3px solid #111722;clip-path:polygon(0 0,60% 0,64% -1px,67% 0,100% 0,100% 100%,0 100%);font:900 clamp(10px,2.7vw,13px)/1.3 monospace;padding:10px 7px 4px;display:flex;align-items:center;z-index:4}
+#dialog:before{content:"";position:absolute;top:-9px;left:65%;border-left:11px solid transparent;border-right:11px solid transparent;border-bottom:11px solid #e9e6da}
+#topBar{position:absolute;top:0;left:0;right:0;height:42px;display:flex;align-items:center;padding:5px;gap:7px;background:#060d18}
+#pause{border:2px solid #dcc489;background:#173345;color:#fff2c5;font:900 14px monospace;width:37px;height:30px;border-radius:4px}
+#brand{font:bold clamp(16px,5vw,21px)/1 monospace;color:#f4dca9;text-shadow:2px 2px #663320}#brand em{font-style:normal;color:#f18740}
+#switch{margin-left:auto;display:flex;gap:5px}
+#switch button{min-width:32px;height:30px;background:#152d40;color:#cfdeed;border:2px solid #718a9c;font:bold 12px monospace;border-radius:4px}
+#switch button.selected{background:#eec486;color:#121b22;border-color:#ffe0a7}
+#navOverlay{display:none;position:absolute;top:335px;right:5px;width:113px;height:215px;z-index:3;pointer-events:none}
+body.variant-A #dashCards{grid-template-columns:1fr 1.03fr}
+body.variant-A #route{display:none}
+body.variant-A #navOverlay{display:flex}
+body.variant-A #navOverlay.card{background:linear-gradient(120deg,#152b3ce0,#091322be);border-color:#9bacb7d6}
+body.variant-B #dashCards{grid-template-columns:1fr .9fr 1.3fr}
+body.variant-B #navOverlay{display:none}
+body.variant-B #metricColumn .metric{padding:5px 6px;gap:4px}
+body.variant-B #metricColumn .metric-icon{font-size:16px;flex-basis:18px}
+body.variant-B .metric-label{font-size:9px}
+body.variant-B .metric-value{font-size:18px}
+body.variant-B #portraitTitle{font-size:9px}
+body.variant-B #dialog{padding-left:5px;padding-right:3px;font-size:10px}
+#left,#right{position:absolute;bottom:max(12px,env(safe-area-inset-bottom));z-index:4;width:48px;height:48px;background:#0a2839db;color:#f7f5d8;border:3px solid #92afba;font:bold 19px monospace;touch-action:manipulation}
+#left{left:12px}#right{right:12px}
+#overlay{position:absolute;inset:0;background:#02070af0;z-index:9;display:grid;place-items:center;padding:15px}
+#overlay[hidden]{display:none}#overlayPanel{width:min(360px,95vw);background:#102439;border:3px solid #c6a675;padding:19px 16px;box-shadow:5px 5px #000d;text-align:center}
+#overlayPanel h2{font:900 20px monospace;color:#ffda99}
+#overlayPanel p{font:13px/1.5 monospace;color:#bdcbd4}
+#overlayPanel button{display:block;background:#203b56;color:#f2e6ce;padding:12px;border:2px solid #869baa;font:900 13px monospace;margin:12px auto;width:100%}
+#engine{position:absolute;left:-1200px;top:0;width:435px;height:600px;opacity:0;border:0;pointer-events:none}
+#hudStats{position:absolute;bottom:65px;right:6px;z-index:4;font:9px monospace;color:#cfe0e8a8;text-shadow:1px 1px #06111a;pointer-events:none}
+@media(max-width:370px){#dashCards{gap:3px;left:3px;right:3px}.metric{padding-left:6px;padding-right:4px}.metric-icon{flex-basis:19px;font-size:18px}.metric-value{font-size:18px}#dialog{font-size:10px}}
+</style></head>
+<body class="variant-A">
+<div id="screen">
+<div id="roadZone"><canvas id="road"></canvas></div>
+<div id="dashboard">
+<div id="dashCards">
+<div id="metricColumn">
+<div class="card metric"><div class="metric-icon">◷</div><div class="metric-copy"><div class="metric-label">ВРЕМЯ</div><div class="metric-value" id="time">--:--</div></div></div>
+<div class="card metric"><div class="metric-icon">◉</div><div class="metric-copy"><div class="metric-label">СКОРОСТЬ</div><div class="metric-value"><span id="speed">---</span><span class="unit"> КМ/Ч</span></div></div></div>
+<div class="card metric"><div class="metric-copy"><div class="metric-label">СОСТОЯНИЕ ФУРЫ</div><div class="healthrow"><div class="healthbar"><span id="healthBar"></span></div><div class="hpvalue" id="health">--%</div></div></div></div>
+</div>
+<div class="card" id="route"><h2>МАРШРУТ</h2><div class="route-stop"><span class="dot"></span><span>ЧЗ СТАРТ</span></div><div class="route-stop"><span class="dot"></span><span>ТРАССА</span></div><div class="route-stop"><span class="dot"></span><span>АПРЕЛЕВКА</span></div><div class="route-stop"><span class="dot"></span><span>STORCK</span></div><div id="routeFooter">ПРОЙДЕНО <strong id="percent">0%</strong></div></div>
+<div id="portraitBlock"><div class="card" id="portraitBox"><div id="portraitTitle">ИГОРЬ · CB</div><canvas id="igor" width="130" height="82"></canvas></div><div id="dialog">Держим курс!</div></div>
+</div>
+<div id="topBar"><button id="pause" aria-label="Пауза">Ⅱ</button><div id="brand">TOFFI <em>RAGE</em></div><div id="switch"><button class="selected" data-variant="A">A</button><button data-variant="B">B</button></div></div>
+</div>
+<div class="card" id="navOverlay"><h2>МАРШРУТ</h2><div class="route-stop"><span class="dot"></span><span>ЧЗ СТАРТ</span></div><div class="route-stop"><span class="dot"></span><span>ТРАССА</span></div><div class="route-stop"><span class="dot"></span><span>АПРЕЛЕВКА</span></div><div class="route-stop"><span class="dot"></span><span>STORCK</span></div><div id="routeFooter">ПРОЙДЕНО <strong id="percentA">0%</strong></div></div>
+<button id="left" aria-label="Перестроиться влево">◀</button><button id="right" aria-label="Перестроиться вправо">▶</button><div id="hudStats"></div>
+<iframe id="engine" src="../toffi-rage/index.html" title="Игровой движок Toffi Rage" allow="fullscreen"></iframe>
+<div id="overlay"><div id="overlayPanel"><h2>TOFFI RAGE</h2><p id="status">Загружаем оригинальную первую миссию…</p><button id="retry" hidden>↻ ПОВТОРИТЬ ЗАГРУЗКУ</button></div></div>
+</div>
+<script>
+(()=>{
+'use strict';
+const $=id=>document.getElementById(id);
+const game=$('engine'),overlay=$('overlay'),status=$('status'),retry=$('retry');
+const canvas=$('road'),ctx=canvas.getContext('2d',{alpha:false}),face=$('igor'),fc=face.getContext('2d');
+let api=null,scene=null,live=false,paused=false,loading=false,attempt=0,lastUpdate=0;
+const now=()=>performance.now(),delay=ms=>new Promise(r=>setTimeout(r,ms));
+const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+const texts={neutral:'Дорога нормальная. Держим курс.',happy:'Отлично едем! Так держать!',worry:'Блин… Надо аккуратнее.',bruised:'Фуру потрепало… Но едем дальше!',alarm:'Топливо на нуле! Надо заправиться!'};
+function message(s){status.textContent=s;}
+function failure(s){message(s);retry.hidden=false;loading=false;}
+async function initialize(){
+ if(loading)return;loading=true;retry.hidden=true;live=false;api=null;scene=null;const id=++attempt;
+ message('Подключаем первую миссию из нашего GitHub…');
+ try{
+  // The original game is already hosted on the same origin. No large nested
+  // base64 srcdoc copied into this preview page.
+  if(!game.contentWindow?.__toffiUnified){
+   game.src='../toffi-rage/index.html?mobileDemo='+id;
+  }
+  let outer;
+  for(let i=0;i<120;i++){if(id!==attempt)return;try{outer=game.contentWindow?.__toffiUnified}catch(e){}if(outer)break;await delay(150);}
+  if(!outer)throw Error('Не удалось открыть игровой движок.');
+  message('Распаковываем оригинальную трассу и изображения…');
+  await outer.start(0,{autoStart:true});
+  for(let i=0;i<210;i++){if(id!==attempt)return;try{api=outer.debugChild()}catch(e){}if(api?.hudTelemetry&&api?.render)break;await delay(150);}
+  if(!api?.hudTelemetry)throw Error('Движок не предоставил сцену первой миссии.');
+  scene=game.contentDocument.getElementById('gameFrame')?.contentDocument?.querySelector('#scene');
+  if(!scene)throw Error('Не найдено игровое поле.');
+  // Advance the genuine mission to show traffic, without altering assets.
+  try{api.advance?.(84);api.render();}catch(e){console.warn('Advance scene:',e);}
+  overlay.hidden=true;loading=false;paused=false;live=true;
+ }catch(e){if(id===attempt)failure('Ошибка: '+(e.message||e)+' Нажми «Повторить загрузку».');}
+}
+function refresh(){
+ requestAnimationFrame(refresh);
+ if(!live||!api||!scene)return;
+ const box=canvas.getBoundingClientRect();
+ if(!box.width||!box.height)return;
+ const dpr=Math.min(2,window.devicePixelRatio||1),w=Math.round(box.width*dpr),h=Math.round(box.height*dpr);
+ if(canvas.width!==w||canvas.height!==h){canvas.width=w;canvas.height=h;}
+ const scale=Math.max(w/270,h/518),sw=w/scale,sh=h/scale;
+ ctx.imageSmoothingEnabled=false;
+ try{
+  api.render();
+  ctx.drawImage(scene,(270-sw)/2,(518-sh)/2,sw,sh,0,0,w,h);
+  const t=api.hudTelemetry(),st=api.state?.()||{};
+  if(!t)return;
+  $('time').textContent=(Math.floor(t.time/60)).toString().padStart(2,'0')+':'+(Math.ceil(t.time%60)).toString().padStart(2,'0');
+  $('speed').textContent=t.speed;
+  $('health').textContent=t.health+'%';
+  $('healthBar').style.setProperty('--hp',clamp(t.health/100,0,1));
+  $('percent').textContent=t.progress+'%';$('percentA').textContent=t.progress+'%';
+  const at=Math.min(3,Math.floor(clamp(t.progress/100,0,1)*3.01));
+  for(const parent of [$('route'),$('navOverlay')]){
+   parent.querySelectorAll('.route-stop').forEach((el,i)=>{el.classList.toggle('done',i<at);el.classList.toggle('current',i===at)});
+  }
+  // Direct crop from the original game's own running Canvas:
+  // Igor's exact original expression, steering wheel, seat belt and cab.
+  fc.imageSmoothingEnabled=false;fc.clearRect(0,0,130,82);fc.drawImage(scene,282,359,130,82,0,0,130,82);
+  $('dialog').textContent=texts[st.emo]||texts.neutral;
+  $('hudStats').textContent='РЕЙС 01 • '+t.progress+'%';
+ }catch(e){if(now()-lastUpdate>2000){console.warn('HUD preview:',e);lastUpdate=now();}}
+}
+function move(d){try{api?.move(d)}catch(e){}}
+$('left').addEventListener('pointerdown',e=>{e.preventDefault();move(-1)});
+$('right').addEventListener('pointerdown',e=>{e.preventDefault();move(1)});
+canvas.addEventListener('pointerdown',e=>{e.preventDefault();move(e.clientX<innerWidth/2?-1:1)});
+for(const b of document.querySelectorAll('[data-variant]'))b.addEventListener('click',()=>{
+ const v=b.dataset.variant;document.body.className='variant-'+v;
+ document.querySelectorAll('[data-variant]').forEach(x=>x.classList.toggle('selected',x.dataset.variant===v));
+});
+$('pause').addEventListener('click',()=>{
+ if(!live)return;
+ if(!paused){try{if(['run','cinematic'].includes(api.state().mode))api.pause();}catch(e){}paused=true;overlay.hidden=false;retry.hidden=false;retry.textContent='▶ ПРОДОЛЖИТЬ';message('Пауза');}
+ else resume();
+});
+function resume(){overlay.hidden=true;paused=false;try{if(api.state().mode==='pause')api.pause();}catch(e){}}
+retry.addEventListener('click',()=>{if(paused){resume();return;}initialize()});
+window.addEventListener('pageshow',()=>{if(!live&&!loading)initialize()});
+requestAnimationFrame(refresh);
+initialize();
+})();
+</script></body></html>
