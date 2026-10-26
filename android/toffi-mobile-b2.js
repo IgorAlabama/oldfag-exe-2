@@ -69,7 +69,13 @@ function portrait(scene){
  g.save();rounded(x+6,y+21,w-12,h-27,4);g.clip();rect(x+6,y+21,w-12,h-27,'#07131f');
  // Copy the actual original driver's sprite from the live mission canvas.
  // Its changing emotions, hands, seatbelt, steering wheel, and cab stay intact.
- if(scene){g.imageSmoothingEnabled=false;g.drawImage(scene,282,359,130,82,x+6,y+21,w-12,h-27)}
+ if(scene){
+   // Contain, never deform: the approved original Igor sprite is exactly 130x82.
+   const innerW=w-12,innerH=h-27,scale=Math.min(innerW/130,innerH/82);
+   const pw=130*scale,ph=82*scale;
+   g.imageSmoothingEnabled=false;
+   g.drawImage(scene,282,359,130,82,x+6+(innerW-pw)/2,y+21+(innerH-ph)/2,pw,ph);
+  }
  g.restore();
 }
 const chats={
