@@ -1,3 +1,4 @@
+@font-face{font-family:'ToffiPixel';src:url('toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 /* Android-only: all games fill the actual device viewport; website unaffected. */
 html,body{overscroll-behavior:none}
 body.android-arcade-active{overflow:hidden!important}
