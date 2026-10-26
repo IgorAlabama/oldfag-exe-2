@@ -177,7 +177,7 @@ function frame(now){
  const briefingVisible=briefing&&getComputedStyle(briefing).display!=='none';
  // The scripted customs-parking arrival uses 'finish', not 'cinematic'.
  // Keep the same portrait HUD and full-width road throughout the animation.
- const should=!!s&&['run','pause','cinematic','finish'].includes(s.st.mode)&&!inStory&&!briefingVisible;
+ const should=!!s&&['run','pause','cinematic','finish','win'].includes(s.st.mode)&&!inStory&&!briefingVisible;
  if(active!==should){active=should;el.hidden=!active;document.body.classList.toggle('toffi-b2-active',active)}
  if(!active)return;
  api=s.child;last=s.st;stage=s.wrap.getLevel?.()??0;
