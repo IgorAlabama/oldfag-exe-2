@@ -2,9 +2,28 @@
 <html lang="ru"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
 <title>Toffi Rage — мобильный тест HUD A/B</title>
+<meta name="theme-color" content="#030911">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Toffi HUD">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="../toffi-rage/arcade_icon.png">
 <style>
 *{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;background:#030911;color:#e5eff4;overscroll-behavior:none;touch-action:pan-x pan-y}body{font-family:monospace}button{cursor:pointer}
 #screen{position:relative;overflow:hidden;width:100vw;height:100dvh;isolation:isolate;background:#0b1420}
+:root{--top-inset:env(safe-area-inset-top,0px)}
+#topBar{top:var(--top-inset)!important}
+#dashboard{height:calc(238px + var(--top-inset))!important}
+#dashCards{top:calc(43px + var(--top-inset))!important}
+#roadZone{top:calc(238px + var(--top-inset))!important}
+#navOverlay{top:calc(335px + var(--top-inset))!important}
+#fullscreen{border:2px solid #8a9fb3;background:#142a3e;color:#fbefd1;height:30px;min-width:34px;font:bold 17px monospace;border-radius:4px;flex-shrink:0}
+#fullscreen[aria-pressed="true"]{background:#e6bd7e;color:#132638}
+#fullscreenHelp{max-width:min(340px,calc(100vw - 36px));border:3px solid #c6a675;border-radius:5px;background:#13263b;color:#f0e5cd;padding:18px;box-shadow:0 5px 20px #000b}
+#fullscreenHelp::backdrop{background:#03050ac9}
+#fullscreenHelp h2{font:900 17px monospace;color:#ffda99;margin:0 0 12px}
+#fullscreenHelp p{font:13px/1.5 monospace}
+#fullscreenHelp button{background:#203b56;color:#f2e6ce;padding:10px;border:2px solid #869baa;font:bold 13px monospace;width:100%;margin-top:10px}
 #roadZone{position:absolute;top:238px;bottom:0;left:0;right:0;background:#050d17;touch-action:none}
 #road{width:100%;height:100%;display:block;image-rendering:pixelated;touch-action:none}
 #dashboard{position:absolute;left:0;right:0;top:0;height:238px;z-index:2;background:linear-gradient(180deg,#060e17,#0d2330 98%,#182d40);border-bottom:3px solid #8b9497;box-shadow:0 5px 12px #0009;pointer-events:none}
@@ -82,10 +101,16 @@ body.variant-B #dialog{padding-left:5px;padding-right:3px;font-size:10px}
 <div class="card" id="route"><h2>МАРШРУТ</h2><div class="route-stop"><span class="dot"></span><span>ЧЗ СТАРТ</span></div><div class="route-stop"><span class="dot"></span><span>ТРАССА</span></div><div class="route-stop"><span class="dot"></span><span>АПРЕЛЕВКА</span></div><div class="route-stop"><span class="dot"></span><span>STORCK</span></div><div id="routeFooter">ПРОЙДЕНО <strong id="percent">0%</strong></div></div>
 <div id="portraitBlock"><div class="card" id="portraitBox"><div id="portraitTitle">ИГОРЬ · CB</div><canvas id="igor" width="130" height="82"></canvas></div><div id="dialog">Держим курс!</div></div>
 </div>
-<div id="topBar"><button id="pause" aria-label="Пауза">Ⅱ</button><div id="brand">TOFFI <em>RAGE</em></div><div id="switch"><button class="selected" data-variant="A">A</button><button data-variant="B">B</button></div></div>
+<div id="topBar"><button id="pause" aria-label="Пауза">Ⅱ</button><div id="brand">TOFFI <em>RAGE</em></div><button id="fullscreen" type="button" aria-label="Полный экран" aria-pressed="false" title="Полный экран">⛶</button><div id="switch"><button class="selected" data-variant="A">A</button><button data-variant="B">B</button></div></div>
 </div>
 <div class="card" id="navOverlay"><h2>МАРШРУТ</h2><div class="route-stop"><span class="dot"></span><span>ЧЗ СТАРТ</span></div><div class="route-stop"><span class="dot"></span><span>ТРАССА</span></div><div class="route-stop"><span class="dot"></span><span>АПРЕЛЕВКА</span></div><div class="route-stop"><span class="dot"></span><span>STORCK</span></div><div id="routeFooter">ПРОЙДЕНО <strong id="percentA">0%</strong></div></div>
 <button id="left" aria-label="Перестроиться влево">◀</button><button id="right" aria-label="Перестроиться вправо">▶</button><div id="hudStats"></div>
+<dialog id="fullscreenHelp" aria-labelledby="fullscreenHelpTitle">
+<h2 id="fullscreenHelpTitle">ПОЛНЫЙ ЭКРАН НА IPHONE</h2>
+<p>Safari на iPhone не позволяет игре скрыть панель браузера одной кнопкой.</p>
+<p>Чтобы играть без браузерной шапки: открой эту страницу <strong>в Safari</strong>, нажми <strong>Поделиться</strong> → <strong>На экран «Домой»</strong>, включи <strong>«Открыть как веб-приложение»</strong>, затем запусти значок Toffi HUD с домашнего экрана.</p>
+<button id="closeFullscreenHelp" type="button">ПОНЯТНО</button>
+</dialog>
 <iframe id="engine" src="../toffi-rage/index.html" title="Игровой движок Toffi Rage" allow="fullscreen"></iframe>
 <div id="overlay"><div id="overlayPanel"><h2>TOFFI RAGE</h2><p id="status">Загружаем оригинальную первую миссию…</p><button id="retry" hidden>↻ ПОВТОРИТЬ ЗАГРУЗКУ</button></div></div>
 </div>
@@ -98,6 +123,26 @@ const canvas=$('road'),ctx=canvas.getContext('2d',{alpha:false}),face=$('igor'),
 let api=null,scene=null,live=false,paused=false,loading=false,attempt=0,lastUpdate=0;
 const now=()=>performance.now(),delay=ms=>new Promise(r=>setTimeout(r,ms));
 const clamp=(n,a,b)=>Math.max(a,Math.min(b,n));
+const fullscreen=$('fullscreen'),fullscreenHelp=$('fullscreenHelp');
+function isStandalone(){return window.navigator.standalone===true||window.matchMedia('(display-mode: standalone)').matches||window.matchMedia('(display-mode: fullscreen)').matches;}
+function syncFullscreen(){
+ const active=!!document.fullscreenElement||isStandalone();
+ fullscreen.setAttribute('aria-pressed',String(active));
+ fullscreen.title=active?'Уже открыт на весь экран':'На весь экран';
+}
+fullscreen.addEventListener('click',async()=>{
+ const enter=document.getElementById('screen').requestFullscreen||document.getElementById('screen').webkitRequestFullscreen;
+ if(document.fullscreenElement){try{await document.exitFullscreen()}catch(e){}syncFullscreen();return;}
+ if(isStandalone()){syncFullscreen();return;}
+ if(enter){
+   try{await enter.call(document.getElementById('screen'));syncFullscreen();return;}catch(e){}
+ }
+ fullscreenHelp.showModal();
+});
+$('closeFullscreenHelp').addEventListener('click',()=>fullscreenHelp.close());
+document.addEventListener('fullscreenchange',syncFullscreen);
+document.addEventListener('webkitfullscreenchange',syncFullscreen);
+syncFullscreen();
 const texts={neutral:'Дорога нормальная. Держим курс.',happy:'Отлично едем! Так держать!',worry:'Блин… Надо аккуратнее.',bruised:'Фуру потрепало… Но едем дальше!',alarm:'Топливо на нуле! Надо заправиться!'};
 function message(s){status.textContent=s;}
 function failure(s){message(s);retry.hidden=false;loading=false;}
