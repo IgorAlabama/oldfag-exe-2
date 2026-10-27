@@ -73,7 +73,12 @@ source=source.replace(needle,
   const foreground='function drawBossForeground(targetCtx){'+NL+' const ctx=targetCtx;'+NL+
     " const b=state.boss;"+NL+" if(b.phase==='hidden'||b.phase==='gone')return;"+NL+
     ' ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();'+NL+
-    original.slice(pivot);
+    original.slice(pivot).replace(
+      // The original bubble used the full 435px desktop scene as its bounds.
+      // Mobile shows the original 270px road, so clamp within that visible area.
+      'const bx=clamp(b.x+36,10,W-bw-10), by=8;',
+      'const bx=clamp(b.x+36,10,VW-bw-10), by=8;'
+    );
   // Foreground is drawn by the SAME original code in the Android overlay.
   // Beam and warnings remain in original road canvas.
   shell=shell.slice(0,start)+beam+NL+foreground+shell.slice(end);
