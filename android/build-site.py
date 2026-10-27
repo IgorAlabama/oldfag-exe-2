@@ -58,17 +58,38 @@ source=source.replace(needle,
     """function patchLevelHTML(i,shell){
   shell=shell.replace('drawHUD();drawTopLabel();','drawHUD();');
   if(i!==3)return shell;
-  const expected=['function drawBoss(){','const bob=Math.sin(state.time*5)*4;','drawHUD();drawBoss();drawPopText();','window.__toffi={'];
-  for(const token of expected){if(!shell.includes(token))throw Error('Bonus boss layout mismatch: '+token);}
-  // Beam and lane warnings remain on the road; the sprite/dialogue are
-  // drawn in a separate fullscreen parent layer above the mobile cockpit.
-  shell=shell.replace('function drawBoss(){','function drawBossBeam(){');
-  shell=shell.replace('const bob=Math.sin(state.time*5)*4;','ctx.restore();return;const bob=Math.sin(state.time*5)*4;');
+  // The source of truth is the actual in-game drawBoss() code.
+  // Split it into two rendering passes without recreating sprite animation,
+  // dialogue text, frame timing, or movement.
+  const start=shell.indexOf('function drawBoss(){');
+  const end=shell.indexOf('\\\\nfunction drawTraffic()',start);
+  if(start<0||end<0)throw Error('Original bonus drawBoss() not found');
+  const original=shell.slice(start,end);
+  const pivot=original.indexOf(' const bob=Math.sin(state.time*5)*4;');
+  if(pivot<0||!original.endsWith(' ctx.restore();\\\\n}'))throw Error('Bonus drawBoss() changed');
+  const beam=original.slice(0,pivot).replace('function drawBoss(){','function drawBossBeam(){')+
+    ' ctx.restore();\\\\n}';
+  const foreground='function drawBossForeground(targetCtx){\\\\n const ctx=targetCtx;\\\\n'+
+    " const b=state.boss;\\\\n if(b.phase==='hidden'||b.phase==='gone')return;\\\\n"+
+    ' ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();\\\\n'+
+    original.slice(pivot);
+  // Foreground is drawn by the SAME original code in the Android overlay.
+  // Beam and warnings remain in original road canvas.
+  shell=shell.slice(0,start)+beam+'\\\\n'+foreground+shell.slice(end);
+  const oldRender='drawHUD();drawBoss();drawPopText();';
+  if(!shell.includes(oldRender))throw Error('Original bonus render call changed');
+  shell=shell.replace(oldRender,'drawHUD();drawBossBeam();drawPopText();');
+  // Remove original translucent КПП / gate instruction from road.
   shell=shell.replace('drawTopLabel();drawPlayer();','drawPlayer();');
-  shell=shell.replace('drawHUD();drawBoss();drawPopText();','drawHUD();drawBossBeam();drawPopText();');
-  shell=shell.replace('window.__toffi={', 'window.__toffiBossBridge={snapshot:()=>({boss:state.boss,time:state.time,lines:bossSpeechLines()}),idle:WALRUS_IDLE,attack:WALRUS_ATTACK};window.__toffi={');
+  const exposed='window.__toffi={';
+  if(!shell.includes(exposed))throw Error('Original bonus debug bridge changed');
+  shell=shell.replace(exposed,
+    "window.__toffiBossBridge={renderForeground:(targetCtx)=>drawBossForeground(targetCtx),"+
+    "active:()=>!['hidden','gone'].includes(state.boss.phase),"+
+    "snapshot:()=>({phase:state.boss.phase,x:state.boss.x})};window.__toffi={");
   return shell;
 }""")
+
 game.write_text(source,encoding='utf-8')
 
 for rel in ['android-arcade-shell.js','android-arcade-shell.css',
@@ -83,5 +104,6 @@ assert 'android-arcade-shell.js' in (site/'index.html').read_text()
 assert 'android-toffi-mobile-b2.js' in (site/'toffi-rage/index.html').read_text()
 assert 'android-toffi-pixel-ui.css' in (site/'toffi-rage/index.html').read_text()
 assert 'android-toffi-pixel-ui.js' in (site/'toffi-rage/index.html').read_text()
+assert "drawBossForeground(targetCtx)" in (site/'toffi-rage/index.html').read_text()
 assert "drawBossBeam()" in (site/'toffi-rage/index.html').read_text()
 print('Android-exclusive arcade fullscreen, pause menu and stage styles packaged.')
