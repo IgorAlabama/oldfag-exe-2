@@ -62,20 +62,21 @@ source=source.replace(needle,
   // Split it into two rendering passes without recreating sprite animation,
   // dialogue text, frame timing, or movement.
   const start=shell.indexOf('function drawBoss(){');
-  const end=shell.indexOf('\\\\nfunction drawTraffic()',start);
+  const NL=String.fromCharCode(10);
+  const end=shell.indexOf(NL+'function drawTraffic()',start);
   if(start<0||end<0)throw Error('Original bonus drawBoss() not found');
   const original=shell.slice(start,end);
   const pivot=original.indexOf(' const bob=Math.sin(state.time*5)*4;');
-  if(pivot<0||!original.endsWith(' ctx.restore();\\\\n}'))throw Error('Bonus drawBoss() changed');
+  if(pivot<0||!original.endsWith(' ctx.restore();'+NL+'}'))throw Error('Bonus drawBoss() changed');
   const beam=original.slice(0,pivot).replace('function drawBoss(){','function drawBossBeam(){')+
-    ' ctx.restore();\\\\n}';
-  const foreground='function drawBossForeground(targetCtx){\\\\n const ctx=targetCtx;\\\\n'+
-    " const b=state.boss;\\\\n if(b.phase==='hidden'||b.phase==='gone')return;\\\\n"+
-    ' ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();\\\\n'+
+    ' ctx.restore();'+NL+'}';
+  const foreground='function drawBossForeground(targetCtx){'+NL+' const ctx=targetCtx;'+NL+
+    " const b=state.boss;"+NL+" if(b.phase==='hidden'||b.phase==='gone')return;"+NL+
+    ' ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();'+NL+
     original.slice(pivot);
   // Foreground is drawn by the SAME original code in the Android overlay.
   // Beam and warnings remain in original road canvas.
-  shell=shell.slice(0,start)+beam+'\\\\n'+foreground+shell.slice(end);
+  shell=shell.slice(0,start)+beam+NL+foreground+shell.slice(end);
   const oldRender='drawHUD();drawBoss();drawPopText();';
   if(!shell.includes(oldRender))throw Error('Original bonus render call changed');
   shell=shell.replace(oldRender,'drawHUD();drawBossBeam();drawPopText();');
