@@ -41,3 +41,13 @@ body.toffi-b2-active #loading{z-index:48!important}
 #toffiB2Folders .b2FolderValue{font-size:clamp(14px,3.6vw,17px);color:#ffc567;white-space:nowrap}
 #toffiB2Folders.complete{border-color:#78c79a;color:#d7f4db;background:#0b2925eb}
 #toffiB2Folders.complete .b2FolderValue{color:#7af5a2}
+
+
+/* The bonus walrus sprite and speech fly ABOVE all Toffi cockpit panels.
+   The attack beam is deliberately rendered only on the road canvas. */
+#toffiB2Boss[hidden]{display:none!important}
+#toffiB2 #toffiB2Boss{
+ position:absolute;left:0;top:0;width:100%;height:auto;
+ aspect-ratio:435/205;image-rendering:pixelated;pointer-events:none;
+ z-index:12;overflow:visible;
+}
