@@ -1,0 +1,22 @@
+/* APK-only main menu for Crimean Tea, portrait 424x924 design */
+@font-face{font-family:'TeaPixel';src:url('../toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+#teaMainMenu[hidden],#teaMenuSettings[hidden],#teaMenuRecords[hidden]{display:none!important}
+#teaMainMenu{position:fixed;inset:0;z-index:9998;background:#070f1d;display:grid;place-items:center;overflow:hidden;touch-action:manipulation}
+#teaMenuArtboard{position:relative;aspect-ratio:849/1852;width:min(100vw,calc(100dvh * 849 / 1852));max-height:100dvh;overflow:hidden;background:#192638;box-shadow:0 0 0 1px #758e9a,0 0 38px #000c}
+#teaMenuBackground{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:fill;image-rendering:auto;pointer-events:none}
+#teaMenuHitboxes{position:absolute;inset:0;z-index:1}
+#teaMenuHitboxes button{position:absolute;left:13.5%;width:72%;height:6.95%;border:0;padding:0;margin:0;background:transparent;color:transparent;outline-offset:-6px;cursor:pointer;touch-action:manipulation}
+#teaMenuHitboxes button:focus-visible{outline:3px solid #ffdb80;background:#ffffff1a;border-radius:5px}
+#teaMenuNew{top:48.5%}#teaMenuOptions{top:56.9%}#teaMenuBest{top:65%}#teaMenuExit{top:72.8%}
+#teaMenuSettings,#teaMenuRecords{position:absolute;inset:0;z-index:5;display:flex;align-items:center;justify-content:center;padding:18px;background:#03101ddc;backdrop-filter:blur(3px)}
+.teaMenuWindow{box-sizing:border-box;width:100%;max-width:360px;border:3px solid #aac6c7;background:linear-gradient(180deg,#203c47,#091b2b 15%,#091525 90%,#1c3441);box-shadow:inset 0 0 0 3px #06111a,5px 6px 0 #020710;padding:22px 14px 18px;color:#e5f3db;border-radius:10px}
+.teaMenuWindow h2{font:400 clamp(10px,2.8vw,13px)/1.7 'TeaPixel',monospace;color:#ffd88c;text-align:center;margin:0 0 20px;text-shadow:2px 2px #1a1c24}
+.teaMenuWindow label{display:block;font:400 clamp(9px,2.4vw,11px)/1.7 'TeaPixel',monospace;color:#cde9c7;margin:18px 0 10px}
+.teaMenuWindow .teaVolumeHeader{display:flex;justify-content:space-between;gap:8px;align-items:center}
+.teaMenuWindow output{font:400 11px 'TeaPixel',monospace;color:#ffd48a}
+.teaMenuWindow input[type=range]{width:100%;height:34px;accent-color:#52c68e;cursor:pointer;touch-action:pan-x}
+.teaMenuWindow .teaMenuNote{font:400 8px/1.8 'TeaPixel',monospace;color:#a9c2cc;margin:15px 0}
+.teaMenuWindow .teaBestScore{text-align:center;font:400 clamp(25px,7vw,35px)/1.5 'TeaPixel',monospace;color:#8df5ab;text-shadow:3px 3px #1b3940;margin:14px 0}
+.teaMenuWindow button{display:block;width:100%;min-height:54px;background:linear-gradient(#2f9c64,#146a4d);border:3px solid #9cdfba;box-shadow:inset 0 0 0 2px #0c432f,0 4px #030e1a;color:#fff9de;font:400 clamp(9px,2.5vw,11px)/1.5 'TeaPixel',monospace;padding:10px 4px;margin-top:20px;cursor:pointer}
+.teaMenuWindow button:focus-visible{outline:3px solid #ffe08f;outline-offset:3px}
+.teaMenuWindow button:active{transform:translateY(2px);box-shadow:inset 0 0 0 2px #0c432f}
