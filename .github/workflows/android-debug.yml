@@ -78,6 +78,11 @@ jobs:
           test -s "$dest/android-arcade-shell.js"
           test -s "$dest/android-game-timur.css"
           test -s "$dest/android-game-tea.css"
+          test -s "$dest/android-tea-start-menu.css"
+          test -s "$dest/android-tea-start-menu.js"
+          test -s "$dest/krymskiy-chai/assets/tea-menu.webp"
+          grep -Fq 'KrymskiyTeaAndroid' "$dest/krymskiy-chai/game.js"
+          grep -Fq 'android-tea-start-menu.js' "$dest/krymskiy-chai/index.html"
           test -s "$dest/android-toffi-mobile-b2.js"
           test -s "$dest/android-toffi-mobile-b2.css"
           test -s "$dest/android-toffi-pixel-ui.css"
@@ -122,6 +127,9 @@ jobs:
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-arcade-shell.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-timur.css'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-game-tea.css'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-tea-start-menu.css'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-tea-start-menu.js'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/krymskiy-chai/assets/tea-menu.webp'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.css'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-pixel-ui.css'
