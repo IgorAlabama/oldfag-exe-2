@@ -188,8 +188,16 @@ function paintBossOverlay(bridge){
  const roadZoom=Math.max(road.width/270,road.height/518);
  const sourceWidth=road.width/roadZoom;
  const cropX=(270-sourceWidth)/2;
+ // Position the ORIGINAL airborne boss at the edge of the actual road.
+ // Previously the boss began at ~18 game px from the top of the whole
+ // phone and floated over the title. Now its head overlaps the HUD's
+ // lower edge slightly and its body/beam visibly connect on the road.
+ // All movement, poses, dialogue and attack timing remain source-owned.
+ const roadTop=road.top-area.top;
+ const hoverAboveRoad=Math.min(44,Math.max(25,road.height*.07));
+ const verticalShift=Math.max(0,roadTop-hoverAboveRoad-18*roadZoom);
  bg.imageSmoothingEnabled=false;
- bg.setTransform(roadZoom*dpr,0,0,roadZoom*dpr,-cropX*roadZoom*dpr,0);
+ bg.setTransform(roadZoom*dpr,0,0,roadZoom*dpr,-cropX*roadZoom*dpr,verticalShift*dpr);
  try{
    // Run the exact source game's foreground draw statements in this canvas.
    // No new boss pose, image selection, dialogue logic or movement here.
