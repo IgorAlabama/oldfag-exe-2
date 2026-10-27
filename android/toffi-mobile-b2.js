@@ -174,20 +174,28 @@ function syncFolderCounter(telemetry){
  folderBadge.setAttribute('aria-label','Папки: '+collected+' из '+required);
 }
 function paintBossOverlay(bridge){
- const snapshot=bridge?.snapshot?.();const b=snapshot?.boss;
- bg.clearRect(0,0,435,205);
- const visible=b&&b.phase!=='hidden'&&b.phase!=='gone';bossCanvas.hidden=!visible;
- if(!visible)return;
- const art=(b.phase==='aim'||b.phase==='fire')?bridge.attack:bridge.idle;
- if(art?.complete&&art.naturalWidth){bg.imageSmoothingEnabled=false;bg.drawImage(art,b.x-74,18+Math.sin(snapshot.time*5)*4,148,148)}
- for(const e of b.explosions||[]){const v=(1-e.t/.85)*18+8;bg.fillStyle='rgba(255,181,40,'+Math.max(0,e.t/.85)+')';bg.beginPath();bg.arc(e.x,e.y,v,0,2*Math.PI);bg.fill()}
- const lines=snapshot.lines;if(!lines?.length)return;
- const bw=250,bh=lines.length>1?57:42,bx=clamp(b.x+36,10,435-bw-10),by=8;
- bg.fillStyle='#0b1320';bg.fillRect(bx+4,by+4,bw,bh);
- bg.fillStyle='#f6f2e9';bg.fillRect(bx,by,bw,bh);bg.lineWidth=3;bg.strokeStyle='#101b2d';bg.strokeRect(bx+1,by+1,bw-2,bh-2);
- const tailX=clamp(b.x+24,bx+22,bx+bw-22);bg.beginPath();bg.moveTo(tailX,by+bh);bg.lineTo(tailX-10,by+bh+14);bg.lineTo(tailX+7,by+bh);bg.closePath();bg.fill();bg.stroke();
- bg.fillStyle='#131926';bg.font='bold 10.5px monospace';bg.textBaseline='alphabetic';bg.textAlign='left';
- lines.forEach((line,i)=>bg.fillText(line,bx+9,by+20+i*17));
+ if(!bridge?.renderForeground||!bridge.active?.()){bossCanvas.hidden=true;return;}
+ const area=el.getBoundingClientRect(),road=world.getBoundingClientRect();
+ if(!area.width||!area.height||!road.width||!road.height){bossCanvas.hidden=true;return;}
+ // Fill the ENTIRE mobile viewport, rather than clipping the boss at y=205.
+ // X uses the same lane scaling and cropping as the actual road renderer.
+ // Y is anchored at the top of the screen, letting the original airborne
+ // walrus and its original speech fly in front of the top dashboard.
+ const dpr=Math.min(2,devicePixelRatio||1);
+ const pw=Math.round(area.width*dpr),ph=Math.round(area.height*dpr);
+ if(bossCanvas.width!==pw||bossCanvas.height!==ph){bossCanvas.width=pw;bossCanvas.height=ph;}
+ bg.setTransform(1,0,0,1,0,0);bg.clearRect(0,0,pw,ph);
+ const roadZoom=Math.max(road.width/270,road.height/518);
+ const sourceWidth=road.width/roadZoom;
+ const cropX=(270-sourceWidth)/2;
+ bg.imageSmoothingEnabled=false;
+ bg.setTransform(roadZoom*dpr,0,0,roadZoom*dpr,-cropX*roadZoom*dpr,0);
+ try{
+   // Run the exact source game's foreground draw statements in this canvas.
+   // No new boss pose, image selection, dialogue logic or movement here.
+   bridge.renderForeground(bg);
+   bossCanvas.hidden=false;
+ }finally{bg.setTransform(1,0,0,1,0,0);}
 }
 function roadDraw(scene){
  const b=world.getBoundingClientRect();if(!b.width||!b.height)return;
