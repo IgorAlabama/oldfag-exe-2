@@ -67,7 +67,7 @@ source=source.replace(needle,
   if(start<0||end<0)throw Error('Original bonus drawBoss() not found');
   const original=shell.slice(start,end);
   const pivot=original.indexOf(' const bob=Math.sin(state.time*5)*4;');
-  if(pivot<0||!original.endsWith(' ctx.restore();'+NL+'}'))throw Error('Bonus drawBoss() changed');
+  if(pivot<0||!original.trimEnd().endsWith(' ctx.restore();'+NL+'}'))throw Error('Bonus drawBoss() changed');
   const beam=original.slice(0,pivot).replace('function drawBoss(){','function drawBossBeam(){')+
     ' ctx.restore();'+NL+'}';
   const foreground='function drawBossForeground(targetCtx){'+NL+' const ctx=targetCtx;'+NL+
