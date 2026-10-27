@@ -159,3 +159,122 @@
  .arcadeButtons{gap:7px}
  .arcadeButton{min-height:48px}
 }
+
+
+/* ================================================================
+   Android v0.3.5 — FIRST START MENU / ONE COCKPIT VISUAL SYSTEM
+   Reuse the armored window, rivets, pixel font and button treatment
+   from the in-game pause menu, without changing menu behavior.
+   ================================================================ */
+#menu{
+ align-items:flex-start;justify-content:center;
+ background:
+  radial-gradient(ellipse 74% 55% at 50% 17%,#284353 0%,#102334 60%,transparent 97%),
+  repeating-linear-gradient(0deg,#081522 0 6px,#0b1a28 7px 9px);
+ padding:clamp(8px,2.5vh,20px) 10px 28px;
+}
+#menu::before{inset:54px 0 0;background:repeating-linear-gradient(0deg,transparent 0 3px,#01091428 4px 6px);z-index:-1}
+#menuInside{
+ box-sizing:border-box;position:relative;isolation:isolate;
+ width:min(470px,100%);max-width:470px;
+ margin:clamp(7px,3vh,25px) auto 15px;padding:16px 15px 19px;
+ overflow:visible;
+ background:linear-gradient(180deg,#3a5361 0%,#182f44 4%,#0b1c2c 47%,#0a1928 94%,#294453 100%);
+ border:4px solid #b1aa90;border-radius:16px;
+ box-shadow:inset 0 0 0 3px #05121f,inset 0 7px 0 #607784,0 6px 0 #02070d,7px 9px 0 #01050ab8;
+}
+#menuInside::before,#menuInside::after{
+ content:"";position:absolute;top:9px;width:5px;height:5px;
+ background:#263543;border:2px solid #a4a99d;box-shadow:1px 2px 0 #020914;
+}
+#menuInside::before{left:9px}#menuInside::after{right:9px}
+#menuInside .arcadeHorizon{
+ position:relative;max-width:none;width:100%;height:100px;margin:8px auto 13px;
+ border:3px solid #90a5b1;border-radius:8px;overflow:hidden;
+ background:linear-gradient(#20283f,#34415a 48%,#121f30);
+ box-shadow:inset 0 0 0 3px #081422,inset 0 6px 0 #354e62,0 3px 0 #030b14;
+}
+#menuInside .arcadeSmall{
+ color:#8fc7cf;font:400 8px/1.75 var(--tr-font);
+ margin:7px auto 11px;max-width:100%;letter-spacing:0;
+}
+#menuInside .arcadeLogo{
+ position:relative;margin:9px 1px 11px;padding:15px 4px 14px;
+ border:3px solid #9eabb4;border-radius:8px;
+ background:linear-gradient(#20394d,#0b1d2f 18%,#061421 88%,#1c3447);
+ box-shadow:inset 0 0 0 2px #04101d,inset 0 5px 0 #52687a,0 4px 0 #020913;
+ font:400 clamp(20px,5.5vw,31px)/1.35 var(--tr-font);
+ white-space:nowrap;letter-spacing:0;color:#f9ca7e;
+ text-shadow:2px 2px 0 #9a4f37,4px 4px 0 #030a15;
+}
+#menuInside .arcadeTag{
+ margin:7px auto 16px;color:#d1d6c9;
+ font:400 clamp(7px,1.7vw,8px)/1.8 var(--tr-font);
+ letter-spacing:0;max-width:96%;
+}
+#menuInside .arcadeButtons{
+ width:100%;max-width:none;gap:8px;padding:12px 9px;
+ border:2px solid #5d788a;border-radius:11px;
+ background:linear-gradient(180deg,#0a1725,#05111f);
+ box-shadow:inset 0 0 0 3px #101f2d,inset 0 6px 12px #0009;
+}
+#menuInside .arcadeButton{
+ display:block;width:100%;height:auto;min-height:55px;
+ padding:13px 12px;text-align:left;
+ border:3px solid #9caebb;border-radius:8px;
+ background:linear-gradient(180deg,#455c6e,#223d55 13%,#0c2035 83%,#2a485c);
+ color:#f6e3b5;font:400 clamp(10px,2.4vw,12px)/1.75 var(--tr-font);
+ box-shadow:inset 0 0 0 2px #061421,inset 0 4px 0 #4a6274,3px 4px 0 #020810;
+ text-shadow:1px 1px 0 #020811;letter-spacing:0;
+}
+#menuInside .arcadeButton:before{font:400 9px var(--tr-font);color:#efba6b;margin-right:9px}
+#menuInside .arcadeButton:hover,#menuInside .arcadeButton:focus-visible{
+ transform:translate(-1px,-1px);
+ border-color:#ffdaa0;
+ background:linear-gradient(#516b80,#294960 20%,#142d43 85%);
+ outline:2px solid #eec47b;outline-offset:2px;
+}
+#menuInside .arcadeButton:active{
+ transform:translate(1px,2px);
+ box-shadow:inset 0 0 0 2px #061421,1px 1px 0 #01070d;
+}
+#menuInside .arcadeFooter{
+ color:#8aabb6;margin:14px auto 2px;
+ font:400 clamp(6px,1.4vw,8px)/1.8 var(--tr-font);letter-spacing:0;
+}
+/* The source scene image is scaled (435x518), but names must not be scaled:
+   we put one clean text label directly on the story overlay, no double glyphs. */
+#storyName.toffi-name-replaced{visibility:hidden!important}
+#storyLayer .toffi-speaker-badge[hidden]{display:none!important}
+#storyLayer .toffi-speaker-badge{
+ box-sizing:border-box;position:absolute;z-index:12;pointer-events:none;
+ width:max-content;max-width:calc(100% - 20px);
+ padding:7px 10px 6px;min-height:26px;
+ border:2px solid #ffdda0;border-radius:4px;
+ background:#d0a16b;color:#11202d;
+ box-shadow:inset 0 0 0 1px #f0c88c,2px 3px 0 #010a13;
+ font:400 10px/1.55 var(--tr-font);
+ letter-spacing:0;text-align:left;text-shadow:none;
+ white-space:nowrap;text-overflow:clip;overflow:hidden;
+ -webkit-font-smoothing:auto;
+ transform:none!important;filter:none!important;
+}
+@media(max-width:620px){
+ #menu{padding:8px 8px 26px}
+ #menuInside{max-width:470px;padding:14px 11px 16px;margin:clamp(5px,2vh,17px) auto 11px}
+ #menuInside .arcadeHorizon{height:85px;margin:7px auto 9px}
+ #menuInside .arcadeSmall{font-size:7px;margin:6px auto 8px}
+ #menuInside .arcadeTag{font-size:7px;margin:8px auto 13px}
+ #menuInside .arcadeLogo{font-size:clamp(20px,5.2vw,28px);padding:12px 3px}
+ #menuInside .arcadeButtons{padding:9px 7px;gap:8px}
+ #menuInside .arcadeButton{min-height:53px;font-size:10px;padding:13px 10px}
+ #menuInside .arcadeFooter{font-size:6px;margin-top:12px}
+ #storyLayer .toffi-speaker-badge{font-size:9px;padding:6px 8px 5px;min-height:24px}
+}
+@media(max-height:680px){
+ #menuInside .arcadeHorizon{height:68px}
+ #menuInside .arcadeButtons{padding:7px;gap:6px}
+ #menuInside .arcadeButton{min-height:47px}
+ #menuInside .arcadeLogo{padding:9px 3px}
+ #menuInside .arcadeFooter{margin-top:9px}
+}
