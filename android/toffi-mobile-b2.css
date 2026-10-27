@@ -47,7 +47,7 @@ body.toffi-b2-active #loading{z-index:48!important}
    The attack beam is deliberately rendered only on the road canvas. */
 #toffiB2Boss[hidden]{display:none!important}
 #toffiB2 #toffiB2Boss{
- position:absolute;left:0;top:0;width:100%;height:auto;
- aspect-ratio:435/205;image-rendering:pixelated;pointer-events:none;
+ position:absolute;inset:0;width:100%;height:100%;
+ display:block;image-rendering:pixelated;pointer-events:none;
  z-index:12;overflow:visible;
 }
