@@ -2,6 +2,7 @@
 """APK-only HTML enhancements; do not modify website source or GitHub Pages."""
 from pathlib import Path
 import shutil
+import base64
 
 root=Path(__file__).resolve().parent.parent
 android=root/'android'
@@ -16,7 +17,7 @@ def inject(path, markup, anchor):
         raise SystemExit(f'Invalid HTML insertion location: {path} ({anchor})')
     f.write_text(html.replace(anchor,markup+'\n'+anchor,1),encoding='utf-8')
 
-for name in ['arcade-shell.js','arcade-shell.css','game-timur.css','game-tea.css','toffi-mobile-b2.js','toffi-mobile-b2.css','toffi-pixel-ui.css','toffi-pixel-ui.js']:
+for name in ['arcade-shell.js','arcade-shell.css','game-timur.css','game-tea.css','toffi-mobile-b2.js','toffi-mobile-b2.css','toffi-pixel-ui.css','toffi-pixel-ui.js','tea-start-menu.css','tea-start-menu.js']:
     shutil.copy2(android/name,site/('android-'+name))
 
 inject(Path('index.html'),
@@ -31,6 +32,66 @@ inject(Path('arcade/index.html'),
 inject(Path('krymskiy-chai/index.html'),
        '<link rel="stylesheet" href="../android-game-tea.css">',
        '</head>')
+
+# Pixelated approved title-screen painting is decoded ONLY into APK assets.
+art=android/'tea-menu-art.b64'
+if not art.is_file():
+    raise SystemExit('Missing approved Krymskiy Chai menu artwork')
+menu_image=site/'krymskiy-chai/assets/tea-menu.webp'
+menu_image.write_bytes(base64.b64decode(art.read_text(encoding='ascii').strip(),validate=True))
+if not menu_image.read_bytes().startswith(b'RIFF'):
+    raise SystemExit('Invalid menu artwork')
+
+# The original game already keeps a local best score. Add Android-only
+# API for the launcher and separate persisted volume controls, preserving
+# web gameplay and its score logic unchanged.
+tea_file=site/'krymskiy-chai/game.js'
+tea=tea_file.read_text(encoding='utf-8')
+def tea_patch(old,new):
+    global tea
+    if tea.count(old)!=1:
+        raise SystemExit(f'Tea script changed; patch anchor found {tea.count(old)} times: {old[:90]}')
+    tea=tea.replace(old,new,1)
+tea_patch("soundtrack.volume = .35;",
+"""let musicVolume=.35,sfxVolume=.85;
+try{
+ const cfg=JSON.parse(localStorage.getItem('krymskiy-tea-audio-v1')||'null');
+ if(cfg){musicVolume=clamp(Number(cfg.music),0,1);sfxVolume=clamp(Number(cfg.effects),0,1);}
+ if(!Number.isFinite(musicVolume))musicVolume=.35;
+ if(!Number.isFinite(sfxVolume))sfxVolume=.85;
+}catch(_e){}
+soundtrack.volume=musicVolume;
+function saveVolumes(){try{localStorage.setItem('krymskiy-tea-audio-v1',JSON.stringify({music:musicVolume,effects:sfxVolume}))}catch(_e){}}
+""")
+tea_patch("if(soundOn && phase === 'playing' && !document.hidden){",
+          "if(soundOn && musicVolume>0 && phase === 'playing' && !document.hidden){")
+tea_patch("function noise(f=540,d=.12,kind='square'){if(!soundOn)return;",
+          "function noise(f=540,d=.12,kind='square'){if(!soundOn || sfxVolume<=0)return;")
+tea_patch("g.gain.setValueAtTime(.085,now)","g.gain.setValueAtTime(.085*sfxVolume,now)")
+tea_patch("  score+=amount;","  score+=amount;saveBest();")
+# Existing native record key remains unchanged across app updates.
+tea_patch("Promise.all(Object.entries(files).map(",
+"""window.KrymskiyTeaAndroid={
+  isReady:()=>!['loading','error'].includes(phase),
+  getPhase:()=>phase,
+  start:()=>{if(['loading','error'].includes(phase))return false;reset();return true;},
+  getBest:()=>Math.max(best,score),
+  getVolumes:()=>({music:musicVolume,effects:sfxVolume}),
+  setVolumes:(music,effects)=>{
+   musicVolume=clamp(Number(music)||0,0,1);sfxVolume=clamp(Number(effects)||0,0,1);
+   soundtrack.volume=musicVolume;saveVolumes();syncSoundtrack();
+  }
+};
+Promise.all(Object.entries(files).map(""")
+tea_patch("setPhase('ready'); showStartDialog();","setPhase('ready'); showStartDialog();window.dispatchEvent(new Event('tea-game-ready'));")
+tea_file.write_text(tea,encoding='utf-8')
+inject(Path('krymskiy-chai/index.html'),
+       '<link rel="stylesheet" href="../android-tea-start-menu.css">',
+       '</head>')
+inject(Path('krymskiy-chai/index.html'),
+       '<script src="../android-tea-start-menu.js"></script>',
+       '</body>')
+
 
 # New pixel-rendered HUD B2 is opt-in for the bundled Android game only.
 # Main GitHub Pages Toffi Rage retains the old right-hand HUD untouched.
@@ -104,6 +165,7 @@ for rel in ['android-arcade-shell.js','android-arcade-shell.css',
             'android-game-timur.css','android-game-tea.css',
             'android-toffi-mobile-b2.js','android-toffi-mobile-b2.css',
             'android-toffi-pixel-ui.js','android-toffi-pixel-ui.css',
+            'android-tea-start-menu.css','android-tea-start-menu.js',
             'club.js','progress.js']:
     if not (site/rel).is_file():
         raise SystemExit(f'Missing required Android asset: {rel}')
