@@ -64,6 +64,7 @@ source=source.replace(needle,
   // drawn in a separate fullscreen parent layer above the mobile cockpit.
   shell=shell.replace('function drawBoss(){','function drawBossBeam(){');
   shell=shell.replace('const bob=Math.sin(state.time*5)*4;','ctx.restore();return;const bob=Math.sin(state.time*5)*4;');
+  shell=shell.replace('drawTopLabel();drawPlayer();','drawPlayer();');
   shell=shell.replace('drawHUD();drawBoss();drawPopText();','drawHUD();drawBossBeam();drawPopText();');
   shell=shell.replace('window.__toffi={', 'window.__toffiBossBridge={snapshot:()=>({boss:state.boss,time:state.time,lines:bossSpeechLines()}),idle:WALRUS_IDLE,attack:WALRUS_ATTACK};window.__toffi={');
   return shell;
