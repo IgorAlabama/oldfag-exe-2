@@ -34,6 +34,13 @@
          show=show && b2Active && mode==='run';
        }catch(e){show=false;}
      }
+     if(game==='tea'){
+       try{
+         const tea=innerWindow()?.KrymskiyTeaAndroid;
+         const menuVisible=inner()?.getElementById('teaMainMenu')?.hidden!==true;
+         show=show && !menuVisible && tea?.getPhase?.()==='playing';
+       }catch(e){show=false;}
+     }
      pauseBtn.style.display=show?'block':'none';
    }
    requestAnimationFrame(updatePauseVisibility);
