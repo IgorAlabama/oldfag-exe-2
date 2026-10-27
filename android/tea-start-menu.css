@@ -1,5 +1,5 @@
 /* APK-only main menu for Crimean Tea, portrait 424x924 design */
-@font-face{font-family:'TeaPixel';src:url('../toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
+@font-face{font-family:'TeaPixel';src:url('toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');font-style:normal;font-weight:400;font-display:swap}
 #teaMainMenu[hidden],#teaMenuSettings[hidden],#teaMenuRecords[hidden]{display:none!important}
 #teaMainMenu{position:fixed;inset:0;z-index:9998;background:#070f1d;display:grid;place-items:center;overflow:hidden;touch-action:manipulation}
 #teaMenuArtboard{position:relative;aspect-ratio:849/1852;width:min(100vw,calc(100dvh * 849 / 1852));max-height:100dvh;overflow:hidden;background:#192638;box-shadow:0 0 0 1px #758e9a,0 0 38px #000c}
