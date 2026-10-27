@@ -83,6 +83,12 @@ jobs:
           test -s "$dest/android-toffi-pixel-ui.css"
           test -s "$dest/android-toffi-pixel-ui.js"
           grep -Fq 'android-toffi-pixel-ui.css' "$dest/toffi-rage/index.html"
+          # The initial menu and every cutscene speaker label must use the
+          # bundled pixel theme rather than scaled system-font layers.
+          grep -Fq '#menuInside .arcadeLogo' "$dest/android-toffi-pixel-ui.css"
+          grep -Fq '#menuInside .arcadeButton' "$dest/android-toffi-pixel-ui.css"
+          grep -Fq 'toffi-speaker-badge' "$dest/android-toffi-pixel-ui.css"
+          grep -Fq 'toffi-name-replaced' "$dest/android-toffi-pixel-ui.js"
           grep -Fq '../android-toffi-mobile-b2.js' "$dest/toffi-rage/index.html"
           echo "Bundled files:"
           du -sh "$dest"
