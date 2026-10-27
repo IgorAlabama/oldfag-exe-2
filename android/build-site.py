@@ -70,6 +70,8 @@ source=source.replace(needle,
   if(pivot<0||!original.trimEnd().endsWith(' ctx.restore();'+NL+'}'))throw Error('Bonus drawBoss() changed');
   const beam=original.slice(0,pivot).replace('function drawBoss(){','function drawBossBeam(){')+
     ' ctx.restore();'+NL+'}';
+  if(!original.includes('const bx=clamp(b.x+36,10,W-bw-10), by=8;'))
+    throw Error('Original bonus speech layout changed');
   const foreground='function drawBossForeground(targetCtx){'+NL+' const ctx=targetCtx;'+NL+
     " const b=state.boss;"+NL+" if(b.phase==='hidden'||b.phase==='gone')return;"+NL+
     ' ctx.save();ctx.beginPath();ctx.rect(0,0,W,H);ctx.clip();'+NL+
@@ -111,5 +113,7 @@ assert 'android-toffi-mobile-b2.js' in (site/'toffi-rage/index.html').read_text(
 assert 'android-toffi-pixel-ui.css' in (site/'toffi-rage/index.html').read_text()
 assert 'android-toffi-pixel-ui.js' in (site/'toffi-rage/index.html').read_text()
 assert "drawBossForeground(targetCtx)" in (site/'toffi-rage/index.html').read_text()
+assert "VW-bw-10" in (site/'toffi-rage/index.html').read_text()
+assert "verticalShift" in (site/'android-toffi-mobile-b2.js').read_text()
 assert "drawBossBeam()" in (site/'toffi-rage/index.html').read_text()
 print('Android-exclusive arcade fullscreen, pause menu and stage styles packaged.')
