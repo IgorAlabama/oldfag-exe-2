@@ -35,7 +35,7 @@ inject(Path('krymskiy-chai/index.html'),
 # The browser and Android app now share exactly the same playable menus,
 # persistent high-score and audio APIs. Never override the full-resolution
 # title artwork with the old 220x480 preview.
-for game,menu in [('krymskiy-chai','tea-menu-hq.png'),('arcade','timur-menu-hq.png')]:
+for game,menu in [('krymskiy-chai','tea-menu-hq.png'),('krymskiy-chai','timur-menu-hq.png')]:
     cover=site/game/'assets'/menu
     if not cover.is_file():
         print(f'WARN: HQ menu image not yet uploaded: {game}/assets/{menu}')
@@ -45,7 +45,7 @@ for game,menu in [('krymskiy-chai','tea-menu-hq.png'),('arcade','timur-menu-hq.p
         if raw[:8] != bytes([137,80,78,71,13,10,26,10]):
             raise SystemExit(f'Expected HQ PNG: {cover}')
         width,height=struct.unpack('>II',raw[16:24])
-        minimum=(849,1852) if game=='krymskiy-chai' else (1852,849)
+        minimum=(849,1852) if menu=='tea-menu-hq.png' else (1852,849)
         if (width,height)!=minimum:
             raise SystemExit(f'Wrong menu dimensions in {cover}: {width}x{height} vs {minimum}')
 for page,jsfile in [('krymskiy-chai','tea-menu.js'),('arcade','timur-menu.js')]:
