@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@font-face{font-family:'TimurMenuPixel';src:url('../toffi-rage/ui/PressStart2P-Regular.ttf') format('truetype');font-display:swap}
+#timurTitleMenu[hidden],#timurMenuSettings[hidden],#timurMenuRecords[hidden]{display:none!important}
+#timurTitleMenu{position:fixed;inset:0;z-index:9800;background:#07101f;display:grid;place-items:center;overflow:hidden}
+#timurMenuBoard{position:relative;width:min(100vw,calc(100dvh * 1852 / 849));aspect-ratio:1852 / 849;max-height:100dvh;overflow:hidden;box-shadow:0 0 0 2px #384f67,0 0 36px #000b}
+#timurMenuCover{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:fill;pointer-events:none}
+#timurMenuButtons{position:absolute;inset:0;z-index:2}
+#timurMenuButtons button{position:absolute;left:5.3%;width:25.7%;height:10.5%;border:0;background:transparent;color:transparent;cursor:pointer;padding:0;touch-action:manipulation;outline-offset:-3px}
+#timurMenuButtons button:focus-visible{outline:3px solid #fff6a1;border-radius:5px;background:#ffffff18}
+#timurMenuNew{top:39.2%}#timurMenuOptions{top:50.8%}#timurMenuBest{top:62.4%}#timurMenuExit{top:74.2%}
+#timurMenuSettings,#timurMenuRecords{position:absolute;inset:0;display:grid;place-items:center;z-index:5;background:#030918dc;padding:clamp(4px,2.1vw,18px)}
+.timurMenuPanel{box-sizing:border-box;width:min(78%,520px);max-height:95%;overflow-y:auto;border:3px solid #879ea9;border-radius:10px;background:linear-gradient(#2f4e61,#122339 13%,#091728 88%,#2f4458);padding:clamp(8px,1.9vw,24px);box-shadow:inset 0 0 0 3px #0a1628,inset 0 4px 0 #4b627a,4px 5px 0 #000;color:#f0e6c5}
+.timurMenuPanel h2{font:400 clamp(11px,2vw,18px)/1.5 'TimurMenuPixel','Press Start 2P',monospace;color:#ffd696;margin:0 0 clamp(10px,2vw,22px);text-align:center}
+.timurMenuPanel .timurRow{display:flex;align-items:center;justify-content:space-between;gap:9px;margin:7px 0}
+.timurMenuPanel label,.timurMenuPanel output,.timurMenuPanel .timurNote{font:400 clamp(7px,1.2vw,11px)/1.8 'TimurMenuPixel','Press Start 2P',monospace}
+.timurMenuPanel output{color:#ffdc96}
+.timurMenuPanel input[type=range]{width:100%;height:30px;accent-color:#ed4543;touch-action:pan-x}
+.timurMenuPanel .timurRecord{font:400 clamp(24px,5.5vw,42px)/1.5 'TimurMenuPixel','Press Start 2P',monospace;text-align:center;color:#ffdb87}
+.timurMenuPanel .timurNote{text-align:center;color:#a8bacd;margin:10px 0}
+.timurMenuPanel button{display:block;width:100%;max-width:360px;margin:14px auto 0;padding:12px;border:2px solid #f4b0aa;background:linear-gradient(#b12c30,#701e29);color:#ffecd5;box-shadow:inset 0 0 0 2px #40151e,0 3px #050b14;cursor:pointer;font:400 clamp(8px,1.25vw,11px)/1.55 'TimurMenuPixel','Press Start 2P',monospace;min-height:39px}
+.timurMenuPanel button:focus-visible{outline:2px solid #fff2a6;outline-offset:2px}
+.timurMenuPanel button:active{transform:translateY(2px)}
+@media(max-height:420px){.timurMenuPanel{padding:8px 11px}.timurMenuPanel h2{margin-bottom:6px}.timurMenuPanel .timurRow{margin:3px 0}.timurMenuPanel input[type=range]{height:24px}.timurMenuPanel button{min-height:35px;margin-top:5px}}
