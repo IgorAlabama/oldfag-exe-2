@@ -16,9 +16,17 @@ let last=0,audioCtx=null,feedbackPulse=0,nextLifeScore=100,popup1upTime=0,popup1
 const soundtrack = new Audio('assets/vstolovkuda8bit.mp3');
 soundtrack.loop = true;
 soundtrack.preload = 'none';
-soundtrack.volume = .35;
+let musicVolume=.35,sfxVolume=.85;
+try{
+ const saved=JSON.parse(localStorage.getItem('krymskiy-tea-audio-v1')||'null');
+ if(saved){const m=Number(saved.music),e=Number(saved.effects);
+   if(Number.isFinite(m))musicVolume=clamp(m,0,1);
+   if(Number.isFinite(e))sfxVolume=clamp(e,0,1);}
+}catch(_e){}
+soundtrack.volume=musicVolume;
+function saveVolumes(){try{localStorage.setItem('krymskiy-tea-audio-v1',JSON.stringify({music:musicVolume,effects:sfxVolume}))}catch(_e){}}
 function syncSoundtrack(){
-  if(soundOn && phase === 'playing' && !document.hidden){
+  if(soundOn && musicVolume>0 && phase === 'playing' && !document.hidden){
     const promise = soundtrack.play();
     if(promise && typeof promise.catch === 'function'){
       promise.catch(err=>{
@@ -58,7 +66,7 @@ function itemDuration(){return Math.max(.43,3.05/speed())}
 // Spawn intensity accelerates slightly faster than movement at very high speed.
 function itemInterval(){return Math.max(.32,1.95/Math.pow(speed(),1.18))}
 function hud(){ $('score').textContent=score; $('speed').textContent='×'+speed().toFixed(1); $('lives').innerHTML='♥'.repeat(lives)+'<i>'+'♡'.repeat(Math.max(0,5-lives))+'</i>'; }
-function noise(f=540,d=.12,kind='square'){if(!soundOn)return;try{audioCtx ||=new (window.AudioContext||window.webkitAudioContext)(); if(audioCtx.state==='suspended')audioCtx.resume();const o=audioCtx.createOscillator(),g=audioCtx.createGain(),now=audioCtx.currentTime;o.type=kind;o.frequency.setValueAtTime(f,now);o.frequency.exponentialRampToValueAtTime(Math.max(70,f*.62),now+d);g.gain.setValueAtTime(.085,now);g.gain.exponentialRampToValueAtTime(.001,now+d);o.connect(g).connect(audioCtx.destination);o.start(now);o.stop(now+d)}catch(e){}}
+function noise(f=540,d=.12,kind='square'){if(!soundOn||sfxVolume<=0)return;try{audioCtx ||=new (window.AudioContext||window.webkitAudioContext)(); if(audioCtx.state==='suspended')audioCtx.resume();const o=audioCtx.createOscillator(),g=audioCtx.createGain(),now=audioCtx.currentTime;o.type=kind;o.frequency.setValueAtTime(f,now);o.frequency.exponentialRampToValueAtTime(Math.max(70,f*.62),now+d);g.gain.setValueAtTime(.085*sfxVolume,now);g.gain.exponentialRampToValueAtTime(.001,now+d);o.connect(g).connect(audioCtx.destination);o.start(now);o.stop(now+d)}catch(e){}}
 function showDialog(title,message,note,b1='▶ ПРОДОЛЖИТЬ'){ $('dialogTitle').textContent=title; $('dialogText').textContent=message; $('dialogNote').textContent=note; $('startBtn').textContent=b1; $('overlay').hidden=false; }
 function showStartDialog(){ showDialog('КРЫМСКИЙ ЧАЙ','Лови чайные пакетики, избегай кофе и сахара. Собери 400 очков, чтобы победить!','Нажимай на нужный из четырёх секторов экрана.','▶ НАЧАТЬ ИГРУ'); }
 function hideDialog(){$('overlay').hidden=true}
@@ -137,7 +145,7 @@ function grant1Up(){
   }
 }
 function addScore(amount,x,y,toastMsg){
-  score+=amount;
+  score+=amount;saveBest();
   paceScore=Math.max(paceScore,score);
   while(score>=nextLifeScore){ grant1Up(); nextLifeScore+=100; }
   hud();
@@ -474,6 +482,19 @@ $('restartBtn').addEventListener('click',reset);
 $('soundBtn').addEventListener('click',()=>{soundOn=!soundOn;$('soundBtn').textContent='♪ ЗВУК: '+(soundOn?'ВКЛ':'ВЫКЛ');syncSoundtrack();});
 document.addEventListener('visibilitychange',()=>{if(document.hidden&&phase==='playing'){$('pauseBtn').click()}syncSoundtrack();});
 window.addEventListener('pagehide',()=>soundtrack.pause());
-Promise.all(Object.entries(files).map(([key,url])=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[key]=im;resolve()};im.onerror=()=>reject(new Error('Не загрузилось изображение: '+url));im.src=url;}))).then(()=>{ setPhase('ready'); showStartDialog(); }).catch(err=>{setPhase('error');showDialog('ОШИБКА ЗАГРУЗКИ',err.message,'Попробуй открыть автономную HTML-версию.','↻ ПЕРЕЗАГРУЗИТЬ');$('startBtn').onclick=()=>location.reload();});
+window.KrymskiyTeaAndroid={
+ isReady:()=>!['loading','error'].includes(phase),
+ getPhase:()=>phase,
+ start:()=>{if(['loading','error'].includes(phase))return false;reset();return true;},
+ getBest:()=>Math.max(best,score),
+ getVolumes:()=>({music:musicVolume,effects:sfxVolume}),
+ setVolumes:(music,effects)=>{
+   const m=Number(music),e=Number(effects);
+   if(Number.isFinite(m))musicVolume=clamp(m,0,1);
+   if(Number.isFinite(e))sfxVolume=clamp(e,0,1);
+   soundtrack.volume=musicVolume;saveVolumes();syncSoundtrack();
+ }
+};
+Promise.all(Object.entries(files).map(([key,url])=>new Promise((resolve,reject)=>{const im=new Image();im.onload=()=>{images[key]=im;resolve()};im.onerror=()=>reject(new Error('Не загрузилось изображение: '+url));im.src=url;}))).then(()=>{ setPhase('ready'); showStartDialog();window.dispatchEvent(new Event('tea-game-ready')); }).catch(err=>{setPhase('error');showDialog('ОШИБКА ЗАГРУЗКИ',err.message,'Попробуй открыть автономную HTML-версию.','↻ ПЕРЕЗАГРУЗИТЬ');$('startBtn').onclick=()=>location.reload();});
 hud(); requestAnimationFrame(frame);
 })();
