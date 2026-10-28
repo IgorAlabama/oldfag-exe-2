@@ -19,13 +19,29 @@ const WALRUS_GROUND_HP=190,WALRUS_AIR_HP=190, WALRUS_SCALE=.44;
 const STORE_BOSS_KILL_THRESHOLD=5;
 
 let audioCtx=null,soundOn=true;
+let currentRunKills=0,deviceBestKills=0;
+try{deviceBestKills=Number(localStorage.getItem('timur-best-kills-v1')||0)||0}catch(_e){}
+function recordKill(){
+ currentRunKills++;
+ if(currentRunKills>deviceBestKills){
+   deviceBestKills=currentRunKills;
+   try{localStorage.setItem('timur-best-kills-v1',String(deviceBestKills))}catch(_e){}
+ }
+}
 // Original 8-bit song, independent of the existing arcade combat sound effects.
 const soundtrack = new Audio('assets/zachem8bit.mp3');
 soundtrack.loop = true;
 soundtrack.preload = 'none';
-soundtrack.volume = .30;
+let musicVolume=.30,effectsVolume=1;
+try{const v=JSON.parse(localStorage.getItem('timur-audio-v1')||'null');
+ if(v){const m=Number(v.music),e=Number(v.effects);
+   if(Number.isFinite(m))musicVolume=Math.max(0,Math.min(1,m));
+   if(Number.isFinite(e))effectsVolume=Math.max(0,Math.min(1,e));}
+}catch(_e){}
+soundtrack.volume=musicVolume;
+function saveAudioSettings(){try{localStorage.setItem('timur-audio-v1',JSON.stringify({music:musicVolume,effects:effectsVolume}))}catch(_e){}}
 function syncSoundtrack(){
-  if(soundOn && phase==='playing' && !document.hidden){
+  if(soundOn && musicVolume>0 && phase==='playing' && !document.hidden){
     const playback = soundtrack.play();
     if(playback && typeof playback.catch==='function'){
       playback.catch(err=>{
@@ -50,7 +66,7 @@ const REGULAR_TARGET=6, TRASH_HP=68, BOSS_HP=TRASH_HP*3, PREPACK_HP=TRASH_HP*3;
 const MAX_REGULAR_ALIVE=3;
 const RESPAWN_INVULN=2.15, RESPAWN_BLINK=2.15;
 
-function beep(freq,duration,type='square',gain=.045,nextFreq=null){if(!soundOn)return;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended') audioCtx.resume().catch(()=>{});const o=audioCtx.createOscillator(),g=audioCtx.createGain(),t=audioCtx.currentTime;o.type=type;o.frequency.setValueAtTime(freq,t);if(nextFreq)o.frequency.exponentialRampToValueAtTime(Math.max(nextFreq,1),t+duration);g.gain.setValueAtTime(gain,t);g.gain.exponentialRampToValueAtTime(.001,t+duration);o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+duration+.01);}catch(err){}}
+function beep(freq,duration,type='square',gain=.045,nextFreq=null){if(!soundOn||effectsVolume<=0)return;try{const AC=window.AudioContext||window.webkitAudioContext;if(!AC)return;audioCtx=audioCtx||new AC();if(audioCtx.state==='suspended') audioCtx.resume().catch(()=>{});const o=audioCtx.createOscillator(),g=audioCtx.createGain(),t=audioCtx.currentTime;o.type=type;o.frequency.setValueAtTime(freq,t);if(nextFreq)o.frequency.exponentialRampToValueAtTime(Math.max(nextFreq,1),t+duration);g.gain.setValueAtTime(gain*effectsVolume,t);g.gain.exponentialRampToValueAtTime(.001,t+duration);o.connect(g);g.connect(audioCtx.destination);o.start(t);o.stop(t+duration+.01);}catch(err){}}
 function confirmBeep(){beep(540,.08,'square',.026,310)}
 function hitBeep(crit){beep(crit?390:210,.16,'sawtooth',.055,crit?110:70);if(crit){setTimeout(()=>beep(960,.16,'square',.04,560),90)}}
 function potionBeep(){beep(880,.07,'triangle',.032,1180);setTimeout(()=>beep(1180,.10,'triangle',.028,980),70)}
@@ -59,7 +75,7 @@ function heroGroundY(){return currentStage==='store'?451:(currentStage==='office
 function resetLives(count=3){lives=count;maxLives=count;}
 function ensureFinisherAudio(){if(!finisherSfx){finisherSfx=new Audio(window.FIGHTER_FINISHER_AUDIO || 'assets/nani-hit.mp3');finisherSfx.preload='auto';}return finisherSfx;}
 function pauseFinisherAudio(){try{if(finisherSfx){finisherSfx.pause();finisherSfx.currentTime=0;}}catch(err){}}
-function maybePlayFinisherAudio(){const a=ensureFinisherAudio();if(!a)return 2.2;try{a.pause();a.currentTime=0;if(soundOn)a.play().catch(()=>{});}catch(err){}return (Number.isFinite(a.duration)&&a.duration>0)?Math.max(2.2,a.duration):12.46;}
+function maybePlayFinisherAudio(){const a=ensureFinisherAudio();if(!a)return 2.2;try{a.pause();a.currentTime=0;if(soundOn && effectsVolume>0){a.volume=effectsVolume;a.play().catch(()=>{});}}catch(err){}return (Number.isFinite(a.duration)&&a.duration>0)?Math.max(2.2,a.duration):12.46;}
 function heroRespawnPosition(){return {x:clamp(cam+W*.5,120,worldW-120),y:heroGroundY()}}
 function resize(){const r=stage.getBoundingClientRect();const a=(r.width&&r.height)?r.width/r.height:16/9;W=clamp(Math.round(H*a),640,1800);canvas.width=W;canvas.height=H;ctx.imageSmoothingEnabled=false;if(p)cam=clamp(cam,0,Math.max(0,worldW-W));}
 window.addEventListener('resize',resize);document.addEventListener('fullscreenchange',resize);resize();
@@ -343,6 +359,7 @@ function spawnBoss(){
  return e;
 }
 function start(){
+ currentRunKills=0;
  currentStage='street'; stageKey='stage';$('stageTag').textContent='STAGE 01 — ДВОР / УЛИЦА';worldW=H*IM.stage.naturalWidth/IM.stage.naturalHeight;
  resetLives(3);pauseFinisherAudio();finalCutscene=null;fireworks=[];victoryFireTimer=.28;
  p={x:200,y:448,dir:1,hp:100,maxHp:100,state:'idle',anim:0,cd:0,stun:0,blink:0,invuln:0};
@@ -385,16 +402,16 @@ function killEnemy(e){
  if(e.state==='dead') return;
  setState(e,'dead'); e.anim=0; e.attackHit=false;
  if(currentStage==='store' && (e.kind==='prepackGrunt'||e.kind==='bag')){
-   if(storeKills<STORE_TOTAL) storeKills++;
+   if(storeKills<STORE_TOTAL){storeKills++;recordKill();}
    if(e.kind==='bag'){ if(storeBagKills<STORE_BAGS)storeBagKills++; }
    else { if(storePrepackKills<STORE_PREPACKS)storePrepackKills++; }
    status.textContent=bossSpawned && !bossDefeated ? 'Магазин: босс на поле. Обычные враги будут идти, пока жив Морж!' : `Магазин: побеждено ${storeKills}/${STORE_TOTAL}`;
  } else if(currentStage==='office' && (e.kind==='trash'||e.kind==='bag')){
-   officeKills++;
+   officeKills++;recordKill();
    if(e.kind==='trash')officeTrashKills++; else officeBagKills++;
    status.textContent=`Офис: побеждено ${officeKills}/${OFFICE_TOTAL}`;
  } else if(e.kind==='trash'){
-   regularKills++;
+   regularKills++;recordKill();
    status.textContent=`Разгромлено мусорок: ${regularKills}/${REGULAR_TARGET}`;
  } else if(e.kind==='boss' || e.kind==='prepackBoss'){
    bossDefeated=true;
@@ -935,12 +952,28 @@ $('restart').addEventListener('click',restart);$('pause').addEventListener('clic
 $('sound').addEventListener('click',()=>{soundOn=!soundOn;$('sound').textContent='♫ Звук: '+(soundOn?'ON':'OFF');$('sound').setAttribute('aria-pressed',String(soundOn));syncSoundtrack();if(soundOn)confirmBeep()});
 $('fullscreen').addEventListener('click',async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await $('shell').requestFullscreen()}catch{}resize()});
 play.addEventListener('click',()=>{if(phase==='paused'){changePhase('playing')}else start()});
+window.TimurMenuAPI={
+ isReady:()=>phase!=='loading',
+ getPhase:()=>phase,
+ start:()=>{if(phase==='loading')return false;start();return true;},
+ getBest:()=>deviceBestKills,
+ getCurrentKills:()=>currentRunKills,
+ getVolumes:()=>({music:musicVolume,effects:effectsVolume}),
+ setVolumes:(music,effects)=>{
+   const m=Number(music),e=Number(effects);
+   if(Number.isFinite(m))musicVolume=clamp(m,0,1);
+   if(Number.isFinite(e))effectsVolume=clamp(e,0,1);
+   soundtrack.volume=musicVolume;
+   if(finisherSfx)finisherSfx.volume=effectsVolume;
+   saveAudioSettings();syncSoundtrack();
+ }
+};
 document.addEventListener('visibilitychange',()=>{
   if(document.hidden && phase==='playing')togglePause();
   syncSoundtrack();
 });
 window.addEventListener('pagehide',()=>soundtrack.pause());
-Promise.all(Object.entries(window.FIGHTER_ASSETS).map(([name,url])=>new Promise((res,rej)=>{const im=new Image();im.onload=()=>{IM[name]=im;res()};im.onerror=()=>rej(Error('Cannot load: '+name));im.src=url}))).then(()=>{worldW=H*IM.stage.naturalWidth/IM.stage.naturalHeight;changePhase('intro','The Adventures of Тимур!','Три полноценных уровня, 3 жизни на всю игру и финальный удар по Моржу. Пройди улицу, офис и магазин по порядку через кнопку «ДАЛЕЕ».','НАЧАТЬ ИГРУ');status.textContent='Готово. Тапай по экрану или используй клавиатуру.';play.disabled=false}).catch(err=>{changePhase('loading','ОШИБКА ЗАГРУЗКИ',err.message,'НЕДОСТУПНО');status.textContent=err.message;});
+Promise.all(Object.entries(window.FIGHTER_ASSETS).map(([name,url])=>new Promise((res,rej)=>{const im=new Image();im.onload=()=>{IM[name]=im;res()};im.onerror=()=>rej(Error('Cannot load: '+name));im.src=url}))).then(()=>{worldW=H*IM.stage.naturalWidth/IM.stage.naturalHeight;changePhase('intro','The Adventures of Тимур!','Три полноценных уровня, 3 жизни на всю игру и финальный удар по Моржу. Пройди улицу, офис и магазин по порядку через кнопку «ДАЛЕЕ».','НАЧАТЬ ИГРУ');status.textContent='Готово. Тапай по экрану или используй клавиатуру.';play.disabled=false;window.dispatchEvent(new Event('timur-game-ready'))}).catch(err=>{changePhase('loading','ОШИБКА ЗАГРУЗКИ',err.message,'НЕДОСТУПНО');status.textContent=err.message;});
 window.__fighterDebug=()=>({phase,currentStage,player:p&&{x:p.x,y:p.y,hp:p.hp,state:p.state,dir:p.dir},enemies:enemies.map(e=>({id:e.id,kind:e.kind,x:e.x,y:e.y,hp:e.hp,state:e.state,dir:e.dir})),potions:potions.map(pt=>({x:pt.x,y:pt.y,state:pt.state})),cam,worldW,viewW:W,loaded:Object.keys(IM).length,victoryReady,heroScale:HERO_SCALE,regularKills,spawnedTrashCount,bossSpawned,bossDefeated,officeSpawned,officeKills,officeBagKills,officeTrashKills,storeSpawned,storeKills,storeBagKills,storePrepackKills,storeCleared,storeBossThreshold:STORE_BOSS_KILL_THRESHOLD,liveEnemyCount:liveEnemies().length,walrus:walrus&&{mode:walrus.mode,phase:walrus.phase,state:walrus.state,anim:walrus.anim,attackHit:walrus.attackHit,clock:walrus.flightClock,hp:walrus.hp,maxHp:walrus.maxHp,aimX:walrus.aimX,x:walrus.x},shots:shots.map(sh=>({x:sh.x,y:sh.y,dir:sh.dir})),left:enemiesLeftCount(),visibleRange:[cam,cam+W],corpses:enemies.filter(e=>e.state==='dead').length,potionDropTimer,lives,officeQueue:officeSpawnQueue.slice(),storeQueue:storeSpawnQueue.slice(),officeObstacles:currentStage==='office'?OFFICE_FURNITURE:[],storeObstacles:currentStage==='store'?STORE_FURNITURE:[],blockedAtPlayer:blockedByFence(p?.x??200,p?.y??448,19)});
 requestAnimationFrame(tick);
 })();
