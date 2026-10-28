@@ -34,6 +34,13 @@
          show=show && b2Active && mode==='run';
        }catch(e){show=false;}
      }
+     if(game==='timur'){
+       try{
+         const child=innerWindow()?.TimurMenuAPI;
+         const menuVisible=inner()?.getElementById('timurTitleMenu')?.hidden!==true;
+         show=show && !menuVisible && child?.getPhase?.()==='playing';
+       }catch(e){show=false;}
+     }
      if(game==='tea'){
        try{
          const tea=innerWindow()?.KrymskiyTeaAndroid;
