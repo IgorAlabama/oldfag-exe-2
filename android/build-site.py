@@ -42,7 +42,7 @@ for game,menu in [('krymskiy-chai','tea-menu-hq.png'),('arcade','timur-menu-hq.p
     else:
         import struct
         raw=cover.read_bytes()
-        if raw[:8] != b'\\x89PNG\\r\\n\\x1a\\n':
+        if raw[:8] != bytes([137,80,78,71,13,10,26,10]):
             raise SystemExit(f'Expected HQ PNG: {cover}')
         width,height=struct.unpack('>II',raw[16:24])
         minimum=(849,1852) if game=='krymskiy-chai' else (1852,849)
