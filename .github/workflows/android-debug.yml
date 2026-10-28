@@ -81,7 +81,7 @@ jobs:
           test -s "$dest/android-tea-start-menu.css"
           test -s "$dest/android-tea-start-menu.js"
           for image in "$dest/krymskiy-chai/assets/tea-menu-hq.png" "$dest/arcade/assets/timur-menu-hq.png"; do
-            if [ ! -s "$image" ]; then echo "HQ image still needs uploading: $image"; fi
+            test -s "$image" || { echo "Required original HQ image missing: $image"; exit 1; }
           done
           grep -Fq 'KrymskiyTeaAndroid' "$dest/krymskiy-chai/game.js"
           grep -Fq 'tea-menu.js' "$dest/krymskiy-chai/index.html"
@@ -135,9 +135,8 @@ jobs:
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-tea-start-menu.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/krymskiy-chai/tea-menu.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/arcade/timur-menu.js'
-          for image in 'assets/site/krymskiy-chai/assets/tea-menu-hq.png' 'assets/site/arcade/assets/timur-menu-hq.png'; do
-            if ! unzip -Z1 "$apk" | grep -Fxq "$image"; then echo "HQ image pending: $image"; fi
-          done
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/krymskiy-chai/assets/tea-menu-hq.png'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/arcade/assets/timur-menu-hq.png'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-mobile-b2.css'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-pixel-ui.css'
