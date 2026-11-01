@@ -145,9 +145,12 @@ parts=sorted((ilyuha/'parts').glob('g[0-3]_*.txt'))
 if len(parts)!=56:
     raise SystemExit(f'Missing The Ильюха story/game parts: {len(parts)}/56')
 full=''.join(x.read_text(encoding='utf-8') for x in parts)
+full=full.replace('</body>', '<script src="sfx.js"></script></body>')
+
 if not (full.startswith('<!DOCTYPE html>') and 'id="mainMenu"' in full and
         'storyCinematic' in full and full.rstrip().endswith('</html>')):
     raise SystemExit('The Ильюха offline game reconstruction failed')
+if not (ilyuha/'sfx.js').is_file(): raise SystemExit('Missing The Ильюха sfx.js')
 (ilyuha/'index.html').write_text(full,encoding='utf-8')
 shutil.rmtree(ilyuha/'parts')
 print('The Ильюха single-file offline game installed:',len(full),'characters')
