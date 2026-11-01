@@ -62,7 +62,7 @@ function tick(){
  }
  if(story&&lastStory){
   if(!lastStory.lunchTriggered&&story.lunchTriggered)play('alarm');
-  if(!lastStory.lunchFinalPlayed&&story.lunchFinalPlayed)play(story.lunchTotalEarned>=1200?'win':'lose');
+  if(!lastStory.lunchFinalPlayed&&story.lunchFinalPlayed)play(story.lunchTotalEarned>=5000?'win':'lose');
  }
  last=now;lastStory=story;
  }catch(e){} // Never interfere with game logic.
