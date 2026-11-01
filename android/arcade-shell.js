@@ -5,7 +5,7 @@
  const $=id=>document.getElementById(id);
  const frame=$('arcadeIframe');
  const screen=$('screen-arcade');
- const names={timur:'ПРИКЛЮЧЕНИЯ ТИМУРА',tea:'КРЫМСКИЙ ЧАЙ',toffi:'TOFFI RAGE'};
+ const names={timur:'ПРИКЛЮЧЕНИЯ ТИМУРА',tea:'КРЫМСКИЙ ЧАЙ',toffi:'TOFFI RAGE',ilyuha:'THE ИЛЬЮХА'};
  let game=null,pausedByHost=false,menuOpen=false,settingMode=false;
  let overlay=null, pauseBtn=null;
  const inner=()=>{try{return frame.contentDocument}catch(e){return null}};
@@ -26,6 +26,7 @@
  function updatePauseVisibility(){
    if(pauseBtn){
      let show=game!==null && !menuOpen;
+     if(game==='ilyuha') show=false; // The Ильюха has its own pixel pause and return-to-arcade menu.
      if(game==='toffi'){
        try{
          const child=toffiAPI();
@@ -150,7 +151,7 @@
    document.body.classList.add('android-arcade-active');
    document.body.dataset.androidGame=gameName;
    if(overlay)overlay.hidden=false;
-   phoneOrientation(game==='timur'?'landscape':'auto');
+   phoneOrientation(game==='timur'||game==='ilyuha'?'landscape':'auto');
  }
  function init(){
    overlay=document.createElement('div');
@@ -185,7 +186,7 @@
    overlay.querySelector('#nativeArcadeExit').addEventListener('click',exit);
    overlay.querySelector('#nativeArcadeSound').addEventListener('click',toggleSound);
    overlay.querySelector('#nativeArcadeSettingsBack').addEventListener('click',showMain);
-   [['arcadeLaunch','timur'],['arcadeLaunchTea','tea'],['arcadeLaunchToffi','toffi']].forEach(([id,name])=>{
+   [['arcadeLaunch','timur'],['arcadeLaunchTea','tea'],['arcadeLaunchToffi','toffi'],['arcadeLaunchIlyuha','ilyuha']].forEach(([id,name])=>{
      $(id)?.addEventListener('click',()=>start(name));
    });
    $('arcadeExitBtn')?.addEventListener('click',resetArcade);
