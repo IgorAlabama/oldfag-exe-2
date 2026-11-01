@@ -3,7 +3,7 @@ document.addEventListener('visibilitychange',()=>{if(!storyStage)return;if(docum
 
 // LUNCH RACE: 80 entrants -> three-panel comic, 100 entrants -> ending.
 // Fictional 10-minute clock is mapped to the next 20 entering customers.
-const LUNCH_START=80,LUNCH_END=100,LUNCH_GOAL=1200;
+const LUNCH_START=80,LUNCH_END=100,LUNCH_GOAL=5000;
 let lunchTriggered=false,lunchFinalPlayed=false,lunchEndless=false,lunchSceneActive=false;
 let lunchTotalEarned=0,lunchStage='',lunchPage=0,lunchSlides=[];
 function formatLunchTime(customersRemaining){
