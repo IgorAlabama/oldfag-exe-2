@@ -181,6 +181,15 @@
    'toffi-rage/index.html','Toffi Rage',
    'ARCADE EDITION v2.2 · 4 РЕЙСА · МУЗЫКА · ПОЛНЫЙ ЭКРАН'
  ));
+ $('arcadeLaunchIlyuha').addEventListener('click',()=>launchArcade(
+   'the-ilyuha/index.html','The Ильюха',
+   '100 ПОКУПАТЕЛЕЙ · POSM · МЕРЧИ · УСПЕТЬ В «ЧАО»'
+ ));
+ window.addEventListener('message',event=>{
+   if(event.source===arcadeFrame.contentWindow && event.data?.type==='oldfag:exit-minigame'){
+     $('arcadeExitBtn')?.click();
+   }
+ });
  $('arcadeExitBtn').addEventListener('click',()=>{
    audio.sfx('click');
    leaveArcade();
