@@ -1,0 +1,17 @@
+/* The Ильюха: production interface, shared by website and Android.
+   Keep hidden debug DOM nodes for legacy game event bindings. */
+#debugToggle,
+.debugToggle,
+.shell .aside,
+.shell .bottom,
+.shell .foot {display:none!important}
+.shell .layout {display:grid;grid-template-columns:minmax(0,1fr)!important}
+.shell .gameCard {min-width:0}
+
+/* The rotation prompt is for real portrait touchscreens, not desktop iframes. */
+@media (hover:hover) and (pointer:fine) {
+  #mainMenu .mmRotateHint,.rotate {display:none!important}
+}
+@media (min-width:701px) {
+  #mainMenu .mmRotateHint {display:none!important}
+}
