@@ -14,6 +14,7 @@ on:
       - 'arcade/**'
       - 'krymskiy-chai/**'
       - 'toffi-rage/**'
+      - 'the-ilyuha/**'
 
 jobs:
   apk:
@@ -49,7 +50,7 @@ jobs:
             test -s "$f" || { echo "Missing website file: $f"; exit 1; }
             cp "$f" "$dest/"
           done
-          for dir in assets arcade krymskiy-chai toffi-rage; do
+          for dir in assets arcade krymskiy-chai toffi-rage the-ilyuha; do
             test -d "$dir" || { echo "Missing game folder: $dir"; exit 1; }
             cp -R "$dir" "$dest/"
           done
@@ -75,6 +76,10 @@ jobs:
           assert font.stat().st_size > 20000, "Pixel font is incomplete"
           assert font.read_bytes()[:4] == b'\x00\x01\x00\x00', "Invalid TrueType font"
           PY_FONT
+          test -s "$dest/the-ilyuha/index.html"
+          grep -Fq 'storyCinematic' "$dest/the-ilyuha/index.html"
+          grep -Fq 'arcadeLaunchIlyuha' "$dest/index.html"
+          grep -Fq 'arcadeLaunchIlyuha' "$dest/club.js"
           test -s "$dest/android-arcade-shell.js"
           test -s "$dest/android-game-timur.css"
           test -s "$dest/android-game-tea.css"
@@ -143,6 +148,7 @@ jobs:
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/android-toffi-pixel-ui.js'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/toffi-rage/ui/PressStart2P-Regular.ttf'
           unzip -Z1 "$apk" | grep -Fxq 'assets/site/toffi-rage/ui/OFL.txt'
+          unzip -Z1 "$apk" | grep -Fxq 'assets/site/the-ilyuha/index.html'
           echo "Main, club, and progress scripts are inside the APK."
       - name: Upload installable APK
         uses: actions/upload-artifact@v4
