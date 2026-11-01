@@ -124,6 +124,9 @@ jobs:
               -storepass android -keypass android -alias androiddebugkey \
               -dname "CN=OLDfag Android Beta,O=Last of Games,C=US"
           fi
+      - name: Verify studio splash image
+        run: |
+          test -s android/app/src/main/res/drawable-nodpi/last_of_games_splash.webp
       - name: Build Android debug APK
         run: gradle -p android --no-daemon :app:assembleDebug
       - name: Verify APK includes essential scripts

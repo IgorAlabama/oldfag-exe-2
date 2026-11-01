@@ -1,12 +1,14 @@
 package exe.oldfag.arcade;
 
 import android.app.Activity;
+import android.graphics.Color;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.WindowManager;
@@ -17,6 +19,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.JavascriptInterface;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 
 import androidx.webkit.WebViewAssetLoader;
 import androidx.webkit.WebViewClientCompat;
@@ -31,6 +34,8 @@ public class MainActivity extends Activity {
             "https://" + ASSET_HOST + "/assets/site/index.html?app=android";
 
     private WebView browser;
+    private FrameLayout splashOverlay;
+    private ImageView splashLogo;
     private FrameLayout root;
     private View fullScreenView;
     private WebChromeClient.CustomViewCallback fullScreenCallback;
@@ -53,6 +58,7 @@ public class MainActivity extends Activity {
         root.addView(browser, new FrameLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT));
         setContentView(root);
+        showStudioSplash();
 
         assetLoader = new WebViewAssetLoader.Builder()
                 .addPathHandler("/assets/", new WebViewAssetLoader.AssetsPathHandler(this))
@@ -118,6 +124,66 @@ public class MainActivity extends Activity {
         } else {
             browser.loadUrl(START_URL);
         }
+    }
+
+
+    /**
+     * Native full-screen studio card shown once per Activity launch.
+     * The bundled WebView can load underneath; navigating between games never replays it.
+     * 200ms black, 350ms fade-in, 2000ms hold, 350ms fade-out.
+     */
+    private void showStudioSplash() {
+        splashOverlay = new FrameLayout(this);
+        splashOverlay.setBackgroundColor(Color.BLACK);
+        splashOverlay.setClickable(true);
+        splashLogo = new ImageView(this);
+        splashLogo.setImageResource(R.drawable.last_of_games_splash);
+        splashLogo.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        splashLogo.setAlpha(0f);
+        splashOverlay.addView(splashLogo, new FrameLayout.LayoutParams(
+                1, 1, Gravity.CENTER));
+        root.addView(splashOverlay, new FrameLayout.LayoutParams(
+                ViewGroup.LayoutParams.MATCH_PARENT,
+                ViewGroup.LayoutParams.MATCH_PARENT));
+        // A size update also covers device rotation while the card is visible.
+        root.addOnLayoutChangeListener((view, left, top, right, bottom,
+                oldLeft, oldTop, oldRight, oldBottom) -> {
+            if (splashLogo != null) resizeSplashLogo(right - left, bottom - top);
+        });
+
+        splashOverlay.postDelayed(() -> {
+            if (splashLogo == null) return;
+            splashLogo.animate().alpha(1f).setDuration(350).withEndAction(() -> {
+                if (splashLogo == null) return;
+                splashLogo.postDelayed(() -> {
+                    if (splashLogo == null) return;
+                    splashLogo.animate().alpha(0f).setDuration(350)
+                            .withEndAction(this::removeStudioSplash).start();
+                }, 2000);
+            }).start();
+        }, 200);
+    }
+
+    private void resizeSplashLogo(int width, int height) {
+        if (splashLogo == null || width <= 0 || height <= 0) return;
+        float density = getResources().getDisplayMetrics().density;
+        int margin = (int) (20 * density);
+        int maxSize = (int) (520 * density);
+        int size = Math.max(1, Math.min(Math.min(width, height) - 2 * margin, maxSize));
+        FrameLayout.LayoutParams layout = (FrameLayout.LayoutParams) splashLogo.getLayoutParams();
+        if (layout.width != size || layout.height != size) {
+            layout.width = size;
+            layout.height = size;
+            layout.gravity = Gravity.CENTER;
+            splashLogo.setLayoutParams(layout);
+        }
+    }
+
+    private void removeStudioSplash() {
+        if (splashOverlay == null) return;
+        root.removeView(splashOverlay);
+        splashLogo = null;
+        splashOverlay = null;
     }
 
     private final class ArcadeOrientationBridge {
