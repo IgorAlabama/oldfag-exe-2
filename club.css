@@ -142,3 +142,17 @@ body.toffi-pseudo-fullscreen{overflow:hidden!important;}
 #screen-arcade:fullscreen .arcade-frame iframe{
  height:100%!important;min-height:0!important;width:100%!important;
 }
+
+/* The Ильюха: approved 192×210 cover has less internal breathing room
+   than the other three game icons, so visually match their inset scale. */
+.arcade-cover-tile--ilyuha img{
+  width:90%;height:90%;margin:5%;object-fit:contain;object-position:center;
+}
+/* In the site the arcade is inside a flex row. Without an explicit width
+   the iframe can shrink to an intrinsically portrait-sized 300px slot. */
+#screen-arcade.arcade-screen{width:100%;min-width:0}
+@media (hover:hover) and (pointer:fine){
+  #screen-arcade .arcade-frame iframe{
+    width:100%;height:auto;min-height:0;aspect-ratio:16 / 9;
+  }
+}
