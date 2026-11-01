@@ -138,4 +138,18 @@ assert "drawBossForeground(targetCtx)" in (site/'toffi-rage/index.html').read_te
 assert "VW-bw-10" in (site/'toffi-rage/index.html').read_text()
 assert "verticalShift" in (site/'android-toffi-mobile-b2.js').read_text()
 assert "drawBossBeam()" in (site/'toffi-rage/index.html').read_text()
+# The Ильюха is split into small UTF-8 parts in git to keep uploads reliable.
+# Rebuild a single, completely offline HTML before packaging Android assets.
+ilyuha=site/'the-ilyuha'
+parts=sorted((ilyuha/'parts').glob('g[0-3]_*.txt'))
+if len(parts)!=56:
+    raise SystemExit(f'Missing The Ильюха story/game parts: {len(parts)}/56')
+full=''.join(x.read_text(encoding='utf-8') for x in parts)
+if not (full.startswith('<!DOCTYPE html>') and 'id="mainMenu"' in full and
+        'storyCinematic' in full and full.rstrip().endswith('</html>')):
+    raise SystemExit('The Ильюха offline game reconstruction failed')
+(ilyuha/'index.html').write_text(full,encoding='utf-8')
+shutil.rmtree(ilyuha/'parts')
+print('The Ильюха single-file offline game installed:',len(full),'characters')
+
 print('Android-exclusive arcade fullscreen, pause menu and stage styles packaged.')
